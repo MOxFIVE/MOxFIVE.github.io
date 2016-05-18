@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  
+  <title>将 Hexo 博客部署到 GitHub Pages | MOxFIVE&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="因为还没有一篇教程能让我依次操作后顺利完成部署，索性简单记录自己的操作步骤备用了。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="将 Hexo 博客部署到 GitHub Pages">
+<meta property="og:url" content="http://MOxFIVE.xyz/2015/11/04/hexo-deployment/index.html">
+<meta property="og:site_name" content="MOxFIVE's Blog">
+<meta property="og:description" content="因为还没有一篇教程能让我依次操作后顺利完成部署，索性简单记录自己的操作步骤备用了。">
+<meta property="og:updated_time" content="2016-05-16T12:38:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="将 Hexo 博客部署到 GitHub Pages">
+<meta name="twitter:description" content="因为还没有一篇教程能让我依次操作后顺利完成部署，索性简单记录自己的操作步骤备用了。">
+  
+    <link rel="alternative" href="/atom.xml" title="MOxFIVE&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/resources/favicon.ico">
+  
+  
+    <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
+  
+  
+      <link href="//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css" rel="stylesheet">
+  
+  
+      <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+      <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+  
+  <script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.9/clipboard.min.js"></script>
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false,
+          fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+          scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.0.9/scrollreveal.min.js"
+      }
+  </script>
+
+  
+      <script>
+          yiliaConfig.rootUrl = "/";
+      </script>
+  
+  
+      <script>
+          var _hmt = _hmt || [];
+          (function() {
+              var hm = document.createElement("script");
+              hm.src = "//hm.baidu.com/hm.js?a4938c90e05043bd9774ff12368e45aa";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+          })();
+      </script>
+  
+  
+</head>
+<body>
+  <!--[if lt IE 9]>
+<style> body { background: orange !important;} div#container { display: none;} </style>
+<p id="ie-updater">
+    
+        珍爱生命，远离 IE！<br>本站不支持 IE6/7/8，请升级浏览器！<br>
+    
+    <a href="//www.bing.com/search?q=Chrome" target="_blank">Chrome</a>, <a href="//www.bing.com/search?q=Firefox" target="_blank">Firefox</a><br>
+    Hexo Theme <a href="//github.com/MOxFIVE/hexo-theme-yelee" target="_blank">Yelee</a> by MOxFIVE
+</p>
+<![endif]-->
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/resources/Mihawk.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">MOxFIVE</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">迈入新世界，为了成为独当一面的 Web 前端工程师！</p>
+        
+                
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/archives">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">留言板</a></li>
+                        
+                            <li><a href="/2015/08/20/blog-building">建站日志</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:&#0000109;&#0000111;&#x0000031;&#0048;&#x0000030;&#0048;&#000053;&#000064;&#00000111;&#0117;&#00116;&#x000006c;&#0111;&#111;&#00107;&#x002e;&#x00063;&#00000111;&#00109;" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="//weibo.com/yemzh" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="//github.com/MOxFIVE" title="GitHub"></a>
+                            
+                                <a class="fa V2EX" target="_blank" href="//www.v2ex.com/member/MOxFIVE" title="V2EX"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa Twitter" target="_blank" href="//twitter.com/MOxFE" title="Twitter"></a>
+                            
+                                <a class="fa TiddlyWiki" target="_blank" href="/wiki/" title="TiddlyWiki"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Anki/">Anki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Browsersync/">Browsersync</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/">DNS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/EndNote/">EndNote</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Font-Awesome/">Font-Awesome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GIF/">GIF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PNG/">PNG</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PhotoShop/">PhotoShop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PowerPoint/">PowerPoint</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Reference/">Reference</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Software/">Software</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sublime/">Sublime</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Table/">Table</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TagCloud/">TagCloud</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UA/">UA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WordPress/">WordPress</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Yelee/">Yelee</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/font-family/">font-family</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/多说/">多说</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//www.netcan666.com/">Netcan</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//f2e-tlj.me/">Ryuu</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//codinglife.in/">Andy_Zheng</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//syncshinee.github.io/">skyxuan</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//luuman.github.io/">世平阜康</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//wixy.top/">王煜</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//www.smallyi.com/">小忆</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//taozj.org/">Nicol_TAO</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">MOxFIVE</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/resources/Mihawk.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">MOxFIVE</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">迈入新世界，为了成为独当一面的 Web 前端工程师！</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">留言板</a></li>
+                
+                    <li><a href="/2015/08/20/blog-building">建站日志</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:&#0000109;&#0000111;&#x0000031;&#0048;&#x0000030;&#0048;&#000053;&#000064;&#00000111;&#0117;&#00116;&#x000006c;&#0111;&#111;&#00107;&#x002e;&#x00063;&#00000111;&#00109;" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="//weibo.com/yemzh" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="//github.com/MOxFIVE" title="GitHub"></a>
+                            
+                                <a class="fa V2EX" target="_blank" href="//www.v2ex.com/member/MOxFIVE" title="V2EX"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa Twitter" target="_blank" href="//twitter.com/MOxFE" title="Twitter"></a>
+                            
+                                <a class="fa TiddlyWiki" target="_blank" href="/wiki/" title="TiddlyWiki"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-hexo-deployment" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/04/hexo-deployment/" class="article-date">
+      <time datetime="2015-11-04T14:50:51.000Z" itemprop="datePublished">2015-11-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      将 Hexo 博客部署到 GitHub Pages
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/自用笔记/">自用笔记</a><a class="article-category-link" href="/categories/自用笔记/术业专攻/">术业专攻</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitHub/">GitHub</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+    <p class="note-intro"><strong>自用笔记：</strong>本文属于自用笔记，不做详解，仅供参考。</p>
+
+      
+          
+        <p>　　因为还没有一篇教程能让我依次操作后顺利完成部署，索性简单记录自己的操作步骤备用了。<br><a id="more"></a></p>
+<h2 id="安装-Git-插件"><a href="#安装-Git-插件" class="headerlink" title="安装 Git 插件"></a>安装 Git 插件</h2><p>Hexo 目前没有自带 Git 部署模块，需手动安装:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<h2 id="部署配置"><a href="#部署配置" class="headerlink" title="部署配置"></a>部署配置</h2><p>将博客部署到 GitHub Pages:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> git</span><br><span class="line"><span class="attr">  message:</span> [message]</span><br><span class="line"><span class="attr">  repo:</span> </span><br><span class="line"><span class="attr">    github:</span> &lt;repository url&gt;,[branch]</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># &lt;!-- 自用地址 --&gt;</span></span><br><span class="line"><span class="attr">github:</span> git@github.com:MOxFIVE/MOxFIVE.github.io.git,master</span><br></pre></td></tr></table></figure>
+<h2 id="Git-个人信息配置"><a href="#Git-个人信息配置" class="headerlink" title="Git 个人信息配置"></a>Git 个人信息配置</h2><p>漏了这步最后部署可能遇到问题:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;用户名&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;邮箱地址&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># &lt;!-- 自用配置 --&gt;</span></span><br><span class="line">git config --global user.name <span class="string">"MOxFIVE"</span></span><br><span class="line">git config --global user.email <span class="string">"mo@outlook.com"</span></span><br></pre></td></tr></table></figure>
+<h2 id="添加-SSH-公匙"><a href="#添加-SSH-公匙" class="headerlink" title="添加 SSH 公匙"></a>添加 SSH 公匙</h2><p>为了方便部署时跳过密码一步到位:</p>
+<blockquote>
+<p>生成并进入 SSH 目录</p>
+</blockquote>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> ~/.ssh</span><br><span class="line"><span class="built_in">cd</span>  ~/.ssh</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>生成密匙，一路回车</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;邮件地址&quot;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>打开生成的 <code>id_rsa.pub</code>，将其中的 <code>全部</code> 内容复制添加为 <a href="https://github.com/settings/ssh" target="_blank" rel="external">GitHub</a> 的 SSH 密匙</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure>
+<h2 id="部署博客"><a href="#部署博客" class="headerlink" title="部署博客"></a>部署博客</h2><blockquote>
+<p>可省，但先运行这步可避免不少问题</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>直接执行<code>hexo d</code>，会自动生成静态文件然后进行部署</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>首次部署需在弹出框输入 <code>yes</code> 继续，之后畅通无阻</p>
+</blockquote>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
+<li><strong>Hexo 部署</strong>: <a href="https://hexo.io/zh-cn/docs/deployment.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/deployment.html</a></li>
+<li><strong>hexo-deployer-git</strong>: <a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="external">https://github.com/hexojs/hexo-deployer-git</a></li>
+<li><strong><em>添加 SSH 公钥</em></strong> by <strong>GitCafe</strong> on <code>2015</code>: <a href="https://help.gitcafe.com/manuals/help/ssh-key" target="_blank" rel="external">https://help.gitcafe.com/manuals/help/ssh-key</a></li>
+<li><strong><em>将Hexo部署到GitCafe</em></strong> by <strong>盛夏</strong> on <code>2014/9/18</code>: <a href="http://www.sumrday.com/2014/09-18-Hello-Hexo.html" target="_blank" rel="external">http://www.sumrday.com/2014/09-18-Hello-Hexo.html</a></li>
+<li><strong><em>让GitCafe项目托管变成外链空间</em></strong> by <strong>遊離式</strong> on <code>2012/11/7</code>: <a href="http://u-lis.com/archives/2417" target="_blank" rel="external">http://u-lis.com/archives/2417</a></li>
+</ol>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2015/11/04/hexo-deployment/">将 Hexo 博客部署到 GitHub Pages</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 MOxFIVE 的个人博客">MOxFIVE</a></p>
+        <p><span>发布时间:</span>2015-11-04, 22:50</p>
+        <p><span>最后更新:</span>2016-05-16, 20:38</p>
+        
+            <p>
+                <span>更新历史:</span><i class="fa fa-github"></i>
+                <a href="https://github.com/MOxFIVE/Markdown-Archives-Backup/blame/master/_posts/2015-11-04.hexo-deployment.md" title="顺序查看文章各部分修改记录" target = "_blank">Blame</a>,
+                <a href="https://github.com/MOxFIVE/Markdown-Archives-Backup/commits/master/_posts/2015-11-04.hexo-deployment.md" title="查看文章有关更新记录" target = "_blank">History</a><span class="raw">文本模式:</span><i class="fa fa-file-text-o"></i>
+                <a href="https://raw.githubusercontent.com/MOxFIVE/Markdown-Archives-Backup/master/_posts/2015-11-04.hexo-deployment.md" title="查看 & 下载文章 Markdown 原始文本" target = "_blank"> .md Raw</a>
+            </p>
+        
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2015/11/04/hexo-deployment/" title="将 Hexo 博客部署到 GitHub Pages">http://MOxFIVE.xyz/2015/11/04/hexo-deployment/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://MOxFIVE.xyz/2015/11/04/hexo-deployment/　　作者: MOxFIVE" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+    
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2015/11/09/web-style-guide/">
+                    Web Style Guide 前端代码规范
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2015/10/31/excel-markdown-table/">
+                    用 Excel 生成和管理 Markdown 表格
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+
+
+
+
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装-Git-插件"><span class="toc-number">1.</span> <span class="toc-text">安装 Git 插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署配置"><span class="toc-number">2.</span> <span class="toc-text">部署配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git-个人信息配置"><span class="toc-number">3.</span> <span class="toc-text">Git 个人信息配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加-SSH-公匙"><span class="toc-number">4.</span> <span class="toc-text">添加 SSH 公匙</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署博客"><span class="toc-number">5.</span> <span class="toc-text">部署博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">6.</span> <span class="toc-text">参考资料</span></a></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+
+</script>
+
+
+
+
+
+    
+    <div class="share">
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"将 Hexo 博客部署到 GitHub Pages　| MOxFIVE's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    </div>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2015/11/04/hexo-deployment/" data-title="将 Hexo 博客部署到 GitHub Pages" data-url="http://MOxFIVE.xyz/2015/11/04/hexo-deployment/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"moxfive"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '//moxfive.xyz/resources/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2015/11/09/web-style-guide/" title="上一篇: Web Style Guide 前端代码规范">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2015/10/31/excel-markdown-table/" title="下一篇: 用 Excel 生成和管理 Markdown 表格">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/05/17/image-compression/">关于 Yelee 主题背景图的压缩与优化</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/public-dns/">几个国内专用的公共 DNS</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/20/baidu-share-fontawesome/">在百度分享中使用 Font Awesome 图标</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/18/text-overflow-ellipsis/">CSS 设置文本省略 ellipsis (…)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/27/hexo-browsersync/">Hexo 页面自动刷新与移动端调试</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/04/markdown-table-style/">Markdown 表格样式调整与自适应优化</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/16/front-end-tools/">前端工程化工具初选</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/10/hexo-post-version-control/">关联 GitHub, 让 Hexo 支持查看文章更新历史</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/02/hexo-comments/">为 Hexo 主题添加评论模块 — Disqus, 多说, 友言</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/01/hexo-config-true-false/">关于 Hexo 配置文件中的 true 和 false</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/22/anki-excel-shortcuts/">Anki 记忆库之 Excel 快捷键大全</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/21/common-hexo-commands/">Hexo 最常用的几个命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/09/css-font-family/">CSS font-family 网页字体使用小结</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/30/sublime-config/">Sublime Text 3 使用配置与插件安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/23/anki-templates/">Anki 自用卡片模板分享</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/23/git-command/">Git 基础命令与相关术语</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/16/png-gif-transparency/">制作透明背景 PNG 图片和 GIF 动图的几种方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/09/web-style-guide/">Web Style Guide 前端代码规范</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/04/hexo-deployment/">将 Hexo 博客部署到 GitHub Pages</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/31/excel-markdown-table/">用 Excel 生成和管理 Markdown 表格</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/25/hexo-tag-cloud/">让 Hexo 自动生成 Tag Cloud 标签云页面</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/16/hexo-404-page/">在 Hexo 中创建匹配主题的404页面</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/09/29/duoshuo-style/">多说样式折腾记录 — 添加 UA 浏览器标识、旋转头像等</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/09/20/windows-mac-software/">自用 Windows 和 Mac 软件推荐</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/30/EndNote-Markdown/">EndNote 与 Markdown 结合 — 为网文快速添加 Reference</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/28/Front-End-Study/">个人 Web 前端学习路线</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/20/blog-building/">个人博客站点建设历程</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/19/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2015-2016 MOxFIVE
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题">Yelee</a><span> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >本站到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+    <script src="/js/GithubRepoWidget.js"></script>
+
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.1.22/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+    <script src="//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

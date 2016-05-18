@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  
+  <title>Git 基础命令与相关术语 | MOxFIVE&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="笔记基本上整理自网站 Try Git，一套很不错的 Git 在线入门教程。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git 基础命令与相关术语">
+<meta property="og:url" content="http://MOxFIVE.xyz/2015/11/23/git-command/index.html">
+<meta property="og:site_name" content="MOxFIVE's Blog">
+<meta property="og:description" content="笔记基本上整理自网站 Try Git，一套很不错的 Git 在线入门教程。">
+<meta property="og:updated_time" content="2016-04-20T03:52:07.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git 基础命令与相关术语">
+<meta name="twitter:description" content="笔记基本上整理自网站 Try Git，一套很不错的 Git 在线入门教程。">
+  
+    <link rel="alternative" href="/atom.xml" title="MOxFIVE&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/resources/favicon.ico">
+  
+  
+    <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
+  
+  
+      <link href="//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css" rel="stylesheet">
+  
+  
+      <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+      <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+  
+  <script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.9/clipboard.min.js"></script>
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false,
+          fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+          scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.0.9/scrollreveal.min.js"
+      }
+  </script>
+
+  
+      <script>
+          yiliaConfig.rootUrl = "/";
+      </script>
+  
+  
+      <script>
+          var _hmt = _hmt || [];
+          (function() {
+              var hm = document.createElement("script");
+              hm.src = "//hm.baidu.com/hm.js?a4938c90e05043bd9774ff12368e45aa";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+          })();
+      </script>
+  
+  
+</head>
+<body>
+  <!--[if lt IE 9]>
+<style> body { background: orange !important;} div#container { display: none;} </style>
+<p id="ie-updater">
+    
+        珍爱生命，远离 IE！<br>本站不支持 IE6/7/8，请升级浏览器！<br>
+    
+    <a href="//www.bing.com/search?q=Chrome" target="_blank">Chrome</a>, <a href="//www.bing.com/search?q=Firefox" target="_blank">Firefox</a><br>
+    Hexo Theme <a href="//github.com/MOxFIVE/hexo-theme-yelee" target="_blank">Yelee</a> by MOxFIVE
+</p>
+<![endif]-->
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/resources/Mihawk.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">MOxFIVE</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">迈入新世界，为了成为独当一面的 Web 前端工程师！</p>
+        
+                
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/archives">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">留言板</a></li>
+                        
+                            <li><a href="/2015/08/20/blog-building">建站日志</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:&#0000109;&#0000111;&#x0000031;&#0048;&#x0000030;&#0048;&#000053;&#000064;&#00000111;&#0117;&#00116;&#x000006c;&#0111;&#111;&#00107;&#x002e;&#x00063;&#00000111;&#00109;" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="//weibo.com/yemzh" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="//github.com/MOxFIVE" title="GitHub"></a>
+                            
+                                <a class="fa V2EX" target="_blank" href="//www.v2ex.com/member/MOxFIVE" title="V2EX"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa Twitter" target="_blank" href="//twitter.com/MOxFE" title="Twitter"></a>
+                            
+                                <a class="fa TiddlyWiki" target="_blank" href="/wiki/" title="TiddlyWiki"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Anki/">Anki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Browsersync/">Browsersync</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/">DNS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/EndNote/">EndNote</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Font-Awesome/">Font-Awesome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GIF/">GIF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PNG/">PNG</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PhotoShop/">PhotoShop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PowerPoint/">PowerPoint</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Reference/">Reference</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Software/">Software</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sublime/">Sublime</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Table/">Table</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TagCloud/">TagCloud</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UA/">UA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WordPress/">WordPress</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Yelee/">Yelee</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/font-family/">font-family</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/多说/">多说</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//www.netcan666.com/">Netcan</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//f2e-tlj.me/">Ryuu</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//codinglife.in/">Andy_Zheng</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//syncshinee.github.io/">skyxuan</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//luuman.github.io/">世平阜康</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//wixy.top/">王煜</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//www.smallyi.com/">小忆</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//taozj.org/">Nicol_TAO</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">MOxFIVE</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/resources/Mihawk.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">MOxFIVE</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">迈入新世界，为了成为独当一面的 Web 前端工程师！</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">留言板</a></li>
+                
+                    <li><a href="/2015/08/20/blog-building">建站日志</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:&#0000109;&#0000111;&#x0000031;&#0048;&#x0000030;&#0048;&#000053;&#000064;&#00000111;&#0117;&#00116;&#x000006c;&#0111;&#111;&#00107;&#x002e;&#x00063;&#00000111;&#00109;" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="//weibo.com/yemzh" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="//github.com/MOxFIVE" title="GitHub"></a>
+                            
+                                <a class="fa V2EX" target="_blank" href="//www.v2ex.com/member/MOxFIVE" title="V2EX"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa Twitter" target="_blank" href="//twitter.com/MOxFE" title="Twitter"></a>
+                            
+                                <a class="fa TiddlyWiki" target="_blank" href="/wiki/" title="TiddlyWiki"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-git-command" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/23/git-command/" class="article-date">
+      <time datetime="2015-11-22T19:01:30.000Z" itemprop="datePublished">2015-11-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Git 基础命令与相关术语
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/自用笔记/">自用笔记</a><a class="article-category-link" href="/categories/自用笔记/术业专攻/">术业专攻</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+    <p class="note-intro"><strong>自用笔记：</strong>本文属于自用笔记，不做详解，仅供参考。</p>
+
+      
+          
+        <p>　　笔记基本上整理自网站 <a href="https://try.github.io" target="_blank" rel="external">Try Git</a>，一套很不错的 Git 在线入门教程。</p>
+<a id="more"></a>
+<h2 id="git-init"><a href="#git-init" class="headerlink" title="git init"></a>git init</h2><p>To initialize a Git repository here</p>
+<h3 id="Directory"><a href="#Directory" class="headerlink" title="Directory"></a>Directory</h3><ul>
+<li>A folder used for storing multiple files.</li>
+</ul>
+<h3 id="Repository"><a href="#Repository" class="headerlink" title="Repository"></a>Repository</h3><ul>
+<li>A directory where Git has been initialized to start version controlling your files.</li>
+</ul>
+<h2 id="git-status"><a href="#git-status" class="headerlink" title="git status"></a>git status</h2><p>See what the current state of the project is.</p>
+<h3 id="staged"><a href="#staged" class="headerlink" title="staged"></a>staged</h3><ul>
+<li>Files are ready to be committed.<h3 id="unstaged"><a href="#unstaged" class="headerlink" title="unstaged"></a>unstaged</h3></li>
+<li>Files with changes that have not been prepared to be committed.<h3 id="untracked"><a href="#untracked" class="headerlink" title="untracked"></a>untracked</h3></li>
+<li>Files aren’t tracked by Git yet. This usually indicates a newly created file.<h3 id="deleted"><a href="#deleted" class="headerlink" title="deleted"></a>deleted</h3></li>
+<li>File has been deleted and is waiting to be removed from Git.</li>
+</ul>
+<h2 id="git-add-lt-file-gt"><a href="#git-add-lt-file-gt" class="headerlink" title="git add &lt;file&gt;"></a>git add <code>&lt;file&gt;</code></h2><p>Add files to the staging area.</p>
+<h3 id="Staging-Area"><a href="#Staging-Area" class="headerlink" title="Staging Area"></a>Staging Area</h3><ul>
+<li>A place where we can group files together before we “commit” them to Git.<br>Commit</li>
+</ul>
+<h3 id="add-all"><a href="#add-all" class="headerlink" title="add all"></a>add all</h3><ul>
+<li>You can also type <code>git add -A</code> . where the dot stands for the current directory, so everything in and beneath it is added. The <code>-A</code> ensures even file deletions are included.</li>
+</ul>
+<h2 id="git-reset"><a href="#git-reset" class="headerlink" title="git reset"></a>git reset</h2><p>You can use <code>git reset &lt;filename&gt;</code> to remove a file or files from the staging area.</p>
+<h2 id="Commit"><a href="#Commit" class="headerlink" title="Commit"></a>Commit</h2><p>A “commit” is a snapshot of our repository. This way if we ever need to look back at the changes we’ve made (or if someone else does), we will see a nice timeline of all changes.</p>
+<h3 id="git-commit-m-“msg”"><a href="#git-commit-m-“msg”" class="headerlink" title="git commit -m “msg”"></a>git commit -m “msg”</h3><ul>
+<li>To store our staged changes we run the commit command with a message describing what we’ve changed. </li>
+</ul>
+<h3 id="‘-a’-option"><a href="#‘-a’-option" class="headerlink" title="‘-a’ option"></a>‘-a’ option</h3><ul>
+<li>Auto removes deleted files with the commit.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -am &quot;msg&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="git-log"><a href="#git-log" class="headerlink" title="git log"></a>git log</h2><p>a journal that remembers all the changes we’ve committed so far</p>
+<h3 id="git-log-–summary"><a href="#git-log-–summary" class="headerlink" title="git log –summary"></a>git log –summary</h3><ul>
+<li>see more information for each commit. You can see where new files were added for the first time or where files were deleted. It’s a good overview of what’s going on in the project.</li>
+</ul>
+<h2 id="git-remote"><a href="#git-remote" class="headerlink" title="git remote"></a>git remote</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add &lt;remote name&gt; &lt;repository URL&gt;</span><br><span class="line">git remote add origin https://github.com/try-git/try_git.git</span><br></pre></td></tr></table></figure>
+<p>Git doesn’t care what you name your remotes, but it’s typical to name your main one <code>origin</code>.</p>
+<p>It’s also a good idea for your main repository to be on a remote server like GitHub in case your machine is lost at sea during a transatlantic boat cruise or crushed by three monkey statues during an earthquake.</p>
+<h2 id="git-push"><a href="#git-push" class="headerlink" title="git push"></a>git push</h2><p>Tells Git where to put our commits when we’re ready.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push -u &lt;remote name&gt; &lt;branch name&gt;</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+<p>The <code>-u</code> tells Git to remember the parameters, so that next time we can simply run <code>git push</code>.</p>
+<h2 id="git-stash"><a href="#git-stash" class="headerlink" title="git stash"></a>git stash</h2><p>Sometimes when you go to pull you may have changes you don’t want to commit just yet. One option you have, other than commiting, is to stash the changes.</p>
+<p>Use the command <code>git stash</code> to stash your changes, and <code>git stash apply</code> to re-apply your changes after your pull.</p>
+<h2 id="git-pull"><a href="#git-pull" class="headerlink" title="git pull"></a>git pull</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push &lt;remote name&gt; &lt;branch name&gt;</span><br><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
+<p>Check for changes on remote repository and pull down any new changes.</p>
+<h2 id="git-diff"><a href="#git-diff" class="headerlink" title="git diff"></a>git diff</h2><p>A good overview of changes we have made and lets us add files or directories one at a time and commit them separately.</p>
+<h3 id="git-diff-HEAD"><a href="#git-diff-HEAD" class="headerlink" title="git diff HEAD"></a>git diff HEAD</h3><ul>
+<li>Show what is different from our last commit. <code>HEAD</code> points to your most recent commit by default.</li>
+</ul>
+<h3 id="git-diff-–staged"><a href="#git-diff-–staged" class="headerlink" title="git diff –staged"></a>git diff –staged</h3><ul>
+<li>Look at changes within files that have already been staged.</li>
+</ul>
+<h2 id="git-checkout-–-lt-target-gt"><a href="#git-checkout-–-lt-target-gt" class="headerlink" title="git checkout – &lt;target&gt;"></a>git checkout – <code>&lt;target&gt;</code></h2><p>Changed files back to how they were at the last commit, namely get rid of all the changes since the last commit.</p>
+<p><code>--</code>: promise the command line that there are no more options after the ‘–’, avoid switching to the branch of the same name.</p>
+<h2 id="git-branch"><a href="#git-branch" class="headerlink" title="git branch"></a>git branch</h2><p>List local branches of now repository.</p>
+<h3 id="git-branch-lt-name-gt"><a href="#git-branch-lt-name-gt" class="headerlink" title="git branch &lt;name&gt;"></a>git branch <code>&lt;name&gt;</code></h3><ul>
+<li>Create a new branch.</li>
+</ul>
+<blockquote>
+<p>When developers are working on a feature or bug they’ll often create a copy (aka. branch) of their code they can make separate commits to. Then when they’re done they can merge this branch back into their main master branch.</p>
+</blockquote>
+<h3 id="git-checkout-lt-branch-gt"><a href="#git-checkout-lt-branch-gt" class="headerlink" title="git checkout &lt;branch&gt;"></a>git checkout <code>&lt;branch&gt;</code></h3><ul>
+<li>Switch to certain branch.</li>
+</ul>
+<h3 id="git-checkout-b-new-branch"><a href="#git-checkout-b-new-branch" class="headerlink" title="git checkout -b new_branch"></a>git checkout -b new_branch</h3><ul>
+<li>Checkout and create a branch at the same time. </li>
+</ul>
+<h2 id="git-rm-lt-file-gt"><a href="#git-rm-lt-file-gt" class="headerlink" title="git rm &lt;file&gt;"></a>git rm <code>&lt;file&gt;</code></h2><p>Not only remove the actual files from disk, but will also stage the removal of the files for us.</p>
+<h3 id="git-rm-r-folder"><a href="#git-rm-r-folder" class="headerlink" title="git rm -r folder"></a>git rm -r folder</h3><ul>
+<li>Recursively remove all folders and files from the given directory.</li>
+</ul>
+<h2 id="git-merge-lt-branch-gt"><a href="#git-merge-lt-branch-gt" class="headerlink" title="git merge &lt;branch&gt;"></a>git merge <code>&lt;branch&gt;</code></h2><p>Merge your changes from the given branch into current branch.</p>
+<h3 id="Merge-Conflicts"><a href="#Merge-Conflicts" class="headerlink" title="Merge Conflicts"></a>Merge Conflicts</h3><ul>
+<li>Merge Conflicts can occur when changes are made to a file at the same time. Reading more on <a href="http://git-scm.com/docs/git-merge#_how_conflicts_are_presented" target="_blank" rel="external">how conflicts are presented</a>.</li>
+</ul>
+<h2 id="Delete-Branch"><a href="#Delete-Branch" class="headerlink" title="Delete Branch"></a>Delete Branch</h2><h3 id="git-branch-d-lt-branch-gt"><a href="#git-branch-d-lt-branch-gt" class="headerlink" title="git branch -d &lt;branch&gt;"></a>git branch -d <code>&lt;branch&gt;</code></h3><ul>
+<li>Delete a local branch. <code>-d</code> won’t let you delete something that hasn’t been merged.</li>
+</ul>
+<h3 id="f-and-D"><a href="#f-and-D" class="headerlink" title="-f and -D"></a><code>-f</code> and <code>-D</code></h3><ul>
+<li>Force delete the branch that hasn’t been merged. </li>
+</ul>
+<blockquote>
+<p>Add the <code>-f</code>(–force) option or use <code>-D</code> which combines <code>-d -f</code> together into one command.</p>
+</blockquote>
+<h3 id="Delete-Remote-Branch"><a href="#Delete-Remote-Branch" class="headerlink" title="Delete Remote Branch"></a>Delete Remote Branch</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch -r -d &lt;remote name&gt;/&lt;branch name&gt;</span><br><span class="line">git push &lt;remote name&gt;: &lt;branch name&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch -r -d origin/branch-name</span><br><span class="line">git push origin :branch-name</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2015/11/23/git-command/">Git 基础命令与相关术语</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 MOxFIVE 的个人博客">MOxFIVE</a></p>
+        <p><span>发布时间:</span>2015-11-23, 03:01</p>
+        <p><span>最后更新:</span>2016-04-20, 11:52</p>
+        
+            <p>
+                <span>更新历史:</span><i class="fa fa-github"></i>
+                <a href="https://github.com/MOxFIVE/Markdown-Archives-Backup/blame/master/_posts/2015-11-23.git-command.md" title="顺序查看文章各部分修改记录" target = "_blank">Blame</a>,
+                <a href="https://github.com/MOxFIVE/Markdown-Archives-Backup/commits/master/_posts/2015-11-23.git-command.md" title="查看文章有关更新记录" target = "_blank">History</a><span class="raw">文本模式:</span><i class="fa fa-file-text-o"></i>
+                <a href="https://raw.githubusercontent.com/MOxFIVE/Markdown-Archives-Backup/master/_posts/2015-11-23.git-command.md" title="查看 & 下载文章 Markdown 原始文本" target = "_blank"> .md Raw</a>
+            </p>
+        
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2015/11/23/git-command/" title="Git 基础命令与相关术语">http://MOxFIVE.xyz/2015/11/23/git-command/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://MOxFIVE.xyz/2015/11/23/git-command/　　作者: MOxFIVE" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+    
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2015/11/23/anki-templates/">
+                    Anki 自用卡片模板分享
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2015/11/16/png-gif-transparency/">
+                    制作透明背景 PNG 图片和 GIF 动图的几种方法
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+
+
+
+
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#git-init"><span class="toc-number">1.</span> <span class="toc-text">git init</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Directory"><span class="toc-number">1.1.</span> <span class="toc-text">Directory</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Repository"><span class="toc-number">1.2.</span> <span class="toc-text">Repository</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-status"><span class="toc-number">2.</span> <span class="toc-text">git status</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#staged"><span class="toc-number">2.1.</span> <span class="toc-text">staged</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#unstaged"><span class="toc-number">2.2.</span> <span class="toc-text">unstaged</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#untracked"><span class="toc-number">2.3.</span> <span class="toc-text">untracked</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#deleted"><span class="toc-number">2.4.</span> <span class="toc-text">deleted</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-add-lt-file-gt"><span class="toc-number">3.</span> <span class="toc-text">git add <file></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Staging-Area"><span class="toc-number">3.1.</span> <span class="toc-text">Staging Area</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#add-all"><span class="toc-number">3.2.</span> <span class="toc-text">add all</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-reset"><span class="toc-number">4.</span> <span class="toc-text">git reset</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Commit"><span class="toc-number">5.</span> <span class="toc-text">Commit</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#git-commit-m-“msg”"><span class="toc-number">5.1.</span> <span class="toc-text">git commit -m “msg”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#‘-a’-option"><span class="toc-number">5.2.</span> <span class="toc-text">‘-a’ option</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-log"><span class="toc-number">6.</span> <span class="toc-text">git log</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#git-log-–summary"><span class="toc-number">6.1.</span> <span class="toc-text">git log –summary</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-remote"><span class="toc-number">7.</span> <span class="toc-text">git remote</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-push"><span class="toc-number">8.</span> <span class="toc-text">git push</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-stash"><span class="toc-number">9.</span> <span class="toc-text">git stash</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-pull"><span class="toc-number">10.</span> <span class="toc-text">git pull</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-diff"><span class="toc-number">11.</span> <span class="toc-text">git diff</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#git-diff-HEAD"><span class="toc-number">11.1.</span> <span class="toc-text">git diff HEAD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git-diff-–staged"><span class="toc-number">11.2.</span> <span class="toc-text">git diff –staged</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-checkout-–-lt-target-gt"><span class="toc-number">12.</span> <span class="toc-text">git checkout – <target></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-branch"><span class="toc-number">13.</span> <span class="toc-text">git branch</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#git-branch-lt-name-gt"><span class="toc-number">13.1.</span> <span class="toc-text">git branch <name></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git-checkout-lt-branch-gt"><span class="toc-number">13.2.</span> <span class="toc-text">git checkout <branch></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git-checkout-b-new-branch"><span class="toc-number">13.3.</span> <span class="toc-text">git checkout -b new_branch</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-rm-lt-file-gt"><span class="toc-number">14.</span> <span class="toc-text">git rm <file></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#git-rm-r-folder"><span class="toc-number">14.1.</span> <span class="toc-text">git rm -r folder</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-merge-lt-branch-gt"><span class="toc-number">15.</span> <span class="toc-text">git merge <branch></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Merge-Conflicts"><span class="toc-number">15.1.</span> <span class="toc-text">Merge Conflicts</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Delete-Branch"><span class="toc-number">16.</span> <span class="toc-text">Delete Branch</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#git-branch-d-lt-branch-gt"><span class="toc-number">16.1.</span> <span class="toc-text">git branch -d <branch></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#f-and-D"><span class="toc-number">16.2.</span> <span class="toc-text">-f and -D</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Delete-Remote-Branch"><span class="toc-number">16.3.</span> <span class="toc-text">Delete Remote Branch</span></a></li></ol></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+
+</script>
+
+
+
+
+
+    
+    <div class="share">
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"Git 基础命令与相关术语　| MOxFIVE's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    </div>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2015/11/23/git-command/" data-title="Git 基础命令与相关术语" data-url="http://MOxFIVE.xyz/2015/11/23/git-command/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"moxfive"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '//moxfive.xyz/resources/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2015/11/23/anki-templates/" title="上一篇: Anki 自用卡片模板分享">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2015/11/16/png-gif-transparency/" title="下一篇: 制作透明背景 PNG 图片和 GIF 动图的几种方法">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/05/17/image-compression/">关于 Yelee 主题背景图的压缩与优化</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/public-dns/">几个国内专用的公共 DNS</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/20/baidu-share-fontawesome/">在百度分享中使用 Font Awesome 图标</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/18/text-overflow-ellipsis/">CSS 设置文本省略 ellipsis (…)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/27/hexo-browsersync/">Hexo 页面自动刷新与移动端调试</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/04/markdown-table-style/">Markdown 表格样式调整与自适应优化</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/16/front-end-tools/">前端工程化工具初选</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/10/hexo-post-version-control/">关联 GitHub, 让 Hexo 支持查看文章更新历史</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/02/hexo-comments/">为 Hexo 主题添加评论模块 — Disqus, 多说, 友言</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/01/hexo-config-true-false/">关于 Hexo 配置文件中的 true 和 false</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/22/anki-excel-shortcuts/">Anki 记忆库之 Excel 快捷键大全</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/21/common-hexo-commands/">Hexo 最常用的几个命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/09/css-font-family/">CSS font-family 网页字体使用小结</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/30/sublime-config/">Sublime Text 3 使用配置与插件安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/23/anki-templates/">Anki 自用卡片模板分享</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/23/git-command/">Git 基础命令与相关术语</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/16/png-gif-transparency/">制作透明背景 PNG 图片和 GIF 动图的几种方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/09/web-style-guide/">Web Style Guide 前端代码规范</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/04/hexo-deployment/">将 Hexo 博客部署到 GitHub Pages</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/31/excel-markdown-table/">用 Excel 生成和管理 Markdown 表格</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/25/hexo-tag-cloud/">让 Hexo 自动生成 Tag Cloud 标签云页面</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/16/hexo-404-page/">在 Hexo 中创建匹配主题的404页面</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/09/29/duoshuo-style/">多说样式折腾记录 — 添加 UA 浏览器标识、旋转头像等</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/09/20/windows-mac-software/">自用 Windows 和 Mac 软件推荐</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/30/EndNote-Markdown/">EndNote 与 Markdown 结合 — 为网文快速添加 Reference</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/28/Front-End-Study/">个人 Web 前端学习路线</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/20/blog-building/">个人博客站点建设历程</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/19/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2015-2016 MOxFIVE
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题">Yelee</a><span> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >本站到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+    <script src="/js/GithubRepoWidget.js"></script>
+
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.1.22/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+    <script src="//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

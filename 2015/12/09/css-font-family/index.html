@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  
+  <title>CSS font-family 网页字体使用小结 | MOxFIVE&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言一直到最近才开始调整博客的字体，之前都是全站微软雅黑了事。慢慢调整后发现 font-family 这个属性相关的知识还是不少的，整理一下常用的部分，分享于此。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS font-family 网页字体使用小结">
+<meta property="og:url" content="http://MOxFIVE.xyz/2015/12/09/css-font-family/index.html">
+<meta property="og:site_name" content="MOxFIVE's Blog">
+<meta property="og:description" content="前言一直到最近才开始调整博客的字体，之前都是全站微软雅黑了事。慢慢调整后发现 font-family 这个属性相关的知识还是不少的，整理一下常用的部分，分享于此。">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/serif.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/sans-serif.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/Monospace.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/cursive.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/font-a1.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/font-a2.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/font-a3.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/font-a4.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/font-icon.png">
+<meta property="og:updated_time" content="2016-04-20T03:52:33.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS font-family 网页字体使用小结">
+<meta name="twitter:description" content="前言一直到最近才开始调整博客的字体，之前都是全站微软雅黑了事。慢慢调整后发现 font-family 这个属性相关的知识还是不少的，整理一下常用的部分，分享于此。">
+<meta name="twitter:image" content="http://MOxFIVE.xyz/resources/serif.png">
+  
+    <link rel="alternative" href="/atom.xml" title="MOxFIVE&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/resources/favicon.ico">
+  
+  
+    <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
+  
+  
+      <link href="//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css" rel="stylesheet">
+  
+  
+      <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+      <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+  
+  <script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.9/clipboard.min.js"></script>
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false,
+          fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+          scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.0.9/scrollreveal.min.js"
+      }
+  </script>
+
+  
+      <script>
+          yiliaConfig.rootUrl = "/";
+      </script>
+  
+  
+      <script>
+          var _hmt = _hmt || [];
+          (function() {
+              var hm = document.createElement("script");
+              hm.src = "//hm.baidu.com/hm.js?a4938c90e05043bd9774ff12368e45aa";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+          })();
+      </script>
+  
+  
+</head>
+<body>
+  <!--[if lt IE 9]>
+<style> body { background: orange !important;} div#container { display: none;} </style>
+<p id="ie-updater">
+    
+        珍爱生命，远离 IE！<br>本站不支持 IE6/7/8，请升级浏览器！<br>
+    
+    <a href="//www.bing.com/search?q=Chrome" target="_blank">Chrome</a>, <a href="//www.bing.com/search?q=Firefox" target="_blank">Firefox</a><br>
+    Hexo Theme <a href="//github.com/MOxFIVE/hexo-theme-yelee" target="_blank">Yelee</a> by MOxFIVE
+</p>
+<![endif]-->
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/resources/Mihawk.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">MOxFIVE</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">迈入新世界，为了成为独当一面的 Web 前端工程师！</p>
+        
+                
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/archives">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">留言板</a></li>
+                        
+                            <li><a href="/2015/08/20/blog-building">建站日志</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:&#0000109;&#0000111;&#x0000031;&#0048;&#x0000030;&#0048;&#000053;&#000064;&#00000111;&#0117;&#00116;&#x000006c;&#0111;&#111;&#00107;&#x002e;&#x00063;&#00000111;&#00109;" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="//weibo.com/yemzh" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="//github.com/MOxFIVE" title="GitHub"></a>
+                            
+                                <a class="fa V2EX" target="_blank" href="//www.v2ex.com/member/MOxFIVE" title="V2EX"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa Twitter" target="_blank" href="//twitter.com/MOxFE" title="Twitter"></a>
+                            
+                                <a class="fa TiddlyWiki" target="_blank" href="/wiki/" title="TiddlyWiki"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Anki/">Anki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Browsersync/">Browsersync</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/">DNS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/EndNote/">EndNote</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Font-Awesome/">Font-Awesome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GIF/">GIF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PNG/">PNG</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PhotoShop/">PhotoShop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PowerPoint/">PowerPoint</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Reference/">Reference</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Software/">Software</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sublime/">Sublime</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Table/">Table</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TagCloud/">TagCloud</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UA/">UA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WordPress/">WordPress</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Yelee/">Yelee</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/font-family/">font-family</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/多说/">多说</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//www.netcan666.com/">Netcan</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//f2e-tlj.me/">Ryuu</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//codinglife.in/">Andy_Zheng</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//syncshinee.github.io/">skyxuan</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//luuman.github.io/">世平阜康</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//wixy.top/">王煜</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//www.smallyi.com/">小忆</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//taozj.org/">Nicol_TAO</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">MOxFIVE</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/resources/Mihawk.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">MOxFIVE</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">迈入新世界，为了成为独当一面的 Web 前端工程师！</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">留言板</a></li>
+                
+                    <li><a href="/2015/08/20/blog-building">建站日志</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:&#0000109;&#0000111;&#x0000031;&#0048;&#x0000030;&#0048;&#000053;&#000064;&#00000111;&#0117;&#00116;&#x000006c;&#0111;&#111;&#00107;&#x002e;&#x00063;&#00000111;&#00109;" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="//weibo.com/yemzh" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="//github.com/MOxFIVE" title="GitHub"></a>
+                            
+                                <a class="fa V2EX" target="_blank" href="//www.v2ex.com/member/MOxFIVE" title="V2EX"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa Twitter" target="_blank" href="//twitter.com/MOxFE" title="Twitter"></a>
+                            
+                                <a class="fa TiddlyWiki" target="_blank" href="/wiki/" title="TiddlyWiki"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-css-font-family" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/09/css-font-family/" class="article-date">
+      <time datetime="2015-12-08T16:33:55.000Z" itemprop="datePublished">2015-12-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS font-family 网页字体使用小结
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/自用笔记/">自用笔记</a><a class="article-category-link" href="/categories/自用笔记/术业专攻/">术业专攻</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/font-family/">font-family</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+          
+        <p></p><h2 id="intro">前言</h2>一直到最近才开始调整博客的字体，之前都是全站微软雅黑了事。慢慢调整后发现 font-family 这个属性相关的知识还是不少的，整理一下常用的部分，分享于此。<p></p>
+<a id="more"></a>
+<h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><h3 id="使用语法"><a href="#使用语法" class="headerlink" title="使用语法"></a>使用语法</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">font-family</span>: 字体名1, 字体名2, 字体名<span class="selector-tag">n</span>, 字体系列名;</span><br><span class="line"><span class="selector-tag">font-family</span>: <span class="selector-tag">Verdana</span>, <span class="selector-tag">Helvetica</span>, "<span class="selector-tag">Microsoft</span> <span class="selector-tag">YaHei</span>", <span class="selector-tag">Arial</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="语法说明"><a href="#语法说明" class="headerlink" title="语法说明"></a>语法说明</h3><blockquote>
+<ol>
+<li>系统将选择列表中最先可用的字体来显示文字;</li>
+<li>因为规则1，通常在最末添加一个 generic-family 字体系列名，保证文字获得相似的显示效果;</li>
+<li>因为规则1，西文字体名应该写在中文字体前，这样才能中英文同时使用不同字体;</li>
+<li>字体名为中文或包含空格等时，需要加双引号””才能正确识别;</li>
+<li>中文字体建议也是用其对应英文字体名，如”微软雅黑”为”Microsoft YaHei”，以提高编码兼容性。</li>
+</ol>
+</blockquote>
+<h2 id="常见字体系列"><a href="#常见字体系列" class="headerlink" title="常见字体系列"></a>常见字体系列</h2><h3 id="Serif-衬线字体"><a href="#Serif-衬线字体" class="headerlink" title="Serif 衬线字体"></a>Serif 衬线字体</h3><ul>
+<li>Times New Roman, Georgia 和宋体都是很常见的衬线字体；</li>
+<li>特征: 文字笔划的开始或结束处有额外的装饰，笔划有粗细之分。</li>
+</ul>
+<p><img src="/resources/serif.png" alt="serif"></p>
+<h3 id="Sans-serif-无衬线字体"><a href="#Sans-serif-无衬线字体" class="headerlink" title="Sans-serif 无衬线字体"></a>Sans-serif 无衬线字体</h3><ul>
+<li>Arial, Verdana, Tahoma, 微软雅黑都是很常见的无衬线字体;</li>
+<li>说明: <code>sans-</code>源于法语前缀，意思为<code>没有</code>。Sans-serif 也就是指无衬线字体。</li>
+<li>特征: 字体比较圆滑，笔划较为均匀。</li>
+</ul>
+<p><img src="/resources/sans-serif.png" alt="sans-serif"></p>
+<ul>
+<li>字体选用: 有种说法是正文多用衬线字体，易于区分；标题多用无衬线字体。不过这个也看个人喜好，我更习惯正文用无衬线字体。如果实在不知道怎么选，随便找一个自己看着舒服的网站，套用它的字体样式好了。</li>
+</ul>
+<h3 id="Monospace-等宽字体"><a href="#Monospace-等宽字体" class="headerlink" title="Monospace 等宽字体"></a>Monospace 等宽字体</h3><ul>
+<li>Courier New, Consolas, Menlo 都是比较常见的等宽字体;</li>
+<li>特征: 字母、数字、空格以及其他符号所占宽度都一致。识别度高，易于对齐和定位，通常用于显示代码。</li>
+</ul>
+<p><img src="/resources/Monospace.png" alt="Monospace"></p>
+<ul>
+<li>一个优秀的代码字体除了等宽外，还应该能较好地区分出<code>0 o O i l 1 I &quot;&quot; &#39;&#39; [] () {}</code> 等字符。</li>
+</ul>
+<h3 id="Cursive-手写体"><a href="#Cursive-手写体" class="headerlink" title="Cursive 手写体"></a>Cursive 手写体</h3><ul>
+<li>Comic Sans, Author, 华文行楷都是比较常见的仿手写体;</li>
+<li>特征: 模仿人的手写体，笔划圆滑或者有连笔等装饰。英文的花体，中文的行书草书等都属于此类。</li>
+</ul>
+<p><img src="/resources/cursive.png" alt="cursive"></p>
+<h2 id="获取字体名称"><a href="#获取字体名称" class="headerlink" title="获取字体名称"></a>获取字体名称</h2><p>同一个字体在不同系统和应用中可能会显示为不同名字，但其内部一般有一个不变的英文名字。CSS font-family 需要引用的就是字体的内部名字。</p>
+<h3 id="本地字体"><a href="#本地字体" class="headerlink" title="本地字体"></a>本地字体</h3><ul>
+<li>Win 上通过搜索或控制面板进入字体文件夹，然后双击字体查看字体名称;</li>
+<li>通过软件，如记事本、Office 等也可以查看字体名字:</li>
+</ul>
+<p><img src="/resources/font-a1.png" alt="font-a1"></p>
+<ul>
+<li>Mac 上搜索打开字体册即可，中间一栏显示的就是字体名称:</li>
+</ul>
+<p><img src="/resources/font-a2.png" alt="font-a2"></p>
+<h3 id="网页字体"><a href="#网页字体" class="headerlink" title="网页字体"></a>网页字体</h3><ul>
+<li>审查元素，查看生效的 font-family:</li>
+</ul>
+<p><img src="/resources/font-a3.png" alt="font-a3"></p>
+<ul>
+<li>通过 Chrome 插件 <a href="http://chengyinliu.com/whatfont.html" target="_blank" rel="external">WhatFont</a>:</li>
+</ul>
+<p><img src="/resources/font-a4.png" alt="font-a4"></p>
+<h2 id="字体图标"><a href="#字体图标" class="headerlink" title="字体图标"></a>字体图标</h2><p>使用<code>@font-face</code>引入字体后，可以像使用文字那样，无损的控制图标的大小，颜色等样式。常见的有 Webdings，Wingdings, <a href="http://fontawesome.io/" target="_blank" rel="external">Font Awesome</a>.</p>
+<p><img src="/resources/font-icon.png" alt="font-icon"></p>
+<h2 id="备用记录"><a href="#备用记录" class="headerlink" title="备用记录"></a>备用记录</h2><h3 id="字体配置"><a href="#字体配置" class="headerlink" title="字体配置"></a>字体配置</h3><ul>
+<li>下面是自己目前比较常用的字体配置，通常按系列设置为 CSS 预处理器的变量，方便调用。</li>
+</ul>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//中文</span></span><br><span class="line"><span class="attribute">font</span>-chs = <span class="string">"Microsoft YaHei"</span>, <span class="string">"Hiragino Sans GB"</span>, <span class="string">"WenQuanYi Micro Hei"</span></span><br><span class="line"><span class="comment">//无衬线字体 sans-serif</span></span><br><span class="line"><span class="attribute">font</span>-sans = Verdana, <span class="string">"Helvetica Neue"</span>, Helvetica, Tahoma, Arial</span><br><span class="line"><span class="comment">//衬线字体 serif</span></span><br><span class="line"><span class="attribute">font</span>-serif = Times, Georgia</span><br><span class="line"><span class="comment">//等宽字体 monospace</span></span><br><span class="line"><span class="attribute">font</span>-mono = Menlo, Consolas, <span class="string">"Source Code Pro"</span>, Inconsolata, Monaco, <span class="string">"Courier New"</span></span><br></pre></td></tr></table></figure>
+<h3 id="字体英文名"><a href="#字体英文名" class="headerlink" title="字体英文名"></a>字体英文名</h3><ul>
+<li>一些常见中文字体的对应英文名。</li>
+</ul>
+<style>
+    .fa-apple {
+        color: #9d9e9d;
+    }
+    .fa-windows {
+        color: #4ca6e7;
+    }
+</style>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">-</th>
+<th>中文名</th>
+<th>英文名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td><i class="fa fa-apple"></i> 苹方</td>
+<td>PingFang SC</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td><i class="fa fa-apple"></i> 冬青黑/苹果丽黑</td>
+<td>Hiragino Sans GB</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td><i class="fa fa-apple"></i> 思源黑体</td>
+<td>Source Han Sans CN</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td><i class="fa fa-apple"></i> 华文细黑</td>
+<td>STHeiti Light [STXihei]</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td><i class="fa fa-apple"></i> 华文黑体</td>
+<td>ST Heiti</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td><i class="fa fa-apple"></i> 华文楷体</td>
+<td>STKaiti</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td><i class="fa fa-apple"></i> 华文宋体</td>
+<td>STSong</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td><i class="fa fa-apple"></i> 华文仿宋</td>
+<td>STFangsong</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td><i class="fa fa-apple"></i> 丽黑 Pro</td>
+<td>LiHei Pro Medium</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td><i class="fa fa-apple"></i> 丽宋 Pro</td>
+<td>LiSong Pro Light</td>
+</tr>
+<tr>
+<td style="text-align:center">11</td>
+<td><i class="fa fa-apple"></i> 标楷体</td>
+<td>BiauKai</td>
+</tr>
+<tr>
+<td style="text-align:center">12</td>
+<td><i class="fa fa-apple"></i> 苹果丽中黑</td>
+<td>Apple LiGothic Medium</td>
+</tr>
+<tr>
+<td style="text-align:center">13</td>
+<td><i class="fa fa-apple"></i> 苹果丽细宋</td>
+<td>Apple LiSung Light</td>
+</tr>
+<tr>
+<td style="text-align:center">14</td>
+<td><i class="fa fa-windows"></i> 新细明体</td>
+<td>PMingLiU</td>
+</tr>
+<tr>
+<td style="text-align:center">15</td>
+<td><i class="fa fa-windows"></i> 细明体</td>
+<td>MingLiU</td>
+</tr>
+<tr>
+<td style="text-align:center">16</td>
+<td><i class="fa fa-windows"></i> 标楷体</td>
+<td>DFKai-SB</td>
+</tr>
+<tr>
+<td style="text-align:center">17</td>
+<td><i class="fa fa-windows"></i> (中易)黑体</td>
+<td>SimHei</td>
+</tr>
+<tr>
+<td style="text-align:center">18</td>
+<td><i class="fa fa-windows"></i> 宋体</td>
+<td>SimSun</td>
+</tr>
+<tr>
+<td style="text-align:center">19</td>
+<td><i class="fa fa-windows"></i> 新宋体</td>
+<td>NSimSun</td>
+</tr>
+<tr>
+<td style="text-align:center">20</td>
+<td><i class="fa fa-windows"></i> 仿宋</td>
+<td>FangSong</td>
+</tr>
+<tr>
+<td style="text-align:center">21</td>
+<td><i class="fa fa-windows"></i> 楷体</td>
+<td>KaiTi</td>
+</tr>
+<tr>
+<td style="text-align:center">22</td>
+<td><i class="fa fa-windows"></i> 仿宋_GB2312</td>
+<td>FangSong_GB2312</td>
+</tr>
+<tr>
+<td style="text-align:center">23</td>
+<td><i class="fa fa-windows"></i> 楷体_GB2312</td>
+<td>KaiTi_GB2312</td>
+</tr>
+<tr>
+<td style="text-align:center">24</td>
+<td><i class="fa fa-windows"></i> 微软正黑体</td>
+<td>Microsoft JhengHei</td>
+</tr>
+<tr>
+<td style="text-align:center">25</td>
+<td><i class="fa fa-windows"></i> 微软雅黑</td>
+<td>Microsoft YaHei</td>
+</tr>
+<tr>
+<td style="text-align:center">26</td>
+<td><i class="fa fa-file-word-o"></i>  隶书</td>
+<td>LiSu</td>
+</tr>
+<tr>
+<td style="text-align:center">27</td>
+<td><i class="fa fa-file-word-o"></i>  幼圆</td>
+<td>YouYuan</td>
+</tr>
+<tr>
+<td style="text-align:center">28</td>
+<td><i class="fa fa-file-word-o"></i>  华文中宋</td>
+<td>STZhongsong</td>
+</tr>
+<tr>
+<td style="text-align:center">29</td>
+<td><i class="fa fa-file-word-o"></i>  方正舒体</td>
+<td>FZShuTi</td>
+</tr>
+<tr>
+<td style="text-align:center">30</td>
+<td><i class="fa fa-file-word-o"></i>  方正姚体</td>
+<td>FZYaoti</td>
+</tr>
+<tr>
+<td style="text-align:center">31</td>
+<td><i class="fa fa-file-word-o"></i>  华文彩云</td>
+<td>STCaiyun</td>
+</tr>
+<tr>
+<td style="text-align:center">32</td>
+<td><i class="fa fa-file-word-o"></i>  华文琥珀</td>
+<td>STHupo</td>
+</tr>
+<tr>
+<td style="text-align:center">33</td>
+<td><i class="fa fa-file-word-o"></i>  华文隶书</td>
+<td>STLiti</td>
+</tr>
+<tr>
+<td style="text-align:center">34</td>
+<td><i class="fa fa-file-word-o"></i>  华文行楷</td>
+<td>STXingkai</td>
+</tr>
+<tr>
+<td style="text-align:center">35</td>
+<td><i class="fa fa-file-word-o"></i>  华文新魏</td>
+<td>STXinwei</td>
+</tr>
+<tr>
+<td style="text-align:center">36</td>
+<td><i class="fa fa-linux"></i> 文泉驿微米黑</td>
+<td>Wenquanyi Micro Hei</td>
+</tr>
+<tr>
+<td style="text-align:center">37</td>
+<td><i class="fa fa-linux"></i> 文泉驿正黑</td>
+<td>WenQuanYi Zen Hei</td>
+</tr>
+<tr>
+<td style="text-align:center">38</td>
+<td><i class="fa fa-linux"></i> 文泉驿点阵正黑</td>
+<td>WenQuanYi Zen Hei Sharp</td>
+</tr>
+</tbody>
+</table>
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ol>
+<li><strong>Font Awesome</strong>: <a href="http://fontawesome.io/" target="_blank" rel="external">http://fontawesome.io/</a></li>
+<li><strong>Webdings和Wingdings字符码对应表</strong>: <a href="http://dwz.cn/2jOjYi" target="_blank" rel="external">http://dwz.cn/2jOjYi</a></li>
+<li><strong><em>CSS魔法堂：再次认识 font</em></strong> by <strong>肥仔John</strong> on <code>2015/3/3</code>: <a href="http://www.cnblogs.com/fsjohnhuang/p/4310533.html" target="_blank" rel="external">http://www.cnblogs.com/fsjohnhuang/p/4310533.html</a></li>
+<li><strong>有字库-中文在线字体</strong>: <a href="http://www.youziku.com/" target="_blank" rel="external">http://www.youziku.com/</a></li>
+<li><strong><em>谈谈网页设计中的字体应用 (2) serif 和 sans-serif</em></strong> by <strong>棕熊</strong> on <code>2008/5/6</code>: <a href="http://www.cnblogs.com/ruxpinsp1/archive/2008/05/06/font-in-front-end-development-2.html" target="_blank" rel="external">http://www.cnblogs.com/ruxpinsp1/archive/2008/05/06/font-in-front-end-development-2.html</a></li>
+<li><strong><em>Serif 和 Sans Serif 字体的区别</em></strong> by <strong>冰火九九</strong> on <code>2013/11/4</code>: <a href="http://blog.jobbole.com/50828/" target="_blank" rel="external">http://blog.jobbole.com/50828/</a></li>
+<li><strong><em>Chinese Web Font Guide</em></strong> by <strong>Kendra Schaefer</strong> on <code>2012/6/11</code>: <a href="http://www.kendraschaefer.com/2012/06/chinese-standard-web-fonts-the-ultimate-guide-to-css-font-family-declarations-for-web-design-in-simplified-chinese/" target="_blank" rel="external">http://www.kendraschaefer.com/2012/06/chinese-standard-web-fonts-the-ultimate-guide-to-css-font-family-declarations-for-web-design-in-simplified-chinese/</a></li>
+<li><strong>Fonts.css – 跨平台中文字体解决方案</strong>: <a href="http://zenozeng.github.io/fonts.css/" target="_blank" rel="external">http://zenozeng.github.io/fonts.css/</a></li>
+</ol>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2015/12/09/css-font-family/">CSS font-family 网页字体使用小结</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 MOxFIVE 的个人博客">MOxFIVE</a></p>
+        <p><span>发布时间:</span>2015-12-09, 00:33</p>
+        <p><span>最后更新:</span>2016-04-20, 11:52</p>
+        
+            <p>
+                <span>更新历史:</span><i class="fa fa-github"></i>
+                <a href="https://github.com/MOxFIVE/Markdown-Archives-Backup/blame/master/_posts/2015-12-09.css-font-family.md" title="顺序查看文章各部分修改记录" target = "_blank">Blame</a>,
+                <a href="https://github.com/MOxFIVE/Markdown-Archives-Backup/commits/master/_posts/2015-12-09.css-font-family.md" title="查看文章有关更新记录" target = "_blank">History</a><span class="raw">文本模式:</span><i class="fa fa-file-text-o"></i>
+                <a href="https://raw.githubusercontent.com/MOxFIVE/Markdown-Archives-Backup/master/_posts/2015-12-09.css-font-family.md" title="查看 & 下载文章 Markdown 原始文本" target = "_blank"> .md Raw</a>
+            </p>
+        
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2015/12/09/css-font-family/" title="CSS font-family 网页字体使用小结">http://MOxFIVE.xyz/2015/12/09/css-font-family/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://MOxFIVE.xyz/2015/12/09/css-font-family/　　作者: MOxFIVE" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+    
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2015/12/21/common-hexo-commands/">
+                    Hexo 最常用的几个命令
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2015/11/30/sublime-config/">
+                    Sublime Text 3 使用配置与插件安装
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+
+
+
+
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#intro"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本用法"><span class="toc-number">2.</span> <span class="toc-text">基本用法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用语法"><span class="toc-number">2.1.</span> <span class="toc-text">使用语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#语法说明"><span class="toc-number">2.2.</span> <span class="toc-text">语法说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见字体系列"><span class="toc-number">3.</span> <span class="toc-text">常见字体系列</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Serif-衬线字体"><span class="toc-number">3.1.</span> <span class="toc-text">Serif 衬线字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sans-serif-无衬线字体"><span class="toc-number">3.2.</span> <span class="toc-text">Sans-serif 无衬线字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Monospace-等宽字体"><span class="toc-number">3.3.</span> <span class="toc-text">Monospace 等宽字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cursive-手写体"><span class="toc-number">3.4.</span> <span class="toc-text">Cursive 手写体</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取字体名称"><span class="toc-number">4.</span> <span class="toc-text">获取字体名称</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#本地字体"><span class="toc-number">4.1.</span> <span class="toc-text">本地字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网页字体"><span class="toc-number">4.2.</span> <span class="toc-text">网页字体</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字体图标"><span class="toc-number">5.</span> <span class="toc-text">字体图标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#备用记录"><span class="toc-number">6.</span> <span class="toc-text">备用记录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#字体配置"><span class="toc-number">6.1.</span> <span class="toc-text">字体配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字体英文名"><span class="toc-number">6.2.</span> <span class="toc-text">字体英文名</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相关链接"><span class="toc-number">7.</span> <span class="toc-text">相关链接</span></a></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+
+</script>
+
+
+
+
+
+    
+    <div class="share">
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"CSS font-family 网页字体使用小结　| MOxFIVE's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    </div>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2015/12/09/css-font-family/" data-title="CSS font-family 网页字体使用小结" data-url="http://MOxFIVE.xyz/2015/12/09/css-font-family/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"moxfive"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '//moxfive.xyz/resources/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2015/12/21/common-hexo-commands/" title="上一篇: Hexo 最常用的几个命令">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2015/11/30/sublime-config/" title="下一篇: Sublime Text 3 使用配置与插件安装">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/05/17/image-compression/">关于 Yelee 主题背景图的压缩与优化</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/public-dns/">几个国内专用的公共 DNS</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/20/baidu-share-fontawesome/">在百度分享中使用 Font Awesome 图标</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/18/text-overflow-ellipsis/">CSS 设置文本省略 ellipsis (…)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/27/hexo-browsersync/">Hexo 页面自动刷新与移动端调试</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/04/markdown-table-style/">Markdown 表格样式调整与自适应优化</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/16/front-end-tools/">前端工程化工具初选</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/10/hexo-post-version-control/">关联 GitHub, 让 Hexo 支持查看文章更新历史</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/02/hexo-comments/">为 Hexo 主题添加评论模块 — Disqus, 多说, 友言</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/01/hexo-config-true-false/">关于 Hexo 配置文件中的 true 和 false</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/22/anki-excel-shortcuts/">Anki 记忆库之 Excel 快捷键大全</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/21/common-hexo-commands/">Hexo 最常用的几个命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/09/css-font-family/">CSS font-family 网页字体使用小结</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/30/sublime-config/">Sublime Text 3 使用配置与插件安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/23/anki-templates/">Anki 自用卡片模板分享</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/23/git-command/">Git 基础命令与相关术语</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/16/png-gif-transparency/">制作透明背景 PNG 图片和 GIF 动图的几种方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/09/web-style-guide/">Web Style Guide 前端代码规范</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/04/hexo-deployment/">将 Hexo 博客部署到 GitHub Pages</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/31/excel-markdown-table/">用 Excel 生成和管理 Markdown 表格</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/25/hexo-tag-cloud/">让 Hexo 自动生成 Tag Cloud 标签云页面</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/16/hexo-404-page/">在 Hexo 中创建匹配主题的404页面</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/09/29/duoshuo-style/">多说样式折腾记录 — 添加 UA 浏览器标识、旋转头像等</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/09/20/windows-mac-software/">自用 Windows 和 Mac 软件推荐</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/30/EndNote-Markdown/">EndNote 与 Markdown 结合 — 为网文快速添加 Reference</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/28/Front-End-Study/">个人 Web 前端学习路线</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/20/blog-building/">个人博客站点建设历程</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/19/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2015-2016 MOxFIVE
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题">Yelee</a><span> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >本站到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+    <script src="/js/GithubRepoWidget.js"></script>
+
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.1.22/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+    <script src="//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
