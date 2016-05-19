@@ -108,6 +108,13 @@ define([], function(){
             touchEndTime = 0;
         }, false);
 
+        $(".slider-trigger").click(function(){
+            show();
+        })
+        $(".viewer-box-r").click(function(){
+            hide();
+        })
+
         //滚动样式
         var $overlay = $("#mobile-nav .overlay");
         var $header = $(".js-mobile-header");
