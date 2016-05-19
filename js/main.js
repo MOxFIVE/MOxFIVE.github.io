@@ -56,7 +56,7 @@ require([], function (){
     resetTags = function(){
         var tags = $(".tagcloud a");
         for(var i = 0; i < tags.length; i++){
-            var num = parseInt(7*Math.random());
+            var num = Math.floor(Math.random()*7);
             tags.eq(i).addClass("color" + num);
         };
         $(".article-category a:nth-child(-n+2)").attr("class", "color0");
@@ -78,7 +78,6 @@ require([], function (){
                     var height = imgArr.eq(i).attr("height");
                     imgArr.eq(i).replaceWith("<a href='"+src+"' title='"+title+"' rel='fancy-group' class='fancy-ctn fancybox'><img src='"+src+"' width="+width+" height="+height+" title='"+title+"' alt='"+title+"'></a>");
                 }
-
                 $(".article-inner .fancy-ctn").fancybox();
             }
         });
@@ -136,12 +135,14 @@ require([], function (){
               // safari不支持requestAnimationFrame不支持document.documentElement的onscroll所以这里不会执行
               // 初始状态设为opacity: 0, 动画效果更平滑一些(由于脚本加载是异步，页面元素渲染后在执行动画，感觉像是延时)
               $(domEl).addClass('animated ' + randomAnimationName).css({opacity: 1});
-              }
-            }).reveal(animateScope);
+            }
+          }).reveal(animateScope);
+
         });
       } else {
         $('.body-wrap > article').css({opacity: 1});
       }
+
     }
 
     //是否新窗口打开链接
@@ -176,16 +177,6 @@ require([], function (){
             });
         });
     }
-
-    // text-block
-    $(document).ready(function() {
-        var highlight = {
-            background: $(".article-entry .highlight").css("background"),
-            foreground: $(".article-entry .highlight").css("color")
-        }
-        $(".article-entry > pre").css("background-color", highlight.background);
-        $(".article-entry > pre code").css("color", highlight.foreground);
-    });
 
     // Task lists in markdown
     $('ul > li').each(function() {
