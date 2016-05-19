@@ -153,6 +153,16 @@ define([], function(){
                     duration: 70,
                 }
             })
+            $(".ds-recent-visitors").tooltip({
+                show: null,
+                position: {
+                my: "left top",
+                at: "left bottom"
+                },
+                open: function( event, ui ) {
+                    ui.tooltip.animate({ top: ui.tooltip.position().top + 6 }, 300 );
+                }
+            });
         });
     }
 

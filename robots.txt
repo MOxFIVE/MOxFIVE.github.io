@@ -1,0 +1,14 @@
+User-agent: *
+Disallow: /resources
+Disallow: /404
+Disallow: /404/index.html
+Disallow: /about/index.html
+Disallow: /background
+Sitemap: /sitemap.xml
+Disallow: /css
+Disallow: /fancybox
+Disallow: /img
+Disallow: /js
+Disallow: /search
+Disallow: /search/index.html
+Disallow: /index.html
