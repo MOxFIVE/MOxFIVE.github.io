@@ -6,9 +6,9 @@ Disallow: /about/index.html
 Disallow: /background
 Sitemap: /sitemap.xml
 Disallow: /css
-Disallow: /fancybox
 Disallow: /img
 Disallow: /js
 Disallow: /search
 Disallow: /search/index.html
 Disallow: /index.html
+Disallow: /search.xml

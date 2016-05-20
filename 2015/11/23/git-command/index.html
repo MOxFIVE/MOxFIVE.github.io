@@ -99,7 +99,13 @@
         
         <p class="header-subtitle">迈入新世界，为了成为独当一面的 Web 前端工程师！</p>
         
-                
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="search..." class="search form-control" oninput="HideTocArea()" autocomplete="off" onkeydown="if(event.keyCode==13) return false;"/>
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+        
 
 
         
@@ -647,6 +653,7 @@
     <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
     <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
+<script src="/js/search.js"></script> 
 
     <script src="//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
