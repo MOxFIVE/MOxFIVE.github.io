@@ -1174,6 +1174,11 @@ ul > li::before,
   font-weight: bold;
   color: #708090;
 }
+#local-search-result > p {
+  margin: 2em 0 2.5em 10%;
+  color: #f58e90;
+  font-family: Times, Georgia serif;
+}
 #local-search-result p.search-result {
   margin: 0.4em auto;
   line-height: 1.2rem;
