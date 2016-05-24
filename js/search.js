@@ -80,11 +80,15 @@ var searchFunc = function(path, search_id, content_id) {
                             
                             str += "<p class=\"search-result\">" + match_content +"...</p>"
                         }
-                        str += "</li>";
+                        $resultContent.innerHTML = str;
+                    } else {
+                        /*$resultContent.innerHTML = "<p>No Results Found <i class='fa fa-undo fa-spin'>";*/
+                        
+                        /*var NoFound = "No Results Found <i class='fa fa-undo fa-spin'>";
+                        $(".no-result").html(NoFound);*/
                     }
+                    
                 });
-                str += "</ul>";
-                $resultContent.innerHTML = str;
             });
         }
     });
