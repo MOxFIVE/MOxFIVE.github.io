@@ -1181,6 +1181,7 @@ ul > li::before,
   overflow: hidden;
   font-size: 0.8rem;
   text-align: justify;
+  color: #808080;
 }
 #local-search-result em.search-keyword {
   border-bottom: 1px dashed #f58e90;
