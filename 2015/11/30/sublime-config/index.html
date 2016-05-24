@@ -62,7 +62,8 @@
           isCategory: false,
           open_in_new: false,
           fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
-          scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js"
+          scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+          search: true
       }
   </script>
 
@@ -102,7 +103,7 @@
         
         
             <form id="search-form">
-            <input type="text" id="local-search-input" name="q" results="0" placeholder="search..." class="search form-control" oninput="HideTocArea()" autocomplete="off" onkeydown="if(event.keyCode==13) return false;"/>
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="search..." class="search form-control" autocomplete="off" searchonload="true" />
             <i class="fa fa-times" onclick="resetSearch()"></i>
             </form>
             <div id="local-search-result"></div>
