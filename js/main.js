@@ -240,7 +240,6 @@ if (yiliaConfig.search && getFileOnload === "true") {
     inputArea.onfocus = function(){ getSearchFile() }
 }
 
-
 var HideTocArea = function(){
     $HideWhenSearch.css("visibility","hidden");
     $resetButton.show();
