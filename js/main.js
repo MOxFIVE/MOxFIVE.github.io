@@ -253,6 +253,7 @@ var resetSearch = function(){
     $resultArea.html("");
     document.querySelector("#search-form").reset();
     $resetButton.hide();
+    $(".no-result").hide(200);
 }
 
 $resultArea.bind("DOMNodeRemoved DOMNodeInserted", function(e) {
