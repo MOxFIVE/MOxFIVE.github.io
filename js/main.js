@@ -226,6 +226,7 @@ require([], function (){
 var inputArea = document.querySelector("#local-search-input");
 var $HideWhenSearch = $("#toc, #tocButton, .post-list, #post-nav-button a:nth-child(2)");
 var $resetButton = $("#search-form .fa-times");
+var $resultArea = $("#local-search-result");
 
 var getSearchFile = function(){
     var search_path = "search.xml";
@@ -249,11 +250,18 @@ inputArea.onkeydown = function(){ if(event.keyCode==13) return false}
 
 var resetSearch = function(){
     $HideWhenSearch.css("visibility","initial");
-    $("#local-search-result").html("");
+    $resultArea.html("");
     document.querySelector("#search-form").reset();
     $resetButton.hide();
 }
 
+$resultArea.bind("DOMNodeRemoved DOMNodeInserted", function(e) {
+    if (!$(e.target).text()) {
+        $(".no-result").show(200);
+    } else {
+      $(".no-result").hide();
+    }
+});
 
 /*var autoKeyword = [
   "Hexo",

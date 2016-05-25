@@ -1174,11 +1174,6 @@ ul > li::before,
   font-weight: bold;
   color: #708090;
 }
-#local-search-result > p {
-  margin: 2em 0 2.5em 10%;
-  color: #f58e90;
-  font-family: Times, Georgia serif;
-}
 #local-search-result p.search-result {
   margin: 0.4em auto;
   line-height: 1.2rem;
@@ -1193,6 +1188,15 @@ ul > li::before,
   color: #f58e90;
   font-weight: bold;
   font-size: 0.85rem;
+}
+p.no-result {
+  display: none;
+  margin: 2em 0 2em 6%;
+  padding-bottom: 0.5em;
+  text-align: left;
+  color: #808080;
+  font-family: Times, Georgia serif;
+  border-bottom: 2px solid #d3d3d3;
 }
 .archives-wrap {
   position: relative;
