@@ -112,6 +112,14 @@ define([], function(){
     if (yiliaConfig.jquery_ui[0]) {
         var tooltip = function(){
             require([yiliaConfig.jquery_ui[1]], function(){
+                var includeLinkStyle = function (url, num) {
+                    var link = document.createElement("link");
+                    link.rel = "stylesheet";
+                    link.href = url;
+                    var head = document.querySelector("head");
+                    head.insertBefore(link, head.childNodes[num]);
+                }
+                includeLinkStyle(yiliaConfig.jquery_ui[2], 25);
                 if (!$().tooltip) return;
                 if (navigator.userAgent.match(/(iPhone|iPad|Android|ios|PlayBook|Touch)/i)) return;
                 $("[title]").tooltip({
