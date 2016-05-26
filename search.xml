@@ -3325,7 +3325,19 @@
 <li>改动和尝试中参考的主要资源都做了 <a href="">链接跳转</a> 并在文末列出；    </li>
 <li><a href="">[G]</a>: 表示该项的具体修改已 commit 提交到 <a href="https://github.com/MOxFIVE" title="MOxFIVE&#39;s GitHub" target="_blank" rel="external">GitHub</a>，点击即可查看；</li>
 </ul>
-<h2 id="2016-年-5-月"><a href="#2016-年-5-月" class="headerlink" title="2016 年 5 月"></a>2016 年 5 月</h2><h3 id="05-23-IE-升级提示"><a href="#05-23-IE-升级提示" class="headerlink" title="05-23 IE 升级提示"></a>05-23 IE 升级提示</h3><blockquote>
+<h2 id="2016-年-5-月"><a href="#2016-年-5-月" class="headerlink" title="2016 年 5 月"></a>2016 年 5 月</h2><h3 id="05-26-代码优化"><a href="#05-26-代码优化" class="headerlink" title="05-26 代码优化"></a>05-26 代码优化</h3><blockquote>
+<ul>
+<li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/07e495813917d7db8cec5b5e2c96ca1d8154ffcb" title="fix: load jQuery UI until it is needed" target="_blank" rel="external">[G]</a> 移动端不再加载多余的 jQuery UI, 首屏加载小了 100k；</li>
+<li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/9065e15cb9892181786d53ee43c1635236c7f761" title="fix: miniArchives button" target="_blank" rel="external">[G]</a> 修复迷你归档按钮切换问题。以前选择器选得太笼统了；</li>
+<li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/6242ff752356e7ecef205caf558481b5a19bb497" title="update: jQuery 2.2.4, RequireJS 2.2.0, Font Awesome 4.6.3 ..." target="_blank" rel="external">[G]</a> 升级依赖版本。因为不会去兼容 IE6-8，所以 jQuery 直接升到了 2.2.4。</li>
+</ul>
+</blockquote>
+<h3 id="05-25-本地搜索"><a href="#05-25-本地搜索" class="headerlink" title="05-25 本地搜索"></a>05-25 本地搜索</h3><blockquote>
+<ul>
+<li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/0280f6a17d1a0fa1f52056856082e022dfac220c" title="feat: Local Site Search | 本地站内搜索" target="_blank" rel="external">[G]</a> 添加本地站内搜索功能。配置基本完善，再装个插件就能用，终于不用再折腾各种第三方搜索服务了。</li>
+</ul>
+</blockquote>
+<h3 id="05-23-IE-升级提示"><a href="#05-23-IE-升级提示" class="headerlink" title="05-23 IE 升级提示"></a>05-23 IE 升级提示</h3><blockquote>
 <ul>
 <li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/7814a79f11b824182a49762bd48c2481c0b0ac92" title="refactor: Update Reminder for IE6/7/8" target="_blank" rel="external">[G]</a> 现在使用 IE6/7/8 访问博客时将跳转的指定的页面；</li>
 </ul>
