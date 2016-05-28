@@ -3327,6 +3327,11 @@
 </ul>
 <h2 id="2016-年-5-月"><a href="#2016-年-5-月" class="headerlink" title="2016 年 5 月"></a>2016 年 5 月</h2><h3 id="05-26-代码优化"><a href="#05-26-代码优化" class="headerlink" title="05-26 代码优化"></a>05-26 代码优化</h3><blockquote>
 <ul>
+<li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/7c57db8257868274e2d1ec1610b33ccb83276ed3" title="fix: local search fails to load when tooltip is disable" target="_blank" rel="external">[G]</a> 修复未启用 jQuery UI 时搜索功能会失效的问题。</li>
+</ul>
+</blockquote>
+<h3 id="05-26-代码优化-1"><a href="#05-26-代码优化-1" class="headerlink" title="05-26 代码优化"></a>05-26 代码优化</h3><blockquote>
+<ul>
 <li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/07e495813917d7db8cec5b5e2c96ca1d8154ffcb" title="fix: load jQuery UI until it is needed" target="_blank" rel="external">[G]</a> 移动端不再加载多余的 jQuery UI, 首屏加载小了 100k；</li>
 <li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/9065e15cb9892181786d53ee43c1635236c7f761" title="fix: miniArchives button" target="_blank" rel="external">[G]</a> 修复迷你归档按钮切换问题。以前选择器选得太笼统了；</li>
 <li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/6242ff752356e7ecef205caf558481b5a19bb497" title="update: jQuery 2.2.4, RequireJS 2.2.0, Font Awesome 4.6.3 ..." target="_blank" rel="external">[G]</a> 升级依赖版本。因为不会去兼容 IE6-8，所以 jQuery 直接升到了 2.2.4。</li>

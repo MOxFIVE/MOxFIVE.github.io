@@ -107,7 +107,7 @@ define([], function(){
                 }
             });
         }
-    }
+    }()
 
     if (yiliaConfig.jquery_ui[0]) {
         var tooltip = function(){
@@ -172,7 +172,7 @@ define([], function(){
                     }
                 });
             })
-        }
+        }()
     }
 
     var search = function(){
@@ -218,16 +218,13 @@ define([], function(){
                 }
             })
         });
-    }
+    }()
 
     return {
         init: function(){
             resetTags();
             bind();
             Tips.init();
-            miniArchives();
-            tooltip();
-            search();
         }
     }
 });
