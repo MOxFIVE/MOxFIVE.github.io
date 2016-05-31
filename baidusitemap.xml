@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://MOxFIVE.xyz/2016/05/31/hexo-local-search/</loc>
+    <lastmod>2016-05-31T09:00:33.202Z</lastmod>
+    <data>
+        <display>
+        <title>让 Hexo 博客支持本地站内搜索</title>
+        <pubTime>2016-05-31T05:50:19.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>Hexo</tag>
+         
+        <tag>jQuery</tag>
+         
+         
+           
+             
+              <breadCrumb title="术业专攻" url="http://MOxFIVE.xyz/categories/%E6%9C%AF%E4%B8%9A%E4%B8%93%E6%94%BB/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://MOxFIVE.xyz/2015/08/20/blog-building/</loc>
     <lastmod>2016-05-28T14:42:48.788Z</lastmod>
     <data>
@@ -23,9 +47,9 @@
          
         <tag>GitHub</tag>
          
-        <tag>WordPress</tag>
-         
         <tag>jQuery</tag>
+         
+        <tag>WordPress</tag>
          
          
            
