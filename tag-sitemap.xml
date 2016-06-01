@@ -156,6 +156,13 @@
     </url>
 
     <url>
+        <loc>http://MOxFIVE.xyz/tags/Markdown/</loc>
+        <lastmod>2016-05-28T14:42:48.788Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://MOxFIVE.xyz/tags/HTML/</loc>
         <lastmod>2016-05-28T14:42:48.788Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -164,13 +171,6 @@
 
     <url>
         <loc>http://MOxFIVE.xyz/tags/CSS/</loc>
-        <lastmod>2016-05-28T14:42:48.788Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://MOxFIVE.xyz/tags/Markdown/</loc>
         <lastmod>2016-05-28T14:42:48.788Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
