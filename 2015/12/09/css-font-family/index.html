@@ -13,6 +13,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="format-detection" content="telephone=no" />
 <meta name="author" content="MOxFIVE" />
+<meta name="theme-color" content="#88acdb">
+
+<meta name="viewport" content="uc-fitscreen=yes">
+<meta name="layoutmode" content="standard">
+
+<meta name="google" value="notranslate">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -361,293 +368,324 @@
       
       
           
-        <p></p><h2 id="intro">前言</h2>一直到最近才开始调整博客的字体，之前都是全站微软雅黑了事。慢慢调整后发现 font-family 这个属性相关的知识还是不少的，整理一下常用的部分，分享于此。<p></p>
+        <p>
+    </p><h2 id="intro">前言</h2>一直到最近才开始调整博客的字体，之前都是全站微软雅黑了事。慢慢调整后发现 font-family 这个属性相关的知识还是不少的，整理一下常用的部分，分享于此。<p></p>
 <a id="more"></a>
-<h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><h3 id="使用语法"><a href="#使用语法" class="headerlink" title="使用语法"></a>使用语法</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">font-family</span>: 字体名1, 字体名2, 字体名<span class="selector-tag">n</span>, 字体系列名;</span><br><span class="line"><span class="selector-tag">font-family</span>: <span class="selector-tag">Verdana</span>, <span class="selector-tag">Helvetica</span>, "<span class="selector-tag">Microsoft</span> <span class="selector-tag">YaHei</span>", <span class="selector-tag">Arial</span>;</span><br></pre></td></tr></table></figure>
-<h3 id="语法说明"><a href="#语法说明" class="headerlink" title="语法说明"></a>语法说明</h3><blockquote>
-<ol>
-<li>系统将选择列表中最先可用的字体来显示文字;</li>
-<li>因为规则1，通常在最末添加一个 generic-family 字体系列名，保证文字获得相似的显示效果;</li>
-<li>因为规则1，西文字体名应该写在中文字体前，这样才能中英文同时使用不同字体;</li>
-<li>字体名为中文或包含空格等时，需要加双引号””才能正确识别;</li>
-<li>中文字体建议也是用其对应英文字体名，如”微软雅黑”为”Microsoft YaHei”，以提高编码兼容性。</li>
-</ol>
+<h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2>
+<h3 id="使用语法"><a href="#使用语法" class="headerlink" title="使用语法"></a>使用语法</h3>
+<figure class="highlight css">
+    <table>
+        <tr>
+            <td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td>
+            <td class="code"><pre><span class="line"><span class="selector-tag">font-family</span>: 字体名1, 字体名2, 字体名<span class="selector-tag">n</span>, 字体系列名;</span><br><span class="line"><span class="selector-tag">font-family</span>: <span class="selector-tag">Verdana</span>, <span class="selector-tag">Helvetica</span>, "<span class="selector-tag">Microsoft</span> <span class="selector-tag">YaHei</span>", <span class="selector-tag">Arial</span>;</span><br></pre></td>
+        </tr>
+    </table>
+</figure>
+<h3 id="语法说明"><a href="#语法说明" class="headerlink" title="语法说明"></a>语法说明</h3>
+<blockquote>
+    <ol>
+        <li>系统将选择列表中最先可用的字体来显示文字;</li>
+        <li>因为规则1，通常在最末添加一个 generic-family 字体系列名，保证文字获得相似的显示效果;</li>
+        <li>因为规则1，西文字体名应该写在中文字体前，这样才能中英文同时使用不同字体;</li>
+        <li>字体名为中文或包含空格等时，需要加双引号””才能正确识别;</li>
+        <li>中文字体建议也是用其对应英文字体名，如”微软雅黑”为”Microsoft YaHei”，以提高编码兼容性。</li>
+    </ol>
 </blockquote>
-<h2 id="常见字体系列"><a href="#常见字体系列" class="headerlink" title="常见字体系列"></a>常见字体系列</h2><h3 id="Serif-衬线字体"><a href="#Serif-衬线字体" class="headerlink" title="Serif 衬线字体"></a>Serif 衬线字体</h3><ul>
-<li>Times New Roman, Georgia 和宋体都是很常见的衬线字体；</li>
-<li>特征: 文字笔划的开始或结束处有额外的装饰，笔划有粗细之分。</li>
+<h2 id="常见字体系列"><a href="#常见字体系列" class="headerlink" title="常见字体系列"></a>常见字体系列</h2>
+<h3 id="Serif-衬线字体"><a href="#Serif-衬线字体" class="headerlink" title="Serif 衬线字体"></a>Serif 衬线字体</h3>
+<ul>
+    <li>Times New Roman, Georgia 和宋体都是很常见的衬线字体；</li>
+    <li>特征: 文字笔划的开始或结束处有额外的装饰，笔划有粗细之分。</li>
 </ul>
 <p><img src="/resources/serif.png" alt="serif"></p>
-<h3 id="Sans-serif-无衬线字体"><a href="#Sans-serif-无衬线字体" class="headerlink" title="Sans-serif 无衬线字体"></a>Sans-serif 无衬线字体</h3><ul>
-<li>Arial, Verdana, Tahoma, 微软雅黑都是很常见的无衬线字体;</li>
-<li>说明: <code>sans-</code>源于法语前缀，意思为<code>没有</code>。Sans-serif 也就是指无衬线字体。</li>
-<li>特征: 字体比较圆滑，笔划较为均匀。</li>
+<h3 id="Sans-serif-无衬线字体"><a href="#Sans-serif-无衬线字体" class="headerlink" title="Sans-serif 无衬线字体"></a>Sans-serif 无衬线字体</h3>
+<ul>
+    <li>Arial, Verdana, Tahoma, 微软雅黑都是很常见的无衬线字体;</li>
+    <li>说明: <code>sans-</code>源于法语前缀，意思为<code>没有</code>。Sans-serif 也就是指无衬线字体。</li>
+    <li>特征: 字体比较圆滑，笔划较为均匀。</li>
 </ul>
 <p><img src="/resources/sans-serif.png" alt="sans-serif"></p>
 <ul>
-<li>字体选用: 有种说法是正文多用衬线字体，易于区分；标题多用无衬线字体。不过这个也看个人喜好，我更习惯正文用无衬线字体。如果实在不知道怎么选，随便找一个自己看着舒服的网站，套用它的字体样式好了。</li>
+    <li>字体选用: 有种说法是正文多用衬线字体，易于区分；标题多用无衬线字体。不过这个也看个人喜好，我更习惯正文用无衬线字体。如果实在不知道怎么选，随便找一个自己看着舒服的网站，套用它的字体样式好了。</li>
 </ul>
-<h3 id="Monospace-等宽字体"><a href="#Monospace-等宽字体" class="headerlink" title="Monospace 等宽字体"></a>Monospace 等宽字体</h3><ul>
-<li>Courier New, Consolas, Menlo 都是比较常见的等宽字体;</li>
-<li>特征: 字母、数字、空格以及其他符号所占宽度都一致。识别度高，易于对齐和定位，通常用于显示代码。</li>
+<h3 id="Monospace-等宽字体"><a href="#Monospace-等宽字体" class="headerlink" title="Monospace 等宽字体"></a>Monospace 等宽字体</h3>
+<ul>
+    <li>Courier New, Consolas, Menlo 都是比较常见的等宽字体;</li>
+    <li>特征: 字母、数字、空格以及其他符号所占宽度都一致。识别度高，易于对齐和定位，通常用于显示代码。</li>
 </ul>
 <p><img src="/resources/Monospace.png" alt="Monospace"></p>
 <ul>
-<li>一个优秀的代码字体除了等宽外，还应该能较好地区分出<code>0 o O i l 1 I &quot;&quot; &#39;&#39; [] () {}</code> 等字符。</li>
+    <li>一个优秀的代码字体除了等宽外，还应该能较好地区分出<code>0 o O i l 1 I &quot;&quot; &#39;&#39; [] () {}</code> 等字符。</li>
 </ul>
-<h3 id="Cursive-手写体"><a href="#Cursive-手写体" class="headerlink" title="Cursive 手写体"></a>Cursive 手写体</h3><ul>
-<li>Comic Sans, Author, 华文行楷都是比较常见的仿手写体;</li>
-<li>特征: 模仿人的手写体，笔划圆滑或者有连笔等装饰。英文的花体，中文的行书草书等都属于此类。</li>
+<h3 id="Cursive-手写体"><a href="#Cursive-手写体" class="headerlink" title="Cursive 手写体"></a>Cursive 手写体</h3>
+<ul>
+    <li>Comic Sans, Author, 华文行楷都是比较常见的仿手写体;</li>
+    <li>特征: 模仿人的手写体，笔划圆滑或者有连笔等装饰。英文的花体，中文的行书草书等都属于此类。</li>
 </ul>
 <p><img src="/resources/cursive.png" alt="cursive"></p>
-<h2 id="获取字体名称"><a href="#获取字体名称" class="headerlink" title="获取字体名称"></a>获取字体名称</h2><p>同一个字体在不同系统和应用中可能会显示为不同名字，但其内部一般有一个不变的英文名字。CSS font-family 需要引用的就是字体的内部名字。</p>
-<h3 id="本地字体"><a href="#本地字体" class="headerlink" title="本地字体"></a>本地字体</h3><ul>
-<li>Win 上通过搜索或控制面板进入字体文件夹，然后双击字体查看字体名称;</li>
-<li>通过软件，如记事本、Office 等也可以查看字体名字:</li>
+<h2 id="获取字体名称"><a href="#获取字体名称" class="headerlink" title="获取字体名称"></a>获取字体名称</h2>
+<p>同一个字体在不同系统和应用中可能会显示为不同名字，但其内部一般有一个不变的英文名字。CSS font-family 需要引用的就是字体的内部名字。</p>
+<h3 id="本地字体"><a href="#本地字体" class="headerlink" title="本地字体"></a>本地字体</h3>
+<ul>
+    <li>Win 上通过搜索或控制面板进入字体文件夹，然后双击字体查看字体名称;</li>
+    <li>通过软件，如记事本、Office 等也可以查看字体名字:</li>
 </ul>
 <p><img src="/resources/font-a1.png" alt="font-a1"></p>
 <ul>
-<li>Mac 上搜索打开字体册即可，中间一栏显示的就是字体名称:</li>
+    <li>Mac 上搜索打开字体册即可，中间一栏显示的就是字体名称:</li>
 </ul>
 <p><img src="/resources/font-a2.png" alt="font-a2"></p>
-<h3 id="网页字体"><a href="#网页字体" class="headerlink" title="网页字体"></a>网页字体</h3><ul>
-<li>审查元素，查看生效的 font-family:</li>
+<h3 id="网页字体"><a href="#网页字体" class="headerlink" title="网页字体"></a>网页字体</h3>
+<ul>
+    <li>审查元素，查看生效的 font-family:</li>
 </ul>
 <p><img src="/resources/font-a3.png" alt="font-a3"></p>
 <ul>
-<li>通过 Chrome 插件 <a href="http://chengyinliu.com/whatfont.html" target="_blank" rel="external">WhatFont</a>:</li>
+    <li>通过 Chrome 插件 <a href="http://chengyinliu.com/whatfont.html" target="_blank" rel="external">WhatFont</a>:</li>
 </ul>
 <p><img src="/resources/font-a4.png" alt="font-a4"></p>
-<h2 id="字体图标"><a href="#字体图标" class="headerlink" title="字体图标"></a>字体图标</h2><p>使用<code>@font-face</code>引入字体后，可以像使用文字那样，无损的控制图标的大小，颜色等样式。常见的有 Webdings，Wingdings, <a href="http://fontawesome.io/" target="_blank" rel="external">Font Awesome</a>.</p>
+<h2 id="字体图标"><a href="#字体图标" class="headerlink" title="字体图标"></a>字体图标</h2>
+<p>使用<code>@font-face</code>引入字体后，可以像使用文字那样，无损的控制图标的大小，颜色等样式。常见的有 Webdings，Wingdings, <a href="http://fontawesome.io/" target="_blank" rel="external">Font Awesome</a>.</p>
 <p><img src="/resources/font-icon.png" alt="font-icon"></p>
-<h2 id="备用记录"><a href="#备用记录" class="headerlink" title="备用记录"></a>备用记录</h2><h3 id="字体配置"><a href="#字体配置" class="headerlink" title="字体配置"></a>字体配置</h3><ul>
-<li>下面是自己目前比较常用的字体配置，通常按系列设置为 CSS 预处理器的变量，方便调用。</li>
+<h2 id="备用记录"><a href="#备用记录" class="headerlink" title="备用记录"></a>备用记录</h2>
+<h3 id="字体配置"><a href="#字体配置" class="headerlink" title="字体配置"></a>字体配置</h3>
+<ul>
+    <li>下面是自己目前比较常用的字体配置，通常按系列设置为 CSS 预处理器的变量，方便调用。</li>
 </ul>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//中文</span></span><br><span class="line"><span class="attribute">font</span>-chs = <span class="string">"Microsoft YaHei"</span>, <span class="string">"Hiragino Sans GB"</span>, <span class="string">"WenQuanYi Micro Hei"</span></span><br><span class="line"><span class="comment">//无衬线字体 sans-serif</span></span><br><span class="line"><span class="attribute">font</span>-sans = Verdana, <span class="string">"Helvetica Neue"</span>, Helvetica, Tahoma, Arial</span><br><span class="line"><span class="comment">//衬线字体 serif</span></span><br><span class="line"><span class="attribute">font</span>-serif = Times, Georgia</span><br><span class="line"><span class="comment">//等宽字体 monospace</span></span><br><span class="line"><span class="attribute">font</span>-mono = Menlo, Consolas, <span class="string">"Source Code Pro"</span>, Inconsolata, Monaco, <span class="string">"Courier New"</span></span><br></pre></td></tr></table></figure>
-<h3 id="字体英文名"><a href="#字体英文名" class="headerlink" title="字体英文名"></a>字体英文名</h3><ul>
-<li>一些常见中文字体的对应英文名。</li>
+<figure class="highlight stylus">
+    <table>
+        <tr>
+            <td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td>
+            <td class="code"><pre><span class="line"><span class="comment">//中文</span></span><br><span class="line"><span class="attribute">font</span>-chs = <span class="string">"Microsoft YaHei"</span>, <span class="string">"Hiragino Sans GB"</span>, <span class="string">"WenQuanYi Micro Hei"</span></span><br><span class="line"><span class="comment">//无衬线字体 sans-serif</span></span><br><span class="line"><span class="attribute">font</span>-sans = Verdana, <span class="string">"Helvetica Neue"</span>, Helvetica, Tahoma, Arial</span><br><span class="line"><span class="comment">//衬线字体 serif</span></span><br><span class="line"><span class="attribute">font</span>-serif = Times, Georgia</span><br><span class="line"><span class="comment">//等宽字体 monospace</span></span><br><span class="line"><span class="attribute">font</span>-mono = Menlo, Consolas, <span class="string">"Source Code Pro"</span>, Inconsolata, Monaco, <span class="string">"Courier New"</span></span><br></pre></td>
+        </tr>
+    </table>
+</figure>
+<h3 id="字体英文名"><a href="#字体英文名" class="headerlink" title="字体英文名"></a>字体英文名</h3>
+<ul>
+    <li>一些常见中文字体的对应英文名。</li>
 </ul>
 <style>
     .fa-apple {
         color: #9d9e9d;
     }
+    
     .fa-windows {
         color: #4ca6e7;
     }
 </style>
 
 <table>
-<thead>
-<tr>
-<th style="text-align:center">-</th>
-<th>中文名</th>
-<th>英文名</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td><i class="fa fa-apple"></i> 苹方</td>
-<td>PingFang SC</td>
-</tr>
-<tr>
-<td style="text-align:center">2</td>
-<td><i class="fa fa-apple"></i> 冬青黑/苹果丽黑</td>
-<td>Hiragino Sans GB</td>
-</tr>
-<tr>
-<td style="text-align:center">3</td>
-<td><i class="fa fa-apple"></i> 思源黑体</td>
-<td>Source Han Sans CN</td>
-</tr>
-<tr>
-<td style="text-align:center">4</td>
-<td><i class="fa fa-apple"></i> 华文细黑</td>
-<td>STHeiti Light [STXihei]</td>
-</tr>
-<tr>
-<td style="text-align:center">5</td>
-<td><i class="fa fa-apple"></i> 华文黑体</td>
-<td>ST Heiti</td>
-</tr>
-<tr>
-<td style="text-align:center">6</td>
-<td><i class="fa fa-apple"></i> 华文楷体</td>
-<td>STKaiti</td>
-</tr>
-<tr>
-<td style="text-align:center">7</td>
-<td><i class="fa fa-apple"></i> 华文宋体</td>
-<td>STSong</td>
-</tr>
-<tr>
-<td style="text-align:center">8</td>
-<td><i class="fa fa-apple"></i> 华文仿宋</td>
-<td>STFangsong</td>
-</tr>
-<tr>
-<td style="text-align:center">9</td>
-<td><i class="fa fa-apple"></i> 丽黑 Pro</td>
-<td>LiHei Pro Medium</td>
-</tr>
-<tr>
-<td style="text-align:center">10</td>
-<td><i class="fa fa-apple"></i> 丽宋 Pro</td>
-<td>LiSong Pro Light</td>
-</tr>
-<tr>
-<td style="text-align:center">11</td>
-<td><i class="fa fa-apple"></i> 标楷体</td>
-<td>BiauKai</td>
-</tr>
-<tr>
-<td style="text-align:center">12</td>
-<td><i class="fa fa-apple"></i> 苹果丽中黑</td>
-<td>Apple LiGothic Medium</td>
-</tr>
-<tr>
-<td style="text-align:center">13</td>
-<td><i class="fa fa-apple"></i> 苹果丽细宋</td>
-<td>Apple LiSung Light</td>
-</tr>
-<tr>
-<td style="text-align:center">14</td>
-<td><i class="fa fa-windows"></i> 新细明体</td>
-<td>PMingLiU</td>
-</tr>
-<tr>
-<td style="text-align:center">15</td>
-<td><i class="fa fa-windows"></i> 细明体</td>
-<td>MingLiU</td>
-</tr>
-<tr>
-<td style="text-align:center">16</td>
-<td><i class="fa fa-windows"></i> 标楷体</td>
-<td>DFKai-SB</td>
-</tr>
-<tr>
-<td style="text-align:center">17</td>
-<td><i class="fa fa-windows"></i> (中易)黑体</td>
-<td>SimHei</td>
-</tr>
-<tr>
-<td style="text-align:center">18</td>
-<td><i class="fa fa-windows"></i> 宋体</td>
-<td>SimSun</td>
-</tr>
-<tr>
-<td style="text-align:center">19</td>
-<td><i class="fa fa-windows"></i> 新宋体</td>
-<td>NSimSun</td>
-</tr>
-<tr>
-<td style="text-align:center">20</td>
-<td><i class="fa fa-windows"></i> 仿宋</td>
-<td>FangSong</td>
-</tr>
-<tr>
-<td style="text-align:center">21</td>
-<td><i class="fa fa-windows"></i> 楷体</td>
-<td>KaiTi</td>
-</tr>
-<tr>
-<td style="text-align:center">22</td>
-<td><i class="fa fa-windows"></i> 仿宋_GB2312</td>
-<td>FangSong_GB2312</td>
-</tr>
-<tr>
-<td style="text-align:center">23</td>
-<td><i class="fa fa-windows"></i> 楷体_GB2312</td>
-<td>KaiTi_GB2312</td>
-</tr>
-<tr>
-<td style="text-align:center">24</td>
-<td><i class="fa fa-windows"></i> 微软正黑体</td>
-<td>Microsoft JhengHei</td>
-</tr>
-<tr>
-<td style="text-align:center">25</td>
-<td><i class="fa fa-windows"></i> 微软雅黑</td>
-<td>Microsoft YaHei</td>
-</tr>
-<tr>
-<td style="text-align:center">26</td>
-<td><i class="fa fa-file-word-o"></i>  隶书</td>
-<td>LiSu</td>
-</tr>
-<tr>
-<td style="text-align:center">27</td>
-<td><i class="fa fa-file-word-o"></i>  幼圆</td>
-<td>YouYuan</td>
-</tr>
-<tr>
-<td style="text-align:center">28</td>
-<td><i class="fa fa-file-word-o"></i>  华文中宋</td>
-<td>STZhongsong</td>
-</tr>
-<tr>
-<td style="text-align:center">29</td>
-<td><i class="fa fa-file-word-o"></i>  方正舒体</td>
-<td>FZShuTi</td>
-</tr>
-<tr>
-<td style="text-align:center">30</td>
-<td><i class="fa fa-file-word-o"></i>  方正姚体</td>
-<td>FZYaoti</td>
-</tr>
-<tr>
-<td style="text-align:center">31</td>
-<td><i class="fa fa-file-word-o"></i>  华文彩云</td>
-<td>STCaiyun</td>
-</tr>
-<tr>
-<td style="text-align:center">32</td>
-<td><i class="fa fa-file-word-o"></i>  华文琥珀</td>
-<td>STHupo</td>
-</tr>
-<tr>
-<td style="text-align:center">33</td>
-<td><i class="fa fa-file-word-o"></i>  华文隶书</td>
-<td>STLiti</td>
-</tr>
-<tr>
-<td style="text-align:center">34</td>
-<td><i class="fa fa-file-word-o"></i>  华文行楷</td>
-<td>STXingkai</td>
-</tr>
-<tr>
-<td style="text-align:center">35</td>
-<td><i class="fa fa-file-word-o"></i>  华文新魏</td>
-<td>STXinwei</td>
-</tr>
-<tr>
-<td style="text-align:center">36</td>
-<td><i class="fa fa-linux"></i> 文泉驿微米黑</td>
-<td>Wenquanyi Micro Hei</td>
-</tr>
-<tr>
-<td style="text-align:center">37</td>
-<td><i class="fa fa-linux"></i> 文泉驿正黑</td>
-<td>WenQuanYi Zen Hei</td>
-</tr>
-<tr>
-<td style="text-align:center">38</td>
-<td><i class="fa fa-linux"></i> 文泉驿点阵正黑</td>
-<td>WenQuanYi Zen Hei Sharp</td>
-</tr>
-</tbody>
+    <thead>
+        <tr>
+            <th style="text-align:center">-</th>
+            <th>中文名</th>
+            <th>英文名</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align:center">1</td>
+            <td><i class="fa fa-apple"></i> 苹方</td>
+            <td>PingFang SC</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">2</td>
+            <td><i class="fa fa-apple"></i> 冬青黑/苹果丽黑</td>
+            <td>Hiragino Sans GB</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">3</td>
+            <td><i class="fa fa-apple"></i> 思源黑体</td>
+            <td>Source Han Sans CN</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">4</td>
+            <td><i class="fa fa-apple"></i> 华文细黑</td>
+            <td>STHeiti Light [STXihei]</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">5</td>
+            <td><i class="fa fa-apple"></i> 华文黑体</td>
+            <td>ST Heiti</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">6</td>
+            <td><i class="fa fa-apple"></i> 华文楷体</td>
+            <td>STKaiti</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">7</td>
+            <td><i class="fa fa-apple"></i> 华文宋体</td>
+            <td>STSong</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">8</td>
+            <td><i class="fa fa-apple"></i> 华文仿宋</td>
+            <td>STFangsong</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">9</td>
+            <td><i class="fa fa-apple"></i> 丽黑 Pro</td>
+            <td>LiHei Pro Medium</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">10</td>
+            <td><i class="fa fa-apple"></i> 丽宋 Pro</td>
+            <td>LiSong Pro Light</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">11</td>
+            <td><i class="fa fa-apple"></i> 标楷体</td>
+            <td>BiauKai</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">12</td>
+            <td><i class="fa fa-apple"></i> 苹果丽中黑</td>
+            <td>Apple LiGothic Medium</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">13</td>
+            <td><i class="fa fa-apple"></i> 苹果丽细宋</td>
+            <td>Apple LiSung Light</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">14</td>
+            <td><i class="fa fa-windows"></i> 新细明体</td>
+            <td>PMingLiU</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">15</td>
+            <td><i class="fa fa-windows"></i> 细明体</td>
+            <td>MingLiU</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">16</td>
+            <td><i class="fa fa-windows"></i> 标楷体</td>
+            <td>DFKai-SB</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">17</td>
+            <td><i class="fa fa-windows"></i> (中易)黑体</td>
+            <td>SimHei</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">18</td>
+            <td><i class="fa fa-windows"></i> 宋体</td>
+            <td>SimSun</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">19</td>
+            <td><i class="fa fa-windows"></i> 新宋体</td>
+            <td>NSimSun</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">20</td>
+            <td><i class="fa fa-windows"></i> 仿宋</td>
+            <td>FangSong</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">21</td>
+            <td><i class="fa fa-windows"></i> 楷体</td>
+            <td>KaiTi</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">22</td>
+            <td><i class="fa fa-windows"></i> 仿宋_GB2312</td>
+            <td>FangSong_GB2312</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">23</td>
+            <td><i class="fa fa-windows"></i> 楷体_GB2312</td>
+            <td>KaiTi_GB2312</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">24</td>
+            <td><i class="fa fa-windows"></i> 微软正黑体</td>
+            <td>Microsoft JhengHei</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">25</td>
+            <td><i class="fa fa-windows"></i> 微软雅黑</td>
+            <td>Microsoft YaHei</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">26</td>
+            <td><i class="fa fa-file-word-o"></i> 隶书</td>
+            <td>LiSu</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">27</td>
+            <td><i class="fa fa-file-word-o"></i> 幼圆</td>
+            <td>YouYuan</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">28</td>
+            <td><i class="fa fa-file-word-o"></i> 华文中宋</td>
+            <td>STZhongsong</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">29</td>
+            <td><i class="fa fa-file-word-o"></i> 方正舒体</td>
+            <td>FZShuTi</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">30</td>
+            <td><i class="fa fa-file-word-o"></i> 方正姚体</td>
+            <td>FZYaoti</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">31</td>
+            <td><i class="fa fa-file-word-o"></i> 华文彩云</td>
+            <td>STCaiyun</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">32</td>
+            <td><i class="fa fa-file-word-o"></i> 华文琥珀</td>
+            <td>STHupo</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">33</td>
+            <td><i class="fa fa-file-word-o"></i> 华文隶书</td>
+            <td>STLiti</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">34</td>
+            <td><i class="fa fa-file-word-o"></i> 华文行楷</td>
+            <td>STXingkai</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">35</td>
+            <td><i class="fa fa-file-word-o"></i> 华文新魏</td>
+            <td>STXinwei</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">36</td>
+            <td><i class="fa fa-linux"></i> 文泉驿微米黑</td>
+            <td>Wenquanyi Micro Hei</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">37</td>
+            <td><i class="fa fa-linux"></i> 文泉驿正黑</td>
+            <td>WenQuanYi Zen Hei</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">38</td>
+            <td><i class="fa fa-linux"></i> 文泉驿点阵正黑</td>
+            <td>WenQuanYi Zen Hei Sharp</td>
+        </tr>
+    </tbody>
 </table>
-<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ol>
-<li><strong>Font Awesome</strong>: <a href="http://fontawesome.io/" target="_blank" rel="external">http://fontawesome.io/</a></li>
-<li><strong>Webdings和Wingdings字符码对应表</strong>: <a href="http://dwz.cn/2jOjYi" target="_blank" rel="external">http://dwz.cn/2jOjYi</a></li>
-<li><strong><em>CSS魔法堂：再次认识 font</em></strong> by <strong>肥仔John</strong> on <code>2015/3/3</code>: <a href="http://www.cnblogs.com/fsjohnhuang/p/4310533.html" target="_blank" rel="external">http://www.cnblogs.com/fsjohnhuang/p/4310533.html</a></li>
-<li><strong>有字库-中文在线字体</strong>: <a href="http://www.youziku.com/" target="_blank" rel="external">http://www.youziku.com/</a></li>
-<li><strong><em>谈谈网页设计中的字体应用 (2) serif 和 sans-serif</em></strong> by <strong>棕熊</strong> on <code>2008/5/6</code>: <a href="http://www.cnblogs.com/ruxpinsp1/archive/2008/05/06/font-in-front-end-development-2.html" target="_blank" rel="external">http://www.cnblogs.com/ruxpinsp1/archive/2008/05/06/font-in-front-end-development-2.html</a></li>
-<li><strong><em>Serif 和 Sans Serif 字体的区别</em></strong> by <strong>冰火九九</strong> on <code>2013/11/4</code>: <a href="http://blog.jobbole.com/50828/" target="_blank" rel="external">http://blog.jobbole.com/50828/</a></li>
-<li><strong><em>Chinese Web Font Guide</em></strong> by <strong>Kendra Schaefer</strong> on <code>2012/6/11</code>: <a href="http://www.kendraschaefer.com/2012/06/chinese-standard-web-fonts-the-ultimate-guide-to-css-font-family-declarations-for-web-design-in-simplified-chinese/" target="_blank" rel="external">http://www.kendraschaefer.com/2012/06/chinese-standard-web-fonts-the-ultimate-guide-to-css-font-family-declarations-for-web-design-in-simplified-chinese/</a></li>
-<li><strong>Fonts.css – 跨平台中文字体解决方案</strong>: <a href="http://zenozeng.github.io/fonts.css/" target="_blank" rel="external">http://zenozeng.github.io/fonts.css/</a></li>
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2>
+<ol>
+    <li><strong>Font Awesome</strong>: <a href="http://fontawesome.io/" target="_blank" rel="external">http://fontawesome.io/</a></li>
+    <li><strong>Webdings和Wingdings字符码对应表</strong>: <a href="http://dwz.cn/2jOjYi" target="_blank" rel="external">http://dwz.cn/2jOjYi</a></li>
+    <li><strong><em>CSS魔法堂：再次认识 font</em></strong> by <strong>肥仔John</strong> on <code>2015/3/3</code>: <a href="http://www.cnblogs.com/fsjohnhuang/p/4310533.html" target="_blank" rel="external">http://www.cnblogs.com/fsjohnhuang/p/4310533.html</a></li>
+    <li><strong>有字库-中文在线字体</strong>: <a href="http://www.youziku.com/" target="_blank" rel="external">http://www.youziku.com/</a></li>
+    <li><strong><em>谈谈网页设计中的字体应用 (2) serif 和 sans-serif</em></strong> by <strong>棕熊</strong> on <code>2008/5/6</code>: <a href="http://www.cnblogs.com/ruxpinsp1/archive/2008/05/06/font-in-front-end-development-2.html" target="_blank" rel="external">http://www.cnblogs.com/ruxpinsp1/archive/2008/05/06/font-in-front-end-development-2.html</a></li>
+    <li><strong><em>Serif 和 Sans Serif 字体的区别</em></strong> by <strong>冰火九九</strong> on <code>2013/11/4</code>: <a href="http://blog.jobbole.com/50828/" target="_blank" rel="external">http://blog.jobbole.com/50828/</a></li>
+    <li><strong><em>Chinese Web Font Guide</em></strong> by <strong>Kendra Schaefer</strong> on <code>2012/6/11</code>: <a href="http://www.kendraschaefer.com/2012/06/chinese-standard-web-fonts-the-ultimate-guide-to-css-font-family-declarations-for-web-design-in-simplified-chinese/" target="_blank" rel="external">http://www.kendraschaefer.com/2012/06/chinese-standard-web-fonts-the-ultimate-guide-to-css-font-family-declarations-for-web-design-in-simplified-chinese/</a></li>
+    <li><strong>Fonts.css – 跨平台中文字体解决方案</strong>: <a href="http://zenozeng.github.io/fonts.css/" target="_blank" rel="external">http://zenozeng.github.io/fonts.css/</a></li>
 </ol>
-
       
     </div>
     

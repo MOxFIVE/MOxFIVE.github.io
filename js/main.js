@@ -221,6 +221,12 @@ require([], function (){
     })
 });
 
+var H = $('html')
+w1 = $(window).width();
+H.addClass('fancybox-lock-test');
+w2 = $(window).width();
+H.removeClass('fancybox-lock-test');
+$("<style type='text/css'>.fancybox-margin{margin-right:" + (w2 - w1) + "px;}</style>").appendTo("head");
 
 
 /*var autoKeyword = [

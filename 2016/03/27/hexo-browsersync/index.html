@@ -13,6 +13,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="format-detection" content="telephone=no" />
 <meta name="author" content="MOxFIVE" />
+<meta name="theme-color" content="#88acdb">
+
+<meta name="viewport" content="uc-fitscreen=yes">
+<meta name="layoutmode" content="standard">
+
+<meta name="google" value="notranslate">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -354,58 +361,102 @@
       
       
           
-        <p></p><h2 id="intro">前言</h2>经常本地调试 Hexo 主题, 如果有工具能监视文件更改幷自动刷新页面，那一定能提高不少效率，<a href="http://www.browsersync.cn/" target="_blank" rel="external">Browsersync</a> 就是这样一款浏览器同步测试工具。<p></p>
+        <p>
+    </p><h2 id="intro">前言</h2>经常本地调试 Hexo 主题, 如果有工具能监视文件更改幷自动刷新页面，那一定能提高不少效率，<a href="http://www.browsersync.cn/" target="_blank" rel="external">Browsersync</a> 就是这样一款浏览器同步测试工具。<p></p>
 <a id="more"></a>
 <p><img src="/resources/browsersync.gif" alt="browser-sync"></p>
-<h2 id="自动刷新"><a href="#自动刷新" class="headerlink" title="自动刷新"></a>自动刷新</h2><h3 id="安装-Browsersync"><a href="#安装-Browsersync" class="headerlink" title="安装 Browsersync"></a>安装 Browsersync</h3><ul>
-<li>Browsersync 依赖包较多，Mac 和 Linux 中建议加上 <code>sudo</code> 避免安装时因权限不足而报错</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g browser-sync</span><br></pre></td></tr></table></figure>
+<h2 id="自动刷新"><a href="#自动刷新" class="headerlink" title="自动刷新"></a>自动刷新</h2>
+<h3 id="安装-Browsersync"><a href="#安装-Browsersync" class="headerlink" title="安装 Browsersync"></a>安装 Browsersync</h3>
 <ul>
-<li>安装结束后执行下面命令，能显示对应版本则表示安装成功</li>
+    <li>Browsersync 依赖包较多，Mac 和 Linux 中建议加上 <code>sudo</code> 避免安装时因权限不足而报错</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">browser-sync --version</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash">
+    <table>
+        <tr>
+            <td class="gutter"><pre><span class="line">1</span><br></pre></td>
+            <td class="code"><pre><span class="line">npm install -g browser-sync</span><br></pre></td>
+        </tr>
+    </table>
+</figure>
+<ul>
+    <li>安装结束后执行下面命令，能显示对应版本则表示安装成功</li>
+</ul>
+<figure class="highlight bash">
+    <table>
+        <tr>
+            <td class="gutter"><pre><span class="line">1</span><br></pre></td>
+            <td class="code"><pre><span class="line">browser-sync --version</span><br></pre></td>
+        </tr>
+    </table>
+</figure>
 <blockquote>
-<p>如果显示无此命令，请尝试使用 <a href="http://npm.taobao.org/" target="_blank" rel="external">淘宝 NPM 镜像</a>，或者全局科学上网后再安装</p>
+    <p>如果显示无此命令，请尝试使用 <a href="http://npm.taobao.org/" target="_blank" rel="external">淘宝 NPM 镜像</a>，或者全局科学上网后再安装</p>
 </blockquote>
-<h3 id="安装-Hexo-端插件"><a href="#安装-Hexo-端插件" class="headerlink" title="安装 Hexo 端插件"></a>安装 Hexo 端插件</h3><ul>
-<li>要把 Browsersync 应用到 Hexo 上，还需要安装一个小插件 <a href="https://github.com/hexojs/hexo-browsersync" target="_blank" rel="external">hexo-browsersync</a> 。命令行中进入 Hexo 根目录，执行以下命令:</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-browsersync --save</span><br></pre></td></tr></table></figure>
+<h3 id="安装-Hexo-端插件"><a href="#安装-Hexo-端插件" class="headerlink" title="安装 Hexo 端插件"></a>安装 Hexo 端插件</h3>
 <ul>
-<li>安装后像往常一样执行 <code>hexo s</code> 开启本地服务器，当相关文件被修改或者保存时，关联的浏览器页面会自带刷新</li>
+    <li>要把 Browsersync 应用到 Hexo 上，还需要安装一个小插件 <a href="https://github.com/hexojs/hexo-browsersync" target="_blank" rel="external">hexo-browsersync</a> 。命令行中进入 Hexo 根目录，执行以下命令:</li>
 </ul>
-<h3 id="一些不足"><a href="#一些不足" class="headerlink" title="一些不足"></a>一些不足</h3><ul>
-<li>变动后将重新加载整个页面，不能局部刷新；</li>
-<li>使用 Hexo 自带服务器时，无法在移动端调试；</li>
-<li>偶尔会报错，需要多保存几次；</li>
-</ul>
-<h2 id="移动端调试"><a href="#移动端调试" class="headerlink" title="移动端调试"></a>移动端调试</h2><p>如果只是为了自动刷新页面，或许使用 LiveReload 就够了。Browsersync 真正强大之处在于其多设备调试功能，局域网设备访问同一网址，页面同步变动。</p>
-<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><ul>
-<li>要在移动端调试，需要先生成 Hexo 站点的静态文件</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-<h3 id="开启服务"><a href="#开启服务" class="headerlink" title="开启服务"></a>开启服务</h3><ul>
-<li>命令行进入静态文件所在的文件夹，默认为 Hexo 根目录下的 <code>public</code>，然后执行以下命令：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">browser-sync start --server --files <span class="string">"css/*.css, *.html"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash">
+    <table>
+        <tr>
+            <td class="gutter"><pre><span class="line">1</span><br></pre></td>
+            <td class="code"><pre><span class="line">npm install hexo-browsersync --save</span><br></pre></td>
+        </tr>
+    </table>
+</figure>
 <ul>
-<li>输入完毕按回车，会自动打开网站首页</li>
-<li>更多命令行用法请参考 <a href="http://www.browsersync.cn/docs/command-line/" target="_blank" rel="external">官方文档</a></li>
+    <li>安装后像往常一样执行 <code>hexo s</code> 开启本地服务器，当相关文件被修改或者保存时，关联的浏览器页面会自带刷新</li>
 </ul>
-<h3 id="局域网访问"><a href="#局域网访问" class="headerlink" title="局域网访问"></a>局域网访问</h3><ul>
-<li>回到命令行窗口，External 那行的 IP 地址就是局域网地址，打开你的手机平板访问即可，各种操作和文件修改都会同步变动，调试极为便利</li>
+<h3 id="一些不足"><a href="#一些不足" class="headerlink" title="一些不足"></a>一些不足</h3>
+<ul>
+    <li>变动后将重新加载整个页面，不能局部刷新；</li>
+    <li>使用 Hexo 自带服务器时，无法在移动端调试；</li>
+    <li>偶尔会报错，需要多保存几次；</li>
+</ul>
+<h2 id="移动端调试"><a href="#移动端调试" class="headerlink" title="移动端调试"></a>移动端调试</h2>
+<p>如果只是为了自动刷新页面，或许使用 LiveReload 就够了。Browsersync 真正强大之处在于其多设备调试功能，局域网设备访问同一网址，页面同步变动。</p>
+<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3>
+<ul>
+    <li>要在移动端调试，需要先生成 Hexo 站点的静态文件</li>
+</ul>
+<figure class="highlight bash">
+    <table>
+        <tr>
+            <td class="gutter"><pre><span class="line">1</span><br></pre></td>
+            <td class="code"><pre><span class="line">hexo g</span><br></pre></td>
+        </tr>
+    </table>
+</figure>
+<h3 id="开启服务"><a href="#开启服务" class="headerlink" title="开启服务"></a>开启服务</h3>
+<ul>
+    <li>命令行进入静态文件所在的文件夹，默认为 Hexo 根目录下的 <code>public</code>，然后执行以下命令：</li>
+</ul>
+<figure class="highlight bash">
+    <table>
+        <tr>
+            <td class="gutter"><pre><span class="line">1</span><br></pre></td>
+            <td class="code"><pre><span class="line">browser-sync start --server --files <span class="string">"css/*.css, *.html"</span></span><br></pre></td>
+        </tr>
+    </table>
+</figure>
+<ul>
+    <li>输入完毕按回车，会自动打开网站首页</li>
+    <li>更多命令行用法请参考 <a href="http://www.browsersync.cn/docs/command-line/" target="_blank" rel="external">官方文档</a></li>
+</ul>
+<h3 id="局域网访问"><a href="#局域网访问" class="headerlink" title="局域网访问"></a>局域网访问</h3>
+<ul>
+    <li>回到命令行窗口，External 那行的 IP 地址就是局域网地址，打开你的手机平板访问即可，各种操作和文件修改都会同步变动，调试极为便利</li>
 </ul>
 <p><img src="/resources/browsersync-2.gif" alt="browsersync-2"></p>
 <blockquote>
-<p>此种方式不是直接修改主题源文件，所以平时一般使用 Hexo 本地服务修改样式，有需要时再生成静态文件在移动端测试页面效果</p>
+    <p>此种方式不是直接修改主题源文件，所以平时一般使用 Hexo 本地服务修改样式，有需要时再生成静态文件在移动端测试页面效果</p>
 </blockquote>
-<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ol>
-<li>Browsersync: <a href="http://www.browsersync.cn/" target="_blank" rel="external">http://www.browsersync.cn/</a></li>
-<li>hexo-browsersync: <a href="https://github.com/hexojs/hexo-browsersync" target="_blank" rel="external">https://github.com/hexojs/hexo-browsersync</a></li>
-<li>淘宝 NPM 镜像: <a href="http://npm.taobao.org/" target="_blank" rel="external">http://npm.taobao.org/</a></li>
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2>
+<ol>
+    <li>Browsersync: <a href="http://www.browsersync.cn/" target="_blank" rel="external">http://www.browsersync.cn/</a></li>
+    <li>hexo-browsersync: <a href="https://github.com/hexojs/hexo-browsersync" target="_blank" rel="external">https://github.com/hexojs/hexo-browsersync</a></li>
+    <li>淘宝 NPM 镜像: <a href="http://npm.taobao.org/" target="_blank" rel="external">http://npm.taobao.org/</a></li>
 </ol>
-
       
     </div>
     

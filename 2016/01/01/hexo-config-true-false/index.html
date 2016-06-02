@@ -13,6 +13,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="format-detection" content="telephone=no" />
 <meta name="author" content="MOxFIVE" />
+<meta name="theme-color" content="#88acdb">
+
+<meta name="viewport" content="uc-fitscreen=yes">
+<meta name="layoutmode" content="standard">
+
+<meta name="google" value="notranslate">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -353,25 +360,76 @@
           
         <p>　　在使用文件 “_config.yml” 对 Hexo 进行配置时，大家习惯于填写 true 和 false 来启用/停用某个功能模块。不过还有几种方法可以表示逻辑真假(boolean)，掌握后可以更灵活地进行功能配置。</p>
 <a id="more"></a>
-<h2 id="false"><a href="#false" class="headerlink" title="false"></a>false</h2><p>如果配置文件中有一个选项 <code>search_box</code>，那下面几种写法都表示该选项逻辑值为假：false。</p>
+<h2 id="false"><a href="#false" class="headerlink" title="false"></a>false</h2>
+<p>如果配置文件中有一个选项 <code>search_box</code>，那下面几种写法都表示该选项逻辑值为假：false。</p>
 <p>即当使用 if (theme.search_box) 进行判断时返回 false. </p>
 <p>1－常规写法</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">search_box:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml">
+    <table>
+        <tr>
+            <td class="gutter"><pre><span class="line">1</span><br></pre></td>
+            <td class="code"><pre><span class="line"><span class="attr">search_box:</span> <span class="literal">false</span></span><br></pre></td>
+        </tr>
+    </table>
+</figure>
 <p>2－前面加 “#”，把该选项变为注释，判断时自然也就 false 了</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#search_box: false</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml">
+    <table>
+        <tr>
+            <td class="gutter"><pre><span class="line">1</span><br></pre></td>
+            <td class="code"><pre><span class="line"><span class="comment">#search_box: false</span></span><br></pre></td>
+        </tr>
+    </table>
+</figure>
 <p>3－用 0 代替。填写 0 时（不含引号），该项会被判断为 false</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">search_box:</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml">
+    <table>
+        <tr>
+            <td class="gutter"><pre><span class="line">1</span><br></pre></td>
+            <td class="code"><pre><span class="line"><span class="attr">search_box:</span> <span class="number">0</span></span><br></pre></td>
+        </tr>
+    </table>
+</figure>
 <p>4－选项留空。留空默认也会判断为 false</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">search_box:</span></span><br></pre></td></tr></table></figure>
-<h2 id="true"><a href="#true" class="headerlink" title="true"></a>true</h2><p>下面几种写法都表示该选项逻辑值为假：true。即当使用 if (theme.search_box) 进行判断时返回 true. </p>
+<figure class="highlight yaml">
+    <table>
+        <tr>
+            <td class="gutter"><pre><span class="line">1</span><br></pre></td>
+            <td class="code"><pre><span class="line"><span class="attr">search_box:</span></span><br></pre></td>
+        </tr>
+    </table>
+</figure>
+<h2 id="true"><a href="#true" class="headerlink" title="true"></a>true</h2>
+<p>下面几种写法都表示该选项逻辑值为假：true。即当使用 if (theme.search_box) 进行判断时返回 true. </p>
 <p>1－常规写法</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">search_box:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml">
+    <table>
+        <tr>
+            <td class="gutter"><pre><span class="line">1</span><br></pre></td>
+            <td class="code"><pre><span class="line"><span class="attr">search_box:</span> <span class="literal">true</span></span><br></pre></td>
+        </tr>
+    </table>
+</figure>
 <p>2－用 1 代替。填 1 时，该项会被判断为 true</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">search_box:</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml">
+    <table>
+        <tr>
+            <td class="gutter"><pre><span class="line">1</span><br></pre></td>
+            <td class="code"><pre><span class="line"><span class="attr">search_box:</span> <span class="number">1</span></span><br></pre></td>
+        </tr>
+    </table>
+</figure>
 <p>3－填 0 之外的其他字符，通常也会被判断为 true</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">search_box:</span> Hexo Yelee</span><br><span class="line"><span class="attr">search_box:</span> <span class="number">998</span></span><br><span class="line"><span class="attr">search_box:</span> <span class="string">"0"</span></span><br></pre></td></tr></table></figure>
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>为了减少误解，在 <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">Yelee</a> 主题的配置中我基本还是使用常规写法。如果大家都能了解这些写法的话，应该能更开心地折腾 Hexo。对配置还有兴趣的，可以去看看 <a href="https://learnxinyminutes.com/docs/zh-cn/yaml-cn/" target="_blank" rel="external">YAML 语法说明</a>，Hexo 的配置文件默认就是使用 YAML 编写。</p>
-
+<figure class="highlight yaml">
+    <table>
+        <tr>
+            <td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td>
+            <td class="code"><pre><span class="line"><span class="attr">search_box:</span> Hexo Yelee</span><br><span class="line"><span class="attr">search_box:</span> <span class="number">998</span></span><br><span class="line"><span class="attr">search_box:</span> <span class="string">"0"</span></span><br></pre></td>
+        </tr>
+    </table>
+</figure>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2>
+<p>为了减少误解，在 <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">Yelee</a> 主题的配置中我基本还是使用常规写法。如果大家都能了解这些写法的话，应该能更开心地折腾 Hexo。对配置还有兴趣的，可以去看看 <a href="https://learnxinyminutes.com/docs/zh-cn/yaml-cn/" target="_blank" rel="external">YAML 语法说明</a>，Hexo 的配置文件默认就是使用 YAML 编写。</p>
       
     </div>
     

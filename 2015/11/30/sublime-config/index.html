@@ -13,6 +13,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="format-detection" content="telephone=no" />
 <meta name="author" content="MOxFIVE" />
+<meta name="theme-color" content="#88acdb">
+
+<meta name="viewport" content="uc-fitscreen=yes">
+<meta name="layoutmode" content="standard">
+
+<meta name="google" value="notranslate">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -358,91 +365,128 @@
           
         <p>　　记录安装配置 Sublime 的过程，同时列出所用到的插件，方便自己在新系统新电脑上快速用上熟悉的 Sublime。 </p>
 <a id="more"></a>
-<h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><h3 id="软件下载"><a href="#软件下载" class="headerlink" title="软件下载"></a>软件下载</h3><ul>
-<li>一直使用的是 Sublime 3，直接转到 3 的 <a href="http://www.sublimetext.com/3" target="_blank" rel="external">下载页面</a> 好了。</li>
+<h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2>
+<h3 id="软件下载"><a href="#软件下载" class="headerlink" title="软件下载"></a>软件下载</h3>
+<ul>
+    <li>一直使用的是 Sublime 3，直接转到 3 的 <a href="http://www.sublimetext.com/3" target="_blank" rel="external">下载页面</a> 好了。</li>
 </ul>
-<h3 id="用户设置"><a href="#用户设置" class="headerlink" title="用户设置"></a>用户设置</h3><ul>
-<li><code>Preferences/Settings - User</code>，设置字体为 <a href="http://pan.baidu.com/s/1mglgkSK" target="_blank" rel="external">Consolas 雅黑混合体</a> yx5g，字号11，tab 转空格，显示空格和制表符。</li>
+<h3 id="用户设置"><a href="#用户设置" class="headerlink" title="用户设置"></a>用户设置</h3>
+<ul>
+    <li><code>Preferences/Settings - User</code>，设置字体为 <a href="http://pan.baidu.com/s/1mglgkSK" target="_blank" rel="external">Consolas 雅黑混合体</a> yx5g，字号11，tab 转空格，显示空格和制表符。</li>
 </ul>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"font_face"</span>: <span class="string">"Yahei Consolas Hybrid"</span>,</span><br><span class="line"><span class="string">"font_size"</span>: <span class="number">11</span>,</span><br><span class="line"><span class="string">"translate_tabs_to_spaces"</span>: <span class="literal">true</span>,</span><br><span class="line"><span class="string">"draw_white_space"</span>: <span class="string">"all"</span>,</span><br><span class="line"></span><br><span class="line"><span class="comment">/*统一使用 UTF-8 编码和 UNIX 风格的换行符(LF, 0x0A)*/</span></span><br><span class="line"><span class="string">"default_line_ending"</span>: <span class="string">"unix"</span>,</span><br><span class="line"><span class="string">"default_encoding"</span>: <span class="string">"UTF-8"</span>,</span><br></pre></td></tr></table></figure>
+<figure class="highlight actionscript">
+    <table>
+        <tr>
+            <td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td>
+            <td class="code"><pre><span class="line"><span class="string">"font_face"</span>: <span class="string">"Yahei Consolas Hybrid"</span>,</span><br><span class="line"><span class="string">"font_size"</span>: <span class="number">11</span>,</span><br><span class="line"><span class="string">"translate_tabs_to_spaces"</span>: <span class="literal">true</span>,</span><br><span class="line"><span class="string">"draw_white_space"</span>: <span class="string">"all"</span>,</span><br><span class="line"></span><br><span class="line"><span class="comment">/*统一使用 UTF-8 编码和 UNIX 风格的换行符(LF, 0x0A)*/</span></span><br><span class="line"><span class="string">"default_line_ending"</span>: <span class="string">"unix"</span>,</span><br><span class="line"><span class="string">"default_encoding"</span>: <span class="string">"UTF-8"</span>,</span><br></pre></td>
+        </tr>
+    </table>
+</figure>
 <blockquote>
-<p>其他设置参考 <code>Preferences/Settings - Default</code>。</p>
+    <p>其他设置参考 <code>Preferences/Settings - Default</code>。</p>
 </blockquote>
-<h2 id="基础插件"><a href="#基础插件" class="headerlink" title="基础插件"></a>基础插件</h2><h3 id="Package-Control"><a href="#Package-Control" class="headerlink" title="Package Control"></a><a href="https://packagecontrol.io/" target="_blank" rel="external">Package Control</a></h3><ul>
-<li>用于管理插件的插件，基础中的基础。之后列的插件全部通过 Package Control 安装。<blockquote>
-<p>插件使用与安装: <a href="https://packagecontrol.io/installation" target="_blank" rel="external">https://packagecontrol.io/installation</a></p>
-</blockquote>
-</li>
+<h2 id="基础插件"><a href="#基础插件" class="headerlink" title="基础插件"></a>基础插件</h2>
+<h3 id="Package-Control"><a href="#Package-Control" class="headerlink" title="Package Control"></a><a href="https://packagecontrol.io/" target="_blank" rel="external">Package Control</a></h3>
+<ul>
+    <li>用于管理插件的插件，基础中的基础。之后列的插件全部通过 Package Control 安装。
+        <blockquote>
+            <p>插件使用与安装: <a href="https://packagecontrol.io/installation" target="_blank" rel="external">https://packagecontrol.io/installation</a></p>
+        </blockquote>
+    </li>
 </ul>
-<h3 id="Convert​To​UTF8"><a href="#Convert​To​UTF8" class="headerlink" title="Convert​To​UTF8"></a><a href="https://packagecontrol.io/packages/ConvertToUTF8" target="_blank" rel="external">Convert​To​UTF8</a></h3><ul>
-<li>文本编码自动转换，减少中日韩文乱码问题。<blockquote>
-<p>插件安装: Ctrl+Shift+P, Package Control: Installed Packages, 搜索 Convert​To​UTF8</p>
-</blockquote>
-</li>
+<h3 id="Convert​To​UTF8"><a href="#Convert​To​UTF8" class="headerlink" title="Convert​To​UTF8"></a><a href="https://packagecontrol.io/packages/ConvertToUTF8" target="_blank" rel="external">Convert​To​UTF8</a></h3>
+<ul>
+    <li>文本编码自动转换，减少中日韩文乱码问题。
+        <blockquote>
+            <p>插件安装: Ctrl+Shift+P, Package Control: Installed Packages, 搜索 Convert​To​UTF8</p>
+        </blockquote>
+    </li>
 </ul>
-<h3 id="IMESupport"><a href="#IMESupport" class="headerlink" title="IMESupport"></a><a href="https://packagecontrol.io/packages/IMESupport" target="_blank" rel="external">IMESupport</a></h3><ul>
-<li>解决输入法选字框不跟随问题。</li>
+<h3 id="IMESupport"><a href="#IMESupport" class="headerlink" title="IMESupport"></a><a href="https://packagecontrol.io/packages/IMESupport" target="_blank" rel="external">IMESupport</a></h3>
+<ul>
+    <li>解决输入法选字框不跟随问题。</li>
 </ul>
-<h3 id="Side​Bar​Enhancements"><a href="#Side​Bar​Enhancements" class="headerlink" title="Side​Bar​Enhancements"></a><a href="https://packagecontrol.io/packages/SideBarEnhancements" target="_blank" rel="external">Side​Bar​Enhancements</a></h3><ul>
-<li>自带边栏功能太少，必须安装此插件增强一下。</li>
+<h3 id="Side​Bar​Enhancements"><a href="#Side​Bar​Enhancements" class="headerlink" title="Side​Bar​Enhancements"></a><a href="https://packagecontrol.io/packages/SideBarEnhancements" target="_blank" rel="external">Side​Bar​Enhancements</a></h3>
+<ul>
+    <li>自带边栏功能太少，必须安装此插件增强一下。</li>
 </ul>
-<h2 id="主题配色"><a href="#主题配色" class="headerlink" title="主题配色"></a>主题配色</h2><h3 id="Theme-Spacegray"><a href="#Theme-Spacegray" class="headerlink" title="Theme - Spacegray"></a><a href="https://packagecontrol.io/packages/Theme%20-%20Spacegray" target="_blank" rel="external">Theme - Spacegray</a></h3><ul>
-<li>Spacegray 主题的 Base16 Eighties Dark 配色方案看着最顺眼，用着最舒服。<br><img src="/resources/Base16-Eighties-Dark.jpg" alt="Base16 Eighties Dark color scheme"></li>
+<h2 id="主题配色"><a href="#主题配色" class="headerlink" title="主题配色"></a>主题配色</h2>
+<h3 id="Theme-Spacegray"><a href="#Theme-Spacegray" class="headerlink" title="Theme - Spacegray"></a><a href="https://packagecontrol.io/packages/Theme%20-%20Spacegray" target="_blank" rel="external">Theme - Spacegray</a></h3>
+<ul>
+    <li>Spacegray 主题的 Base16 Eighties Dark 配色方案看着最顺眼，用着最舒服。<br><img src="/resources/Base16-Eighties-Dark.jpg" alt="Base16 Eighties Dark color scheme"></li>
 </ul>
-<h2 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h2><h3 id="Sublime​Linter"><a href="#Sublime​Linter" class="headerlink" title="Sublime​Linter"></a><a href="https://packagecontrol.io/packages/SublimeLinter" target="_blank" rel="external">Sublime​Linter</a></h3><ul>
-<li>用于管理其他 code linting 代码规范插件。<blockquote>
-<p>使用说明: <a href="http://sublimelinter.readthedocs.org/en/latest/installation.html#installing-via-pc" target="_blank" rel="external">http://sublimelinter.readthedocs.org/en/latest/installation.html#installing-via-pc</a></p>
-</blockquote>
-</li>
+<h2 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h2>
+<h3 id="Sublime​Linter"><a href="#Sublime​Linter" class="headerlink" title="Sublime​Linter"></a><a href="https://packagecontrol.io/packages/SublimeLinter" target="_blank" rel="external">Sublime​Linter</a></h3>
+<ul>
+    <li>用于管理其他 code linting 代码规范插件。
+        <blockquote>
+            <p>使用说明: <a href="http://sublimelinter.readthedocs.org/en/latest/installation.html#installing-via-pc" target="_blank" rel="external">http://sublimelinter.readthedocs.org/en/latest/installation.html#installing-via-pc</a></p>
+        </blockquote>
+    </li>
 </ul>
-<h3 id="Sublime​Linter-jshint"><a href="#Sublime​Linter-jshint" class="headerlink" title="Sublime​Linter-jshint"></a><a href="https://packagecontrol.io/packages/SublimeLinter-jshint" target="_blank" rel="external">Sublime​Linter-jshint</a></h3><ul>
-<li>基于 <a href="http://jshint.com/" target="_blank" rel="external">JSHint</a>，用于检查规范 JavaScript 代码。<blockquote>
-<p>NPM 依赖包: <code>npm install -g jshint</code><br>使用说明: <a href="https://github.com/SublimeLinter/SublimeLinter-jshint" target="_blank" rel="external">https://github.com/SublimeLinter/SublimeLinter-jshint</a></p>
-</blockquote>
-</li>
+<h3 id="Sublime​Linter-jshint"><a href="#Sublime​Linter-jshint" class="headerlink" title="Sublime​Linter-jshint"></a><a href="https://packagecontrol.io/packages/SublimeLinter-jshint" target="_blank" rel="external">Sublime​Linter-jshint</a></h3>
+<ul>
+    <li>基于 <a href="http://jshint.com/" target="_blank" rel="external">JSHint</a>，用于检查规范 JavaScript 代码。
+        <blockquote>
+            <p>NPM 依赖包: <code>npm install -g jshint</code><br>使用说明: <a href="https://github.com/SublimeLinter/SublimeLinter-jshint" target="_blank" rel="external">https://github.com/SublimeLinter/SublimeLinter-jshint</a></p>
+        </blockquote>
+    </li>
 </ul>
-<h3 id="Sublime​Linter-csslint"><a href="#Sublime​Linter-csslint" class="headerlink" title="Sublime​Linter-csslint"></a><a href="https://packagecontrol.io/packages/SublimeLinter-csslint" target="_blank" rel="external">Sublime​Linter-csslint</a></h3><ul>
-<li>基于 <a href="https://github.com/CSSLint/csslint" target="_blank" rel="external">CSSLint</a>，用于检查规范 CSS 代码。<blockquote>
-<p>NPM 依赖包: <code>npm install -g csslint</code><br>使用说明: <a href="https://github.com/SublimeLinter/SublimeLinter-csslint" target="_blank" rel="external">https://github.com/SublimeLinter/SublimeLinter-csslint</a></p>
-</blockquote>
-</li>
+<h3 id="Sublime​Linter-csslint"><a href="#Sublime​Linter-csslint" class="headerlink" title="Sublime​Linter-csslint"></a><a href="https://packagecontrol.io/packages/SublimeLinter-csslint" target="_blank" rel="external">Sublime​Linter-csslint</a></h3>
+<ul>
+    <li>基于 <a href="https://github.com/CSSLint/csslint" target="_blank" rel="external">CSSLint</a>，用于检查规范 CSS 代码。
+        <blockquote>
+            <p>NPM 依赖包: <code>npm install -g csslint</code><br>使用说明: <a href="https://github.com/SublimeLinter/SublimeLinter-csslint" target="_blank" rel="external">https://github.com/SublimeLinter/SublimeLinter-csslint</a></p>
+        </blockquote>
+    </li>
 </ul>
-<h3 id="Sublime​Linter-contrib-htmlhint"><a href="#Sublime​Linter-contrib-htmlhint" class="headerlink" title="Sublime​Linter-contrib-htmlhint"></a><a href="https://packagecontrol.io/packages/SublimeLinter-contrib-htmlhint" target="_blank" rel="external">Sublime​Linter-contrib-htmlhint</a></h3><ul>
-<li>基于 <a href="http://htmlhint.com/" target="_blank" rel="external">HTMLHint</a>，用于检查规范 HTML 代码。<blockquote>
-<p>NPM 依赖包: <code>npm install -g htmlhint@latest</code><br>使用说明: <a href="https://github.com/mmaday/SublimeLinter-contrib-htmlhint" target="_blank" rel="external">https://github.com/mmaday/SublimeLinter-contrib-htmlhint</a></p>
-</blockquote>
-</li>
+<h3 id="Sublime​Linter-contrib-htmlhint"><a href="#Sublime​Linter-contrib-htmlhint" class="headerlink" title="Sublime​Linter-contrib-htmlhint"></a><a href="https://packagecontrol.io/packages/SublimeLinter-contrib-htmlhint" target="_blank" rel="external">Sublime​Linter-contrib-htmlhint</a></h3>
+<ul>
+    <li>基于 <a href="http://htmlhint.com/" target="_blank" rel="external">HTMLHint</a>，用于检查规范 HTML 代码。
+        <blockquote>
+            <p>NPM 依赖包: <code>npm install -g htmlhint@latest</code><br>使用说明: <a href="https://github.com/mmaday/SublimeLinter-contrib-htmlhint" target="_blank" rel="external">https://github.com/mmaday/SublimeLinter-contrib-htmlhint</a></p>
+        </blockquote>
+    </li>
 </ul>
-<h2 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a>常用插件</h2><h3 id="HTML-CSS-JS-Prettify"><a href="#HTML-CSS-JS-Prettify" class="headerlink" title="HTML-CSS-JS Prettify"></a><a href="https://packagecontrol.io/packages/HTML-CSS-JS%20Prettify" target="_blank" rel="external">HTML-CSS-JS Prettify</a></h3><ul>
-<li>格式化 HTML, CSS, JavaScript 及 JSON 代码。</li>
+<h2 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a>常用插件</h2>
+<h3 id="HTML-CSS-JS-Prettify"><a href="#HTML-CSS-JS-Prettify" class="headerlink" title="HTML-CSS-JS Prettify"></a><a href="https://packagecontrol.io/packages/HTML-CSS-JS%20Prettify" target="_blank" rel="external">HTML-CSS-JS Prettify</a></h3>
+<ul>
+    <li>格式化 HTML, CSS, JavaScript 及 JSON 代码。</li>
 </ul>
-<h3 id="Color-Highlighter"><a href="#Color-Highlighter" class="headerlink" title="Color Highlighter"></a><a href="https://packagecontrol.io/packages/Color%20Highlighter" target="_blank" rel="external">Color Highlighter</a></h3><ul>
-<li>直接在代码中预览颜色。</li>
+<h3 id="Color-Highlighter"><a href="#Color-Highlighter" class="headerlink" title="Color Highlighter"></a><a href="https://packagecontrol.io/packages/Color%20Highlighter" target="_blank" rel="external">Color Highlighter</a></h3>
+<ul>
+    <li>直接在代码中预览颜色。</li>
 </ul>
-<h3 id="Stylus"><a href="#Stylus" class="headerlink" title="Stylus"></a><a href="https://packagecontrol.io/packages/Stylus" target="_blank" rel="external">Stylus</a></h3><ul>
-<li>使代码高亮支持 Stylus。</li>
+<h3 id="Stylus"><a href="#Stylus" class="headerlink" title="Stylus"></a><a href="https://packagecontrol.io/packages/Stylus" target="_blank" rel="external">Stylus</a></h3>
+<ul>
+    <li>使代码高亮支持 Stylus。</li>
 </ul>
-<h3 id="Stylus-Clean-Completions"><a href="#Stylus-Clean-Completions" class="headerlink" title="Stylus Clean Completions"></a><a href="https://packagecontrol.io/packages/Stylus%20Clean%20Completions" target="_blank" rel="external">Stylus Clean Completions</a></h3><ul>
-<li>Stylus 代码自动补全。</li>
+<h3 id="Stylus-Clean-Completions"><a href="#Stylus-Clean-Completions" class="headerlink" title="Stylus Clean Completions"></a><a href="https://packagecontrol.io/packages/Stylus%20Clean%20Completions" target="_blank" rel="external">Stylus Clean Completions</a></h3>
+<ul>
+    <li>Stylus 代码自动补全。</li>
 </ul>
-<h3 id="AutoFileName"><a href="#AutoFileName" class="headerlink" title="AutoFileName"></a><a href="https://packagecontrol.io/packages/AutoFileName" target="_blank" rel="external">AutoFileName</a></h3><ul>
-<li>文件名自动补全。<br><img src="/resources/autofilename.png" alt="AutoFileName"></li>
+<h3 id="AutoFileName"><a href="#AutoFileName" class="headerlink" title="AutoFileName"></a><a href="https://packagecontrol.io/packages/AutoFileName" target="_blank" rel="external">AutoFileName</a></h3>
+<ul>
+    <li>文件名自动补全。<br><img src="/resources/autofilename.png" alt="AutoFileName"></li>
 </ul>
-<h3 id="Can-I-Use"><a href="#Can-I-Use" class="headerlink" title="Can I Use"></a><a href="https://packagecontrol.io/packages/Can%20I%20Use" target="_blank" rel="external">Can I Use</a></h3><ul>
-<li><a href="http://caniuse.com/" target="_blank" rel="external">http://caniuse.com/</a> 的插件版，快速查询 HTML, CSS 等前端技术的浏览器兼容性</li>
+<h3 id="Can-I-Use"><a href="#Can-I-Use" class="headerlink" title="Can I Use"></a><a href="https://packagecontrol.io/packages/Can%20I%20Use" target="_blank" rel="external">Can I Use</a></h3>
+<ul>
+    <li><a href="http://caniuse.com/" target="_blank" rel="external">http://caniuse.com/</a> 的插件版，快速查询 HTML, CSS 等前端技术的浏览器兼容性</li>
 </ul>
-<h3 id="BracketHighlighter"><a href="#BracketHighlighter" class="headerlink" title="BracketHighlighter"></a><a href="https://packagecontrol.io/packages/BracketHighlighter" target="_blank" rel="external">BracketHighlighter</a></h3><ul>
-<li>调整各类括号匹配的高亮样式</li>
+<h3 id="BracketHighlighter"><a href="#BracketHighlighter" class="headerlink" title="BracketHighlighter"></a><a href="https://packagecontrol.io/packages/BracketHighlighter" target="_blank" rel="external">BracketHighlighter</a></h3>
+<ul>
+    <li>调整各类括号匹配的高亮样式</li>
 </ul>
-<h3 id="To-be-added"><a href="#To-be-added" class="headerlink" title="To be added"></a>To be added</h3><h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ol>
-<li><strong>Package Control</strong>: <a href="https://packagecontrol.io/" target="_blank" rel="external">https://packagecontrol.io/</a></li>
-<li><strong>SublimeLinter</strong>: <a href="http://sublimelinter.readthedocs.org/" target="_blank" rel="external">http://sublimelinter.readthedocs.org/</a></li>
-<li><strong>JSHint</strong>: <a href="http://jshint.com/" target="_blank" rel="external">http://jshint.com/</a></li>
-<li><strong>CSSLint</strong>: <a href="https://github.com/CSSLint/csslint" target="_blank" rel="external">https://github.com/CSSLint/csslint</a></li>
-<li><strong>HTMLHint</strong>: <a href="http://htmlhint.com/" target="_blank" rel="external">http://htmlhint.com/</a></li>
-<li><strong>Stylus</strong>: <a href="http://learnboost.github.io/stylus/" target="_blank" rel="external">http://learnboost.github.io/stylus/</a></li>
+<h3 id="To-be-added"><a href="#To-be-added" class="headerlink" title="To be added"></a>To be added</h3>
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2>
+<ol>
+    <li><strong>Package Control</strong>: <a href="https://packagecontrol.io/" target="_blank" rel="external">https://packagecontrol.io/</a></li>
+    <li><strong>SublimeLinter</strong>: <a href="http://sublimelinter.readthedocs.org/" target="_blank" rel="external">http://sublimelinter.readthedocs.org/</a></li>
+    <li><strong>JSHint</strong>: <a href="http://jshint.com/" target="_blank" rel="external">http://jshint.com/</a></li>
+    <li><strong>CSSLint</strong>: <a href="https://github.com/CSSLint/csslint" target="_blank" rel="external">https://github.com/CSSLint/csslint</a></li>
+    <li><strong>HTMLHint</strong>: <a href="http://htmlhint.com/" target="_blank" rel="external">http://htmlhint.com/</a></li>
+    <li><strong>Stylus</strong>: <a href="http://learnboost.github.io/stylus/" target="_blank" rel="external">http://learnboost.github.io/stylus/</a></li>
 </ol>
-
       
     </div>
     

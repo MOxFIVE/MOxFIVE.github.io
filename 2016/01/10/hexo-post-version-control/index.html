@@ -13,6 +13,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="format-detection" content="telephone=no" />
 <meta name="author" content="MOxFIVE" />
+<meta name="theme-color" content="#88acdb">
+
+<meta name="viewport" content="uc-fitscreen=yes">
+<meta name="layoutmode" content="standard">
+
+<meta name="google" value="notranslate">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -356,49 +363,75 @@
       
       
           
-        <p></p><h2 id="intro">前言</h2>Hexo 的文章源文件就是一个个 Markdown 文本，自己一直把这些文件备份在 <a href="https://github.com/MOxFIVE/Markdown-Archives-Backup" target="_blank" rel="external">GitHub</a> 上。渐渐发觉，如果只把 GitHub 当作普通网盘，那真是有点大材小用了。于是稍作折腾，成功地把 GitHub 上的备份关联到主题中。现在，在文章文末版权区，可以很方便地跳转查看文章更新记录、历史版本以及下载源文件。<p></p>
+        <p>
+    </p><h2 id="intro">前言</h2>Hexo 的文章源文件就是一个个 Markdown 文本，自己一直把这些文件备份在 <a href="https://github.com/MOxFIVE/Markdown-Archives-Backup" target="_blank" rel="external">GitHub</a> 上。渐渐发觉，如果只把 GitHub 当作普通网盘，那真是有点大材小用了。于是稍作折腾，成功地把 GitHub 上的备份关联到主题中。现在，在文章文末版权区，可以很方便地跳转查看文章更新记录、历史版本以及下载源文件。<p></p>
 <a id="more"></a>
 <p><img src="/resources/version-control.png" alt="version-control"></p>
-<h2 id="文件处理"><a href="#文件处理" class="headerlink" title="文件处理"></a>文件处理</h2><h3 id="文件命名"><a href="#文件命名" class="headerlink" title="文件命名"></a>文件命名</h3><ul>
-<li>为了便于文章识别和自动关联文件，文章 Markdown 的文件名应该符合规范。</li>
-<li>建议使用 文章建立日期.固定链接 <code>YY-MM-DD.permalink.md</code> 的形式。</li>
-<li>在文章 [Front-matter] 中设置固定链接 permalink，然后填写文件名，例如本文完整文件名为 <code>2016-01-10.hexo-post-version-control.md</code></li>
-<li>为什么不使用文章标题作为文件名:<blockquote>
-<p>一是因为标题偶尔会变动，修改相对麻烦；二是标题可能包含不能用作文件名的符号，导致关联出错。</p>
-</blockquote>
-</li>
+<h2 id="文件处理"><a href="#文件处理" class="headerlink" title="文件处理"></a>文件处理</h2>
+<h3 id="文件命名"><a href="#文件命名" class="headerlink" title="文件命名"></a>文件命名</h3>
+<ul>
+    <li>为了便于文章识别和自动关联文件，文章 Markdown 的文件名应该符合规范。</li>
+    <li>建议使用 文章建立日期.固定链接 <code>YY-MM-DD.permalink.md</code> 的形式。</li>
+    <li>在文章 [Front-matter] 中设置固定链接 permalink，然后填写文件名，例如本文完整文件名为 <code>2016-01-10.hexo-post-version-control.md</code></li>
+    <li>为什么不使用文章标题作为文件名:
+        <blockquote>
+            <p>一是因为标题偶尔会变动，修改相对麻烦；二是标题可能包含不能用作文件名的符号，导致关联出错。</p>
+        </blockquote>
+    </li>
 </ul>
-<h3 id="文件备份"><a href="#文件备份" class="headerlink" title="文件备份"></a>文件备份</h3><ul>
-<li>把 <code>hexo/sources/_posts</code> 文件夹同步备份到你的 GitHub 上，不熟悉 Git 的可使用 GitHub Desktop 操作，具体方法自行搜索。</li>
+<h3 id="文件备份"><a href="#文件备份" class="headerlink" title="文件备份"></a>文件备份</h3>
+<ul>
+    <li>把 <code>hexo/sources/_posts</code> 文件夹同步备份到你的 GitHub 上，不熟悉 Git 的可使用 GitHub Desktop 操作，具体方法自行搜索。</li>
 </ul>
-<h2 id="代码添加"><a href="#代码添加" class="headerlink" title="代码添加"></a>代码添加</h2><p>把下面 EJS 代码添加到主题文章模板合适位置中，<a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">Yelee</a> 主题是添加在文末版权区中。参考备份文件在 Github 的链接修改前半部分地址。</p>
-<figure class="highlight erb"><figcaption><span>yelee/layout/_partial/post/nav.ejs</span><a href="https://github.com/MOxFIVE/M-Hexo-Blog/commit/d8a4942dab23920837cc70249c31697d36e49235" target="_blank" rel="external">Post Version Control</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%</span></span></span> if (post.backup != false)&#123; <span class="xml"><span class="tag">%&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>更新历史:<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-github"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;文章 Blame 地址&gt;/&lt;%=</span></span></span> post.date.format("YYYY-MM-DD") <span class="xml"><span class="tag"><span class="string">%&gt;.&lt;%=</span></span></span> post.slug <span class="xml"><span class="tag"><span class="string">%&gt;.md"</span> <span class="attr">title</span>=<span class="string">"顺序查看文章各部分修改记录"</span> <span class="attr">target</span> = <span class="string">"_blank"</span>&gt;</span>Blame<span class="tag">&lt;/<span class="name">a</span>&gt;</span>,</span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;文章 History 地址&gt;/&lt;%=</span></span></span> post.date.format("YYYY-MM-DD") <span class="xml"><span class="tag"><span class="string">%&gt;.&lt;%=</span></span></span> post.slug <span class="xml"><span class="tag"><span class="string">%&gt;.md"</span> <span class="attr">title</span>=<span class="string">"查看文章有关更新记录"</span> <span class="attr">target</span> = <span class="string">"_blank"</span>&gt;</span>History<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"raw"</span>&gt;</span>文本模式:<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-file-text-o"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;文章 Raw 地址&gt;/&lt;%=</span></span></span> post.date.format("YYYY-MM-DD") <span class="xml"><span class="tag"><span class="string">%&gt;.&lt;%=</span></span></span> post.slug <span class="xml"><span class="tag"><span class="string">%&gt;.md"</span> <span class="attr">title</span>=<span class="string">"查看 &amp; 下载文章 Markdown 原始文本"</span> <span class="attr">target</span> = <span class="string">"_blank"</span>&gt;</span> .md Raw<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span></span></span> &#125; <span class="xml"><span class="tag">%&gt;</span></span></span><br></pre></td></tr></table></figure>
-<h2 id="代码简析"><a href="#代码简析" class="headerlink" title="代码简析"></a>代码简析</h2><figure class="highlight erb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- 不设置 backup: false 则默认显示 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span></span></span> if (post.backup != false)&#123; <span class="xml"><span class="tag">%&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>更新历史:<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-github"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 不同功能替换前面超链接即可，文件名不变 --&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 文件名生成: &lt;%=</span></span> post.date.format("YYYY-MM-DD") <span class="xml"><span class="comment">%&gt;.&lt;%=</span></span> post.slug <span class="xml"><span class="comment">%&gt; --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;文章 Blame 地址&gt;/&lt;%=</span></span></span> post.date.format("YYYY-MM-DD") <span class="xml"><span class="tag"><span class="string">%&gt;.&lt;%=</span></span></span> post.slug <span class="xml"><span class="tag"><span class="string">%&gt;.md"</span> <span class="attr">title</span>=<span class="string">"顺序查看文章各部分修改记录"</span> <span class="attr">target</span> = <span class="string">"_blank"</span>&gt;</span>Blame<span class="tag">&lt;/<span class="name">a</span>&gt;</span>,</span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;文章 History 地址&gt;/&lt;%=</span></span></span> post.date.format("YYYY-MM-DD") <span class="xml"><span class="tag"><span class="string">%&gt;.&lt;%=</span></span></span> post.slug <span class="xml"><span class="tag"><span class="string">%&gt;.md"</span> <span class="attr">title</span>=<span class="string">"查看文章有关更新记录"</span> <span class="attr">target</span> = <span class="string">"_blank"</span>&gt;</span>History<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"raw"</span>&gt;</span>文本模式:<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-file-text-o"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;文章 Raw 地址&gt;/&lt;%=</span></span></span> post.date.format("YYYY-MM-DD") <span class="xml"><span class="tag"><span class="string">%&gt;.&lt;%=</span></span></span> post.slug <span class="xml"><span class="tag"><span class="string">%&gt;.md"</span> <span class="attr">title</span>=<span class="string">"查看 &amp; 下载文章 Markdown 原始文本"</span> <span class="attr">target</span> = <span class="string">"_blank"</span>&gt;</span> .md Raw<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span></span></span> &#125; <span class="xml"><span class="tag">%&gt;</span></span></span><br></pre></td></tr></table></figure>
-<h3 id="Blame"><a href="#Blame" class="headerlink" title="Blame"></a>Blame</h3><ul>
-<li>顺序列出文章内容，左侧显示各部分 commit 信息，最后修改时间等。<br><img src="/resources/Blame.png" alt="Blame"></li>
+<h2 id="代码添加"><a href="#代码添加" class="headerlink" title="代码添加"></a>代码添加</h2>
+<p>把下面 EJS 代码添加到主题文章模板合适位置中，<a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">Yelee</a> 主题是添加在文末版权区中。参考备份文件在 Github 的链接修改前半部分地址。</p>
+<figure class="highlight erb">
+    <figcaption><span>yelee/layout/_partial/post/nav.ejs</span><a href="https://github.com/MOxFIVE/M-Hexo-Blog/commit/d8a4942dab23920837cc70249c31697d36e49235" target="_blank" rel="external">Post Version Control</a></figcaption>
+    <table>
+        <tr>
+            <td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td>
+            <td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%</span></span></span> if (post.backup != false)&#123; <span class="xml"><span class="tag">%&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>更新历史:<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-github"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;文章 Blame 地址&gt;/&lt;%=</span></span></span> post.date.format("YYYY-MM-DD") <span class="xml"><span class="tag"><span class="string">%&gt;.&lt;%=</span></span></span> post.slug <span class="xml"><span class="tag"><span class="string">%&gt;.md"</span> <span class="attr">title</span>=<span class="string">"顺序查看文章各部分修改记录"</span> <span class="attr">target</span> = <span class="string">"_blank"</span>&gt;</span>Blame<span class="tag">&lt;/<span class="name">a</span>&gt;</span>,</span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;文章 History 地址&gt;/&lt;%=</span></span></span> post.date.format("YYYY-MM-DD") <span class="xml"><span class="tag"><span class="string">%&gt;.&lt;%=</span></span></span> post.slug <span class="xml"><span class="tag"><span class="string">%&gt;.md"</span> <span class="attr">title</span>=<span class="string">"查看文章有关更新记录"</span> <span class="attr">target</span> = <span class="string">"_blank"</span>&gt;</span>History<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"raw"</span>&gt;</span>文本模式:<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-file-text-o"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;文章 Raw 地址&gt;/&lt;%=</span></span></span> post.date.format("YYYY-MM-DD") <span class="xml"><span class="tag"><span class="string">%&gt;.&lt;%=</span></span></span> post.slug <span class="xml"><span class="tag"><span class="string">%&gt;.md"</span> <span class="attr">title</span>=<span class="string">"查看 &amp; 下载文章 Markdown 原始文本"</span> <span class="attr">target</span> = <span class="string">"_blank"</span>&gt;</span> .md Raw<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span></span></span> &#125; <span class="xml"><span class="tag">%&gt;</span></span></span><br></pre></td>
+        </tr>
+    </table>
+</figure>
+<h2 id="代码简析"><a href="#代码简析" class="headerlink" title="代码简析"></a>代码简析</h2>
+<figure class="highlight erb">
+    <table>
+        <tr>
+            <td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td>
+            <td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- 不设置 backup: false 则默认显示 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span></span></span> if (post.backup != false)&#123; <span class="xml"><span class="tag">%&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>更新历史:<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-github"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 不同功能替换前面超链接即可，文件名不变 --&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 文件名生成: &lt;%=</span></span> post.date.format("YYYY-MM-DD") <span class="xml"><span class="comment">%&gt;.&lt;%=</span></span> post.slug <span class="xml"><span class="comment">%&gt; --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;文章 Blame 地址&gt;/&lt;%=</span></span></span> post.date.format("YYYY-MM-DD") <span class="xml"><span class="tag"><span class="string">%&gt;.&lt;%=</span></span></span> post.slug <span class="xml"><span class="tag"><span class="string">%&gt;.md"</span> <span class="attr">title</span>=<span class="string">"顺序查看文章各部分修改记录"</span> <span class="attr">target</span> = <span class="string">"_blank"</span>&gt;</span>Blame<span class="tag">&lt;/<span class="name">a</span>&gt;</span>,</span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;文章 History 地址&gt;/&lt;%=</span></span></span> post.date.format("YYYY-MM-DD") <span class="xml"><span class="tag"><span class="string">%&gt;.&lt;%=</span></span></span> post.slug <span class="xml"><span class="tag"><span class="string">%&gt;.md"</span> <span class="attr">title</span>=<span class="string">"查看文章有关更新记录"</span> <span class="attr">target</span> = <span class="string">"_blank"</span>&gt;</span>History<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"raw"</span>&gt;</span>文本模式:<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-file-text-o"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;文章 Raw 地址&gt;/&lt;%=</span></span></span> post.date.format("YYYY-MM-DD") <span class="xml"><span class="tag"><span class="string">%&gt;.&lt;%=</span></span></span> post.slug <span class="xml"><span class="tag"><span class="string">%&gt;.md"</span> <span class="attr">title</span>=<span class="string">"查看 &amp; 下载文章 Markdown 原始文本"</span> <span class="attr">target</span> = <span class="string">"_blank"</span>&gt;</span> .md Raw<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span></span></span> &#125; <span class="xml"><span class="tag">%&gt;</span></span></span><br></pre></td>
+        </tr>
+    </table>
+</figure>
+<h3 id="Blame"><a href="#Blame" class="headerlink" title="Blame"></a>Blame</h3>
+<ul>
+    <li>顺序列出文章内容，左侧显示各部分 commit 信息，最后修改时间等。<br><img src="/resources/Blame.png" alt="Blame"></li>
 </ul>
-<h3 id="History"><a href="#History" class="headerlink" title="History"></a>History</h3><ul>
-<li>列出与该文件相关的更新记录 (commit)，按路径匹配。我一般直接就用提交时间作为 commit 信息了，想要更直观查看变动的可以在提交时书写更完善的 commit 信息。</li>
+<h3 id="History"><a href="#History" class="headerlink" title="History"></a>History</h3>
+<ul>
+    <li>列出与该文件相关的更新记录 (commit)，按路径匹配。我一般直接就用提交时间作为 commit 信息了，想要更直观查看变动的可以在提交时书写更完善的 commit 信息。</li>
 </ul>
 <p><img src="/resources/History.png" alt="History"></p>
-<h3 id="md-Raw"><a href="#md-Raw" class="headerlink" title=".md Raw"></a>.md Raw</h3><ul>
-<li>在线查看或者直接下载文章原始 Markdown 文本。<br><img src="/resources/Raw.png" alt="Raw"></li>
-</ul>
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><blockquote>
+<h3 id="md-Raw"><a href="#md-Raw" class="headerlink" title=".md Raw"></a>.md Raw</h3>
 <ul>
-<li>这是半自动的版本控制，需要手动把文章同步备份到 GitHub；</li>
-<li>代码部分的变动基于 <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">Yelee</a> 主题，其它主题用户可以参考 <a href="/2015/10/25/hexo-tag-cloud/">另一篇文章</a> 的方法，自行添加代码到合适位置；</li>
-<li>小图标来自 Font Awesome，需主题支持才会正常显示；</li>
-<li>本文不详解 Hexo 基础知识，有设置项不理解的请先阅读 <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">Hexo 官方帮助文档</a>。</li>
+    <li>在线查看或者直接下载文章原始 Markdown 文本。<br><img src="/resources/Raw.png" alt="Raw"></li>
 </ul>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2>
+<blockquote>
+    <ul>
+        <li>这是半自动的版本控制，需要手动把文章同步备份到 GitHub；</li>
+        <li>代码部分的变动基于 <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">Yelee</a> 主题，其它主题用户可以参考 <a href="/2015/10/25/hexo-tag-cloud/">另一篇文章</a> 的方法，自行添加代码到合适位置；</li>
+        <li>小图标来自 Font Awesome，需主题支持才会正常显示；</li>
+        <li>本文不详解 Hexo 基础知识，有设置项不理解的请先阅读 <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">Hexo 官方帮助文档</a>。</li>
+    </ul>
 </blockquote>
-<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ol>
-<li><strong>GitHub Desktop</strong>: <a href="https://desktop.github.com/" target="_blank" rel="external">https://desktop.github.com/</a></li>
-<li><strong>Font Awesome</strong>: <a href="http://fontawesome.io/" target="_blank" rel="external">http://fontawesome.io/</a></li>
-<li><strong>Hexo 使用文档</strong>: <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">https://hexo.io/zh-cn/docs/</a></li>
-<li><strong><em>Hexo 文章版本控制</em></strong>  by <strong>MOxFIVE</strong> on <code>2016/01/10</code>: <a href="https://github.com/MOxFIVE/M-Hexo-Blog/commit/d8a4942dab23920837cc70249c31697d36e49235" target="_blank" rel="external">https://github.com/MOxFIVE/M-Hexo-Blog/commit/d8a4942dab23920837cc70249c31697d36e49235</a></li>
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2>
+<ol>
+    <li><strong>GitHub Desktop</strong>: <a href="https://desktop.github.com/" target="_blank" rel="external">https://desktop.github.com/</a></li>
+    <li><strong>Font Awesome</strong>: <a href="http://fontawesome.io/" target="_blank" rel="external">http://fontawesome.io/</a></li>
+    <li><strong>Hexo 使用文档</strong>: <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">https://hexo.io/zh-cn/docs/</a></li>
+    <li><strong><em>Hexo 文章版本控制</em></strong> by <strong>MOxFIVE</strong> on <code>2016/01/10</code>: <a href="https://github.com/MOxFIVE/M-Hexo-Blog/commit/d8a4942dab23920837cc70249c31697d36e49235" target="_blank" rel="external">https://github.com/MOxFIVE/M-Hexo-Blog/commit/d8a4942dab23920837cc70249c31697d36e49235</a></li>
 </ol>
-
       
     </div>
     

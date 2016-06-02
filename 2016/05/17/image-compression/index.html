@@ -13,6 +13,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="format-detection" content="telephone=no" />
 <meta name="author" content="MOxFIVE" />
+<meta name="theme-color" content="#88acdb">
+
+<meta name="viewport" content="uc-fitscreen=yes">
+<meta name="layoutmode" content="standard">
+
+<meta name="google" value="notranslate">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -358,41 +365,48 @@
           
         <p>　　目前主题里可以使用多张随机大图作背景，如果不做好图片压缩和优化，可能会严重影响网站流畅性。下面简单介绍两种比较便捷的优化方案。</p>
 <a id="more"></a>
-<h2 id="优化说明"><a href="#优化说明" class="headerlink" title="优化说明"></a>优化说明</h2><ul>
-<li>请使用 <code>jpg</code> 后缀名的背景图片；</li>
-<li>如果可以，使用 <code>渐进式JPEG</code>，让图片加载时逐渐清晰；</li>
-<li>将图片品质尽量调低，一般可以压缩到几十kb（背景图半透明显示，因此细节并不重要）；<blockquote>
-<p>下图1 为目前主题自带背景图的分辨率和文件大小展示，图2 为渐进式图片加载示例</p>
-</blockquote>
-</li>
+<h2 id="优化说明"><a href="#优化说明" class="headerlink" title="优化说明"></a>优化说明</h2>
+<ul>
+    <li>请使用 <code>jpg</code> 后缀名的背景图片；</li>
+    <li>如果可以，使用 <code>渐进式JPEG</code>，让图片加载时逐渐清晰；</li>
+    <li>将图片品质尽量调低，一般可以压缩到几十kb（背景图半透明显示，因此细节并不重要）；
+        <blockquote>
+            <p>下图1 为目前主题自带背景图的分辨率和文件大小展示，图2 为渐进式图片加载示例</p>
+        </blockquote>
+    </li>
 </ul>
 <p><img src="/resources/image-compression-1.png" alt="Yelee Background info."> <img src="/resources/image-compression-2.gif" alt="Progressive JPEGs"></p>
-<h2 id="优化方案"><a href="#优化方案" class="headerlink" title="优化方案"></a>优化方案</h2><h3 id="PhotoShop"><a href="#PhotoShop" class="headerlink" title="PhotoShop"></a>PhotoShop</h3><ul>
-<li>电脑上如果装有 PhotoShop, 那用其来优化图片真是再好不过了</li>
-<li>PS 打开图片 → 文件 → 存储为 Web 所用格式 → JPEG 格式，品质 0，勾选 <code>连续</code> （渐进式），最后存储，这样一张高压缩渐进式的 JPG 背景图就做好了</li>
+<h2 id="优化方案"><a href="#优化方案" class="headerlink" title="优化方案"></a>优化方案</h2>
+<h3 id="PhotoShop"><a href="#PhotoShop" class="headerlink" title="PhotoShop"></a>PhotoShop</h3>
+<ul>
+    <li>电脑上如果装有 PhotoShop, 那用其来优化图片真是再好不过了</li>
+    <li>PS 打开图片 → 文件 → 存储为 Web 所用格式 → JPEG 格式，品质 0，勾选 <code>连续</code> （渐进式），最后存储，这样一张高压缩渐进式的 JPG 背景图就做好了</li>
 </ul>
 <p><img src="/resources/image-compression-ps.png" alt="image Compression by PhotoShop"></p>
-<h3 id="智图"><a href="#智图" class="headerlink" title="智图"></a>智图</h3><ul>
-<li><a href="http://zhitu.isux.us/" target="_blank" rel="external">智图</a> 是腾讯 ISUX 出品的在线图片优化工具，可以方便的对比优化前后的图片，同时可以自行调节图片品质，除了不能设置 <code>渐进式JPEG</code> , 其他基本满足背景图优化需要</li>
-<li>进入网站后按提示上传图片，再调低图片品质，之后下载图片即可<blockquote>
-<p>因为主题背景图为 <code>jpg</code> 格式，其他格式请转为 <code>jpg</code> 再上传到该网站优化。转换格式方法很多，比如用 Windows 自带的画图打开图片然后另存为 jpg</p>
-</blockquote>
-</li>
+<h3 id="智图"><a href="#智图" class="headerlink" title="智图"></a>智图</h3>
+<ul>
+    <li><a href="http://zhitu.isux.us/" target="_blank" rel="external">智图</a> 是腾讯 ISUX 出品的在线图片优化工具，可以方便的对比优化前后的图片，同时可以自行调节图片品质，除了不能设置 <code>渐进式JPEG</code> , 其他基本满足背景图优化需要</li>
+    <li>进入网站后按提示上传图片，再调低图片品质，之后下载图片即可
+        <blockquote>
+            <p>因为主题背景图为 <code>jpg</code> 格式，其他格式请转为 <code>jpg</code> 再上传到该网站优化。转换格式方法很多，比如用 Windows 自带的画图打开图片然后另存为 jpg</p>
+        </blockquote>
+    </li>
 </ul>
 <p><img src="/resources/zhitu.png" alt="智图"></p>
-<h3 id="方案对比"><a href="#方案对比" class="headerlink" title="方案对比"></a>方案对比</h3><ul>
-<li>原图为 420kb，智图选择最低品质(10)后约为 129kb；</li>
-<li>PhotoShop 选择品质 0，可以压缩到 62k，同时可以设为 <code>渐进式JPEG</code>；</li>
-<li>因此，有条件的话更推荐使用 PS 压缩背景图。</li>
+<h3 id="方案对比"><a href="#方案对比" class="headerlink" title="方案对比"></a>方案对比</h3>
+<ul>
+    <li>原图为 420kb，智图选择最低品质(10)后约为 129kb；</li>
+    <li>PhotoShop 选择品质 0，可以压缩到 62k，同时可以设为 <code>渐进式JPEG</code>；</li>
+    <li>因此，有条件的话更推荐使用 PS 压缩背景图。</li>
 </ul>
-<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ol>
-<li><strong>智图</strong>: <a href="http://zhitu.isux.us/" target="_blank" rel="external">http://zhitu.isux.us/</a></li>
-<li><strong>TinyPNG</strong>: <a href="https://tinypng.com/" target="_blank" rel="external">https://tinypng.com/</a></li>
-<li><strong><em>渐进式 jpeg(progressive jpeg) 图片及其相关</em></strong> by <strong>张鑫旭</strong> on <code>2013/01/07</code>: <a href="http://www.zhangxinxu.com/wordpress/2013/01/progressive-jpeg-image-and-so-on/" target="_blank" rel="external">http://www.zhangxinxu.com/wordpress/2013/01/progressive-jpeg-image-and-so-on/</a></li>
-<li><strong>呆毛王示例壁纸下载</strong>: <a href="http://moxfive.xyz/resources/saber.jpg">http://moxfive.xyz/resources/saber.jpg</a></li>
-<li><strong>最人性化的壁纸网站</strong>: <a href="http://www.wallpaperpcmobile.com/" target="_blank" rel="external">http://www.wallpaperpcmobile.com/</a></li>
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2>
+<ol>
+    <li><strong>智图</strong>: <a href="http://zhitu.isux.us/" target="_blank" rel="external">http://zhitu.isux.us/</a></li>
+    <li><strong>TinyPNG</strong>: <a href="https://tinypng.com/" target="_blank" rel="external">https://tinypng.com/</a></li>
+    <li><strong><em>渐进式 jpeg(progressive jpeg) 图片及其相关</em></strong> by <strong>张鑫旭</strong> on <code>2013/01/07</code>: <a href="http://www.zhangxinxu.com/wordpress/2013/01/progressive-jpeg-image-and-so-on/" target="_blank" rel="external">http://www.zhangxinxu.com/wordpress/2013/01/progressive-jpeg-image-and-so-on/</a></li>
+    <li><strong>呆毛王示例壁纸下载</strong>: <a href="http://moxfive.xyz/resources/saber.jpg">http://moxfive.xyz/resources/saber.jpg</a></li>
+    <li><strong>最人性化的壁纸网站</strong>: <a href="http://www.wallpaperpcmobile.com/" target="_blank" rel="external">http://www.wallpaperpcmobile.com/</a></li>
 </ol>
-
       
     </div>
     
