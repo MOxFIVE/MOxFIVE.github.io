@@ -362,74 +362,24 @@
           
         <p>　　在 CSS 中应用 ellipsis 属性，可显示省略符号(…)来代表被修剪的文本。</p>
 <a id="more"></a>
-<p>
-    </p><p data-height="309" data-theme-id="0" data-slug-hash="yOjQKo" data-default-tab="css,result" data-user="MOxFIVE" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/MOxFIVE/pen/yOjQKo/" target="_blank" rel="external">text-overflow: ellipsis</a> by MOxFIVE (<a href="http://codepen.io/MOxFIVE" target="_blank" rel="external">@MOxFIVE</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.</p>
-<p></p>
+<p></p><p data-height="309" data-theme-id="0" data-slug-hash="yOjQKo" data-default-tab="css,result" data-user="MOxFIVE" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/MOxFIVE/pen/yOjQKo/" target="_blank" rel="external">text-overflow: ellipsis</a> by MOxFIVE (<a href="http://codepen.io/MOxFIVE" target="_blank" rel="external">@MOxFIVE</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-<h2 id="单行省略"><a href="#单行省略" class="headerlink" title="单行省略"></a>单行省略</h2>
-<h3 id="样式代码"><a href="#样式代码" class="headerlink" title="样式代码"></a>样式代码</h3>
-<figure class="highlight html">
-    <table>
-        <tr>
-            <td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td>
-            <td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>CSS is awesome, especially when you can scroll to see extra text </span><br><span class="line">instead of just having it overlap other text by default.<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td>
-        </tr>
-    </table>
-</figure>
-<figure class="highlight css">
-    <table>
-        <tr>
-            <td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td>
-            <td class="code"><pre><span class="line"><span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">14em</span>;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line">    <span class="attribute">white-space</span>: nowrap;</span><br><span class="line">&#125;</span><br></pre></td>
-        </tr>
-    </table>
-</figure>
-<h3 id="代码简析"><a href="#代码简析" class="headerlink" title="代码简析"></a>代码简析</h3>
-<figure class="highlight stylus">
-    <table>
-        <tr>
-            <td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td>
-            <td class="code"><pre><span class="line"><span class="attribute">text-overflow</span>: ellipsis；</span><br><span class="line"><span class="comment">// [必需], 文本溢出时显示省略号(…)</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">display</span>: block;</span><br><span class="line"><span class="comment">// [可选], `ellipsis` 只应用于 `block containers`（块级容器），</span></span><br><span class="line"><span class="comment">// 如果所在 HTML 标签非块级，那需要设置 `display` 属性</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">white-space</span>: nowrap;</span><br><span class="line"><span class="comment">// [必需], 将文本限制在一行内</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">overflow</span>: hidden;</span><br><span class="line"><span class="comment">// [必需], 隐藏溢出的内容</span></span><br><span class="line"><span class="comment">// 可按需要仅设置 `overflow-y` 或 `overflow-x`</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">width</span>: <span class="number">14em</span>;</span><br><span class="line"><span class="comment">// [可选], 限制容器宽度</span></span><br><span class="line"><span class="comment">// 可使用 `max-width`</span></span><br></pre></td>
-        </tr>
-    </table>
-</figure>
-<h2 id="多行省略"><a href="#多行省略" class="headerlink" title="多行省略"></a>多行省略</h2>
-<p>在指定行数后，才使用省略号代替溢出文本，这可以借助 <code>-webkit-line-clamp</code> 属性实现</p>
+<h2 id="单行省略"><a href="#单行省略" class="headerlink" title="单行省略"></a>单行省略</h2><h3 id="样式代码"><a href="#样式代码" class="headerlink" title="样式代码"></a>样式代码</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>CSS is awesome, especially when you can scroll to see extra text </span><br><span class="line">instead of just having it overlap other text by default.<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">14em</span>;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line">    <span class="attribute">white-space</span>: nowrap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="代码简析"><a href="#代码简析" class="headerlink" title="代码简析"></a>代码简析</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">text-overflow</span>: ellipsis；</span><br><span class="line"><span class="comment">// [必需], 文本溢出时显示省略号(…)</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">display</span>: block;</span><br><span class="line"><span class="comment">// [可选], `ellipsis` 只应用于 `block containers`（块级容器），</span></span><br><span class="line"><span class="comment">// 如果所在 HTML 标签非块级，那需要设置 `display` 属性</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">white-space</span>: nowrap;</span><br><span class="line"><span class="comment">// [必需], 将文本限制在一行内</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">overflow</span>: hidden;</span><br><span class="line"><span class="comment">// [必需], 隐藏溢出的内容</span></span><br><span class="line"><span class="comment">// 可按需要仅设置 `overflow-y` 或 `overflow-x`</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">width</span>: <span class="number">14em</span>;</span><br><span class="line"><span class="comment">// [可选], 限制容器宽度</span></span><br><span class="line"><span class="comment">// 可使用 `max-width`</span></span><br></pre></td></tr></table></figure>
+<h2 id="多行省略"><a href="#多行省略" class="headerlink" title="多行省略"></a>多行省略</h2><p>在指定行数后，才使用省略号代替溢出文本，这可以借助 <code>-webkit-line-clamp</code> 属性实现</p>
 <ul>
-    <li>-webkit- 内核属性，不支持 IE 和 Firefox 浏览器 <a href="http://caniuse.com/#search=-webkit-line-clamp" target="_blank" rel="external">查看兼容性</a></li>
+<li>-webkit- 内核属性，不支持 IE 和 Firefox 浏览器 <a href="http://caniuse.com/#search=-webkit-line-clamp" target="_blank" rel="external">查看兼容性</a></li>
 </ul>
-<h3 id="样式代码-1"><a href="#样式代码-1" class="headerlink" title="样式代码"></a>样式代码</h3>
-<figure class="highlight html">
-    <table>
-        <tr>
-            <td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td>
-            <td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>CSS is awesome, especially when you can scroll to see extra text </span><br><span class="line">instead of just having it overlap other text by default.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td>
-        </tr>
-    </table>
-</figure>
-<figure class="highlight css">
-    <table>
-        <tr>
-            <td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td>
-            <td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: -webkit-box;</span><br><span class="line">    <span class="attribute">-webkit-line-clamp</span>: <span class="number">2</span>;</span><br><span class="line">    <span class="attribute">-webkit-box-orient</span>: vertical;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">15em</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">1.5</span>;</span><br><span class="line">    <span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line">    <span class="attribute">overflow </span>: hidden;</span><br><span class="line">&#125;</span><br></pre></td>
-        </tr>
-    </table>
-</figure>
-<h3 id="代码简析-1"><a href="#代码简析-1" class="headerlink" title="代码简析"></a>代码简析</h3>
-<figure class="highlight less">
-    <table>
-        <tr>
-            <td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td>
-            <td class="code"><pre><span class="line"><span class="comment">// 必需的属性</span></span><br><span class="line"><span class="attribute">display</span>: -webkit-box; <span class="comment">// 将元素设为弹性盒模型</span></span><br><span class="line"><span class="attribute">-webkit-line-clamp</span>: <span class="number">2</span>; <span class="comment">// 文本最大行数</span></span><br><span class="line"><span class="attribute">-webkit-box-orient</span>: vertical; <span class="comment">// 模型内元素垂直排列</span></span><br><span class="line"><span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line"><span class="attribute">overflow </span>: hidden;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 可选的样式</span></span><br><span class="line"><span class="attribute">width</span>: <span class="number">15em</span>; <span class="comment">// 限制容器宽度</span></span><br><span class="line"><span class="attribute">line-height</span>: <span class="number">1.5</span>; <span class="comment">// 建议增大行高，避免文字被腰斩</span></span><br></pre></td>
-        </tr>
-    </table>
-</figure>
-<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2>
-<ol>
-    <li><strong><em>多行文本溢出显示省略号(…)全攻略</em></strong> by <strong>愚人码头</strong> on <code>2014/09/30</code>: <a href="http://www.css88.com/archives/5206" target="_blank" rel="external">http://www.css88.com/archives/5206</a></li>
-    <li><strong><em>Overflow Ellipsis: the text-overflow property</em></strong> by <strong>W3C</strong> on <code>2015/07/07</code>: <a href="https://www.w3.org/TR/css-ui-3/#text-overflow" target="_blank" rel="external">https://www.w3.org/TR/css-ui-3/#text-overflow</a></li>
+<h3 id="样式代码-1"><a href="#样式代码-1" class="headerlink" title="样式代码"></a>样式代码</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>CSS is awesome, especially when you can scroll to see extra text </span><br><span class="line">instead of just having it overlap other text by default.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: -webkit-box;</span><br><span class="line">    <span class="attribute">-webkit-line-clamp</span>: <span class="number">2</span>;</span><br><span class="line">    <span class="attribute">-webkit-box-orient</span>: vertical;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">15em</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">1.5</span>;</span><br><span class="line">    <span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line">    <span class="attribute">overflow </span>: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="代码简析-1"><a href="#代码简析-1" class="headerlink" title="代码简析"></a>代码简析</h3><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 必需的属性</span></span><br><span class="line"><span class="attribute">display</span>: -webkit-box; <span class="comment">// 将元素设为弹性盒模型</span></span><br><span class="line"><span class="attribute">-webkit-line-clamp</span>: <span class="number">2</span>; <span class="comment">// 文本最大行数</span></span><br><span class="line"><span class="attribute">-webkit-box-orient</span>: vertical; <span class="comment">// 模型内元素垂直排列</span></span><br><span class="line"><span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line"><span class="attribute">overflow </span>: hidden;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 可选的样式</span></span><br><span class="line"><span class="attribute">width</span>: <span class="number">15em</span>; <span class="comment">// 限制容器宽度</span></span><br><span class="line"><span class="attribute">line-height</span>: <span class="number">1.5</span>; <span class="comment">// 建议增大行高，避免文字被腰斩</span></span><br></pre></td></tr></table></figure>
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ol>
+<li><strong><em>多行文本溢出显示省略号(…)全攻略</em></strong> by <strong>愚人码头</strong> on <code>2014/09/30</code>: <a href="http://www.css88.com/archives/5206" target="_blank" rel="external">http://www.css88.com/archives/5206</a></li>
+<li><strong><em>Overflow Ellipsis: the text-overflow property</em></strong> by <strong>W3C</strong> on <code>2015/07/07</code>: <a href="https://www.w3.org/TR/css-ui-3/#text-overflow" target="_blank" rel="external">https://www.w3.org/TR/css-ui-3/#text-overflow</a></li>
 </ol>
+
       
     </div>
     

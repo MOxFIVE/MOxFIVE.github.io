@@ -358,114 +358,96 @@
       
       
           
-        <p>
-    </p><h2 id="intro">前言</h2>Markdown 作为一种轻量级的标记语言，用来进行简单的文本排版，确实方便快捷。但 Markdown 标记语言的属性，也使得其在表格处理上略显繁琐且不直观。而 Excel 几乎就是表格的代名词，借助 Excel，可以改善我们在 Markdown 中使用表格的体验。下文将简单介绍怎么使用 Excel 生成和管理可用于 Markdown 文章的表格。<p></p>
+        <p></p><h2 id="intro">前言</h2>Markdown 作为一种轻量级的标记语言，用来进行简单的文本排版，确实方便快捷。但 Markdown 标记语言的属性，也使得其在表格处理上略显繁琐且不直观。而 Excel 几乎就是表格的代名词，借助 Excel，可以改善我们在 Markdown 中使用表格的体验。下文将简单介绍怎么使用 Excel 生成和管理可用于 Markdown 文章的表格。<p></p>
 <a id="more"></a>
-<h2 id="填写表格"><a href="#填写表格" class="headerlink" title="填写表格"></a>填写表格</h2>
-<p>在 Excel 中正常填写你的表格内容，之后在标题行下插入一行，要居中的填入 <strong><code>:-:</code></strong>，要右对齐的填<strong><code>-:</code></strong>，其它全部填上<strong><code>-</code></strong>。</p>
+<h2 id="填写表格"><a href="#填写表格" class="headerlink" title="填写表格"></a>填写表格</h2><p>在 Excel 中正常填写你的表格内容，之后在标题行下插入一行，要居中的填入 <strong><code>:-:</code></strong>，要右对齐的填<strong><code>-:</code></strong>，其它全部填上<strong><code>-</code></strong>。</p>
 <table>
-    <thead>
-        <tr>
-            <th style="text-align:center">-</th>
-            <th>左对齐</th>
-            <th style="text-align:center">居中对齐</th>
-            <th style="text-align:right">右对齐</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td style="text-align:center"><strong>:-:</strong></td>
-            <td><strong>-</strong></td>
-            <td style="text-align:center"><strong>:-:</strong></td>
-            <td style="text-align:right"><strong>-</strong>:</td>
-        </tr>
-        <tr>
-            <td style="text-align:center">1</td>
-            <td>Left</td>
-            <td style="text-align:center">Center</td>
-            <td style="text-align:right">Right</td>
-        </tr>
-        <tr>
-            <td style="text-align:center">2</td>
-            <td>Left</td>
-            <td style="text-align:center">Center</td>
-            <td style="text-align:right">Right</td>
-        </tr>
-        <tr>
-            <td style="text-align:center">3</td>
-            <td>Left</td>
-            <td style="text-align:center">Center</td>
-            <td style="text-align:right">Right</td>
-        </tr>
-    </tbody>
+<thead>
+<tr>
+<th style="text-align:center">-</th>
+<th>左对齐</th>
+<th style="text-align:center">居中对齐</th>
+<th style="text-align:right">右对齐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>:-:</strong></td>
+<td><strong>-</strong></td>
+<td style="text-align:center"><strong>:-:</strong></td>
+<td style="text-align:right"><strong>-</strong>:</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td>Left</td>
+<td style="text-align:center">Center</td>
+<td style="text-align:right">Right</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td>Left</td>
+<td style="text-align:center">Center</td>
+<td style="text-align:right">Right</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td>Left</td>
+<td style="text-align:center">Center</td>
+<td style="text-align:right">Right</td>
+</tr>
+</tbody>
 </table>
 <ul>
-    <li>如图左上角，表头也不要留空，填上<code>-</code>提高兼容性。</li>
+<li>如图左上角，表头也不要留空，填上<code>-</code>提高兼容性。</li>
 </ul>
-<h2 id="生成表格"><a href="#生成表格" class="headerlink" title="生成表格"></a>生成表格</h2>
-<p>选中表格，复制，然后粘贴到 Markdown 编辑器中</p>
-<figure class="highlight plain">
-    <table>
-        <tr>
-            <td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td>
-            <td class="code"><pre><span class="line">-	左对齐	居中对齐	右对齐</span><br><span class="line">:-:	:-	:-:	-:</span><br><span class="line">1	Left	Center	Right</span><br><span class="line">2	Left	Center	Right</span><br><span class="line">3	Left	Center	Right</span><br></pre></td>
-        </tr>
-    </table>
-</figure>
+<h2 id="生成表格"><a href="#生成表格" class="headerlink" title="生成表格"></a>生成表格</h2><p>选中表格，复制，然后粘贴到 Markdown 编辑器中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-	左对齐	居中对齐	右对齐</span><br><span class="line">:-:	:-	:-:	-:</span><br><span class="line">1	Left	Center	Right</span><br><span class="line">2	Left	Center	Right</span><br><span class="line">3	Left	Center	Right</span><br></pre></td></tr></table></figure>
 <p>复制出来的 Excel 默认以<code>tab</code>作为单元格分隔符，而 Markdown 则以<code>|</code>为分隔符。顺理成章，当我们使用 <code>|</code> 对原<code>tab</code>分隔符进行替换后，即可生成 Markdown 化的表格。</p>
-<figure class="highlight plain">
-    <table>
-        <tr>
-            <td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td>
-            <td class="code"><pre><span class="line">-|默认左对齐|居中对齐|内容右对齐</span><br><span class="line">:-:|-|:-:|-:</span><br><span class="line">1|Left|Center|Right</span><br><span class="line">2|Left|Center|Right</span><br><span class="line">3|Left|Center|Right</span><br></pre></td>
-        </tr>
-    </table>
-</figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-|默认左对齐|居中对齐|内容右对齐</span><br><span class="line">:-:|-|:-:|-:</span><br><span class="line">1|Left|Center|Right</span><br><span class="line">2|Left|Center|Right</span><br><span class="line">3|Left|Center|Right</span><br></pre></td></tr></table></figure>
 <p>表格效果大致如下：</p>
 <table>
-    <thead>
-        <tr>
-            <th style="text-align:center">-</th>
-            <th>左对齐</th>
-            <th style="text-align:center">居中对齐</th>
-            <th style="text-align:right">右对齐</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td style="text-align:center">1</td>
-            <td>Left</td>
-            <td style="text-align:center">Center</td>
-            <td style="text-align:right">Right</td>
-        </tr>
-        <tr>
-            <td style="text-align:center">2</td>
-            <td>Left</td>
-            <td style="text-align:center">Center</td>
-            <td style="text-align:right">Right</td>
-        </tr>
-        <tr>
-            <td style="text-align:center">3</td>
-            <td>Left</td>
-            <td style="text-align:center">Center</td>
-            <td style="text-align:right">Right</td>
-        </tr>
-    </tbody>
+<thead>
+<tr>
+<th style="text-align:center">-</th>
+<th>左对齐</th>
+<th style="text-align:center">居中对齐</th>
+<th style="text-align:right">右对齐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td>Left</td>
+<td style="text-align:center">Center</td>
+<td style="text-align:right">Right</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td>Left</td>
+<td style="text-align:center">Center</td>
+<td style="text-align:right">Right</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td>Left</td>
+<td style="text-align:center">Center</td>
+<td style="text-align:right">Right</td>
+</tr>
+</tbody>
 </table>
-<h2 id="处理表格"><a href="#处理表格" class="headerlink" title="处理表格"></a>处理表格</h2>
-<p>在 Excel 中，处理表格灵活方便，调整好后再按上面方法重新生成表格即可。</p>
+<h2 id="处理表格"><a href="#处理表格" class="headerlink" title="处理表格"></a>处理表格</h2><p>在 Excel 中，处理表格灵活方便，调整好后再按上面方法重新生成表格即可。</p>
 <ul>
-    <li>可以对表格进行快速拖拽排序；</li>
-    <li>可以用公式 <code>=row()</code> 给表格添加自动序号；</li>
-    <li>当然我们也可以使用 Markdown 语法为单元格内容设置格式，添加超链接等；</li>
+<li>可以对表格进行快速拖拽排序；</li>
+<li>可以用公式 <code>=row()</code> 给表格添加自动序号；</li>
+<li>当然我们也可以使用 Markdown 语法为单元格内容设置格式，添加超链接等；</li>
 </ul>
-<h2 id="其他说明"><a href="#其他说明" class="headerlink" title="其他说明"></a>其他说明</h2>
-<ul>
-    <li>Markdown 默认语法不支持单元格合并，更复杂的表格不适合用在 Markdown 中；</li>
-    <li>这种写法的表格，目前已知在 GitHub 上不能正确解析；</li>
-    <li><a href="/2015/09/20/windows-mac-software/">自用 Windows 和 Mac 软件推荐</a>，这些表格处理经验基本是为了写左边这篇文章而积累的，大家可以看看效果。</li>
-    <li>顺便推荐一个在线表格生成网站，<a href="http://www.tablesgenerator.com/markdown_tables" target="_blank" rel="external">Tables Generator.com</a>，在上面也可以快速生成通用的 Markdown 表格。使用网站的不便之处就是需要联网，而且这个网站还在[墙外]。</li>
+<h2 id="其他说明"><a href="#其他说明" class="headerlink" title="其他说明"></a>其他说明</h2><ul>
+<li>Markdown 默认语法不支持单元格合并，更复杂的表格不适合用在 Markdown 中；</li>
+<li>这种写法的表格，目前已知在 GitHub 上不能正确解析；</li>
+<li><a href="/2015/09/20/windows-mac-software/">自用 Windows 和 Mac 软件推荐</a>，这些表格处理经验基本是为了写左边这篇文章而积累的，大家可以看看效果。</li>
+<li>顺便推荐一个在线表格生成网站，<a href="http://www.tablesgenerator.com/markdown_tables" target="_blank" rel="external">Tables Generator.com</a>，在上面也可以快速生成通用的 Markdown 表格。使用网站的不便之处就是需要联网，而且这个网站还在[墙外]。</li>
 </ul>
+
       
     </div>
     

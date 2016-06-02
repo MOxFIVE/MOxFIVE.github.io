@@ -373,55 +373,42 @@
           
         <p>　　最近正在学习用 Markdown 写文章，网上搜了一圈，没找到称心的插入参考资料列表 Reference 的方法。想起自己一直在用 EndNote 管理文献，索性网络博文的文献也用 EndNote 管理好了。</p>
 <p>　　参考 Markdown 的语法，修改了 EndNote 文献的导出格式，生成的列表较简洁，样式自定义，排序和维护都比较方便，基本满足了自己的要求。</p>
-<p>　　下面是实现过程，稍作记录供参考，具体细节样式取决于 Markdown 样式配置。<br>
-    <a id="more"></a>
-</p>
+<p>　　下面是实现过程，稍作记录供参考，具体细节样式取决于 Markdown 样式配置。<br><a id="more"></a></p>
 <p><strong>相关程序: </strong></p>
 <ul>
-    <li>EndNote X7 </li>
-    <li>Windows 10</li>
-    <li>马克飞象 &amp; Mou</li>
+<li>EndNote X7 </li>
+<li>Windows 10</li>
+<li>马克飞象 &amp; Mou</li>
 </ul>
 <hr>
-<h3 id="导入与配置"><a href="#导入与配置" class="headerlink" title="导入与配置"></a>导入与配置</h3>
-<ol>
-    <li>配置文件下载：→ <a href="/resources/EndNote-MOxFIVE.zip">EndNote-MOxFIVE.zip</a><br><img src="/resources/EndNote-files.jpg" alt="EndNote-files"></li>
-    <li>如下图获取 Style Folder 路径然后在资源管理器里打开 → 把下载解压得到的两个 ens 格式拷入其中;<br><img src="/resources/EndNote-Style.gif" alt="EndNote-Style"></li>
-    <li>如下图打开样式管理器，找到并勾选新添加的两种样式；<br><img src="/resources/EndNote-add.gif" alt="EndNote-add"></li>
-    <li>打开 EndNote → Preferences → 导入下载的 Reference Type.xml → 默认 type 选择“1.web” → 点确定退出；<br><img src="/resources/Reference-Type.gif" alt="Reference-Type"> </li>
+<h3 id="导入与配置"><a href="#导入与配置" class="headerlink" title="导入与配置"></a>导入与配置</h3><ol>
+<li>配置文件下载：→ <a href="/resources/EndNote-MOxFIVE.zip">EndNote-MOxFIVE.zip</a><br><img src="/resources/EndNote-files.jpg" alt="EndNote-files"></li>
+<li>如下图获取 Style Folder 路径然后在资源管理器里打开 → 把下载解压得到的两个 ens 格式拷入其中;<br><img src="/resources/EndNote-Style.gif" alt="EndNote-Style"></li>
+<li>如下图打开样式管理器，找到并勾选新添加的两种样式；<br><img src="/resources/EndNote-add.gif" alt="EndNote-add"></li>
+<li>打开 EndNote → Preferences → 导入下载的 Reference Type.xml → 默认 type 选择“1.web” → 点确定退出；<br><img src="/resources/Reference-Type.gif" alt="Reference-Type"> </li>
 </ol>
-<h3 id="生成列表"><a href="#生成列表" class="headerlink" title="生成列表"></a>生成列表</h3>
-<ol>
-    <li>如下图，下拉列表切换为 Markdown List 样式，点新建文献按钮，填入作者、标题、日期和链接后保存；<br><img src="/resources/EndNote-item.jpg" alt="EndNote-item"></li>
-    <li>
-        <p>选取添加好的文献，右键选 Copy Formatted，在 Markdown 正文末尾加一个标题，把列表粘贴其下；</p>
-        <figure class="highlight markdown">
-            <table>
-                <tr>
-                    <td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td>
-                    <td class="code"><pre><span class="line"><span class="section">### 参考资料:</span></span><br><span class="line"><span class="bullet">1. </span><span class="strong">***认识与入门 Markdown**</span><span class="bullet">* by *</span><span class="emphasis">*Te_Lee*</span>* on &lt;code&gt;2014/04/17&lt;/code&gt;: &lt;http://sspai.com/25137&gt; </span><br><span class="line"><span class="bullet">1. </span><span class="strong">***Markdown 语法说明**</span><span class="bullet">* by *</span><span class="emphasis">*riku*</span>* on &lt;code&gt;2012&lt;/code&gt;: &lt;http://wowubuntu.com/markdown/&gt; </span><br><span class="line"><span class="bullet">1. </span><span class="strong">***使用 GitHub 和 Hexo 搭建免费静态 Blog**</span><span class="bullet">* by *</span><span class="emphasis">*wsgzao*</span>* on &lt;code&gt;2015/03/23&lt;/code&gt;: &lt;https://www.v2ex.com/t/178642&gt; </span><br><span class="line">~~~~~~~~~</span><br><span class="line"><span class="section">##### 上面是文章List样式，单一主页的样式先切换到Markdown Homepage再复制; </span></span><br><span class="line"><span class="bullet">1. </span><span class="strong">**GitHub**</span>: &lt;https://github.com/MOxFIVE&gt;</span><br></pre></td>
-                </tr>
-            </table>
-        </figure>
-    </li>
+<h3 id="生成列表"><a href="#生成列表" class="headerlink" title="生成列表"></a>生成列表</h3><ol>
+<li>如下图，下拉列表切换为 Markdown List 样式，点新建文献按钮，填入作者、标题、日期和链接后保存；<br><img src="/resources/EndNote-item.jpg" alt="EndNote-item"></li>
+<li><p>选取添加好的文献，右键选 Copy Formatted，在 Markdown 正文末尾加一个标题，把列表粘贴其下；</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">### 参考资料:</span></span><br><span class="line"><span class="bullet">1. </span><span class="strong">***认识与入门 Markdown**</span><span class="bullet">* by *</span><span class="emphasis">*Te_Lee*</span>* on &lt;code&gt;2014/04/17&lt;/code&gt;: &lt;http://sspai.com/25137&gt; </span><br><span class="line"><span class="bullet">1. </span><span class="strong">***Markdown 语法说明**</span><span class="bullet">* by *</span><span class="emphasis">*riku*</span>* on &lt;code&gt;2012&lt;/code&gt;: &lt;http://wowubuntu.com/markdown/&gt; </span><br><span class="line"><span class="bullet">1. </span><span class="strong">***使用 GitHub 和 Hexo 搭建免费静态 Blog**</span><span class="bullet">* by *</span><span class="emphasis">*wsgzao*</span>* on &lt;code&gt;2015/03/23&lt;/code&gt;: &lt;https://www.v2ex.com/t/178642&gt; </span><br><span class="line">~~~~~~~~~</span><br><span class="line"><span class="section">##### 上面是文章List样式，单一主页的样式先切换到Markdown Homepage再复制; </span></span><br><span class="line"><span class="bullet">1. </span><span class="strong">**GitHub**</span>: &lt;https://github.com/MOxFIVE&gt;</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<h3 id="效果预览"><a href="#效果预览" class="headerlink" title="效果预览"></a>效果预览</h3>
-<ol>
-    <li><strong>GitHub</strong>: <a href="https://github.com/MOxFIVE" target="_blank" rel="external">https://github.com/MOxFIVE</a> </li>
-    <li><strong><em>认识与入门 Markdown</em></strong> by <strong>Te_Lee</strong> on <code>2014/04/17</code>: <a href="http://sspai.com/25137" target="_blank" rel="external">http://sspai.com/25137</a> </li>
-    <li><strong><em>Markdown 语法说明</em></strong> by <strong>riku</strong> on <code>2012</code>: <a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">http://wowubuntu.com/markdown/</a> </li>
-    <li><strong><em>使用 GitHub 和 Hexo 搭建免费静态 Blog</em></strong> by <strong>wsgzao</strong> on <code>2015/03/23</code>: <a href="https://www.v2ex.com/t/178642" target="_blank" rel="external">https://www.v2ex.com/t/178642</a> </li>
-    <li>更长预览请参看本人另一篇日志的 <a href="/2015/08/20/blog-building/#参考资料:">参考资料列表</a>。</li>
+<h3 id="效果预览"><a href="#效果预览" class="headerlink" title="效果预览"></a>效果预览</h3><ol>
+<li><strong>GitHub</strong>: <a href="https://github.com/MOxFIVE" target="_blank" rel="external">https://github.com/MOxFIVE</a> </li>
+<li><strong><em>认识与入门 Markdown</em></strong> by <strong>Te_Lee</strong> on <code>2014/04/17</code>: <a href="http://sspai.com/25137" target="_blank" rel="external">http://sspai.com/25137</a> </li>
+<li><strong><em>Markdown 语法说明</em></strong> by <strong>riku</strong> on <code>2012</code>: <a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">http://wowubuntu.com/markdown/</a> </li>
+<li><strong><em>使用 GitHub 和 Hexo 搭建免费静态 Blog</em></strong> by <strong>wsgzao</strong> on <code>2015/03/23</code>: <a href="https://www.v2ex.com/t/178642" target="_blank" rel="external">https://www.v2ex.com/t/178642</a> </li>
+<li>更长预览请参看本人另一篇日志的 <a href="/2015/08/20/blog-building/#参考资料:">参考资料列表</a>。</li>
 </ol>
-<h3 id="一些取舍"><a href="#一些取舍" class="headerlink" title="一些取舍"></a>一些取舍</h3>
-<ul>
-    <li>EndNote 里的样式配置尽量使用 Markdown 语法编写，保证对各个 Markdown 编辑器的兼容性；</li>
-    <li><code>&lt;code&gt;2012&lt;/code&gt;</code>日期这里不用 Markdown 写法，因为有关符号 ` 在 EndNote 中被用于引入变量； </li>
-    <li>显示完整网址，便于识别来源；</li>
-    <li><code>1.</code>的列表写法主要为了便于批量生成以及自由排序，只是某些编辑器可能不兼容这个写法；</li>
-    <li>原本标题想用书名号《》包起来，但感觉不少内容不应该用书名号，最后还是使用斜体表示标题；</li>
-    <li>上面预览样式是按我个人喜好配的，需要调整的话可自行琢磨参数修改模板。<br><img src="/resources/EndNote-templates.gif" alt="EndNote-templates"></li>
+<h3 id="一些取舍"><a href="#一些取舍" class="headerlink" title="一些取舍"></a>一些取舍</h3><ul>
+<li>EndNote 里的样式配置尽量使用 Markdown 语法编写，保证对各个 Markdown 编辑器的兼容性；</li>
+<li><code>&lt;code&gt;2012&lt;/code&gt;</code>日期这里不用 Markdown 写法，因为有关符号 ` 在 EndNote 中被用于引入变量；  </li>
+<li>显示完整网址，便于识别来源；</li>
+<li><code>1.</code>的列表写法主要为了便于批量生成以及自由排序，只是某些编辑器可能不兼容这个写法；</li>
+<li>原本标题想用书名号《》包起来，但感觉不少内容不应该用书名号，最后还是使用斜体表示标题；</li>
+<li>上面预览样式是按我个人喜好配的，需要调整的话可自行琢磨参数修改模板。<br><img src="/resources/EndNote-templates.gif" alt="EndNote-templates"></li>
 </ul>
+
       
     </div>
     
