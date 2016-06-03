@@ -746,6 +746,30 @@
         $(".switch-btn, .switch-area").show();
     }
 
+    var $titleHasChild = $("#toc .toc-item:has(> .toc-child) > .toc-link");
+    var $tocTitle = $("#toc .toc-title");
+    var $subToc = $titleHasChild.next(".toc-child");
+
+/*    $titleHasChild.prepend("<i class='fa fa-plus' style='color: lightgray; margin-left: -1em'></i>");*/
+    
+    if ($titleHasChild) {
+        $tocTitle.css("cursor", "pointer");
+        $tocTitle.click(function(){
+            if ($subToc.is(":hidden")) {
+                $subToc.show();
+            } else {
+                $subToc.hide();
+            }
+        })
+    }
+
+    $titleHasChild.children(".toc-number").css({"font-weight": "bolder"});
+
+    $titleHasChild.click(function(){
+        var title = $(this);
+        $(this).next(".toc-child").toggle(100);
+    })
+
 </script>
 
 
