@@ -544,14 +544,14 @@
     var $subToc = $titleHasChild.next(".toc-child");
 
 /*    $titleHasChild.prepend("<i class='fa fa-plus' style='color: lightgray; margin-left: -1em'></i>");*/
-    
+
     if ($titleHasChild) {
         $tocTitle.css("cursor", "pointer");
         $tocTitle.click(function(){
             if ($subToc.is(":hidden")) {
-                $subToc.show();
+                $subToc.show(150);
             } else {
-                $subToc.hide();
+                $subToc.hide(100);
             }
         })
     }

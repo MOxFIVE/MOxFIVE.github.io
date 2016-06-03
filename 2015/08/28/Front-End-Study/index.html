@@ -519,14 +519,14 @@ PS: 学习前端前的一些个人相关信息和经验：
     var $subToc = $titleHasChild.next(".toc-child");
 
 /*    $titleHasChild.prepend("<i class='fa fa-plus' style='color: lightgray; margin-left: -1em'></i>");*/
-    
+
     if ($titleHasChild) {
         $tocTitle.css("cursor", "pointer");
         $tocTitle.click(function(){
             if ($subToc.is(":hidden")) {
-                $subToc.show();
+                $subToc.show(150);
             } else {
-                $subToc.hide();
+                $subToc.hide(100);
             }
         })
     }
