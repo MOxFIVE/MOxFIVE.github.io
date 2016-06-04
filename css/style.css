@@ -1713,8 +1713,15 @@ li:hover {
   background: rgba(158,188,226,0.21);
 }
 #toc .toc-title {
+  margin-left: -0.1em;
   font-weight: bold;
   color: #808080;
+}
+#toc .toc-title:hover {
+  color: #88acdb;
+}
+#toc .toc-title:active {
+  color: #d3d3d3;
 }
 #toc .toc {
   padding: 0.7em;
@@ -1777,6 +1784,20 @@ li:hover {
 }
 .table-area {
   overflow: auto;
+}
+#toc .toc-item i {
+  display: inline-block;
+  margin-left: -0.9em;
+  width: 0.9em;
+  color: #b3b3b3;
+  font-weight: bold;
+  cursor: pointer;
+}
+#toc .toc-item i:hover {
+  color: #000;
+}
+#toc .toc-item i.hide {
+  display: none;
 }
 @-moz-keyframes cd-bounce-1 {
   0% {
