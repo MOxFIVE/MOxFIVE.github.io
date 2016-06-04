@@ -1716,10 +1716,13 @@ li:hover {
   font-weight: bold;
   color: #808080;
 }
-#toc .toc-title:hover {
+#toc .clickable {
+  cursor: pointer;
+}
+#toc .clickable:hover {
   color: #88acdb;
 }
-#toc .toc-title:active {
+#toc .clickable:active {
   color: #d3d3d3;
 }
 #toc .toc {

@@ -537,8 +537,8 @@ PS: 学习前端前的一些个人相关信息和经验：
         $(this).css("opacity", "1");
     })*/
 
-    if ($titleHasChild) {
-        $tocTitle.css("cursor", "pointer");
+    if ($titleHasChild.length) {
+        $tocTitle.addClass("clickable");
         $tocTitle.click(function(){
             if ($subToc.is(":hidden")) {
                 $subToc.show(150);
