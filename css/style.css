@@ -490,6 +490,9 @@ a {
   }
   #container .toc-article .toc-title {
     display: none;
+    padding: 0.3em;
+    color: #fff;
+    background: #d3d3d3;
   }
   #container .toc-article .toc {
     padding: 0.5em;

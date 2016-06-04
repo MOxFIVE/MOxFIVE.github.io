@@ -482,27 +482,23 @@
     $("#toc .toc-item:has(> .toc-child)").prepend("<i class='fa fa-caret-down'></i><i class='fa fa-caret-right'></i>");
 
     var $toggleIcon = $("#toc .toc-item > i");
-/*    $toggleIcon.css("color", "hsl(0, 0%, 70%)");*/
     var $iconToExpand = $(".toc-item > .fa-caret-right");
     var $iconToFold = $(".toc-item > .fa-caret-down");
     $iconToExpand.addClass("hide");
+
     $toggleIcon.click(function(){
-        $(this).nextAll(".toc-child").slideToggle(100);
-        $("#toc .toc-item").has($(this)).children("i").toggleClass("hide");
+        $(this).siblings(".toc-child").slideToggle(100);
+        $(this).toggleClass("hide");
+        $(this).siblings("i").toggleClass("hide");
     })
 
     $titleHasChild.click(function(){
-        if ($(this).next(".toc-child").is(":hidden")) {
-            $(this).next(".toc-child").show(100);
-            $("#toc .toc-item").has($(this)).children("i").toggleClass("hide");
+        var $curentTocChild = $(this).siblings(".toc-child");
+        if ($curentTocChild.is(":hidden")) {
+            $curentTocChild.show(100);
+            $(this).siblings("i").toggleClass("hide");
         }
     })
-
-/*    $toggleIcon.hover(function(){
-        var linkColor = $(this).next(".toc-link").css("color");
-        $(this).css("color", linkColor);
-        $(this).css("opacity", "1");
-    })*/
 
     if ($titleHasChild.length) {
         $tocTitle.addClass("clickable");
@@ -517,6 +513,10 @@
                 $iconToFold.removeClass("hide");
             }
         })
+        if ($(".left-col").is(":hidden")) {
+            $("#container .toc-article .toc").css("padding-left", "1.4em");
+            $("#container .toc-article .toc-title").css("display", "initial");
+        }
     }
 
 </script>

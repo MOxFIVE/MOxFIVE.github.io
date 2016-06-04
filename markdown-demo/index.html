@@ -55,7 +55,7 @@
 
 汉皇重色思倾国，御宇多年求不得。杨家有女初长成，养在深闺人未识。天生丽质难自弃，一朝选在君王侧。回眸一笑百">
 <meta property="og:image" content="http://moxfive.xyz/resources/Mihawk-Wind.gif">
-<meta property="og:updated_time" content="2016-05-19T04:19:05.658Z">
+<meta property="og:updated_time" content="2016-06-04T07:43:36.765Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="markdown-demo">
 <meta name="twitter:description" content="这是 斜体，这是 粗体，这是删除线
@@ -560,6 +560,96 @@
 
 
 
+
+
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#这是一个一级标题-h1"><span class="toc-number">1.</span> <span class="toc-text">这是一个一级标题 h1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#这是一个二级标题-h2"><span class="toc-number">1.1.</span> <span class="toc-text">这是一个二级标题 h2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#这是一个三级标题-h3"><span class="toc-number">1.1.1.</span> <span class="toc-text">这是一个三级标题 h3</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#这是一个四级标题-h4"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">这是一个四级标题 h4</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#这是一个五级标题-h5"><span class="toc-number">1.1.1.1.1.</span> <span class="toc-text">这是一个五级标题 h5</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#这是一个六级标题-h6"><span class="toc-number">1.1.1.1.1.1.</span> <span class="toc-text">这是一个六级标题 h6</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+
+
+    var $titleHasChild = $("#toc .toc-item:has(> .toc-child) > .toc-link");
+    var $tocTitle = $("#toc .toc-title");
+    var $subToc = $titleHasChild.next(".toc-child");
+
+    $("#toc .toc-item:has(> .toc-child)").prepend("<i class='fa fa-caret-down'></i><i class='fa fa-caret-right'></i>");
+
+    var $toggleIcon = $("#toc .toc-item > i");
+    var $iconToExpand = $(".toc-item > .fa-caret-right");
+    var $iconToFold = $(".toc-item > .fa-caret-down");
+    $iconToExpand.addClass("hide");
+
+    $toggleIcon.click(function(){
+        $(this).siblings(".toc-child").slideToggle(100);
+        $(this).toggleClass("hide");
+        $(this).siblings("i").toggleClass("hide");
+    })
+
+    $titleHasChild.click(function(){
+        var $curentTocChild = $(this).siblings(".toc-child");
+        if ($curentTocChild.is(":hidden")) {
+            $curentTocChild.show(100);
+            $(this).siblings("i").toggleClass("hide");
+        }
+    })
+
+    if ($titleHasChild.length) {
+        $tocTitle.addClass("clickable");
+        $tocTitle.click(function(){
+            if ($subToc.is(":hidden")) {
+                $subToc.show(150);
+                $iconToExpand.removeClass("hide");
+                $iconToFold.addClass("hide");
+            } else {
+                $subToc.hide(100);
+                $iconToExpand.addClass("hide");
+                $iconToFold.removeClass("hide");
+            }
+        })
+        if ($(".left-col").is(":hidden")) {
+            $("#container .toc-article .toc").css("padding-left", "1.4em");
+            $("#container .toc-article .toc-title").css("display", "initial");
+        }
+    }
+
+</script>
 
 
 
