@@ -1,15 +1,16 @@
 require([], function (){
 
+    var jsPath = yiliaConfig.rootUrl + "js\/"
     var isMobileInit = false;
     var loadMobile = function(){
-        require([yiliaConfig.rootUrl + 'js/mobile.js'], function(mobile){
+        require([jsPath + 'mobile.js'], function(mobile){
             mobile.init();
             isMobileInit = true;
         });
     }
     var isPCInit = false;
     var loadPC = function(){
-        require([yiliaConfig.rootUrl + 'js/pc.js'], function(pc){
+        require([jsPath + 'pc.js'], function(pc){
             pc.init();
             isPCInit = true;
         });
@@ -144,18 +145,23 @@ require([], function (){
       }
     }
 
-    //是否新窗口打开链接
+    // TOC
+    if (yiliaConfig.toc) {
+        require(['toc'], function(){ })
+    }
+
+    // Open in New Window
     if(yiliaConfig.open_in_new == true){
         $(".article a[href]").attr("target", "_blank")
     }
     $(".archive-article-title, .github-widget a").attr("target", "_blank");
 
-    //随机颜色
+    // 随机颜色
     var colorList = ["#6da336", "#ff945c", "#66CC66", "#99CC99", "#CC6666", "#76becc", "#c99979", "#918597", "#4d4d4d"];
     var id = Math.ceil(Math.random()*(colorList.length-1));
-    //PC
+    // PC
     $("#container .left-col .overlay").css({"background-color": colorList[id],"opacity": .3});
-    //移动端
+    // Mobile
     $("#container #mobile-nav .overlay").css({"background-color": colorList[id],"opacity": .7});
 
     $("table").wrap("<div class='table-area'></div>");
@@ -219,7 +225,8 @@ require([], function (){
             }
         }
     })
-});
+
+})
 
 
 

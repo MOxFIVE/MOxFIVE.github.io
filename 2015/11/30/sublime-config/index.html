@@ -505,9 +505,7 @@
     <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#开始使用"><span class="toc-number">1.</span> <span class="toc-text">开始使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#软件下载"><span class="toc-number">1.1.</span> <span class="toc-text">软件下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用户设置"><span class="toc-number">1.2.</span> <span class="toc-text">用户设置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基础插件"><span class="toc-number">2.</span> <span class="toc-text">基础插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Package-Control"><span class="toc-number">2.1.</span> <span class="toc-text">Package Control</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Convert​To​UTF8"><span class="toc-number">2.2.</span> <span class="toc-text">Convert​To​UTF8</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IMESupport"><span class="toc-number">2.3.</span> <span class="toc-text">IMESupport</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Side​Bar​Enhancements"><span class="toc-number">2.4.</span> <span class="toc-text">Side​Bar​Enhancements</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#主题配色"><span class="toc-number">3.</span> <span class="toc-text">主题配色</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Theme-Spacegray"><span class="toc-number">3.1.</span> <span class="toc-text">Theme - Spacegray</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码规范"><span class="toc-number">4.</span> <span class="toc-text">代码规范</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Sublime​Linter"><span class="toc-number">4.1.</span> <span class="toc-text">Sublime​Linter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sublime​Linter-jshint"><span class="toc-number">4.2.</span> <span class="toc-text">Sublime​Linter-jshint</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sublime​Linter-csslint"><span class="toc-number">4.3.</span> <span class="toc-text">Sublime​Linter-csslint</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sublime​Linter-contrib-htmlhint"><span class="toc-number">4.4.</span> <span class="toc-text">Sublime​Linter-contrib-htmlhint</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用插件"><span class="toc-number">5.</span> <span class="toc-text">常用插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-CSS-JS-Prettify"><span class="toc-number">5.1.</span> <span class="toc-text">HTML-CSS-JS Prettify</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Color-Highlighter"><span class="toc-number">5.2.</span> <span class="toc-text">Color Highlighter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Stylus"><span class="toc-number">5.3.</span> <span class="toc-text">Stylus</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Stylus-Clean-Completions"><span class="toc-number">5.4.</span> <span class="toc-text">Stylus Clean Completions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AutoFileName"><span class="toc-number">5.5.</span> <span class="toc-text">AutoFileName</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Can-I-Use"><span class="toc-number">5.6.</span> <span class="toc-text">Can I Use</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BracketHighlighter"><span class="toc-number">5.7.</span> <span class="toc-text">BracketHighlighter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#To-be-added"><span class="toc-number">5.8.</span> <span class="toc-text">To be added</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相关链接"><span class="toc-number">6.</span> <span class="toc-text">相关链接</span></a></li></ol>
 </div>
 <style>
-    .left-col .switch-btn {
-        display: none;
-    }
+    .left-col .switch-btn,
     .left-col .switch-area {
         display: none;
     }
@@ -516,76 +514,7 @@
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
 <script>
-    var valueHide = "隐藏目录";
-    var valueShow = "显示目录";
-
-    if ($(".left-col").is(":hidden")) {
-        $("#tocButton").attr("value", valueShow);
-    }
-
-    $("#tocButton").click(function() {
-        if ($("#toc").is(":hidden")) {
-            $("#tocButton").attr("value", valueHide);
-            $("#toc").slideDown(320);
-            $(".switch-btn, .switch-area").fadeOut(300);
-        }
-        else {
-            $("#tocButton").attr("value", valueShow);
-            $("#toc").slideUp(350);
-            $(".switch-btn, .switch-area").fadeIn(500);
-        }
-    })
-
-    if ($(".toc").length < 1) {
-        $("#toc, #tocButton").hide();
-        $(".switch-btn, .switch-area").show();
-    }
-
-
-    var $titleHasChild = $("#toc .toc-item:has(> .toc-child) > .toc-link");
-    var $tocTitle = $("#toc .toc-title");
-    var $subToc = $titleHasChild.next(".toc-child");
-
-    $("#toc .toc-item:has(> .toc-child)").prepend("<i class='fa fa-caret-down'></i><i class='fa fa-caret-right'></i>");
-
-    var $toggleIcon = $("#toc .toc-item > i");
-    var $iconToExpand = $(".toc-item > .fa-caret-right");
-    var $iconToFold = $(".toc-item > .fa-caret-down");
-    $iconToExpand.addClass("hide");
-
-    $toggleIcon.click(function(){
-        $(this).siblings(".toc-child").slideToggle(100);
-        $(this).toggleClass("hide");
-        $(this).siblings("i").toggleClass("hide");
-    })
-
-    $titleHasChild.click(function(){
-        var $curentTocChild = $(this).siblings(".toc-child");
-        if ($curentTocChild.is(":hidden")) {
-            $curentTocChild.show(100);
-            $(this).siblings("i").toggleClass("hide");
-        }
-    })
-
-    if ($titleHasChild.length) {
-        $tocTitle.addClass("clickable");
-        $tocTitle.click(function(){
-            if ($subToc.is(":hidden")) {
-                $subToc.show(150);
-                $iconToExpand.removeClass("hide");
-                $iconToFold.addClass("hide");
-            } else {
-                $subToc.hide(100);
-                $iconToExpand.addClass("hide");
-                $iconToFold.removeClass("hide");
-            }
-        })
-        if ($(".left-col").is(":hidden")) {
-            $("#container .toc-article .toc").css("padding-left", "1.4em");
-            $("#container .toc-article .toc-title").css("display", "initial");
-        }
-    }
-
+    yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
 </script>
 
 

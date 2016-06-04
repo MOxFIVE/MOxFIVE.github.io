@@ -531,9 +531,7 @@
     <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#General-style-rules"><span class="toc-number">1.</span> <span class="toc-text">General style rules</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Filename"><span class="toc-number">1.1.</span> <span class="toc-text">Filename</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Separator"><span class="toc-number">1.2.</span> <span class="toc-text">Separator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Protocol"><span class="toc-number">1.3.</span> <span class="toc-text">Protocol</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Text-indentation"><span class="toc-number">1.4.</span> <span class="toc-text">Text indentation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Comments"><span class="toc-number">1.5.</span> <span class="toc-text">Comments</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Code-linting"><span class="toc-number">1.6.</span> <span class="toc-text">Code linting</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-style-rules"><span class="toc-number">2.</span> <span class="toc-text">HTML style rules</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Document-type"><span class="toc-number">2.1.</span> <span class="toc-text">Document type</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Script-loading"><span class="toc-number">2.2.</span> <span class="toc-text">Script loading</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Type-attributes"><span class="toc-number">2.3.</span> <span class="toc-text">Type attributes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ID-in-Headings"><span class="toc-number">2.4.</span> <span class="toc-text">ID in Headings</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Quotation-marks"><span class="toc-number">2.5.</span> <span class="toc-text">Quotation marks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0-values"><span class="toc-number">2.6.</span> <span class="toc-text">0 values</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Shorthand-Properties"><span class="toc-number">2.7.</span> <span class="toc-text">Shorthand Properties</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexadecimal-Notation"><span class="toc-number">2.8.</span> <span class="toc-text">Hexadecimal Notation</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#To-be-continued"><span class="toc-number">3.</span> <span class="toc-text">To be continued</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">4.</span> <span class="toc-text">参考资料</span></a></li></ol>
 </div>
 <style>
-    .left-col .switch-btn {
-        display: none;
-    }
+    .left-col .switch-btn,
     .left-col .switch-area {
         display: none;
     }
@@ -542,76 +540,7 @@
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
 <script>
-    var valueHide = "隐藏目录";
-    var valueShow = "显示目录";
-
-    if ($(".left-col").is(":hidden")) {
-        $("#tocButton").attr("value", valueShow);
-    }
-
-    $("#tocButton").click(function() {
-        if ($("#toc").is(":hidden")) {
-            $("#tocButton").attr("value", valueHide);
-            $("#toc").slideDown(320);
-            $(".switch-btn, .switch-area").fadeOut(300);
-        }
-        else {
-            $("#tocButton").attr("value", valueShow);
-            $("#toc").slideUp(350);
-            $(".switch-btn, .switch-area").fadeIn(500);
-        }
-    })
-
-    if ($(".toc").length < 1) {
-        $("#toc, #tocButton").hide();
-        $(".switch-btn, .switch-area").show();
-    }
-
-
-    var $titleHasChild = $("#toc .toc-item:has(> .toc-child) > .toc-link");
-    var $tocTitle = $("#toc .toc-title");
-    var $subToc = $titleHasChild.next(".toc-child");
-
-    $("#toc .toc-item:has(> .toc-child)").prepend("<i class='fa fa-caret-down'></i><i class='fa fa-caret-right'></i>");
-
-    var $toggleIcon = $("#toc .toc-item > i");
-    var $iconToExpand = $(".toc-item > .fa-caret-right");
-    var $iconToFold = $(".toc-item > .fa-caret-down");
-    $iconToExpand.addClass("hide");
-
-    $toggleIcon.click(function(){
-        $(this).siblings(".toc-child").slideToggle(100);
-        $(this).toggleClass("hide");
-        $(this).siblings("i").toggleClass("hide");
-    })
-
-    $titleHasChild.click(function(){
-        var $curentTocChild = $(this).siblings(".toc-child");
-        if ($curentTocChild.is(":hidden")) {
-            $curentTocChild.show(100);
-            $(this).siblings("i").toggleClass("hide");
-        }
-    })
-
-    if ($titleHasChild.length) {
-        $tocTitle.addClass("clickable");
-        $tocTitle.click(function(){
-            if ($subToc.is(":hidden")) {
-                $subToc.show(150);
-                $iconToExpand.removeClass("hide");
-                $iconToFold.addClass("hide");
-            } else {
-                $subToc.hide(100);
-                $iconToExpand.addClass("hide");
-                $iconToFold.removeClass("hide");
-            }
-        })
-        if ($(".left-col").is(":hidden")) {
-            $("#container .toc-article .toc").css("padding-left", "1.4em");
-            $("#container .toc-article .toc-title").css("display", "initial");
-        }
-    }
-
+    yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
 </script>
 
 

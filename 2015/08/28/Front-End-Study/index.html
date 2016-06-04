@@ -478,9 +478,7 @@ PS: 学习前端前的一些个人相关信息和经验：
     <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#intro"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#入门级别-Basic-35h"><span class="toc-number">2.</span> <span class="toc-text">入门级别 Basic 35h</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-08-10-Codecademy-HTML-amp-CSS-10h"><span class="toc-number">2.1.</span> <span class="toc-text">2015-08-10. Codecademy: HTML & CSS 10h</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-08-31-Codecademy-JavaScript-20h"><span class="toc-number">2.2.</span> <span class="toc-text">2015-08-31. Codecademy: JavaScript 20h</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-11-05-Code-School-Try-Git-2h"><span class="toc-number">2.3.</span> <span class="toc-text">2015-11-05. Code School: Try Git 2h</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-11-11-Codecademy-Make-a-Website-3h"><span class="toc-number">2.4.</span> <span class="toc-text">2015-11-11. Codecademy: Make a Website 3h</span></a></li></ol></li></ol>
 </div>
 <style>
-    .left-col .switch-btn {
-        display: none;
-    }
+    .left-col .switch-btn,
     .left-col .switch-area {
         display: none;
     }
@@ -489,76 +487,7 @@ PS: 学习前端前的一些个人相关信息和经验：
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
 <script>
-    var valueHide = "隐藏目录";
-    var valueShow = "显示目录";
-
-    if ($(".left-col").is(":hidden")) {
-        $("#tocButton").attr("value", valueShow);
-    }
-
-    $("#tocButton").click(function() {
-        if ($("#toc").is(":hidden")) {
-            $("#tocButton").attr("value", valueHide);
-            $("#toc").slideDown(320);
-            $(".switch-btn, .switch-area").fadeOut(300);
-        }
-        else {
-            $("#tocButton").attr("value", valueShow);
-            $("#toc").slideUp(350);
-            $(".switch-btn, .switch-area").fadeIn(500);
-        }
-    })
-
-    if ($(".toc").length < 1) {
-        $("#toc, #tocButton").hide();
-        $(".switch-btn, .switch-area").show();
-    }
-
-
-    var $titleHasChild = $("#toc .toc-item:has(> .toc-child) > .toc-link");
-    var $tocTitle = $("#toc .toc-title");
-    var $subToc = $titleHasChild.next(".toc-child");
-
-    $("#toc .toc-item:has(> .toc-child)").prepend("<i class='fa fa-caret-down'></i><i class='fa fa-caret-right'></i>");
-
-    var $toggleIcon = $("#toc .toc-item > i");
-    var $iconToExpand = $(".toc-item > .fa-caret-right");
-    var $iconToFold = $(".toc-item > .fa-caret-down");
-    $iconToExpand.addClass("hide");
-
-    $toggleIcon.click(function(){
-        $(this).siblings(".toc-child").slideToggle(100);
-        $(this).toggleClass("hide");
-        $(this).siblings("i").toggleClass("hide");
-    })
-
-    $titleHasChild.click(function(){
-        var $curentTocChild = $(this).siblings(".toc-child");
-        if ($curentTocChild.is(":hidden")) {
-            $curentTocChild.show(100);
-            $(this).siblings("i").toggleClass("hide");
-        }
-    })
-
-    if ($titleHasChild.length) {
-        $tocTitle.addClass("clickable");
-        $tocTitle.click(function(){
-            if ($subToc.is(":hidden")) {
-                $subToc.show(150);
-                $iconToExpand.removeClass("hide");
-                $iconToFold.addClass("hide");
-            } else {
-                $subToc.hide(100);
-                $iconToExpand.addClass("hide");
-                $iconToFold.removeClass("hide");
-            }
-        })
-        if ($(".left-col").is(":hidden")) {
-            $("#container .toc-article .toc").css("padding-left", "1.4em");
-            $("#container .toc-article .toc-title").css("display", "initial");
-        }
-    }
-
+    yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
 </script>
 
 

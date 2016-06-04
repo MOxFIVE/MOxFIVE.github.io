@@ -515,9 +515,7 @@ UA 浏览器标识">
     <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#intro"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#相关下载"><span class="toc-number">1.1.</span> <span class="toc-text">相关下载</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UA-浏览器标识"><span class="toc-number">2.</span> <span class="toc-text">UA 浏览器标识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#本地化-embed-js"><span class="toc-number">2.1.</span> <span class="toc-text">本地化 embed-js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#引入-Font-Awesome"><span class="toc-number">2.2.</span> <span class="toc-text">引入 Font Awesome</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加对应-CSS"><span class="toc-number">2.3.</span> <span class="toc-text">添加对应 CSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#显示博主标记"><span class="toc-number">2.4.</span> <span class="toc-text">显示博主标记</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#个性化-CSS-样式"><span class="toc-number">3.</span> <span class="toc-text">个性化 CSS 样式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#旋转头像"><span class="toc-number">3.1.</span> <span class="toc-text">旋转头像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#通用样式"><span class="toc-number">3.2.</span> <span class="toc-text">通用样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#喜欢按钮样式"><span class="toc-number">3.3.</span> <span class="toc-text">喜欢按钮样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#社交账号登陆透明度"><span class="toc-number">3.4.</span> <span class="toc-text">社交账号登陆透明度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#评论、文本框字体"><span class="toc-number">3.5.</span> <span class="toc-text">评论、文本框字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用户名等超链接颜色"><span class="toc-number">3.6.</span> <span class="toc-text">用户名等超链接颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#未登录用户名字颜色"><span class="toc-number">3.7.</span> <span class="toc-text">未登录用户名字颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#评论框背景图片"><span class="toc-number">3.8.</span> <span class="toc-text">评论框背景图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#评论框背景"><span class="toc-number">3.9.</span> <span class="toc-text">评论框背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#工具栏背景"><span class="toc-number">3.10.</span> <span class="toc-text">工具栏背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#“发布”按钮背景"><span class="toc-number">3.11.</span> <span class="toc-text">“发布”按钮背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#评论列表背景"><span class="toc-number">3.12.</span> <span class="toc-text">评论列表背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#评论数标签"><span class="toc-number">3.13.</span> <span class="toc-text">评论数标签</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多说账户设置"><span class="toc-number">4.</span> <span class="toc-text">多说账户设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#评论显示方式"><span class="toc-number">4.1.</span> <span class="toc-text">评论显示方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#过滤机制"><span class="toc-number">4.2.</span> <span class="toc-text">过滤机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#默认头像"><span class="toc-number">4.3.</span> <span class="toc-text">默认头像</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">5.</span> <span class="toc-text">参考资料</span></a></li></ol>
 </div>
 <style>
-    .left-col .switch-btn {
-        display: none;
-    }
+    .left-col .switch-btn,
     .left-col .switch-area {
         display: none;
     }
@@ -526,76 +524,7 @@ UA 浏览器标识">
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
 <script>
-    var valueHide = "隐藏目录";
-    var valueShow = "显示目录";
-
-    if ($(".left-col").is(":hidden")) {
-        $("#tocButton").attr("value", valueShow);
-    }
-
-    $("#tocButton").click(function() {
-        if ($("#toc").is(":hidden")) {
-            $("#tocButton").attr("value", valueHide);
-            $("#toc").slideDown(320);
-            $(".switch-btn, .switch-area").fadeOut(300);
-        }
-        else {
-            $("#tocButton").attr("value", valueShow);
-            $("#toc").slideUp(350);
-            $(".switch-btn, .switch-area").fadeIn(500);
-        }
-    })
-
-    if ($(".toc").length < 1) {
-        $("#toc, #tocButton").hide();
-        $(".switch-btn, .switch-area").show();
-    }
-
-
-    var $titleHasChild = $("#toc .toc-item:has(> .toc-child) > .toc-link");
-    var $tocTitle = $("#toc .toc-title");
-    var $subToc = $titleHasChild.next(".toc-child");
-
-    $("#toc .toc-item:has(> .toc-child)").prepend("<i class='fa fa-caret-down'></i><i class='fa fa-caret-right'></i>");
-
-    var $toggleIcon = $("#toc .toc-item > i");
-    var $iconToExpand = $(".toc-item > .fa-caret-right");
-    var $iconToFold = $(".toc-item > .fa-caret-down");
-    $iconToExpand.addClass("hide");
-
-    $toggleIcon.click(function(){
-        $(this).siblings(".toc-child").slideToggle(100);
-        $(this).toggleClass("hide");
-        $(this).siblings("i").toggleClass("hide");
-    })
-
-    $titleHasChild.click(function(){
-        var $curentTocChild = $(this).siblings(".toc-child");
-        if ($curentTocChild.is(":hidden")) {
-            $curentTocChild.show(100);
-            $(this).siblings("i").toggleClass("hide");
-        }
-    })
-
-    if ($titleHasChild.length) {
-        $tocTitle.addClass("clickable");
-        $tocTitle.click(function(){
-            if ($subToc.is(":hidden")) {
-                $subToc.show(150);
-                $iconToExpand.removeClass("hide");
-                $iconToFold.addClass("hide");
-            } else {
-                $subToc.hide(100);
-                $iconToExpand.addClass("hide");
-                $iconToFold.removeClass("hide");
-            }
-        })
-        if ($(".left-col").is(":hidden")) {
-            $("#container .toc-article .toc").css("padding-left", "1.4em");
-            $("#container .toc-article .toc-title").css("display", "initial");
-        }
-    }
-
+    yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
 </script>
 
 
