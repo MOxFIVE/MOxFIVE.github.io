@@ -531,6 +531,13 @@ PS: 学习前端前的一些个人相关信息和经验：
         $("#toc .toc-item").has($(this)).children("i").toggleClass("hide");
     })
 
+    $titleHasChild.click(function(){
+        if ($(this).next(".toc-child").is(":hidden")) {
+            $(this).next(".toc-child").show(100);
+            $("#toc .toc-item").has($(this)).children("i").toggleClass("hide");
+        }
+    })
+
 /*    $toggleIcon.hover(function(){
         var linkColor = $(this).next(".toc-link").css("color");
         $(this).css("color", linkColor);
