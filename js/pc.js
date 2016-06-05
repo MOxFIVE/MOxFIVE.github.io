@@ -97,6 +97,7 @@ define([], function(){
                 if ($(".toc").length > 0) {
                     $("#toc, #tocButton").toggle(200, function() {
                         if ($(".switch-area").is(":visible")) {
+                            var valueHide = yiliaConfig.toc[0];
                             $("#toc, .switch-btn, .switch-area").toggle();
                             $("#tocButton").attr("value", valueHide);
                             }

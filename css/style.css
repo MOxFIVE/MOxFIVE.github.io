@@ -1804,6 +1804,20 @@ li:hover {
 #toc .toc-item i.hide {
   display: none;
 }
+#toc .toc-link {
+  display: inline-block;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+li.toc-item {
+  line-height: 1.45em;
+}
+#toc .toc-item i {
+  position: relative;
+  bottom: 0.35em;
+}
 @-moz-keyframes cd-bounce-1 {
   0% {
     opacity: 0;
