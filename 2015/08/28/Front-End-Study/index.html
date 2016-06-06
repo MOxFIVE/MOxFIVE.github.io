@@ -514,22 +514,31 @@ PS: 学习前端前的一些个人相关信息和经验：
 
     
       <div class="duoshuo" id="comments">
-    <!-- 多说评论框 start -->
+    <aside onclick="duoshuo();">
+        <a href="javascript:void(0);">
+            <i class="fa fa-commenting-o animated infinite pulse"></i>
+            <i class="fa fa-spinner fa-pulse"></i>
+        </a>
+    </aside>
+    
+    <div id="comment-box" ></div>
     <div class="ds-thread" data-thread-key="2015/08/28/Front-End-Study/" data-title="个人 Web 前端学习路线" data-url="http://MOxFIVE.xyz/2015/08/28/Front-End-Study/"></div>
-    <!-- 多说评论框 end -->
-    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-    <script type="text/javascript">
-    var duoshuoQuery = {short_name:"moxfive"};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = '//moxfive.xyz/resources/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
+    <script>
+        var duoshuoQuery = {short_name:"moxfive"};
+        var duoshuo = function () {
+            $("#comments > aside > a > i").toggle();
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = '//moxfive.xyz/resources/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] 
+             || document.getElementsByTagName('body')[0]).appendChild(ds);
+            $("#comments > aside").fadeOut(800);
+        }
+        $("#comments > aside > a").hover(function(){
+            duoshuo();
+        })
     </script>
-    <!-- 多说公共JS代码 end -->
 </div>
 
     
@@ -623,7 +632,7 @@ PS: 学习前端前的一些个人相关信息和经验：
 
 <div class="scroll" id="scroll">
     <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#comments" onclick="duoshuo();" title="查看评论"><i class="fa fa-comments-o"></i></a>
     <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">

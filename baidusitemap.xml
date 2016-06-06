@@ -4,24 +4,8 @@
 
     
   <url>
-    <loc>http://MOxFIVE.xyz/2015/08/19/hello-world/</loc>
-    <lastmod>2016-06-05T08:04:13.647Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2015-08-18T16:00:00.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
     <loc>http://MOxFIVE.xyz/2015/08/20/blog-building/</loc>
-    <lastmod>2016-06-03T12:02:57.765Z</lastmod>
+    <lastmod>2016-06-06T13:34:50.114Z</lastmod>
     <data>
         <display>
         <title>个人博客站点建设历程</title>
@@ -52,6 +36,22 @@
     </data>
     </url>
 
+    
+  <url>
+    <loc>http://MOxFIVE.xyz/2015/08/19/hello-world/</loc>
+    <lastmod>2016-06-05T08:04:13.647Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2015-08-18T16:00:00.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://MOxFIVE.xyz/2016/05/31/hexo-local-search/</loc>

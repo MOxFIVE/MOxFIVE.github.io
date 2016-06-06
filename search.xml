@@ -3386,7 +3386,18 @@
 <li>改动和尝试中参考的主要资源都做了 <a href="">链接跳转</a> 并在文末列出；    </li>
 <li><a href="">[G]</a>: 表示该项的具体修改已 commit 提交到 <a href="https://github.com/MOxFIVE" title="MOxFIVE&#39;s GitHub" target="_blank" rel="external">GitHub</a>，点击即可查看；</li>
 </ul>
-<h2 id="2016-年-6-月"><a href="#2016-年-6-月" class="headerlink" title="2016 年 6 月"></a>2016 年 6 月</h2><h3 id="06-02-图片压缩"><a href="#06-02-图片压缩" class="headerlink" title="06-02 图片压缩"></a>06-02 图片压缩</h3><blockquote>
+<h2 id="2016-年-6-月"><a href="#2016-年-6-月" class="headerlink" title="2016 年 6 月"></a>2016 年 6 月</h2><h3 id="06-05-可折叠目录"><a href="#06-05-可折叠目录" class="headerlink" title="06-05 可折叠目录"></a>06-05 可折叠目录</h3><blockquote>
+<ul>
+<li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/85764bbf482c78d819f8ca87bf9fe390d523dd3b" title="feat: collapsible TOC 可折叠目录" target="_blank" rel="external">[G]</a> 多级目录现在可以被展开和收起，方便浏览。同时对目录相关的代码进行了大量优化；</li>
+<li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/6b1f010ccc781793bcce0c750d50fc9f4fe25f80" title="refactor: TOC nowrap" target="_blank" rel="external">[G]</a> 目录不换行时，使用更合理的方式显示标题提示。</li>
+</ul>
+</blockquote>
+<h3 id="06-04-样式优化"><a href="#06-04-样式优化" class="headerlink" title="06-04 样式优化"></a>06-04 样式优化</h3><blockquote>
+<ul>
+<li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/73ea4ac7144992c4dca3581cba99e82a6d42b41b" title="fix: tag cloud displays incompletely in sidebar" target="_blank" rel="external">[G]</a> 经提醒修复边栏标签云显示溢出的问题；</li>
+</ul>
+</blockquote>
+<h3 id="06-02-图片压缩"><a href="#06-02-图片压缩" class="headerlink" title="06-02 图片压缩"></a>06-02 图片压缩</h3><blockquote>
 <ul>
 <li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/eb416b5b064bbeb332214df0440f40e046b78588" title="style: compress images" target="_blank" rel="external">[G]</a> 压缩优化主题中的图片。</li>
 </ul>
