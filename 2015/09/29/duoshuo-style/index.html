@@ -555,6 +555,7 @@ UA 浏览器标识">
         <a href="javascript:void(0);">
             <i class="fa fa-commenting-o animated infinite pulse"></i>
             <i class="fa fa-spinner fa-pulse"></i>
+            <span class="count-comment"></span>
         </a>
     </aside>
     
@@ -575,6 +576,19 @@ UA 浏览器标识">
         $("#comments > aside > a").hover(function(){
             duoshuo();
         })
+
+        $(function() { 
+            var countsJson = "http://api.duoshuo.com/threads/counts.jsonp?short_name=moxfive&threads=2015/09/29/duoshuo-style/&callback=?";
+            $.getJSON(countsJson, function(data) {
+                var countComment = '';
+                $.each(data.response, function(i, obj) {
+                    countComment += obj.comments;
+                })
+                if (countComment > 0) {
+                    $(".count-comment").text(countComment);
+                }
+            })
+        });
     </script>
 </div>
 

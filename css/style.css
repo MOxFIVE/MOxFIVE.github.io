@@ -1835,6 +1835,9 @@ li.toc-item {
   display: inline-block;
   width: 3em;
 }
+.duoshuo > aside a span {
+  font-size: 1.5rem;
+}
 @-moz-keyframes cd-bounce-1 {
   0% {
     opacity: 0;
