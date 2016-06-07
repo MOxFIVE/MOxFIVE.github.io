@@ -575,6 +575,9 @@ a {
   #container .copyright span {
     width: 5em;
   }
+  #container .tags a {
+    line-height: 45px;
+  }
 }
 .header-author {
   text-align: center;
@@ -1821,7 +1824,7 @@ li.toc-item {
   position: relative;
   bottom: 0.35em;
 }
-.duoshuo > aside {
+aside.comment-bar {
   display: block;
   cursor: pointer;
   background: rgba(255,255,255,0.3);
@@ -1831,14 +1834,14 @@ li.toc-item {
   text-align: center;
   font-size: 2rem;
 }
-.duoshuo > aside i.fa-spinner {
+aside.comment-bar i.fa-spinner {
   display: none;
 }
-.duoshuo > aside a {
+aside.comment-bar a {
   display: inline-block;
   width: 3em;
 }
-.duoshuo > aside a span {
+aside.comment-bar a span {
   font-size: 1.5rem;
 }
 @-moz-keyframes cd-bounce-1 {
