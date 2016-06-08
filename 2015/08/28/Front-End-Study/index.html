@@ -110,7 +110,10 @@ PS: 学习前端前的一些个人相关信息和经验：
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
         search: true
     }
+    var duoshuoQuery = {short_name:"moxfive"};
 </script>
+
+
 
 
     <script>
@@ -514,29 +517,30 @@ PS: 学习前端前的一些个人相关信息和经验：
 
     
       <div class="duoshuo" id="comments">
+    
     <aside class="comment-bar">
-    <a href="javascript:void(0);">
-        <i class="fa fa-commenting-o animated infinite pulse"></i>
-        <i class="fa fa-spinner fa-pulse"></i>
-        <span class="count-comment"></span>
-    </a>
-</aside>
+        <a href="javascript:void(0);">
+            <i class="fa fa-commenting-o animated infinite pulse"></i>
+            <i class="fa fa-spinner fa-pulse"></i>
+            <span class="count-comment"></span>
+        </a>
+    </aside>
 
-<script>
-    var $commentBar = $("#comments aside.comment-bar");
-    var load$hide = function(){
-        $commentBar.find("a > i").toggle();
-        loadComment();
-        $commentBar.fadeOut(800);
-    }
-    $commentBar.children("a").hover(function(){
-        load$hide();
-    })
-    $("#comments > aside, #scroll > a[href='#comments']").click(function(){
-        load$hide();
-    })
+    <script>
+        var $commentBar = $("#comments aside.comment-bar");
+        var load$hide = function(){
+            $commentBar.find("a > i").toggle();
+            loadComment();
+            $commentBar.fadeOut(800);
+        }
+        $commentBar.children("a").hover(function(){
+            load$hide();
+        })
+        $("#comments > aside, #scroll > a[href='#comments']").click(function(){
+            load$hide();
+        })
+    </script>
 
-</script>
     <div id="comment-box" ></div>
     <div class="ds-thread" data-thread-key="2015/08/28/Front-End-Study/" data-title="个人 Web 前端学习路线" data-url="http://MOxFIVE.xyz/2015/08/28/Front-End-Study/"></div>
     <script>
