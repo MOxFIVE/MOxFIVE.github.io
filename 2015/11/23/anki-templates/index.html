@@ -474,6 +474,31 @@
 
     
       <div class="duoshuo" id="comments">
+    <div id="comment-box" ></div>
+    <div class="ds-thread" data-thread-key="2015/11/23/anki-templates/" data-title="Anki 自用卡片模板分享" data-url="http://MOxFIVE.xyz/2015/11/23/anki-templates/"></div>
+    <script>
+        var duoshuoQuery = {short_name:"moxfive"};
+        function loadComment() {
+            var d = document, s = d.createElement('script');
+            s.src = '//moxfive.xyz/resources/embed.js';
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
+
+        $(function() { 
+            var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=moxfive&threads=2015/11/23/anki-templates/&callback=?";
+            $.getJSON(jsonUrl, function(result) {
+                $.each(result.response, function(i, field) {
+                    var value = field.comments;
+                    if (value > 0) {
+                        $(".count-comment").text(value);
+                        return;
+                    }
+                })
+
+            })
+        });
+    </script>
     
     <aside class="comment-bar">
         <a href="javascript:void(0);">
@@ -490,40 +515,17 @@
             loadComment();
             $commentBar.fadeOut(800);
         }
+        $commentBar.click(function(){
+            load$hide();
+        })
         $commentBar.children("a").hover(function(){
             load$hide();
         })
-        $("#comments > aside, #scroll > a[href='#comments']").click(function(){
+        if (window.location.hash === "#comments") {
             load$hide();
-        })
-    </script>
-
-    <div id="comment-box" ></div>
-    <div class="ds-thread" data-thread-key="2015/11/23/anki-templates/" data-title="Anki 自用卡片模板分享" data-url="http://MOxFIVE.xyz/2015/11/23/anki-templates/"></div>
-    <script>
-        var duoshuoQuery = {short_name:"moxfive"};
-        var loadComment = function () {
-            var ds = document.createElement('script');
-            ds.type = 'text/javascript';ds.async = true;
-            ds.src = '//moxfive.xyz/resources/embed.js';
-            ds.charset = 'UTF-8';
-            (document.getElementsByTagName('head')[0] 
-             || document.getElementsByTagName('body')[0]).appendChild(ds);
         }
-
-        $(function() { 
-            var countsJson = "http://api.duoshuo.com/threads/counts.jsonp?short_name=moxfive&threads=2015/11/23/anki-templates/&callback=?";
-            $.getJSON(countsJson, function(data) {
-                var countComment = '';
-                $.each(data.response, function(i, obj) {
-                    countComment += obj.comments;
-                })
-                if (countComment > 0) {
-                    $(".count-comment").text(countComment);
-                }
-            })
-        });
     </script>
+
 </div>
 
     
