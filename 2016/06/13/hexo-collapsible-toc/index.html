@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="MOxFIVE" />
+<meta name="renderer" content="webkit">
+<meta name="google" value="notranslate">
+
+
+
+<meta name="description" content="前言Hexo 支持自动给文章加上目录，但默认生成的目录比较简陋，好在我们可以手动改进一下它，比如增加 点击展开/收起多级目录 的功能。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为 Hexo 添加可折叠的文章目录">
+<meta property="og:url" content="http://MOxFIVE.xyz/2016/06/13/hexo-collapsible-toc/index.html">
+<meta property="og:site_name" content="MOxFIVE's Blog">
+<meta property="og:description" content="前言Hexo 支持自动给文章加上目录，但默认生成的目录比较简陋，好在我们可以手动改进一下它，比如增加 点击展开/收起多级目录 的功能。">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/feat.toc.gif">
+<meta property="og:updated_time" content="2016-06-13T15:44:20.987Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="为 Hexo 添加可折叠的文章目录">
+<meta name="twitter:description" content="前言Hexo 支持自动给文章加上目录，但默认生成的目录比较简陋，好在我们可以手动改进一下它，比如增加 点击展开/收起多级目录 的功能。">
+<meta name="twitter:image" content="http://MOxFIVE.xyz/resources/feat.toc.gif">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternative" href="/atom.xml" title="MOxFIVE&#39;s Blog" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/resources/favicon.ico">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>为 Hexo 添加可折叠的文章目录 | MOxFIVE&#39;s Blog</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        open_in_new: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?a4938c90e05043bd9774ff12368e45aa";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/resources/Mihawk.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">MOxFIVE</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">迈入新世界，为了成为独当一面的 Web 前端工程师！</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/archives">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">留言板</a></li>
+                        
+                            <li><a href="/2015/08/20/blog-building">建站日志</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:&#0000109;&#0000111;&#x0000031;&#0048;&#x0000030;&#0048;&#000053;&#000064;&#00000111;&#0117;&#00116;&#x000006c;&#0111;&#111;&#00107;&#x002e;&#x00063;&#00000111;&#00109;" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="//weibo.com/yemzh" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="//github.com/MOxFIVE" title="GitHub"></a>
+                            
+                                <a class="fa V2EX" target="_blank" href="//www.v2ex.com/member/MOxFIVE" title="V2EX"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa Twitter" target="_blank" href="//twitter.com/MOxFE" title="Twitter"></a>
+                            
+                                <a class="fa TiddlyWiki" target="_blank" href="/wiki/" title="TiddlyWiki"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Anki/">Anki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Browsersync/">Browsersync</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/">DNS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/EndNote/">EndNote</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Font-Awesome/">Font-Awesome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GIF/">GIF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PNG/">PNG</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PhotoShop/">PhotoShop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PowerPoint/">PowerPoint</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Reference/">Reference</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Software/">Software</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sublime/">Sublime</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Table/">Table</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TagCloud/">TagCloud</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UA/">UA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WordPress/">WordPress</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Yelee/">Yelee</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/font-family/">font-family</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/多说/">多说</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//www.netcan666.com/">Netcan</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//f2e-tlj.me/">Ryuu</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//codinglife.in/">Andy_Zheng</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//syncshinee.github.io/">skyxuan</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//luuman.github.io/">世平阜康</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//wixy.top/">王煜</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//www.smallyi.com/">小忆</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//taozj.org/">Nicol_TAO</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="//orangexc.xyz/">Orange</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">MOxFIVE</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/resources/Mihawk.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">MOxFIVE</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">迈入新世界，为了成为独当一面的 Web 前端工程师！</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">留言板</a></li>
+                
+                    <li><a href="/2015/08/20/blog-building">建站日志</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:&#0000109;&#0000111;&#x0000031;&#0048;&#x0000030;&#0048;&#000053;&#000064;&#00000111;&#0117;&#00116;&#x000006c;&#0111;&#111;&#00107;&#x002e;&#x00063;&#00000111;&#00109;" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="//weibo.com/yemzh" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="//github.com/MOxFIVE" title="GitHub"></a>
+                            
+                                <a class="fa V2EX" target="_blank" href="//www.v2ex.com/member/MOxFIVE" title="V2EX"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa Twitter" target="_blank" href="//twitter.com/MOxFE" title="Twitter"></a>
+                            
+                                <a class="fa TiddlyWiki" target="_blank" href="/wiki/" title="TiddlyWiki"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-hexo-collapsible-toc" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/13/hexo-collapsible-toc/" class="article-date">
+      <time datetime="2016-06-13T12:06:30.000Z" itemprop="datePublished">2016-06-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      为 Hexo 添加可折叠的文章目录
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/术业专攻/">术业专攻</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+          
+        <p></p><h2 id="intro">前言</h2>Hexo 支持自动给文章加上目录，但默认生成的目录比较简陋，好在我们可以手动改进一下它，比如增加 点击展开/收起多级目录 的功能。<p></p>
+<a id="more"></a>
+<p><img style="display: block;" src="/resources/feat.toc.gif" title="TOC"></p>
+<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><h3 id="目录生成"><a href="#目录生成" class="headerlink" title="目录生成"></a>目录生成</h3><ul>
+<li>比如 <a href="https://github.com/MOxFIVE/hexo-theme-yelee/" target="_blank" rel="external">Yelee</a> 主题中用以下代码自带生成目录，使用 Hexo 自带的辅助函数 <code>&lt;%-toc(post.content)%&gt;</code> 来生成文章目录，同时将目录包裹起来以便修改样式。其他主题大同小异。</li>
+</ul>
+<figure class="highlight erb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"toc"</span> <span class="attr">class</span>=<span class="string">"toc-article"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">strong</span> <span class="attr">class</span>=<span class="string">"toc-title"</span>&gt;</span>文章目录<span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%-</span></span></span> toc(post.content) <span class="xml"><span class="tag">%&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="观察结构"><a href="#观察结构" class="headerlink" title="观察结构"></a>观察结构</h3><ul>
+<li>审查元素，观察到生成后的目录 HTML 结构大致如下</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"toc"</span> <span class="attr">class</span>=<span class="string">"toc-article"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">strong</span> <span class="attr">class</span>=<span class="string">"toc-title"</span>&gt;</span>文章目录<span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">"toc"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"toc-item toc-level-2"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"toc-link"</span> <span class="attr">href</span>=<span class="string">"#标题1"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"toc-number"</span>&gt;</span>1.<span class="tag">&lt;/<span class="name">span</span>&gt;</span> <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"toc-text"</span>&gt;</span>标题1<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"toc-item toc-level-2"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"toc-link"</span> <span class="attr">href</span>=<span class="string">"#标题2"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"toc-number"</span>&gt;</span>2.<span class="tag">&lt;/<span class="name">span</span>&gt;</span> <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"toc-text"</span>&gt;</span>标题2<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- 含子标题 --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">"toc-child"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"toc-item toc-level-3"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"toc-link"</span> <span class="attr">href</span>=<span class="string">"#子标题1"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"toc-number"</span>&gt;</span>2.1.<span class="tag">&lt;/<span class="name">span</span>&gt;</span> <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"toc-text"</span>&gt;</span>子标题1<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"toc-item toc-level-3"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"toc-link"</span> <span class="attr">href</span>=<span class="string">"#子标题2"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"toc-number"</span>&gt;</span>2.2.<span class="tag">&lt;/<span class="name">span</span>&gt;</span> <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"toc-text"</span>&gt;</span>子标题2<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="功能构思"><a href="#功能构思" class="headerlink" title="功能构思"></a>功能构思</h3><ul>
+<li>在每个包含子标题的大标题前插入小图标；</li>
+<li>找出需要绑定点击事件的元素；</li>
+<li>理清每次事件中子目录折叠和小图标切换的逻辑。</li>
+</ul>
+<h2 id="代码编写"><a href="#代码编写" class="headerlink" title="代码编写"></a>代码编写</h2><h3 id="添加小图标"><a href="#添加小图标" class="headerlink" title="添加小图标"></a>添加小图标</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> $itemHasChild = $(<span class="string">"#toc .toc-item:has(&gt; .toc-child)"</span>);</span><br><span class="line"><span class="keyword">var</span> $titleHasChild = $itemHasChild.children(<span class="string">".toc-link"</span>);</span><br><span class="line">$itemHasChild.prepend(<span class="string">"&lt;i class='fa fa-caret-down'&gt;&lt;/i&gt;&lt;i class='fa fa-caret-right'&gt;&lt;/i&gt;"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> $iconToFold = $(<span class="string">".toc-item &gt; .fa-caret-down"</span>);</span><br><span class="line">$iconToExpand.addClass(<span class="string">"hide"</span>);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这里在匹配的大标题前插入了两个 <code>&lt;i&gt;</code> 标签，用于表示目录 <code>展开</code> 和 <code>收起</code> 这两种状态；<br>标签使用了 <a href="http://fontawesome.io/" target="_blank" rel="external">Font Awesome</a> 中的小三角形图标，可自行更换或者用 CSS 绘制；</p>
+</blockquote>
+<h3 id="点击小图标"><a href="#点击小图标" class="headerlink" title="点击小图标"></a>点击小图标</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> clickIcon = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="string">"#toc .toc-item &gt; i"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        $(<span class="keyword">this</span>).siblings(<span class="string">".toc-child"</span>).slideToggle(<span class="number">100</span>);</span><br><span class="line">        $(<span class="keyword">this</span>).toggleClass(<span class="string">"hide"</span>);</span><br><span class="line">        $(<span class="keyword">this</span>).siblings(<span class="string">"i"</span>).toggleClass(<span class="string">"hide"</span>);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 默认展开目录，所以隐藏掉表示“目录已展开”的图标（向下的小三角）</span></span><br><span class="line"><span class="keyword">var</span> $iconToFold = $(<span class="string">".toc-item &gt; .fa-caret-down"</span>);</span><br><span class="line">$iconToExpand.addClass(<span class="string">"hide"</span>);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>点击小图标折叠次级目录，同时切换到相应图标；</li>
+<li>这里图标的显示状态是在 <code>inline-block</code> 和 <code>none</code> 中切换，用 <code>toggleClass</code> 比较合适。</li>
+</ul>
+</blockquote>
+<h3 id="点击大标题"><a href="#点击大标题" class="headerlink" title="点击大标题"></a>点击大标题</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> clickTitle = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $titleHasChild.dblclick(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        $(<span class="keyword">this</span>).siblings(<span class="string">".toc-child"</span>).hide(<span class="number">100</span>);</span><br><span class="line">        $(<span class="keyword">this</span>).siblings(<span class="string">"i"</span>).toggleClass(<span class="string">"hide"</span>);</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="comment">// After dblclick enent</span></span><br><span class="line">    $titleHasChild.click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> $curentTocChild = $(<span class="keyword">this</span>).siblings(<span class="string">".toc-child"</span>);</span><br><span class="line">        <span class="keyword">if</span> ($curentTocChild.is(<span class="string">":hidden"</span>)) &#123;</span><br><span class="line">            $curentTocChild.show(<span class="number">100</span>);</span><br><span class="line">            $(<span class="keyword">this</span>).siblings(<span class="string">"i"</span>).toggleClass(<span class="string">"hide"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;()</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>这里按我自己的习惯设计成 <code>单击</code> 即展开目录，而折叠目录需要 <code>双击</code>。因为点击某个目录时，代表我希望了解该目录的内容，所以不希望单击就把对应目录给收起了；</li>
+<li>单击事件要在双击事件之后，要不点击事件会出现异常。</li>
+</ul>
+</blockquote>
+<h3 id="点击总标题"><a href="#点击总标题" class="headerlink" title="点击总标题"></a>点击总标题</h3><ul>
+<li>之前给目录区加了个总标题 <code>文章目录</code>，现在可以给赋予其函数，以便点击时 展开/收起 所有目录</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> clickTocTitle = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> $iconToExpand = $(<span class="string">".toc-item &gt; .fa-caret-right"</span>);</span><br><span class="line">    <span class="keyword">var</span> $iconToFold = $(<span class="string">".toc-item &gt; .fa-caret-down"</span>);</span><br><span class="line">    <span class="keyword">var</span> $subToc = $titleHasChild.next(<span class="string">".toc-child"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> $tocTitle = $(<span class="string">"#toc .toc-title"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 当包含多级目录时再执行</span></span><br><span class="line">    <span class="keyword">if</span> ($titleHasChild.length) &#123;</span><br><span class="line">        $tocTitle.addClass(<span class="string">"clickable"</span>);</span><br><span class="line">        $tocTitle.click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="keyword">if</span> ($subToc.is(<span class="string">":hidden"</span>)) &#123;</span><br><span class="line">                $subToc.show(<span class="number">150</span>);</span><br><span class="line">                $iconToExpand.removeClass(<span class="string">"hide"</span>);</span><br><span class="line">                $iconToFold.addClass(<span class="string">"hide"</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                $subToc.hide(<span class="number">100</span>);</span><br><span class="line">                $iconToExpand.addClass(<span class="string">"hide"</span>);</span><br><span class="line">                $iconToFold.removeClass(<span class="string">"hide"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;()</span><br></pre></td></tr></table></figure>
+<h3 id="CSS-样式"><a href="#CSS-样式" class="headerlink" title="CSS 样式"></a>CSS 样式</h3><ul>
+<li>功能函数设置好后，再通过 CSS 调整下样式即可，样式根据主题风格和个人喜好自行调整；</li>
+<li>下面是部分自用样式，可参考</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*小图标*/</span></span><br><span class="line"><span class="selector-id">#toc</span> <span class="selector-tag">ol</span><span class="selector-class">.toc</span> <span class="selector-tag">li</span><span class="selector-class">.toc-item</span> <span class="selector-tag">i</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">margin-left</span>: -<span class="number">0.9em</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0.9em</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#b3b3b3</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">    <span class="attribute">cursor</span>: pointer;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#toc</span> <span class="selector-tag">ol</span><span class="selector-class">.toc</span> <span class="selector-tag">li</span><span class="selector-class">.toc-item</span> <span class="selector-tag">i</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#000</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*关联图标的 Class*/</span></span><br><span class="line"><span class="selector-id">#toc</span> <span class="selector-tag">ol</span><span class="selector-class">.toc</span> <span class="selector-tag">li</span><span class="selector-class">.toc-item</span> <span class="selector-tag">i</span><span class="selector-class">.hide</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*关联总标题的 Class*/</span></span><br><span class="line"><span class="selector-id">#toc</span> <span class="selector-class">.toc-title</span><span class="selector-class">.clickable</span> &#123;</span><br><span class="line">    <span class="attribute">cursor</span>: pointer;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#toc</span> <span class="selector-class">.toc-title</span><span class="selector-class">.clickable</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#88acdb</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#toc</span> <span class="selector-class">.toc-title</span><span class="selector-class">.clickable</span><span class="selector-pseudo">:active</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#d3d3d3</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*其他目录相关*/</span></span><br><span class="line"><span class="selector-id">#toc</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">0.9em</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">1.65em</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#toc</span> <span class="selector-class">.toc-title</span> &#123;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#808080</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#toc</span> <span class="selector-tag">ol</span><span class="selector-class">.toc</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0.7em</span>;</span><br><span class="line">    <span class="attribute">padding-right</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#toc</span> <span class="selector-tag">ol</span><span class="selector-class">.toc</span> <span class="selector-tag">li</span><span class="selector-class">.toc-item</span> &#123;</span><br><span class="line">    <span class="attribute">list-style-type</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#toc</span> <span class="selector-tag">ol</span><span class="selector-class">.toc</span> <span class="selector-tag">li</span><span class="selector-class">.toc-item</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#toc</span> <span class="selector-tag">ol</span><span class="selector-class">.toc</span> <span class="selector-tag">a</span><span class="selector-class">.toc-link</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#808080</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#toc</span> <span class="selector-tag">ol</span><span class="selector-class">.toc</span> <span class="selector-tag">a</span><span class="selector-class">.toc-link</span><span class="selector-pseudo">:visited</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#f48385</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#toc</span> <span class="selector-tag">ol</span><span class="selector-class">.toc</span> <span class="selector-tag">a</span><span class="selector-class">.toc-link</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#88acdb</span>;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(158,188,226,0.21);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#toc</span> <span class="selector-tag">ol</span><span class="selector-class">.toc</span> <span class="selector-tag">ol</span><span class="selector-class">.toc-child</span> &#123;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">1.25em</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">4px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ol>
+<li><strong>Font Awesome</strong>: <a href="http://fontawesome.io/" target="_blank" rel="external">http://fontawesome.io/</a></li>
+<li><strong>Hexo TOC 辅助函数:</strong> <a href="https://hexo.io/zh-cn/docs/helpers.html#toc" target="_blank" rel="external">https://hexo.io/zh-cn/docs/helpers.html#toc</a></li>
+<li><strong><em>为 Hexo 博客添加目录</em></strong> by <strong>况琪</strong> on <code>2015/02/09</code>: <a href="http://kuangqi.me/tricks/enable-table-of-contents-on-hexo/" target="_blank" rel="external">http://kuangqi.me/tricks/enable-table-of-contents-on-hexo/</a></li>
+<li><strong><em>feat: collapsible TOC 可折叠目录</em></strong> by <strong>MOxFIVE</strong> on <code>2016/06/05</code>: <a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/85764bbf482c78d819f8ca87bf9fe390d523dd3b" target="_blank" rel="external">https://github.com/MOxFIVE/hexo-theme-yelee/commit/85764bbf482c78d819f8ca87bf9fe390d523dd3b</a></li>
+</ol>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/06/13/hexo-collapsible-toc/">为 Hexo 添加可折叠的文章目录</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 MOxFIVE 的个人博客">MOxFIVE</a></p>
+        <p><span>发布时间:</span>2016-06-13, 20:06</p>
+        <p><span>最后更新:</span>2016-06-13, 23:44</p>
+        
+            <p>
+                <span>更新历史:</span><i class="fa fa-github"></i>
+                <a href="https://github.com/MOxFIVE/Markdown-Archives-Backup/blame/master/_posts/2016-06-13.hexo-collapsible-toc.md" title="顺序查看文章各部分修改记录" target = "_blank">Blame</a>,
+                <a href="https://github.com/MOxFIVE/Markdown-Archives-Backup/commits/master/_posts/2016-06-13.hexo-collapsible-toc.md" title="查看文章有关更新记录" target = "_blank">History</a><span class="raw">文本模式:</span><i class="fa fa-file-text-o"></i>
+                <a href="https://raw.githubusercontent.com/MOxFIVE/Markdown-Archives-Backup/master/_posts/2016-06-13.hexo-collapsible-toc.md" title="查看 & 下载文章 Markdown 原始文本" target = "_blank"> .md Raw</a>
+            </p>
+        
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/06/13/hexo-collapsible-toc/" title="为 Hexo 添加可折叠的文章目录">http://MOxFIVE.xyz/2016/06/13/hexo-collapsible-toc/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://MOxFIVE.xyz/2016/06/13/hexo-collapsible-toc/　　作者: MOxFIVE" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+    
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/05/31/hexo-local-search/">
+                    让 Hexo 博客支持本地站内搜索
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+
+
+
+
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#intro"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前期准备"><span class="toc-number">2.</span> <span class="toc-text">前期准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#目录生成"><span class="toc-number">2.1.</span> <span class="toc-text">目录生成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#观察结构"><span class="toc-number">2.2.</span> <span class="toc-text">观察结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#功能构思"><span class="toc-number">2.3.</span> <span class="toc-text">功能构思</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码编写"><span class="toc-number">3.</span> <span class="toc-text">代码编写</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#添加小图标"><span class="toc-number">3.1.</span> <span class="toc-text">添加小图标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#点击小图标"><span class="toc-number">3.2.</span> <span class="toc-text">点击小图标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#点击大标题"><span class="toc-number">3.3.</span> <span class="toc-text">点击大标题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#点击总标题"><span class="toc-number">3.4.</span> <span class="toc-text">点击总标题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS-样式"><span class="toc-number">3.5.</span> <span class="toc-text">CSS 样式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相关链接"><span class="toc-number">4.</span> <span class="toc-text">相关链接</span></a></li></ol>
+</div>
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script>
+    yiliaConfig.toc = ["隐藏目录", "显示目录", !!"true"];
+</script>
+
+
+
+    
+    <div class="share">
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"为 Hexo 添加可折叠的文章目录　| MOxFIVE's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    </div>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <div id="comment-box" ></div>
+    <div class="ds-thread" data-thread-key="2016/06/13/hexo-collapsible-toc/" data-title="为 Hexo 添加可折叠的文章目录" data-url="http://MOxFIVE.xyz/2016/06/13/hexo-collapsible-toc/"></div>
+    <script>
+        var duoshuoQuery = {short_name:"moxfive"};
+        function loadComment() {
+            var d = document, s = d.createElement('script');
+            s.src = '//moxfive.xyz/resources/embed.js';
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
+
+        $(function() { 
+            var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=moxfive&threads=2016/06/13/hexo-collapsible-toc/&callback=?";
+            $.getJSON(jsonUrl, function(result) {
+                $.each(result.response, function(i, field) {
+                    var value = field.comments;
+                    if (value > 0) {
+                        $(".count-comment").text(value);
+                        return;
+                    }
+                })
+
+            })
+        });
+    </script>
+    
+    <aside class="comment-bar">
+        <a href="javascript:void(0);">
+            <i class="fa fa-commenting-o animated infinite pulse"></i>
+            <i class="fa fa-spinner fa-pulse"></i>
+            <span class="count-comment"></span>
+        </a>
+    </aside>
+
+    <script>
+        var $commentBar = $("#comments aside.comment-bar");
+        var load$hide = function(){
+            $commentBar.find("a > i").toggle();
+            loadComment();
+            $commentBar.fadeOut(800);
+        }
+        $commentBar.click(function(){
+            load$hide();
+        })
+        $commentBar.children("a").hover(function(){
+            load$hide();
+        })
+        if (window.location.hash === "#comments") {
+            load$hide();
+        }
+    </script>
+
+</div>
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/05/31/hexo-local-search/" title="下一篇: 让 Hexo 博客支持本地站内搜索">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/06/13/hexo-collapsible-toc/">为 Hexo 添加可折叠的文章目录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/31/hexo-local-search/">让 Hexo 博客支持本地站内搜索</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/17/image-compression/">关于 Yelee 主题背景图的压缩与优化</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/public-dns/">几个国内专用的公共 DNS</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/20/baidu-share-fontawesome/">在百度分享中使用 Font Awesome 图标</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/18/text-overflow-ellipsis/">CSS 设置文本省略 ellipsis (…)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/27/hexo-browsersync/">Hexo 页面自动刷新与移动端调试</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/04/markdown-table-style/">Markdown 表格样式调整与自适应优化</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/16/front-end-tools/">前端工程化工具初选</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/10/hexo-post-version-control/">关联 GitHub, 让 Hexo 支持查看文章更新历史</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/02/hexo-comments/">为 Hexo 主题添加评论模块 — Disqus, 多说, 友言</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/01/hexo-config-true-false/">关于 Hexo 配置文件中的 true 和 false</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/22/anki-excel-shortcuts/">Anki 记忆库之 Excel 快捷键大全</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/21/common-hexo-commands/">Hexo 最常用的几个命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/09/css-font-family/">CSS font-family 网页字体使用小结</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/30/sublime-config/">Sublime Text 3 使用配置与插件安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/23/anki-templates/">Anki 自用卡片模板分享</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/23/git-command/">Git 基础命令与相关术语</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/16/png-gif-transparency/">制作透明背景 PNG 图片和 GIF 动图的几种方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/09/web-style-guide/">Web Style Guide 前端代码规范</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/04/hexo-deployment/">将 Hexo 博客部署到 GitHub Pages</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/31/excel-markdown-table/">用 Excel 生成和管理 Markdown 表格</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/25/hexo-tag-cloud/">让 Hexo 自动生成 Tag Cloud 标签云页面</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/16/hexo-404-page/">在 Hexo 中创建匹配主题的404页面</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/09/29/duoshuo-style/">多说样式折腾记录 — 添加 UA 浏览器标识、旋转头像等</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/09/20/windows-mac-software/">自用 Windows 和 Mac 软件推荐</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/30/EndNote-Markdown/">EndNote 与 Markdown 结合 — 为网文快速添加 Reference</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/28/Front-End-Study/">个人 Web 前端学习路线</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/20/blog-building/">个人博客站点建设历程</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/19/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+            yiliaConfig.fancybox = false;
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2015-2016 MOxFIVE
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题 v3.0">Yelee</a><span> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >本站到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+    <script src="/js/GithubRepoWidget.js"></script>
+
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 10;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

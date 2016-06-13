@@ -7,6 +7,13 @@
     </url>
     
     <url>
+        <loc>http://MOxFIVE.xyz/tags/index.html</loc>
+        <lastmod>2016-06-13T07:36:21.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>http://MOxFIVE.xyz/markdown-demo/index.html</loc>
         <lastmod>2016-06-04T07:43:36.765Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -23,13 +30,6 @@
     <url>
         <loc>http://MOxFIVE.xyz/about/index.html</loc>
         <lastmod>2016-01-31T16:01:56.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>http://MOxFIVE.xyz/tags/index.html</loc>
-        <lastmod>2015-11-17T16:30:16.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
