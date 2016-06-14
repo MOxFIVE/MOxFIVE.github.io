@@ -1427,6 +1427,8 @@ ul > li::before,
   margin: 0.5em auto;
   border-left: 4px solid rgba(147,181,224,0.4);
   background: rgba(255,255,255,0.4);
+  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 }
 .article-entry blockquote p {
   margin: 0.4em auto;
@@ -1476,10 +1478,11 @@ ul > li::before,
 }
 .article-entry h2 {
   margin: 0.5em auto;
-  color: #9c9;
+  color: #66be66;
   padding-bottom: 5px;
   border-bottom: 1px solid #ddd;
   text-align: center;
+  font-size: 1.5rem;
 }
 .article-entry h2:hover {
   color: #88acdb;
@@ -1495,6 +1498,8 @@ ul > li::before,
   background: rgba(243,248,253,0.6);
   border: 1px solid #d2e8fa;
   padding: 0.2em 0.6em;
+  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.15);
 }
 .article-entry h3:hover a {
   text-decoration: underline;
@@ -2201,9 +2206,11 @@ aside.comment-bar:active {
   padding: 0.05em 0.3em;
   -webkit-border-radius: 3px;
   border-radius: 3px;
+  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.08);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.08);
   var: 1;
   color: #fff;
-  background: rgba(153,204,153,0.7);
+  background: rgba(153,204,153,0.75);
 }
 pre .comment,
 pre .quote,
