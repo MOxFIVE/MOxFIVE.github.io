@@ -18,21 +18,16 @@
 
 
 
-<meta name="description" content="目前主题里可以使用多张随机大图作背景，如果不做好图片压缩和优化，可能会严重影响网站流畅性。下面简单介绍两种比较便捷的优化方案。">
+<meta name="description" content="前言不少网站使用的是多说等第三方评论系统，有时候需要在特定位置显示对应文章的评论数，下面的方法可以快速获取多说和 Disqus 的文章评论数，所得为纯数字，方便排版布局。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于 Yelee 主题背景图的压缩与优化">
-<meta property="og:url" content="http://MOxFIVE.xyz/2016/05/17/image-compression/index.html">
+<meta property="og:title" content="获取多说和 Disqus 文章评论数的方法">
+<meta property="og:url" content="http://MOxFIVE.xyz/2016/06/14/duoshuo-disqus-comment-count/index.html">
 <meta property="og:site_name" content="MOxFIVE's Blog">
-<meta property="og:description" content="目前主题里可以使用多张随机大图作背景，如果不做好图片压缩和优化，可能会严重影响网站流畅性。下面简单介绍两种比较便捷的优化方案。">
-<meta property="og:image" content="http://MOxFIVE.xyz/resources/image-compression-1.png">
-<meta property="og:image" content="http://MOxFIVE.xyz/resources/image-compression-2.gif">
-<meta property="og:image" content="http://MOxFIVE.xyz/resources/image-compression-ps.png">
-<meta property="og:image" content="http://MOxFIVE.xyz/resources/zhitu.png">
-<meta property="og:updated_time" content="2016-05-17T13:49:22.000Z">
+<meta property="og:description" content="前言不少网站使用的是多说等第三方评论系统，有时候需要在特定位置显示对应文章的评论数，下面的方法可以快速获取多说和 Disqus 的文章评论数，所得为纯数字，方便排版布局。">
+<meta property="og:updated_time" content="2016-06-14T17:10:32.556Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于 Yelee 主题背景图的压缩与优化">
-<meta name="twitter:description" content="目前主题里可以使用多张随机大图作背景，如果不做好图片压缩和优化，可能会严重影响网站流畅性。下面简单介绍两种比较便捷的优化方案。">
-<meta name="twitter:image" content="http://MOxFIVE.xyz/resources/image-compression-1.png">
+<meta name="twitter:title" content="获取多说和 Disqus 文章评论数的方法">
+<meta name="twitter:description" content="前言不少网站使用的是多说等第三方评论系统，有时候需要在特定位置显示对应文章的评论数，下面的方法可以快速获取多说和 Disqus 的文章评论数，所得为纯数字，方便排版布局。">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -64,7 +59,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>关于 Yelee 主题背景图的压缩与优化 | MOxFIVE&#39;s Blog</title>
+<title>获取多说和 Disqus 文章评论数的方法 | MOxFIVE&#39;s Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -315,11 +310,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-image-compression" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-duoshuo-disqus-comment-count" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/05/17/image-compression/" class="article-date">
-      <time datetime="2016-05-17T07:59:04.000Z" itemprop="datePublished">2016-05-17</time>
+      <a href="/2016/06/14/duoshuo-disqus-comment-count/" class="article-date">
+      <time datetime="2016-06-14T13:19:34.000Z" itemprop="datePublished">2016-06-14</time>
 </a>
     </div>
   
@@ -332,7 +327,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      关于 Yelee 主题背景图的压缩与优化
+      获取多说和 Disqus 文章评论数的方法
     </h1>
   
 
@@ -347,7 +342,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PhotoShop/">PhotoShop</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Yelee/">Yelee</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Disqus/">Disqus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JSON/">JSON</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/多说/">多说</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -358,41 +353,48 @@
       
       
           
-        <p>　　目前主题里可以使用多张随机大图作背景，如果不做好图片压缩和优化，可能会严重影响网站流畅性。下面简单介绍两种比较便捷的优化方案。</p>
+        <p></p><h2 id="intro">前言</h2>不少网站使用的是多说等第三方评论系统，有时候需要在特定位置显示对应文章的评论数，下面的方法可以快速获取多说和 Disqus 的文章评论数，所得为纯数字，方便排版布局。<p></p>
 <a id="more"></a>
-<h2 id="优化说明"><a href="#优化说明" class="headerlink" title="优化说明"></a>优化说明</h2><ul>
-<li>请使用 <code>jpg</code> 后缀名的背景图片；</li>
-<li>如果可以，使用 <code>渐进式JPEG</code>，让图片加载时逐渐清晰；</li>
-<li>将图片品质尽量调低，一般可以压缩到几十kb（背景图半透明显示，因此细节并不重要）；<blockquote>
-<p>下图1 为目前主题自带背景图的分辨率和文件大小展示，图2 为渐进式图片加载示例</p>
+<p></p><p data-height="265" data-theme-id="0" data-slug-hash="VjvLpB" data-default-tab="js,result" data-user="MOxFIVE" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/MOxFIVE/pen/VjvLpB/" target="_blank" rel="external">Count  Comment for Duoshuo &amp; Disqus</a> by MOxFIVE (<a href="http://codepen.io/MOxFIVE" target="_blank" rel="external">@MOxFIVE</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<h2 id="多说"><a href="#多说" class="headerlink" title="多说"></a>多说</h2><p>多说提供了获取文章评论数的接口，需要做的只是填好相关参数，然后再从返回的 JSON 数据中提取出评论数即可</p>
+<h3 id="请求参数"><a href="#请求参数" class="headerlink" title="请求参数"></a>请求参数</h3><ul>
+<li><code>short_name</code>: 站点注册的多说二级域名，比如注册了 <a href="http://helloworld.duoshuo.com/" target="_blank" rel="external">http://helloworld.duoshuo.com/</a>, 则对应二级域名为 helloworld;</li>
+<li><code>threads</code>: 文章的 <code>thread-key</code>, 与评论框中 data-thread-key 一致。</li>
+</ul>
+<h3 id="返回数据示例"><a href="#返回数据示例" class="headerlink" title="返回数据示例"></a>返回数据示例</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"response"</span>: &#123;</span><br><span class="line">        <span class="attr">"about/index.html"</span>: &#123;</span><br><span class="line">            <span class="attr">"thread_id"</span>: <span class="string">"6205475504969401090"</span>,</span><br><span class="line">            <span class="attr">"channel_key"</span>: <span class="literal">null</span>,</span><br><span class="line">            <span class="attr">"thread_key"</span>: <span class="string">"about/index.html"</span>,</span><br><span class="line">            <span class="attr">"reposts"</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="attr">"views"</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="attr">"likes"</span>: <span class="number">8</span>,</span><br><span class="line">            <span class="attr">"dislikes"</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="attr">"comments"</span>: <span class="number">187</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"options"</span>: &#123;</span><br><span class="line">        <span class="attr">"comments_zero"</span>: <span class="string">"暂无评论"</span>,</span><br><span class="line">        <span class="attr">"comments_one"</span>: <span class="string">"1条评论"</span>,</span><br><span class="line">        <span class="attr">"comments_multiple"</span>: <span class="string">"&#123;num&#125;条评论"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"code"</span>: <span class="number">0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="数据提取"><a href="#数据提取" class="headerlink" title="数据提取"></a>数据提取</h3><ul>
+<li>需要的只是评论数 <code>comments</code>，这里使用 jQuery 的 <code>getJSON</code> 比较方便</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> shortName = <span class="string">"moxfive"</span>;</span><br><span class="line">    <span class="keyword">var</span> threads = <span class="string">"about/index.html"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> jsonUrl = <span class="string">"http://api.duoshuo.com/threads/counts.jsonp?short_name="</span> + shortName + <span class="string">"&amp;threads="</span> + threads +  <span class="string">"&amp;callback=?"</span>;</span><br><span class="line">    $.getJSON(jsonUrl, <span class="function"><span class="keyword">function</span>(<span class="params">result</span>) </span>&#123;</span><br><span class="line">        $.each(result.response, <span class="function"><span class="keyword">function</span>(<span class="params">i, field</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> value = field.comments;</span><br><span class="line">            $(<span class="string">".duoshuo-count"</span>).text(value);</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>获得的值会显示在匹配的区域中</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"disqus-count"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Disqus"><a href="#Disqus" class="headerlink" title="Disqus"></a>Disqus</h2><h3 id="加载相关-JS"><a href="#加载相关-JS" class="headerlink" title="加载相关 JS"></a>加载相关 JS</h3><ul>
+<li>域名中填入自己的 Disqus <code>shortname</code>，获取方式参考 <a href="https://help.disqus.com/customer/en/portal/articles/466208-what-s-a-shortname-" target="_blank" rel="external">官方文档</a></li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">id</span>=<span class="string">"dsq-count-scr"</span> <span class="attr">src</span>=<span class="string">"//&lt;shortname&gt;.disqus.com/count.js"</span> <span class="attr">async</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- e.g. --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">id</span>=<span class="string">"dsq-count-scr"</span> <span class="attr">src</span>=<span class="string">"//moxfive.disqus.com/count.js"</span> <span class="attr">async</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="显示评论数"><a href="#显示评论数" class="headerlink" title="显示评论数"></a>显示评论数</h3><ul>
+<li>这里介绍两种借助特定 Class 显示评论数的方法</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 通过 `data-disqus-identifier` --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"disqus-comment-count"</span> <span class="attr">data-disqus-identifier</span>=<span class="string">"about/index.html"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 通过 `data-disqus-url` --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"disqus-comment-count"</span> <span class="attr">data-disqus-url</span>=<span class="string">"http://MOxFIVE.xyz/about/index.html"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><code>identifier</code> 和 <code>url</code> 的值如果不清楚，可以自行设置，方法参考 <a href="https://help.disqus.com/customer/portal/articles/472098" target="_blank" rel="external">官方文档</a></li>
+<li>获取的评论数不正确，很可能是因为远程数据没更新，等等就好。</li>
+</ul>
 </blockquote>
-</li>
+<h3 id="提取纯数字"><a href="#提取纯数字" class="headerlink" title="提取纯数字"></a>提取纯数字</h3><ul>
+<li>上面方法显示的评论数是类似 <code>1 Comment</code> 这样的格式，这里可以把它转为纯数字格式 <code>1</code></li>
+<li>使用 jQuery 绑定事件，当评论数信息显示时去掉非数字字符即可</li>
 </ul>
-<p><img src="/resources/image-compression-1.png" alt="Yelee Background info."> <img src="/resources/image-compression-2.gif" alt="Progressive JPEGs"></p>
-<h2 id="优化方案"><a href="#优化方案" class="headerlink" title="优化方案"></a>优化方案</h2><h3 id="PhotoShop"><a href="#PhotoShop" class="headerlink" title="PhotoShop"></a>PhotoShop</h3><ul>
-<li>电脑上如果装有 PhotoShop, 那用其来优化图片真是再好不过了</li>
-<li>PS 打开图片 → 文件 → 存储为 Web 所用格式 → JPEG 格式，品质 0，勾选 <code>连续</code> （渐进式），最后存储，这样一张高压缩渐进式的 JPG 背景图就做好了</li>
-</ul>
-<p><img src="/resources/image-compression-ps.png" alt="image Compression by PhotoShop"></p>
-<h3 id="智图"><a href="#智图" class="headerlink" title="智图"></a>智图</h3><ul>
-<li><a href="http://zhitu.isux.us/" target="_blank" rel="external">智图</a> 是腾讯 ISUX 出品的在线图片优化工具，可以方便的对比优化前后的图片，同时可以自行调节图片品质，除了不能设置 <code>渐进式JPEG</code> , 其他基本满足背景图优化需要</li>
-<li>进入网站后按提示上传图片，再调低图片品质，之后下载图片即可<blockquote>
-<p>因为主题背景图为 <code>jpg</code> 格式，其他格式请转为 <code>jpg</code> 再上传到该网站优化。转换格式方法很多，比如用 Windows 自带的画图打开图片然后另存为 jpg</p>
-</blockquote>
-</li>
-</ul>
-<p><img src="/resources/zhitu.png" alt="智图"></p>
-<h3 id="方案对比"><a href="#方案对比" class="headerlink" title="方案对比"></a>方案对比</h3><ul>
-<li>原图为 420kb，智图选择最低品质(10)后约为 129kb；</li>
-<li>PhotoShop 选择品质 0，可以压缩到 62k，同时可以设为 <code>渐进式JPEG</code>；</li>
-<li>因此，有条件的话更推荐使用 PS 压缩背景图。</li>
-</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> $disqusCount = $(<span class="string">".disqus-comment-count"</span>);</span><br><span class="line">$disqusCount.bind(<span class="string">"DOMNodeInserted"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> num = $(<span class="keyword">this</span>).text().replace(<span class="regexp">/[^0-9]/ig</span>,<span class="string">""</span>);</span><br><span class="line">  $(<span class="keyword">this</span>).text(num)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ol>
-<li><strong>智图</strong>: <a href="http://zhitu.isux.us/" target="_blank" rel="external">http://zhitu.isux.us/</a></li>
-<li><strong>TinyPNG</strong>: <a href="https://tinypng.com/" target="_blank" rel="external">https://tinypng.com/</a></li>
-<li><strong><em>渐进式 jpeg(progressive jpeg) 图片及其相关</em></strong> by <strong>张鑫旭</strong> on <code>2013/01/07</code>: <a href="http://www.zhangxinxu.com/wordpress/2013/01/progressive-jpeg-image-and-so-on/" target="_blank" rel="external">http://www.zhangxinxu.com/wordpress/2013/01/progressive-jpeg-image-and-so-on/</a></li>
-<li><strong>呆毛王示例壁纸下载</strong>: <a href="http://moxfive.xyz/resources/saber.jpg">http://moxfive.xyz/resources/saber.jpg</a></li>
-<li><strong>最人性化的壁纸网站</strong>: <a href="http://www.wallpaperpcmobile.com/" target="_blank" rel="external">http://www.wallpaperpcmobile.com/</a></li>
+<li>多说官方文档: <a href="http://dev.duoshuo.com/docs/50615732a834c63c56004257" target="_blank" rel="external">获取文章评论、转发数</a></li>
+<li>多说官方文档: <a href="http://dev.duoshuo.com/threads/5016427f77cf5fa30500000e" target="_blank" rel="external">代码显示【文章评论数】方法</a></li>
+<li>Disqus Help: <a href="https://help.disqus.com/customer/portal/articles/565624-adding-comment-c" target="_blank" rel="external">Adding comment count links to your home page</a></li>
 </ol>
 
       
@@ -402,21 +404,21 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/05/17/image-compression/">关于 Yelee 主题背景图的压缩与优化</a></p>
+        <p><span>本文标题:</span><a href="/2016/06/14/duoshuo-disqus-comment-count/">获取多说和 Disqus 文章评论数的方法</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 MOxFIVE 的个人博客">MOxFIVE</a></p>
-        <p><span>发布时间:</span>2016-05-17, 15:59</p>
-        <p><span>最后更新:</span>2016-05-17, 21:49</p>
+        <p><span>发布时间:</span>2016-06-14, 21:19</p>
+        <p><span>最后更新:</span>2016-06-15, 01:10</p>
         
             <p>
                 <span>更新历史:</span><i class="fa fa-github"></i>
-                <a href="https://github.com/MOxFIVE/Markdown-Archives-Backup/blame/master/_posts/2016-05-17.image-compression.md" title="顺序查看文章各部分修改记录" target = "_blank">Blame</a>,
-                <a href="https://github.com/MOxFIVE/Markdown-Archives-Backup/commits/master/_posts/2016-05-17.image-compression.md" title="查看文章有关更新记录" target = "_blank">History</a><span class="raw">文本模式:</span><i class="fa fa-file-text-o"></i>
-                <a href="https://raw.githubusercontent.com/MOxFIVE/Markdown-Archives-Backup/master/_posts/2016-05-17.image-compression.md" title="查看 & 下载文章 Markdown 原始文本" target = "_blank"> .md Raw</a>
+                <a href="https://github.com/MOxFIVE/Markdown-Archives-Backup/blame/master/_posts/2016-06-14.duoshuo-disqus-comment-count.md" title="顺序查看文章各部分修改记录" target = "_blank">Blame</a>,
+                <a href="https://github.com/MOxFIVE/Markdown-Archives-Backup/commits/master/_posts/2016-06-14.duoshuo-disqus-comment-count.md" title="查看文章有关更新记录" target = "_blank">History</a><span class="raw">文本模式:</span><i class="fa fa-file-text-o"></i>
+                <a href="https://raw.githubusercontent.com/MOxFIVE/Markdown-Archives-Backup/master/_posts/2016-06-14.duoshuo-disqus-comment-count.md" title="查看 & 下载文章 Markdown 原始文本" target = "_blank"> .md Raw</a>
             </p>
         
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/05/17/image-compression/" title="关于 Yelee 主题背景图的压缩与优化">http://MOxFIVE.xyz/2016/05/17/image-compression/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://MOxFIVE.xyz/2016/05/17/image-compression/　　作者: MOxFIVE" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/06/14/duoshuo-disqus-comment-count/" title="获取多说和 Disqus 文章评论数的方法">http://MOxFIVE.xyz/2016/06/14/duoshuo-disqus-comment-count/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://MOxFIVE.xyz/2016/06/14/duoshuo-disqus-comment-count/　　作者: MOxFIVE" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -427,16 +429,10 @@
     
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/05/31/hexo-local-search/">
-                    让 Hexo 博客支持本地站内搜索
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/05/11/public-dns/">
-                    几个国内专用的公共 DNS
+                <a href="/2016/06/13/hexo-collapsible-toc/">
+                    为 Hexo 添加可折叠的文章目录
                 </a>
             </div>
         
@@ -452,7 +448,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#优化说明"><span class="toc-number">1.</span> <span class="toc-text">优化说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优化方案"><span class="toc-number">2.</span> <span class="toc-text">优化方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PhotoShop"><span class="toc-number">2.1.</span> <span class="toc-text">PhotoShop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#智图"><span class="toc-number">2.2.</span> <span class="toc-text">智图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方案对比"><span class="toc-number">2.3.</span> <span class="toc-text">方案对比</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相关链接"><span class="toc-number">3.</span> <span class="toc-text">相关链接</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#intro"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多说"><span class="toc-number">2.</span> <span class="toc-text">多说</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#请求参数"><span class="toc-number">2.1.</span> <span class="toc-text">请求参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#返回数据示例"><span class="toc-number">2.2.</span> <span class="toc-text">返回数据示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据提取"><span class="toc-number">2.3.</span> <span class="toc-text">数据提取</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Disqus"><span class="toc-number">3.</span> <span class="toc-text">Disqus</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#加载相关-JS"><span class="toc-number">3.1.</span> <span class="toc-text">加载相关 JS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#显示评论数"><span class="toc-number">3.2.</span> <span class="toc-text">显示评论数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#提取纯数字"><span class="toc-number">3.3.</span> <span class="toc-text">提取纯数字</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相关链接"><span class="toc-number">4.</span> <span class="toc-text">相关链接</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn,
@@ -482,7 +478,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"关于 Yelee 主题背景图的压缩与优化　| MOxFIVE's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"获取多说和 Disqus 文章评论数的方法　| MOxFIVE's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     </div>
 
@@ -492,7 +488,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" data-thread-key="2016/05/17/image-compression/" data-title="关于 Yelee 主题背景图的压缩与优化" data-url="http://MOxFIVE.xyz/2016/05/17/image-compression/"></div>
+    <div class="ds-thread" data-thread-key="2016/06/14/duoshuo-disqus-comment-count/" data-title="获取多说和 Disqus 文章评论数的方法" data-url="http://MOxFIVE.xyz/2016/06/14/duoshuo-disqus-comment-count/"></div>
     <script>
         var duoshuoQuery = {short_name:"moxfive"};
         function loadComment() {
@@ -503,7 +499,7 @@
         }
 
         $(function() { 
-            var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=moxfive&threads=2016/05/17/image-compression/&callback=?";
+            var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=moxfive&threads=2016/06/14/duoshuo-disqus-comment-count/&callback=?";
             $.getJSON(jsonUrl, function(result) {
                 $.each(result.response, function(i, field) {
                     var value = field.comments;
@@ -552,15 +548,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/05/31/hexo-local-search/" title="上一篇: 让 Hexo 博客支持本地站内搜索">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/05/11/public-dns/" title="下一篇: 几个国内专用的公共 DNS">
+            <a href="/2016/06/13/hexo-collapsible-toc/" title="下一篇: 为 Hexo 添加可折叠的文章目录">
                 <i class="fa fa-angle-right"></i>
             </a>
         

@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>http://MOxFIVE.xyz/2016/06/14/duoshuo-disqus-comment-count/</loc>
+    <lastmod>2016-06-14T17:10:32.556Z</lastmod>
+    <data>
+        <display>
+        <title>获取多说和 Disqus 文章评论数的方法</title>
+        <pubTime>2016-06-14T13:19:34.000Z</pubTime>
+        
+        <tag>多说</tag>
+         
+        <tag>jQuery</tag>
+         
+        <tag>Disqus</tag>
+         
+        <tag>JSON</tag>
+         
+         
+           
+             
+              <breadCrumb title="术业专攻" url="http://MOxFIVE.xyz/categories/%E6%9C%AF%E4%B8%9A%E4%B8%93%E6%94%BB/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://MOxFIVE.xyz/2015/08/19/hello-world/</loc>
     <lastmod>2016-06-14T09:24:48.842Z</lastmod>
     <data>
@@ -112,11 +138,11 @@
          
         <tag>JavaScript</tag>
          
+        <tag>Hexo</tag>
+         
         <tag>多说</tag>
          
         <tag>UA</tag>
-         
-        <tag>Hexo</tag>
          
          
            

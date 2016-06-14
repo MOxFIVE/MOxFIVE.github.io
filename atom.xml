@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://MOxFIVE.xyz/"/>
-  <updated>2016-06-13T15:44:20.987Z</updated>
+  <updated>2016-06-14T17:10:32.556Z</updated>
   <id>http://MOxFIVE.xyz/</id>
   
   <author>
@@ -14,6 +14,77 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>获取多说和 Disqus 文章评论数的方法</title>
+    <link href="http://MOxFIVE.xyz/2016/06/14/duoshuo-disqus-comment-count/"/>
+    <id>http://MOxFIVE.xyz/2016/06/14/duoshuo-disqus-comment-count/</id>
+    <published>2016-06-14T13:19:34.000Z</published>
+    <updated>2016-06-14T17:10:32.556Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;/p&gt;&lt;h2 id=&quot;intro&quot;&gt;前言&lt;/h2&gt;不少网站使用的是多说等第三方评论系统，有时候需要在特定位置显示对应文章的评论数，下面的方法可以快速获取多说和 Disqus 的文章评论数，所得为纯数字，方便排版布局。&lt;p&gt;&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p data-height=&quot;265&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;VjvLpB&quot; data-default-tab=&quot;js,result&quot; data-user=&quot;MOxFIVE&quot; data-embed-version=&quot;2&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/MOxFIVE/pen/VjvLpB/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Count  Comment for Duoshuo &amp;amp; Disqus&lt;/a&gt; by MOxFIVE (&lt;a href=&quot;http://codepen.io/MOxFIVE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;@MOxFIVE&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
+&lt;script async src=&quot;//assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;多说&quot;&gt;&lt;a href=&quot;#多说&quot; class=&quot;headerlink&quot; title=&quot;多说&quot;&gt;&lt;/a&gt;多说&lt;/h2&gt;&lt;p&gt;多说提供了获取文章评论数的接口，需要做的只是填好相关参数，然后再从返回的 JSON 数据中提取出评论数即可&lt;/p&gt;
+&lt;h3 id=&quot;请求参数&quot;&gt;&lt;a href=&quot;#请求参数&quot; class=&quot;headerlink&quot; title=&quot;请求参数&quot;&gt;&lt;/a&gt;请求参数&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;short_name&lt;/code&gt;: 站点注册的多说二级域名，比如注册了 &lt;a href=&quot;http://helloworld.duoshuo.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://helloworld.duoshuo.com/&lt;/a&gt;, 则对应二级域名为 helloworld;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;threads&lt;/code&gt;: 文章的 &lt;code&gt;thread-key&lt;/code&gt;, 与评论框中 data-thread-key 一致。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;返回数据示例&quot;&gt;&lt;a href=&quot;#返回数据示例&quot; class=&quot;headerlink&quot; title=&quot;返回数据示例&quot;&gt;&lt;/a&gt;返回数据示例&lt;/h3&gt;&lt;figure class=&quot;highlight json&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;&quot;response&quot;&lt;/span&gt;: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;attr&quot;&gt;&quot;about/index.html&quot;&lt;/span&gt;: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;attr&quot;&gt;&quot;thread_id&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;6205475504969401090&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;attr&quot;&gt;&quot;channel_key&quot;&lt;/span&gt;: &lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;attr&quot;&gt;&quot;thread_key&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;about/index.html&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;attr&quot;&gt;&quot;reposts&quot;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;attr&quot;&gt;&quot;views&quot;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;attr&quot;&gt;&quot;likes&quot;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;attr&quot;&gt;&quot;dislikes&quot;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;attr&quot;&gt;&quot;comments&quot;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;187&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;&quot;options&quot;&lt;/span&gt;: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;attr&quot;&gt;&quot;comments_zero&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;暂无评论&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;attr&quot;&gt;&quot;comments_one&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;1条评论&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;attr&quot;&gt;&quot;comments_multiple&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;&amp;#123;num&amp;#125;条评论&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;&quot;code&quot;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;数据提取&quot;&gt;&lt;a href=&quot;#数据提取&quot; class=&quot;headerlink&quot; title=&quot;数据提取&quot;&gt;&lt;/a&gt;数据提取&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;需要的只是评论数 &lt;code&gt;comments&lt;/code&gt;，这里使用 jQuery 的 &lt;code&gt;getJSON&lt;/code&gt; 比较方便&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; shortName = &lt;span class=&quot;string&quot;&gt;&quot;moxfive&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; threads = &lt;span class=&quot;string&quot;&gt;&quot;about/index.html&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; jsonUrl = &lt;span class=&quot;string&quot;&gt;&quot;http://api.duoshuo.com/threads/counts.jsonp?short_name=&quot;&lt;/span&gt; + shortName + &lt;span class=&quot;string&quot;&gt;&quot;&amp;amp;threads=&quot;&lt;/span&gt; + threads +  &lt;span class=&quot;string&quot;&gt;&quot;&amp;amp;callback=?&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    $.getJSON(jsonUrl, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;result&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        $.each(result.response, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;i, field&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; value = field.comments;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            $(&lt;span class=&quot;string&quot;&gt;&quot;.duoshuo-count&quot;&lt;/span&gt;).text(value);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;获得的值会显示在匹配的区域中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;disqus-count&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;Disqus&quot;&gt;&lt;a href=&quot;#Disqus&quot; class=&quot;headerlink&quot; title=&quot;Disqus&quot;&gt;&lt;/a&gt;Disqus&lt;/h2&gt;&lt;h3 id=&quot;加载相关-JS&quot;&gt;&lt;a href=&quot;#加载相关-JS&quot; class=&quot;headerlink&quot; title=&quot;加载相关 JS&quot;&gt;&lt;/a&gt;加载相关 JS&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;域名中填入自己的 Disqus &lt;code&gt;shortname&lt;/code&gt;，获取方式参考 &lt;a href=&quot;https://help.disqus.com/customer/en/portal/articles/466208-what-s-a-shortname-&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;dsq-count-scr&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;//&amp;lt;shortname&amp;gt;.disqus.com/count.js&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;async&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- e.g. --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;dsq-count-scr&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;//moxfive.disqus.com/count.js&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;async&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;显示评论数&quot;&gt;&lt;a href=&quot;#显示评论数&quot; class=&quot;headerlink&quot; title=&quot;显示评论数&quot;&gt;&lt;/a&gt;显示评论数&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;这里介绍两种借助特定 Class 显示评论数的方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- 通过 `data-disqus-identifier` --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;disqus-comment-count&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;data-disqus-identifier&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;about/index.html&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- 通过 `data-disqus-url` --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;disqus-comment-count&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;data-disqus-url&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;http://MOxFIVE.xyz/about/index.html&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;identifier&lt;/code&gt; 和 &lt;code&gt;url&lt;/code&gt; 的值如果不清楚，可以自行设置，方法参考 &lt;a href=&quot;https://help.disqus.com/customer/portal/articles/472098&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;获取的评论数不正确，很可能是因为远程数据没更新，等等就好。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;提取纯数字&quot;&gt;&lt;a href=&quot;#提取纯数字&quot; class=&quot;headerlink&quot; title=&quot;提取纯数字&quot;&gt;&lt;/a&gt;提取纯数字&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;上面方法显示的评论数是类似 &lt;code&gt;1 Comment&lt;/code&gt; 这样的格式，这里可以把它转为纯数字格式 &lt;code&gt;1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;使用 jQuery 绑定事件，当评论数信息显示时去掉非数字字符即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; $disqusCount = $(&lt;span class=&quot;string&quot;&gt;&quot;.disqus-comment-count&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$disqusCount.bind(&lt;span class=&quot;string&quot;&gt;&quot;DOMNodeInserted&quot;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;e&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; num = $(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;).text().replace(&lt;span class=&quot;regexp&quot;&gt;/[^0-9]/ig&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  $(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;).text(num)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;相关链接&quot;&gt;&lt;a href=&quot;#相关链接&quot; class=&quot;headerlink&quot; title=&quot;相关链接&quot;&gt;&lt;/a&gt;相关链接&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;多说官方文档: &lt;a href=&quot;http://dev.duoshuo.com/docs/50615732a834c63c56004257&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;获取文章评论、转发数&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;多说官方文档: &lt;a href=&quot;http://dev.duoshuo.com/threads/5016427f77cf5fa30500000e&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;代码显示【文章评论数】方法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Disqus Help: &lt;a href=&quot;https://help.disqus.com/customer/portal/articles/565624-adding-comment-c&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Adding comment count links to your home page&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;h2 id=&quot;intro&quot;&gt;前言&lt;/h2&gt;不少网站使用的是多说等第三方评论系统，有时候需要在特定位置显示对应文章的评论数，下面的方法可以快速获取多说和 Disqus 的文章评论数，所得为纯数字，方便排版布局。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="术业专攻" scheme="http://MOxFIVE.xyz/categories/%E6%9C%AF%E4%B8%9A%E4%B8%93%E6%94%BB/"/>
+    
+    
+      <category term="多说" scheme="http://MOxFIVE.xyz/tags/%E5%A4%9A%E8%AF%B4/"/>
+    
+      <category term="jQuery" scheme="http://MOxFIVE.xyz/tags/jQuery/"/>
+    
+      <category term="Disqus" scheme="http://MOxFIVE.xyz/tags/Disqus/"/>
+    
+      <category term="JSON" scheme="http://MOxFIVE.xyz/tags/JSON/"/>
+    
+  </entry>
   
   <entry>
     <title>为 Hexo 添加可折叠的文章目录</title>
@@ -2224,149 +2295,6 @@
       <category term="PNG" scheme="http://MOxFIVE.xyz/tags/PNG/"/>
     
       <category term="PowerPoint" scheme="http://MOxFIVE.xyz/tags/PowerPoint/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Web Style Guide 前端代码规范</title>
-    <link href="http://MOxFIVE.xyz/2015/11/09/web-style-guide/"/>
-    <id>http://MOxFIVE.xyz/2015/11/09/web-style-guide/</id>
-    <published>2015-11-08T16:31:45.000Z</published>
-    <updated>2016-04-20T03:51:55.000Z</updated>
-    
-    <content type="html">&lt;p&gt;　　在此记录自己已理解并开始遵循的前端代码规范。What How Why&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;General-style-rules&quot;&gt;&lt;a href=&quot;#General-style-rules&quot; class=&quot;headerlink&quot; title=&quot;General style rules&quot;&gt;&lt;/a&gt;General style rules&lt;/h2&gt;&lt;h3 id=&quot;Filename&quot;&gt;&lt;a href=&quot;#Filename&quot; class=&quot;headerlink&quot; title=&quot;Filename&quot;&gt;&lt;/a&gt;Filename&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Start a file name with a letter and avoid numbers:&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;thousand-and-one-scripts.js&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Start a filename with a special sign in order to flag it for a special purpose.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;Lower case in filename:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Some operating systems support case sensitive file names and we should not mix the cases to minimize confusion and possible sources for human errors.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;Separator&quot;&gt;&lt;a href=&quot;#Separator&quot; class=&quot;headerlink&quot; title=&quot;Separator&quot;&gt;&lt;/a&gt;Separator&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Use minus (-) sign as separating parts:&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;my-script.js&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;my-camel-case-name.css&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;i-love-underscores.html&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;my-script.js&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;For readability purpose. Users may mistake the underscores for spaces, as the underlining in the link hides the underscores;&lt;/li&gt;
-&lt;li&gt;It’s a common separator in canonical URL and URL slugs;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;Use dot’s to separate the clear purpose of this additional meta-data in a filename:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;my-file.min.css&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;Protocol&quot;&gt;&lt;a href=&quot;#Protocol&quot; class=&quot;headerlink&quot; title=&quot;Protocol&quot;&gt;&lt;/a&gt;Protocol&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Omit the protocol portion (http:, https:):&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;//cdn.com/foundation.min.js&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;background: url(//static.example.com/images/bg.jpg)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;Makes the URL relative—prevents mixed content issues;&lt;/li&gt;
-&lt;li&gt;Saves file size.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;Text-indentation&quot;&gt;&lt;a href=&quot;#Text-indentation&quot; class=&quot;headerlink&quot; title=&quot;Text indentation&quot;&gt;&lt;/a&gt;Text indentation&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Indent by 4 spaces at a time. Hitting the Tab key in your text editor should generate four space characters rather than one tab character:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;ul&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;Fantastic&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;Great&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;href&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;#&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;Test&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;ul&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;Make code appearing identical across platforms;&lt;/li&gt;
-&lt;li&gt;Developers can make adjustments to their editing environments a single time.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;Comments&quot;&gt;&lt;a href=&quot;#Comments&quot; class=&quot;headerlink&quot; title=&quot;Comments&quot;&gt;&lt;/a&gt;Comments&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Comment why it was coded this way and comment the thinking behind. Also include links in your comments to open issues, specifications etc.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; offset = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(includeLabels) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// If the labels are included we need to have a minimum offset of 20 pixels&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// We need to set it explicitly because of the following bug: http://somebrowservendor.com/issue-tracker/ISSUE-1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  offset = &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;Use tools to generates API documentation from comments. &lt;a href=&quot;http://usejsdoc.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;JSDoc&lt;/a&gt; or &lt;a href=&quot;http://yui.github.io/yuidoc/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;YUIDoc&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;Code-linting&quot;&gt;&lt;a href=&quot;#Code-linting&quot; class=&quot;headerlink&quot; title=&quot;Code linting&quot;&gt;&lt;/a&gt;Code linting&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Writing and following a style guide is a good practice but having an automated process that is enforcing it is even better. &lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;HTML-style-rules&quot;&gt;&lt;a href=&quot;#HTML-style-rules&quot; class=&quot;headerlink&quot; title=&quot;HTML style rules&quot;&gt;&lt;/a&gt;HTML style rules&lt;/h2&gt;&lt;h3 id=&quot;Document-type&quot;&gt;&lt;a href=&quot;#Document-type&quot; class=&quot;headerlink&quot; title=&quot;Document type&quot;&gt;&lt;/a&gt;Document type&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;HTML5 (HTML syntax) is preferred for all HTML documents:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;Script-loading&quot;&gt;&lt;a href=&quot;#Script-loading&quot; class=&quot;headerlink&quot; title=&quot;Script loading&quot;&gt;&lt;/a&gt;Script loading&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Add your script element just before the body close tag and add them with a async attribute:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;link&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;rel&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;href&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;main.css&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- body goes here --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;main.js&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;async&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;On modern browsers, this will asynchronously load the script and don’t wait for CSSOM to complete before loading;&lt;/li&gt;
-&lt;li&gt;On older browsers (IE9-), prevent DOM parser blocking, not affecting the user experience too much.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;Type-attributes&quot;&gt;&lt;a href=&quot;#Type-attributes&quot; class=&quot;headerlink&quot; title=&quot;Type attributes&quot;&gt;&lt;/a&gt;Type attributes&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Omit type attributes for style sheets and scripts:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;link&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;rel&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;href&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;main.css&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;main.js&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;p&gt;HTML5 implies text/css and text/javascript as defaults;&lt;br&gt;This can be safely done even for older browsers.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;ID-in-Headings&quot;&gt;&lt;a href=&quot;#ID-in-Headings&quot; class=&quot;headerlink&quot; title=&quot;ID in Headings&quot;&gt;&lt;/a&gt;ID in Headings&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Give all headings a ID:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;h3&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;best-practices&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;Best practices&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;h3&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;IDs for anchors, enter the URL to scroll to the position this element.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;Quotation-marks&quot;&gt;&lt;a href=&quot;#Quotation-marks&quot; class=&quot;headerlink&quot; title=&quot;Quotation marks&quot;&gt;&lt;/a&gt;Quotation marks&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Use double quotation marks (“”) to quote attributes values:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;news-article&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;0-values&quot;&gt;&lt;a href=&quot;#0-values&quot; class=&quot;headerlink&quot; title=&quot;0 values&quot;&gt;&lt;/a&gt;0 values&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Do not use units after 0 values unless they are required:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;padding-bottom&lt;/span&gt;: 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;margin&lt;/span&gt;: 0;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;Shorthand-Properties&quot;&gt;&lt;a href=&quot;#Shorthand-Properties&quot; class=&quot;headerlink&quot; title=&quot;Shorthand Properties&quot;&gt;&lt;/a&gt;Shorthand Properties&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Should be used whenever possible, even in cases where only one value is explicitly set.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;border-top: 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;font: 100%/1.6 palatino, georgia, serif;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;padding: 0 1em 2em;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;Useful for code efficiency and understandability.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;Hexadecimal-Notation&quot;&gt;&lt;a href=&quot;#Hexadecimal-Notation&quot; class=&quot;headerlink&quot; title=&quot;Hexadecimal Notation&quot;&gt;&lt;/a&gt;Hexadecimal Notation&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Use 3 character hexadecimal notation where possible and lower case hex digits:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;color&lt;/span&gt;: &lt;span class=&quot;selector-id&quot;&gt;#f3a&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;color&lt;/span&gt;: &lt;span class=&quot;selector-id&quot;&gt;#d4ddef&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;To-be-continued&quot;&gt;&lt;a href=&quot;#To-be-continued&quot; class=&quot;headerlink&quot; title=&quot;To be continued&quot;&gt;&lt;/a&gt;To be continued&lt;/h2&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;&lt;em&gt;Web Styleguide - Style guide to harmonize HTML, Javascript and CSS / Sass coding style&lt;/em&gt;&lt;/strong&gt; by &lt;strong&gt;Gion Kunz&lt;/strong&gt; on &lt;code&gt;2014/10/8&lt;/code&gt;: &lt;a href=&quot;https://github.com/gionkunz/chartist-js/blob/develop/CODINGSTYLE.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/gionkunz/chartist-js/blob/develop/CODINGSTYLE.md&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;em&gt;Isobar Front-end Code Standards&lt;/em&gt;&lt;/strong&gt; by &lt;strong&gt;Isobar&lt;/strong&gt; on &lt;code&gt;2015/8/25&lt;/code&gt;: &lt;a href=&quot;http://isobar-idev.github.io/code-standards/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://isobar-idev.github.io/code-standards/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;em&gt;[译文] Isobar 前端代码规范 及 最佳实践&lt;/em&gt;&lt;/strong&gt; by &lt;strong&gt;老码农&lt;/strong&gt; on &lt;code&gt;2015/8/25&lt;/code&gt;: &lt;a href=&quot;http://coderlmn.github.io/code-standards/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://coderlmn.github.io/code-standards/&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;　　在此记录自己已理解并开始遵循的前端代码规范。What How Why&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="自用笔记" scheme="http://MOxFIVE.xyz/categories/%E8%87%AA%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="术业专攻" scheme="http://MOxFIVE.xyz/categories/%E8%87%AA%E7%94%A8%E7%AC%94%E8%AE%B0/%E6%9C%AF%E4%B8%9A%E4%B8%93%E6%94%BB/"/>
-    
-    
-      <category term="HTML" scheme="http://MOxFIVE.xyz/tags/HTML/"/>
-    
-      <category term="CSS" scheme="http://MOxFIVE.xyz/tags/CSS/"/>
-    
-      <category term="JavaScript" scheme="http://MOxFIVE.xyz/tags/JavaScript/"/>
     
   </entry>
   
