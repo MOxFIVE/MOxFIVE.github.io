@@ -3490,7 +3490,13 @@
 <li>改动和尝试中参考的主要资源都做了 <a href="">链接跳转</a> 并在文末列出；    </li>
 <li><a href="">[G]</a>: 表示该项的具体修改已 commit 提交到 <a href="https://github.com/MOxFIVE" title="MOxFIVE&#39;s GitHub" target="_blank" rel="external">GitHub</a>，点击即可查看；</li>
 </ul>
-<h2 id="2016-年-6-月"><a href="#2016-年-6-月" class="headerlink" title="2016 年 6 月"></a>2016 年 6 月</h2><h3 id="06-11-ISSUE-模板"><a href="#06-11-ISSUE-模板" class="headerlink" title="06-11 ISSUE 模板"></a>06-11 ISSUE 模板</h3><blockquote>
+<h2 id="2016-年-6-月"><a href="#2016-年-6-月" class="headerlink" title="2016 年 6 月"></a>2016 年 6 月</h2><h3 id="06-14-样式调整"><a href="#06-14-样式调整" class="headerlink" title="06-14 样式调整"></a>06-14 样式调整</h3><blockquote>
+<ul>
+<li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/621e98914b1ba14aa9878ef5fe9a3ab47f3a2851" title="style: box-shadow, color, font-size" target="_blank" rel="external">[G]</a> 调整部分区域的阴影效果和文字样式；</li>
+<li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/d9735d76ab21914f9db8d6a92cec3bd04a98a009" title="style: change default background images" target="_blank" rel="external">[G]</a> 去掉几张默认背景图。</li>
+</ul>
+</blockquote>
+<h3 id="06-11-ISSUE-模板"><a href="#06-11-ISSUE-模板" class="headerlink" title="06-11 ISSUE 模板"></a>06-11 ISSUE 模板</h3><blockquote>
 <ul>
 <li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/6e0139c81dbaecdeed4419e3e085b862814cb934" title="doc: add ISSUE_TEMPLATE" target="_blank" rel="external">[G]</a> 提 issue 前希望能阅读下推荐的短文，总结得挺好的 <a href="http://t.cn/R5tOIdv" target="_blank" rel="external">提问的检查表</a>。</li>
 </ul>
