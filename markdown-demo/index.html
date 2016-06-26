@@ -120,7 +120,6 @@
         isArchive: false,
         isTag: false,
         isCategory: false,
-        open_in_new: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
         search: true
@@ -150,7 +149,6 @@
         })();
     </script>
 
-
 </head>
 <body>
   <div id="container">
@@ -171,7 +169,7 @@
 
         
             <form id="search-form">
-            <input type="text" id="local-search-input" name="q" results="0" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
             <i class="fa fa-times" onclick="resetSearch()"></i>
             </form>
             <div id="local-search-result"></div>
@@ -240,19 +238,19 @@
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" target="_blank" href="mailto:&#0000109;&#0000111;&#x0000031;&#0048;&#x0000030;&#0048;&#000053;&#000064;&#00000111;&#0117;&#00116;&#x000006c;&#0111;&#111;&#00107;&#x002e;&#x00063;&#00000111;&#00109;" title="Email"></a>
+                                <a class="fa Email" href="mailto:&#0000109;&#0000111;&#x0000031;&#0048;&#x0000030;&#0048;&#000053;&#000064;&#00000111;&#0117;&#00116;&#x000006c;&#0111;&#111;&#00107;&#x002e;&#x00063;&#00000111;&#00109;" title="Email"></a>
                             
-                                <a class="fa 新浪微博" target="_blank" href="//weibo.com/yemzh" title="新浪微博"></a>
+                                <a class="fa 新浪微博" href="//weibo.com/yemzh" title="新浪微博"></a>
                             
-                                <a class="fa GitHub" target="_blank" href="//github.com/MOxFIVE" title="GitHub"></a>
+                                <a class="fa GitHub" href="//github.com/MOxFIVE" title="GitHub"></a>
                             
-                                <a class="fa V2EX" target="_blank" href="//www.v2ex.com/member/MOxFIVE" title="V2EX"></a>
+                                <a class="fa V2EX" href="//www.v2ex.com/member/MOxFIVE" title="V2EX"></a>
                             
-                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
                             
-                                <a class="fa Twitter" target="_blank" href="//twitter.com/MOxFE" title="Twitter"></a>
+                                <a class="fa Twitter" href="//twitter.com/MOxFE" title="Twitter"></a>
                             
-                                <a class="fa TiddlyWiki" target="_blank" href="/wiki/" title="TiddlyWiki"></a>
+                                <a class="fa TiddlyWiki" href="/wiki/" title="TiddlyWiki"></a>
                             
                         </ul>
                     </nav>
@@ -270,23 +268,23 @@
                 <section class="switch-part switch-part3">
                     <div id="js-friends">
                     
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="//www.netcan666.com/">Netcan</a>
+                      <a class="main-nav-link switch-friends-link" href="//www.netcan666.com/">Netcan</a>
                     
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="//f2e-tlj.me/">Ryuu</a>
+                      <a class="main-nav-link switch-friends-link" href="//f2e-tlj.me/">Ryuu</a>
                     
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="//codinglife.in/">Andy_Zheng</a>
+                      <a class="main-nav-link switch-friends-link" href="//codinglife.in/">Andy_Zheng</a>
                     
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="//syncshinee.github.io/">skyxuan</a>
+                      <a class="main-nav-link switch-friends-link" href="//syncshinee.github.io/">skyxuan</a>
                     
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="//luuman.github.io/">世平阜康</a>
+                      <a class="main-nav-link switch-friends-link" href="//luuman.github.io/">世平阜康</a>
                     
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="//wixy.top/">王煜</a>
+                      <a class="main-nav-link switch-friends-link" href="//wixy.top/">王煜</a>
                     
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="//www.smallyi.com/">小忆</a>
+                      <a class="main-nav-link switch-friends-link" href="//www.smallyi.com/">小忆</a>
                     
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="//taozj.org/">Nicol_TAO</a>
+                      <a class="main-nav-link switch-friends-link" href="//taozj.org/">Nicol_TAO</a>
                     
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="//orangexc.xyz/">Orange</a>
+                      <a class="main-nav-link switch-friends-link" href="//orangexc.xyz/">Orange</a>
                     
                     </div>
                 </section>
@@ -363,6 +361,9 @@
       <a href="/markdown-demo/index.html" class="article-date">
       <time datetime="2016-01-17T14:48:52.000Z" itemprop="datePublished">2016-01-17</time>
 </a>
+
+
+
     </div>
   
   <div class="article-inner">
@@ -669,11 +670,35 @@
 
 
 
+
+
+
 <div class="scroll" id="scroll">
     <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
     <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
     <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+             github: ".github-widget a", 
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
   </div>

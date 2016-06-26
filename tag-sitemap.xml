@@ -149,27 +149,6 @@
     </url>
 
     <url>
-        <loc>http://MOxFIVE.xyz/tags/%E5%A4%9A%E8%AF%B4/</loc>
-        <lastmod>2016-06-14T17:10:32.556Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://MOxFIVE.xyz/tags/Disqus/</loc>
-        <lastmod>2016-06-14T17:10:32.556Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://MOxFIVE.xyz/tags/JSON/</loc>
-        <lastmod>2016-06-14T17:10:32.556Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://MOxFIVE.xyz/tags/HTML/</loc>
         <lastmod>2016-06-20T12:22:00.169Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -212,15 +191,36 @@
     </url>
 
     <url>
-        <loc>http://MOxFIVE.xyz/tags/jQuery/</loc>
+        <loc>http://MOxFIVE.xyz/tags/WordPress/</loc>
         <lastmod>2016-06-20T12:22:00.169Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://MOxFIVE.xyz/tags/WordPress/</loc>
-        <lastmod>2016-06-20T12:22:00.169Z</lastmod>
+        <loc>http://MOxFIVE.xyz/tags/%E5%A4%9A%E8%AF%B4/</loc>
+        <lastmod>2016-06-26T11:36:37.129Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://MOxFIVE.xyz/tags/jQuery/</loc>
+        <lastmod>2016-06-26T11:36:37.129Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://MOxFIVE.xyz/tags/Disqus/</loc>
+        <lastmod>2016-06-26T11:36:37.129Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://MOxFIVE.xyz/tags/JSON/</loc>
+        <lastmod>2016-06-26T11:36:37.129Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

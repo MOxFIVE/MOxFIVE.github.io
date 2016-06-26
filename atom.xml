@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://MOxFIVE.xyz/"/>
-  <updated>2016-06-14T17:10:32.556Z</updated>
+  <updated>2016-06-26T11:36:37.129Z</updated>
   <id>http://MOxFIVE.xyz/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://MOxFIVE.xyz/2016/06/14/duoshuo-disqus-comment-count/"/>
     <id>http://MOxFIVE.xyz/2016/06/14/duoshuo-disqus-comment-count/</id>
     <published>2016-06-14T13:19:34.000Z</published>
-    <updated>2016-06-14T17:10:32.556Z</updated>
+    <updated>2016-06-26T11:36:37.129Z</updated>
     
     <content type="html">&lt;p&gt;&lt;/p&gt;&lt;h2 id=&quot;intro&quot;&gt;前言&lt;/h2&gt;不少网站使用的是多说等第三方评论系统，有时候需要在特定位置显示对应文章的评论数，下面的方法可以快速获取多说和 Disqus 的文章评论数，所得为纯数字，方便排版布局。&lt;p&gt;&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -41,6 +41,10 @@
 &lt;li&gt;获得的值会显示在匹配的区域中&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;disqus-count&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;适用场景&quot;&gt;&lt;a href=&quot;#适用场景&quot; class=&quot;headerlink&quot; title=&quot;适用场景&quot;&gt;&lt;/a&gt;适用场景&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;适合只需显示当前文章评论数的页面；&lt;/li&gt;
+&lt;li&gt;若页面中需要分开显示多篇文章评论数，则按 &lt;a href=&quot;http://dev.duoshuo.com/threads/5016427f77cf5fa30500000e&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;多说官方教程&lt;/a&gt; 配置比较合适。JSON 解析法每篇文章都需要发起一次请求，文章一多相对效率就低了。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&quot;Disqus&quot;&gt;&lt;a href=&quot;#Disqus&quot; class=&quot;headerlink&quot; title=&quot;Disqus&quot;&gt;&lt;/a&gt;Disqus&lt;/h2&gt;&lt;h3 id=&quot;加载相关-JS&quot;&gt;&lt;a href=&quot;#加载相关-JS&quot; class=&quot;headerlink&quot; title=&quot;加载相关 JS&quot;&gt;&lt;/a&gt;加载相关 JS&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;域名中填入自己的 Disqus &lt;code&gt;shortname&lt;/code&gt;，获取方式参考 &lt;a href=&quot;https://help.disqus.com/customer/en/portal/articles/466208-what-s-a-shortname-&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方文档&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -57,9 +61,9 @@
 &lt;/blockquote&gt;
 &lt;h3 id=&quot;提取纯数字&quot;&gt;&lt;a href=&quot;#提取纯数字&quot; class=&quot;headerlink&quot; title=&quot;提取纯数字&quot;&gt;&lt;/a&gt;提取纯数字&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;上面方法显示的评论数是类似 &lt;code&gt;1 Comment&lt;/code&gt; 这样的格式，这里可以把它转为纯数字格式 &lt;code&gt;1&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;使用 jQuery 绑定事件，当评论数信息显示时去掉非数字字符即可&lt;/li&gt;
+&lt;li&gt;使用 jQuery 绑定事件，当评论数信息显示时去掉非数字字符即可。为了避免循环错误，这里新建了一个标签来显示评论数。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; $disqusCount = $(&lt;span class=&quot;string&quot;&gt;&quot;.disqus-comment-count&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$disqusCount.bind(&lt;span class=&quot;string&quot;&gt;&quot;DOMNodeInserted&quot;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;e&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; num = $(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;).text().replace(&lt;span class=&quot;regexp&quot;&gt;/[^0-9]/ig&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  $(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;).text(num)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; $disqusCount = $(&lt;span class=&quot;string&quot;&gt;&quot;.disqus-comment-count&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$disqusCount.bind(&lt;span class=&quot;string&quot;&gt;&quot;DOMNodeInserted&quot;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;e&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; num = $(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;).text().replace(&lt;span class=&quot;regexp&quot;&gt;/[^0-9]/ig&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    $(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;).after(&lt;span class=&quot;string&quot;&gt;&quot;&amp;lt;span class=&#39;count-comment&#39;&amp;gt;&amp;lt;/span&amp;gt;&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    $(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;).siblings(&lt;span class=&quot;string&quot;&gt;&quot;.count-comment&quot;&lt;/span&gt;).text(num);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    $(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;).remove();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&quot;相关链接&quot;&gt;&lt;a href=&quot;#相关链接&quot; class=&quot;headerlink&quot; title=&quot;相关链接&quot;&gt;&lt;/a&gt;相关链接&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;多说官方文档: &lt;a href=&quot;http://dev.duoshuo.com/docs/50615732a834c63c56004257&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;获取文章评论、转发数&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;多说官方文档: &lt;a href=&quot;http://dev.duoshuo.com/threads/5016427f77cf5fa30500000e&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;代码显示【文章评论数】方法&lt;/a&gt;&lt;/li&gt;
