@@ -1581,6 +1581,10 @@ ul > li::before,
   padding-top: 0.45rem;
   color: #999;
 }
+.article-meta a:nth-child(2):hover {
+  color: #258fb8;
+  font-size: 110%;
+}
 .article-meta a:nth-child(2) i {
   vertical-align: top;
 }
