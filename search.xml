@@ -24,7 +24,7 @@
 <ul>
 <li>获得的值会显示在匹配的区域中</li>
 </ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"disqus-count"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"duoshuo-count"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h3><ul>
 <li>适合只需显示当前文章评论数的页面；</li>
 <li>若页面中需要分开显示多篇文章评论数，则按 <a href="http://dev.duoshuo.com/threads/5016427f77cf5fa30500000e" target="_blank" rel="external">多说官方教程</a> 配置比较合适。JSON 解析法每篇文章都需要发起一次请求，文章一多相对效率就低了。</li>
@@ -3495,7 +3495,18 @@
 <li>改动和尝试中参考的主要资源都做了 <a href="">链接跳转</a> 并在文末列出；    </li>
 <li><a href="">[G]</a>: 表示该项的具体修改已 commit 提交到 <a href="https://github.com/MOxFIVE" title="MOxFIVE&#39;s GitHub" target="_blank" rel="external">GitHub</a>，点击即可查看；</li>
 </ul>
-<h2 id="2016-年-6-月"><a href="#2016-年-6-月" class="headerlink" title="2016 年 6 月"></a>2016 年 6 月</h2><h3 id="06-17-主题文档"><a href="#06-17-主题文档" class="headerlink" title="06-17 主题文档"></a>06-17 主题文档</h3><blockquote>
+<h2 id="2016-年-6-月"><a href="#2016-年-6-月" class="headerlink" title="2016 年 6 月"></a>2016 年 6 月</h2><h3 id="06-27-评论数显示"><a href="#06-27-评论数显示" class="headerlink" title="06-27 评论数显示"></a>06-27 评论数显示</h3><blockquote>
+<ul>
+<li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/865a26bbcce2c173534653e2ee6ea201a22fe6ff" title="feat: show comment count on home page" target="_blank" rel="external">[G]</a> 可以在主页文章标题旁显示评论数（多说 或 Disqus）</li>
+</ul>
+</blockquote>
+<h3 id="06-25-新标签设置"><a href="#06-25-新标签设置" class="headerlink" title="06-25 新标签设置"></a>06-25 新标签设置</h3><blockquote>
+<ul>
+<li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/6416f538e5ee70a84a0dbddfc44a5b6a53fdfbc8" title="add: settings for &quot;open in new tab&quot;" target="_blank" rel="external">[G]</a> 完善新标签打开页面的设置，现在可以分别指定哪些类型页面在新标签中打开；</li>
+<li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/a0f31a3acae4a7333439c450b4b8994ca6c09e5d" title="add(social-icon): LOFTER, Coding, Quora, bilibili, AcFun, niconico" target="_blank" rel="external">[G]</a> 添加几个社交图标（LOFTER, Coding, Quora, bilibili, AcFun, niconico）</li>
+</ul>
+</blockquote>
+<h3 id="06-17-主题文档"><a href="#06-17-主题文档" class="headerlink" title="06-17 主题文档"></a>06-17 主题文档</h3><blockquote>
 <ul>
 <li><a href="https://github.com/MOxFIVE/yelee" target="_blank" rel="external">[G]</a> 主题发布 v3.5 版本，也终于弄好说明文档了，希望大家能更新，以后有疑问可先查阅文档: <a href="http://MOxFIVE.coding.me/yelee" target="_blank" rel="external">《Yelee 主题使用说明》</a></li>
 </ul>

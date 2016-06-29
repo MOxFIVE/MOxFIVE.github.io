@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://MOxFIVE.xyz/"/>
-  <updated>2016-06-26T11:36:37.129Z</updated>
+  <updated>2016-06-29T14:32:38.475Z</updated>
   <id>http://MOxFIVE.xyz/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://MOxFIVE.xyz/2016/06/14/duoshuo-disqus-comment-count/"/>
     <id>http://MOxFIVE.xyz/2016/06/14/duoshuo-disqus-comment-count/</id>
     <published>2016-06-14T13:19:34.000Z</published>
-    <updated>2016-06-26T11:36:37.129Z</updated>
+    <updated>2016-06-29T14:32:38.475Z</updated>
     
     <content type="html">&lt;p&gt;&lt;/p&gt;&lt;h2 id=&quot;intro&quot;&gt;前言&lt;/h2&gt;不少网站使用的是多说等第三方评论系统，有时候需要在特定位置显示对应文章的评论数，下面的方法可以快速获取多说和 Disqus 的文章评论数，所得为纯数字，方便排版布局。&lt;p&gt;&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -40,7 +40,7 @@
 &lt;ul&gt;
 &lt;li&gt;获得的值会显示在匹配的区域中&lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;disqus-count&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;duoshuo-count&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;适用场景&quot;&gt;&lt;a href=&quot;#适用场景&quot; class=&quot;headerlink&quot; title=&quot;适用场景&quot;&gt;&lt;/a&gt;适用场景&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;适合只需显示当前文章评论数的页面；&lt;/li&gt;
 &lt;li&gt;若页面中需要分开显示多篇文章评论数，则按 &lt;a href=&quot;http://dev.duoshuo.com/threads/5016427f77cf5fa30500000e&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;多说官方教程&lt;/a&gt; 配置比较合适。JSON 解析法每篇文章都需要发起一次请求，文章一多相对效率就低了。&lt;/li&gt;
