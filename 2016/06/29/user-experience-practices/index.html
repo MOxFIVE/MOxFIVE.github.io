@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="MOxFIVE" />
+<meta name="renderer" content="webkit">
+<meta name="google" value="notranslate">
+
+
+
+<meta name="description" content="英文原文：125 Easy Tweaks to Optimize Your Website’s Usability Today
+中文译文: 有图有案例！125个提升网页可用性的优化小技巧
+
+
+将英文原文整理于此，便于目录跳转、学习、研究和记笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="图解网页设计！125个小优化提升网页可用性">
+<meta property="og:url" content="http://MOxFIVE.xyz/2016/06/29/user-experience-practices/index.html">
+<meta property="og:site_name" content="MOxFIVE's Blog">
+<meta property="og:description" content="英文原文：125 Easy Tweaks to Optimize Your Website’s Usability Today
+中文译文: 有图有案例！125个提升网页可用性的优化小技巧
+
+
+将英文原文整理于此，便于目录跳转、学习、研究和记笔记">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-1-Add-Visual-Contrast-to-Page-Headlines.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-2-Avoid-Trapping-Negative-Space-in-the-Composition.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-3-Use-a-One-Column-Layout.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-4-Overlap-a-Design-Element-to-Emphasize-Continuity.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/Gestalt-Principles.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-5-Group-Similar-Functions-or-Menu-Items-by-Proximity.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-6-Align-Headlines-Closer-to-Respective-Sections.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-7-Constrain-Headlines-to-Respective-Sections.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-9-Visibly-Animate-Transitions-in-the-Interface.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-8-Place-Error-Messages-Above-Forms-and-Adjacent-to-Elements.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-10-Obscure-Backgrounds-Behind-Popup-or-Modal-Boxes.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-11-Maximize-Data-Ink-Ratios-in-All-Imagery.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-12-Remove-Unnecessary-Borders-From-Design-Elements.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-13-Remove-Redundant-or-Self-Explanatory-Instructions.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-27-Hide-Infrequent-But-Necessary-Settings-Features-and-Information.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-14-Extend-Elements-Through-the-Fold.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-15-Add-a-Shadow-to-Indicate-Depth.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Example-Adding-Shadow-to-Indicate-Depth.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-16-Indicate-More-Content-With-Words-or-Graphics.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-17-Filter-or-Jump-to-Items-That-Users-Are-Searching-.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-18-Create-Smart-Defaults-Based-on-Frequently-Chosen-Input.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-21-Include-Important-Data-on-Product-Listing-Pages.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-22-Provide-Useful-Information-on-Hover.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-23-Expose-Frequently-Used-Functions.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-25-Display-Primary-Data-or-Statuses-in-Main-Dashboard.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-26-Position-Common-Answers-At-the-Top-of-Drop-Down-Lists.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-28-Display-Current-Progress-and-Time-Remaining-on-Machine-Driven-Tasks.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-29-Communicate-the-Incremental-Phase-of-Interactions.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-33-Reveal-the-Number-of-Steps-Within-a-Sequence.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-89-Reveal-the-Number-of-Items-in-a-Category.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-30-Let-Users-Log-In-Via-Username-or-Email.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-31-Offer-Keyboard-Shortcuts-for-Repetitive-Functions.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-19-Let-Users-Drag-and-Drop-Elements.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-20-Let-Users-Directly-Edit-Data.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-34-Describe-the-Input-That-You-Require-From-Users.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-35-Give-Real-Time-Password-Requirements-and-Feedback.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-36-Prepopulate-Form-Elements-With-Universal-Parameters.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-37-Indicate-Required-and-Optional-Form-Elements.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-39-Use-Descriptive-Labels-for-Buttons.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-38-Show-a-Preview-of-the-Output-Based-on-the-Current-Input.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-24-Indicate-or-Preview-the-Next-Item-in-a-Sequence.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-40-Use-Smart-Menu-Items-to-Clarify-Actions.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-41-Maintain-Congruency-Between-Links-and-Target-Pages.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-42-Provide-Quick-Wins-During-Onboarding.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-43-Start-Progress-Bars-Above-0.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-44-Indicate-Whether-Your-Office-is-Open-or-Closed.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-45-Indicate-the-Recency-of-Events.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-46-Indicate-the-Number-of-Items-Remaining.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-47-Highlight-the-Section-Within-the-Navigation-Menu.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-48-Provide-Breadcrumbs-or-Sequence-Maps-in-Complex-Interfaces.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-49-Put-Descriptive-Terms-at-the-Beginning-of-the-Browsers-Page-Title.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-50-Indicate-the-Options-That-Most-Users-Choose.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-51-Provide-a-Curated-List-of-Common-Search-Terms.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-52-Create-Tight-Categories-Within-Navigation-Menus.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-53-Use-Conventional-Navigation-Menus.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-54-Put-Utilities-in-the-Top-Right-Corner.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-55-Display-Success-Messages-After-Important-Interactions.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-56-Indicate-Which-Items-the-Cursor-is-Hovering-Over.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-57-Use-Cool-Colors-in-Loading-Animations-to-Decrease-Arousal.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-58-Keep-Users-Engaged-During-Lengthy-Waiting-Periods.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-59-Prevent-Users-From-Uploading-Files-That-Are-Incompatible.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-60-Display-a-Running-Tally-of-Tasks-Occurring.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-61-Keep-Form-Labels-Visible-At-All-Times.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-62-Position-Placeholder-Text-Outside-the-Form-Element.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-63-Add-Copy-Buttons-to-Movable-Input.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-64-Merge-Congruent-Data-to-Help-Users-Compare-Items.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-65-Align-Form-Labels-Directly-Adjacent-to-Elements.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-66-Design-Buttons-Using-3D-Characteristics.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-67-Add-Dotted-Textures-to-Drag-and-Drop-Elements.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-68-Use-Icons-and-Symbols-to-Convey-the-Meaning-of-an-Interaction.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-69-Speak-the-Language-of-the-User-Not-the-System.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-70-Offer-a-Translate-Button-When-Foreign-Languages-Appear.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-71-Choose-Colors-That-Are-Semantically-Congruent.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-72-Keep-Paragraphs-Short-and-Highlight-Key-Terms.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-73-Position-Important-Information-at-Beginning-of-List-Items.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-74-Add-Row-Stripes-to-Your-Tables.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-75-Write-Standalone-Subheadlines.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-76-Break-Up-Text-With-Visual-Variety.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-77-Create-Strong-Contrast-Between-the-Text-and-Background.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-78-Left-Align-the-Majority-of-Body-Text.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-79-Create-a-Front-End-Style-Guide.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-80-Keep-Navigation-Menus-in-the-Same-Position.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-81-Construct-Designs-Using-Mathematical-Principles.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-82-Choose-Contrasting-Fonts.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-83-Use-the-Proper-Amount-of-Onboarding.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/Onboarding-Matrix.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-84-Add-Tooltips-to-Coach-Novice-Users-Without-Disrupting-Expert-Users.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-85-Use-Card-Sorting-to-Construct-the-Information-Acrhitecture.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-86-Let-Users-Control-the-Appearance-of-Data.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-87-Let-Users-Control-the-Order-of-Data.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-88-Let-Users-Control-the-Quantity-of-Data.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-90-Use-Personas-to-Optimize-the-Interface.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-91-Let-Users-Open-Pages-in-New-Tabs.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-92-Use-Semantic-Labels-in-HTML5.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-93-Use-Multiple-Cues-to-Communicate-Information.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-94-Resolve-Unfavorable-Outcomes-in-Automatically-Generated-Messages.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-95-Use-Form-Elements-That-Accept-Various-Formats-of-Input.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-96-Display-Results-That-Solve-the-Searchers-Need.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-97-Use-Search-Fields-That-Handle-Typos-Synonyms-and-Variants.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-98-Customize-Instructions-for-the-Users-Browser.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-99-Use-One-Window-Drilldowns-on-Small-Devices.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-100-Remove-Disable-or-Replace-Buttons-When-Users-Click-Them.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-101-Only-Offer-Inputs-That-Are-Acceptable.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-102-Use-Responsive-Enabling-or-Dlsclosure-in-Form-Elements.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-103-Structure-Text-Fields-to-Match-the-Required-Input.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-104-Search-for-Wording-That-Contradicts-User-Intent.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-105-Remind-Users-if-Theyve-Already-Purchased-an-Item.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-106-Separate-Powerful-Functions-by-Space-or-Color.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-107-Add-Constraints-to-Significant-Irreversible-Changes.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-108-Use-Undos-Rather-Than-Confirmations.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-109-Offer-an-Escape-Hatch-on-All-Pages-and-Functions.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-110-Provide-a-Visible-Close-on-Popups-and-Modal-Boxes.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-111-Save-Data-That-Users-Enter.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-112-Let-Users-Return-to-the-Same-Position-in-a-Sequence.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-113-Add-a-Transparent-Border-to-Small-Buttons.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-114-Add-a-Slight-Delay-to-Hover-Pop-Ups-and-Drop-Down-Menus.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-115-Hyperlink-the-Entire-Menu-Option-Container.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-116-Hyperlink-Primary-Menus-List-Items-and-Complementary-Icons.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-117-Explain-the-Reason-for-Validation-Errors.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-118-Point-Users-Toward-Documentation-or-Support-for-Complex-Errors.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-119-Avoid-Saying-22You22-in-Error-Messages.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-120-Display-the-Users-Recent-Searches.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-121-Use-Different-Colors-for-Visited-Links.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-122-Indicate-Which-Items-Users-Have-Already-Viewed.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-123-Gather-User-Feedback-in-Appropriate-Places.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-124-Create-Alerts-for-Increases-in-404-Errors.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-125-Identify-Pages-Where-Users-Are-Pogo-Sticking.png">
+<meta property="og:image" content="http://MOxFIVE.xyz/resources/ux/UX-Books.jpg">
+<meta property="og:updated_time" content="2016-06-30T06:06:09.934Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="图解网页设计！125个小优化提升网页可用性">
+<meta name="twitter:description" content="英文原文：125 Easy Tweaks to Optimize Your Website’s Usability Today
+中文译文: 有图有案例！125个提升网页可用性的优化小技巧
+
+
+将英文原文整理于此，便于目录跳转、学习、研究和记笔记">
+<meta name="twitter:image" content="http://MOxFIVE.xyz/resources/ux/UX-Tactic-1-Add-Visual-Contrast-to-Page-Headlines.png">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternative" href="/atom.xml" title="MOxFIVE&#39;s Blog" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/resources/favicon.ico">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>图解网页设计！125个小优化提升网页可用性 | MOxFIVE&#39;s Blog</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?a4938c90e05043bd9774ff12368e45aa";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/resources/Mihawk.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">MOxFIVE</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">迈入新世界，为了成为独当一面的 Web 前端工程师！</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/archives">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">留言板</a></li>
+                        
+                            <li><a href="/2015/08/20/blog-building">建站日志</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:&#0000109;&#0000111;&#x0000031;&#0048;&#x0000030;&#0048;&#000053;&#000064;&#00000111;&#0117;&#00116;&#x000006c;&#0111;&#111;&#00107;&#x002e;&#x00063;&#00000111;&#00109;" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" href="//weibo.com/yemzh" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" href="//github.com/MOxFIVE" title="GitHub"></a>
+                            
+                                <a class="fa V2EX" href="//www.v2ex.com/member/MOxFIVE" title="V2EX"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa Twitter" href="//twitter.com/MOxFE" title="Twitter"></a>
+                            
+                                <a class="fa TiddlyWiki" href="/wiki/" title="TiddlyWiki"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Anki/">Anki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Browsersync/">Browsersync</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/">DNS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Disqus/">Disqus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/EndNote/">EndNote</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Font-Awesome/">Font-Awesome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GIF/">GIF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JSON/">JSON</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PNG/">PNG</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PhotoShop/">PhotoShop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PowerPoint/">PowerPoint</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Reference/">Reference</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Software/">Software</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sublime/">Sublime</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Table/">Table</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TagCloud/">TagCloud</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UA/">UA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UI/">UI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UX/">UX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WordPress/">WordPress</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Yelee/">Yelee</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/font-family/">font-family</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/多说/">多说</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="//www.netcan666.com/">Netcan</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="//f2e-tlj.me/">Ryuu</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="//codinglife.in/">Andy_Zheng</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="//syncshinee.github.io/">skyxuan</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="//luuman.github.io/">世平阜康</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="//wixy.top/">王煜</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="//www.smallyi.com/">小忆</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="//taozj.org/">Nicol_TAO</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="//orangexc.xyz/">Orange</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">MOxFIVE</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/resources/Mihawk.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">MOxFIVE</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">迈入新世界，为了成为独当一面的 Web 前端工程师！</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">留言板</a></li>
+                
+                    <li><a href="/2015/08/20/blog-building">建站日志</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:&#0000109;&#0000111;&#x0000031;&#0048;&#x0000030;&#0048;&#000053;&#000064;&#00000111;&#0117;&#00116;&#x000006c;&#0111;&#111;&#00107;&#x002e;&#x00063;&#00000111;&#00109;" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="//weibo.com/yemzh" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="//github.com/MOxFIVE" title="GitHub"></a>
+                            
+                                <a class="fa V2EX" target="_blank" href="//www.v2ex.com/member/MOxFIVE" title="V2EX"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa Twitter" target="_blank" href="//twitter.com/MOxFE" title="Twitter"></a>
+                            
+                                <a class="fa TiddlyWiki" target="_blank" href="/wiki/" title="TiddlyWiki"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-user-experience-practices" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/29/user-experience-practices/" class="article-date">
+      <time datetime="2016-06-29T15:17:50.000Z" itemprop="datePublished">2016-06-29</time>
+</a>
+
+ 
+    <a href="/2016/06/29/user-experience-practices/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+            <span class="ds-thread-count" "></span>
+        
+        
+    </a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      图解网页设计！125个小优化提升网页可用性
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/自用笔记/">自用笔记</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UI/">UI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UX/">UX</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+          
+        <ul>
+<li>英文原文：<a href="http://www.nickkolenda.com/user-experience/" target="_blank" rel="external">125 Easy Tweaks to Optimize Your Website’s Usability Today</a></li>
+<li>中文译文: <a href="http://www.admin5.com/article/20160521/664802.shtml" target="_blank" rel="external">有图有案例！125个提升网页可用性的优化小技巧</a></li>
+</ul>
+<blockquote>
+<p>将英文原文整理于此，便于目录跳转、学习、研究和记笔记</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+
+<style>
+    body {
+        background: url("/background/bg-1.jpg") 0% 0% / cover fixed !important;
+    }
+    .user-experience {
+        font-family: 'Open Sans', "Lucida Grande", Verdana, "Helvetica Neue", Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+    }
+    .user-experience h2 {
+        text-align: center;
+        padding: 20px 15px;
+        margin-top: 110px;
+        margin-bottom: 40px;
+        font-family: Cambria, 'Open Sans';
+        font-size: 36px;
+        margin: 0 0 4% 0;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 700;
+        background: #2D2D2D;
+        line-height: 1.2em;
+    }
+    .user-experience h2:hover {
+        color: white;
+    }
+
+    .user-experience h2:after {
+        display: none;
+    }
+    .article-style2 h3 {
+        font-size: 2.1em;
+        color: #2D2D2D;
+        font-weight: bold;
+        margin-top: 50px;
+        margin-bottom: 15px;
+        padding: 0;
+        text-transform: none;
+        background: none;
+        box-shadow: none;
+        border: none;
+        line-height: 1.1;
+    }
+    .article-style2 h3:after {
+        display: none;
+    }
+
+    .user-experience {
+        counter-reset: tactic category strategy;
+        line-height: 1.5;
+    }
+
+    .user-experience h2:before {
+        display: block;
+        counter-increment: category;
+        content: "category " counter(category) " ";
+    }
+
+    .article-entry h3:before {
+        counter-increment: strategy;
+        content: "S" counter(strategy) ". ";
+    }
+
+
+    .content-box-style1 {
+        background: #EDEFF2;
+        border-radius: 10px;
+        max-width: 650px;
+        padding: 1px 25px;
+        margin: 2rem auto; 
+        margin-bottom: 3rem;
+        box-shadow: 2px 2px 10px 3px rgba(79,79,79,.7);
+        border: 2px solid rgba(0,0,0,.5);
+    }
+
+    .content-box-style1 h4 {
+        margin-top: 10px;
+        margin-bottom: 35px;
+        font-weight: bold;
+        color: #323232;
+        font-size: 22px;
+        font-family: 'Open Sans', "Lucida Grande", Verdana, "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.4em;
+    }
+    .article img {
+        box-shadow: none;
+        display: block;
+    }
+    .content-box-style1 img {
+        display: block;
+        margin: 0 auto;
+    }
+    .content-box-style1 h4:before {
+        counter-increment: tactic;
+        content: "Tactic " counter(tactic);
+        display: block;
+        padding-bottom: 8px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-variant: small-caps;
+        color: #353535;
+        font-size: 35px;
+        letter-spacing: 2px;
+        border-bottom: 1px dashed #6E6E6E;
+    }
+    br,
+    .toc-level-4,
+    .toc-level-3 i,
+    .toc-child .toc-number{
+        display: none !important;
+    }
+    .toc-article {
+        width: 275px;
+        padding-left: 18px;
+    }
+    #toc a:visited {
+        color: #808080;
+    }
+    .toc-level-2 > a {
+        font-weight: bold;
+    }
+    #toc .toc-child {
+        padding-left: 0;
+    }
+
+    .toc {
+        counter-reset: strategy-toc
+    }
+    .toc-item .toc-level-3 > a::before {
+        content: "S"counter(strategy-toc);
+        counter-increment: strategy-toc;
+    }
+    #toc .toc {
+        padding-top: 1.5em;
+    }
+    #toc .toc-title {
+        position: fixed;
+    }
+</style>
+
+<div class="article-style2 user-experience"><br><p>Welcome to a huge&nbsp;resource on <i>user experience (UX)</i>, <i>user interfaces (UI)</i>, and <i>interaction design</i>.</p><br><p>Whether you’re designing a website or mobile app, <b>you’ll learn 125+ tactics&nbsp;to optimize its&nbsp;usability.</b></p><br><p>I organized the tactics into various categories and strategies.&nbsp;<strong>Click a strategy to view examples and applications</strong>.</p><br><br><br><h2 id="ux-category1">Control the User’s Focus and Attention</h2><br><h3 id="ux-strategy1">Emphasize a Point of Entry in the Interface</h3><br><p>Every interface should have&nbsp;a clear starting point. Where should viewers look first? Make it clear.</p><br><div class="content-box-style1"><br><h4>Add Visual Contrast to Page Headlines</h4><br><p><img class="size-full wp-image-2651" src="/resources/ux/UX-Tactic-1-Add-Visual-Contrast-to-Page-Headlines.png" alt="UX Tactic 1 - Add Visual Contrast to Page Headlines"></p><br></div><br><h3 id="ux-strategy2">Guide Users Through a Visual Hierarchy</h3><br><p>Control the user’s experience&nbsp;by&nbsp;guiding them through the interface. Where should they look first, second,&nbsp;and third? Establish that hierarchy.</p><br><div class="content-box-style1"><br><h4>Avoid Trapping Negative Space in the Composition</h4><br><p><img class="size-full wp-image-2652" src="/resources/ux/UX-Tactic-2-Avoid-Trapping-Negative-Space-in-the-Composition.png" alt="UX Tactic 2 - Avoid Trapping Negative Space in the Composition" srcset="/resources/ux/UX-Tactic-2-Avoid-Trapping-Negative-Space-in-the-Composition.png 474w, /resources/ux/UX-Tactic-2-Avoid-Trapping-Negative-Space-in-the-Composition-300x189.png 300w" sizes="(max-width: 474px) 100vw, 474px"></p><br></div><br><div class="content-box-style1"><br><h4>Use a One Column Layout</h4><br><p><img class="size-full wp-image-2653" src="/resources/ux/UX-Tactic-3-Use-a-One-Column-Layout.png" alt="UX Tactic 3 - Use a One Column Layout"></p><br></div><br><div class="content-box-style1"><br><h4>Overlap a Design Element to Emphasize Continuity</h4><br><p><img class="size-full wp-image-2654" src="/resources/ux/UX-Tactic-4-Overlap-a-Design-Element-to-Emphasize-Continuity.png" alt="UX Tactic 4 - Overlap a Design Element to Emphasize Continuity"></p><br></div><br><h3 id="ux-strategy3">Design the Layout Using Gestalt Principles</h3><br><p>We’re inundated with stimuli. According to <i>gestalt psychology</i>, we try to&nbsp;overcome that chaos by simplifying our perception. We group things. We categorize elements. We look for the <i>whole</i>.</p><br><p>Some principles include: <b>similarity</b>, <b>proximity</b>, <b>closure</b>, <b>connection</b>, <b>continuity</b>, and <b>figure/ground</b>.</p><br><p><img class="size-full wp-image-2853 aligncenter" src="/resources/ux/Gestalt-Principles.png" alt="Gestalt Principles" srcset="/resources/ux/Gestalt-Principles.png 594w, /resources/ux/Gestalt-Principles-300x154.png 300w" sizes="(max-width: 594px) 100vw, 594px"></p><br><div class="content-box-style1"><br><h4>Group Similar Functions or Menu Items by Proximity</h4><br><p><img class="alignnone size-full wp-image-2665" src="/resources/ux/UX-Tactic-5-Group-Similar-Functions-or-Menu-Items-by-Proximity.png" alt="UX Tactic 5 - Group Similar Functions or Menu Items by Proximity" srcset="/resources/ux/UX-Tactic-5-Group-Similar-Functions-or-Menu-Items-by-Proximity.png 451w, /resources/ux/UX-Tactic-5-Group-Similar-Functions-or-Menu-Items-by-Proximity-300x115.png 300w" sizes="(max-width: 451px) 100vw, 451px"></p><br></div><br><div class="content-box-style1"><br><h4>Position Headlines Closer to Respective Sections</h4><br><p><img class="alignnone size-full wp-image-2666" src="/resources/ux/UX-Tactic-6-Align-Headlines-Closer-to-Respective-Sections.png" alt="UX Tactic 6 - Align Headlines Closer to Respective Sections" srcset="/resources/ux/UX-Tactic-6-Align-Headlines-Closer-to-Respective-Sections.png 450w, /resources/ux/UX-Tactic-6-Align-Headlines-Closer-to-Respective-Sections-300x113.png 300w" sizes="(max-width: 450px) 100vw, 450px"></p><br></div><br><div class="content-box-style1"><br><h4>Constrain Headlines to Respective Sections</h4><br><p><img class="alignnone size-full wp-image-2667" src="/resources/ux/UX-Tactic-7-Constrain-Headlines-to-Respective-Sections.png" alt="UX Tactic 7 - Constrain Headlines to Respective Sections" srcset="/resources/ux/UX-Tactic-7-Constrain-Headlines-to-Respective-Sections.png 442w, /resources/ux/UX-Tactic-7-Constrain-Headlines-to-Respective-Sections-300x109.png 300w" sizes="(max-width: 442px) 100vw, 442px"></p><br></div><br><h3 id="ux-strategy4">Depict Interface Changes&nbsp;Without Disrupting the User</h3><br><p>Sometimes you’ll need to adjust the interface in front of the user. Make those changes noticeable, yet nondisruptive.</p><br><div class="content-box-style1"><br><h4>Visibly Animate Changes&nbsp;in the Interface</h4><br><p><img class="alignnone size-full wp-image-2669" src="/resources/ux/UX-Tactic-9-Visibly-Animate-Transitions-in-the-Interface.png" alt="UX Tactic 9 - Visibly Animate Transitions in the Interface" srcset="/resources/ux/UX-Tactic-9-Visibly-Animate-Transitions-in-the-Interface.png 568w, /resources/ux/UX-Tactic-9-Visibly-Animate-Transitions-in-the-Interface-300x93.png 300w" sizes="(max-width: 568px) 100vw, 568px"></p><br></div><br><div class="content-box-style1"><br><h4>Differentiate Elements That Triggered an Error</h4><br><p><img class="alignnone size-full wp-image-2668" src="/resources/ux/UX-Tactic-8-Place-Error-Messages-Above-Forms-and-Adjacent-to-Elements.png" alt="UX Tactic 8 - Place Error Messages Above Forms and Adjacent to Elements" srcset="/resources/ux/UX-Tactic-8-Place-Error-Messages-Above-Forms-and-Adjacent-to-Elements.png 420w, /resources/ux/UX-Tactic-8-Place-Error-Messages-Above-Forms-and-Adjacent-to-Elements-300x143.png 300w" sizes="(max-width: 420px) 100vw, 420px"></p><br></div><br><h3 id="ux-strategy5">Remove or Deemphasize Unnecessary Information</h3><br><p>Our mental focus is finite. Unnecessary elements&nbsp;will&nbsp;deplete those resources. So&nbsp;keep users focused on the important information and functions.</p><br><div class="content-box-style1"><br><h4>Obscure Backgrounds Behind Popup or Modal Boxes</h4><br><p><img class="alignnone size-full wp-image-2678" src="/resources/ux/UX-Tactic-10-Obscure-Backgrounds-Behind-Popup-or-Modal-Boxes.png" alt="UX Tactic 10 - Obscure Backgrounds Behind Popup or Modal Boxes" srcset="/resources/ux/UX-Tactic-10-Obscure-Backgrounds-Behind-Popup-or-Modal-Boxes.png 444w, /resources/ux/UX-Tactic-10-Obscure-Backgrounds-Behind-Popup-or-Modal-Boxes-300x114.png 300w" sizes="(max-width: 444px) 100vw, 444px"></p><br></div><br><div class="content-box-style1"><br><h4>Maximize Data-Ink Ratios in All Imagery</h4><br><p><img class="alignnone size-full wp-image-2679" src="/resources/ux/UX-Tactic-11-Maximize-Data-Ink-Ratios-in-All-Imagery.png" alt="UX Tactic 11 - Maximize Data-Ink Ratios in All Imagery" srcset="/resources/ux/UX-Tactic-11-Maximize-Data-Ink-Ratios-in-All-Imagery.png 451w, /resources/ux/UX-Tactic-11-Maximize-Data-Ink-Ratios-in-All-Imagery-300x108.png 300w" sizes="(max-width: 451px) 100vw, 451px"></p><br></div><br><div class="content-box-style1"><br><h4>Remove Unnecessary Borders From Design Elements</h4><br><p><img class="alignnone size-full wp-image-2680" src="/resources/ux/UX-Tactic-12-Remove-Unnecessary-Borders-From-Design-Elements.png" alt="UX Tactic 12 - Remove Unnecessary Borders From Design Elements" srcset="/resources/ux/UX-Tactic-12-Remove-Unnecessary-Borders-From-Design-Elements.png 459w, /resources/ux/UX-Tactic-12-Remove-Unnecessary-Borders-From-Design-Elements-300x105.png 300w" sizes="(max-width: 459px) 100vw, 459px"></p><br></div><br><div class="content-box-style1"><br><h4>Remove Redundant or Self-Explanatory Instructions</h4><br><p><img class="alignnone size-full wp-image-2681" src="/resources/ux/UX-Tactic-13-Remove-Redundant-or-Self-Explanatory-Instructions.png" alt="UX Tactic 13 - Remove Redundant or Self-Explanatory Instructions" srcset="/resources/ux/UX-Tactic-13-Remove-Redundant-or-Self-Explanatory-Instructions.png 431w, /resources/ux/UX-Tactic-13-Remove-Redundant-or-Self-Explanatory-Instructions-300x130.png 300w" sizes="(max-width: 431px) 100vw, 431px"></p><br></div><br><div class="content-box-style1"><br><h4>Hide Infrequent But Necessary Settings, Features, and Information</h4><br><p><img class="alignnone size-full wp-image-2699" src="/resources/ux/UX-Tactic-27-Hide-Infrequent-But-Necessary-Settings-Features-and-Information.png" alt="UX Tactic 27 - Hide Infrequent But Necessary Settings, Features, and Information" srcset="/resources/ux/UX-Tactic-27-Hide-Infrequent-But-Necessary-Settings-Features-and-Information.png 585w, /resources/ux/UX-Tactic-27-Hide-Infrequent-But-Necessary-Settings-Features-and-Information-300x79.png 300w" sizes="(max-width: 585px) 100vw, 585px"></p><br></div><br><h3 id="ux-strategy6">Indicate Whether Content Exists Beyond the Fold</h3><br><p>Nowadays, most&nbsp;browsers hide scroll bars when they’re inactive. You need “scroll hints” to communicate whether content exists beyond the fold.</p><br><div class="content-box-style1"><br><h4>Extend Elements Through the Fold</h4><br><p><img class="alignnone size-full wp-image-2683" src="/resources/ux/UX-Tactic-14-Extend-Elements-Through-the-Fold.png" alt="UX Tactic 14 - Extend Elements Through the Fold" srcset="/resources/ux/UX-Tactic-14-Extend-Elements-Through-the-Fold.png 453w, /resources/ux/UX-Tactic-14-Extend-Elements-Through-the-Fold-300x105.png 300w" sizes="(max-width: 453px) 100vw, 453px"></p><br></div><br><div class="content-box-style1"><br><h4>Add a Shadow to Indicate Depth</h4><br><p><img class="alignnone size-full wp-image-2684" src="/resources/ux/UX-Tactic-15-Add-a-Shadow-to-Indicate-Depth.png" alt="UX Tactic 15 - Add a Shadow to Indicate Depth" srcset="/resources/ux/UX-Tactic-15-Add-a-Shadow-to-Indicate-Depth.png 308w, /resources/ux/UX-Tactic-15-Add-a-Shadow-to-Indicate-Depth-300x135.png 300w" sizes="(max-width: 308px) 100vw, 308px"></p><br><p><img class="alignnone size-full wp-image-2682" src="/resources/ux/UX-Example-Adding-Shadow-to-Indicate-Depth.png" alt="UX Example - Adding Shadow to Indicate Depth" srcset="/resources/ux/UX-Example-Adding-Shadow-to-Indicate-Depth.png 533w, /resources/ux/UX-Example-Adding-Shadow-to-Indicate-Depth-300x109.png 300w" sizes="(max-width: 533px) 100vw, 533px"></p><br></div><br><div class="content-box-style1"><br><h4>Indicate More Content With Words or Graphics</h4><br><p><img class="alignnone size-full wp-image-2685" src="/resources/ux/UX-Tactic-16-Indicate-More-Content-With-Words-or-Graphics.png" alt="UX Tactic 16 - Indicate More Content With Words or Graphics" srcset="/resources/ux/UX-Tactic-16-Indicate-More-Content-With-Words-or-Graphics.png 463w, /resources/ux/UX-Tactic-16-Indicate-More-Content-With-Words-or-Graphics-300x113.png 300w" sizes="(max-width: 463px) 100vw, 463px"></p><br></div><br><h2 id="ux-category2">Guide Users Toward the End Goal</h2><br><p>Now that you’ve captured and directed the user’s&nbsp;attention, help them achieve&nbsp;their goal.</p><br><h3 id="ux-strategy7">Position Frequent Functions and Important&nbsp;Data Closer to Users</h3><br><p>Predict the user’s&nbsp;intention. Then position that goal&nbsp;as close as possible.</p><br><div class="content-box-style1"><br><h4>Filter or Jump to Items That Users Are Searching</h4><br><p><img class="alignnone size-full wp-image-2687" src="/resources/ux/UX-Tactic-17-Filter-or-Jump-to-Items-That-Users-Are-Searching-.png" alt="UX Tactic 17 - Filter or Jump to Items That Users Are Searching" srcset="/resources/ux/UX-Tactic-17-Filter-or-Jump-to-Items-That-Users-Are-Searching-.png 445w, /resources/ux/UX-Tactic-17-Filter-or-Jump-to-Items-That-Users-Are-Searching--300x112.png 300w" sizes="(max-width: 445px) 100vw, 445px"></p><br></div><br><div class="content-box-style1"><br><h4>Create Smart Defaults Based on Frequently Chosen Input</h4><br><p><img class="alignnone size-full wp-image-2688" src="/resources/ux/UX-Tactic-18-Create-Smart-Defaults-Based-on-Frequently-Chosen-Input.png" alt="UX Tactic 18 - Create Smart Defaults Based on Frequently Chosen Input" srcset="/resources/ux/UX-Tactic-18-Create-Smart-Defaults-Based-on-Frequently-Chosen-Input.png 417w, /resources/ux/UX-Tactic-18-Create-Smart-Defaults-Based-on-Frequently-Chosen-Input-300x84.png 300w" sizes="(max-width: 417px) 100vw, 417px"></p><br></div><br><div class="content-box-style1"><br><h4>Include Important Data on Product Listing Pages</h4><br><p>Oftentimes, users will pogo stick. They click an item to look for information. Then they’ll return to the previous page to repeat that process with another item.&nbsp;That’s poor usability.&nbsp;Minimize pogo-sticking by placing&nbsp;important information on primary pages.</p><br><p><img class="alignnone size-full wp-image-2692" src="/resources/ux/UX-Tactic-21-Include-Important-Data-on-Product-Listing-Pages.png" alt="UX Tactic 21 - Include Important Data on Product Listing Pages" srcset="/resources/ux/UX-Tactic-21-Include-Important-Data-on-Product-Listing-Pages.png 480w, /resources/ux/UX-Tactic-21-Include-Important-Data-on-Product-Listing-Pages-300x113.png 300w" sizes="(max-width: 480px) 100vw, 480px"></p><br><p>If&nbsp;you don’t like the extra&nbsp;clutter, you could&nbsp;include that information on hover (see next tactic).</p><br></div><br><div class="content-box-style1"><br><h4>Provide Useful Information on Hover</h4><br><p><img class="alignnone size-full wp-image-2693" src="/resources/ux/UX-Tactic-22-Provide-Useful-Information-on-Hover.png" alt="UX Tactic 22 - Provide Useful Information on Hover" srcset="/resources/ux/UX-Tactic-22-Provide-Useful-Information-on-Hover.png 464w, /resources/ux/UX-Tactic-22-Provide-Useful-Information-on-Hover-300x120.png 300w" sizes="(max-width: 464px) 100vw, 464px"></p><br></div><br><div class="content-box-style1"><br><h4>Expose Frequently Used Functions</h4><br><p><img class="alignnone size-full wp-image-2694" src="/resources/ux/UX-Tactic-23-Expose-Frequently-Used-Functions.png" alt="UX Tactic 23 - Expose Frequently Used Functions" srcset="/resources/ux/UX-Tactic-23-Expose-Frequently-Used-Functions.png 422w, /resources/ux/UX-Tactic-23-Expose-Frequently-Used-Functions-300x93.png 300w" sizes="(max-width: 422px) 100vw, 422px"></p><br></div><br><div class="content-box-style1"><br><h4>Display Primary Data or Statuses in a&nbsp;Dashboard</h4><br><p><img class="alignnone size-full wp-image-2697" src="/resources/ux/UX-Tactic-25-Display-Primary-Data-or-Statuses-in-Main-Dashboard.png" alt="UX Tactic 25 - Display Primary Data or Statuses in Main Dashboard" srcset="/resources/ux/UX-Tactic-25-Display-Primary-Data-or-Statuses-in-Main-Dashboard.png 453w, /resources/ux/UX-Tactic-25-Display-Primary-Data-or-Statuses-in-Main-Dashboard-300x109.png 300w" sizes="(max-width: 453px) 100vw, 453px"></p><br></div><br><div class="content-box-style1"><br><h4>Position Common Answers at the Top of Drop Down Lists</h4><br><p><img class="alignnone size-full wp-image-2698" src="/resources/ux/UX-Tactic-26-Position-Common-Answers-At-the-Top-of-Drop-Down-Lists.png" alt="UX Tactic 26 - Position Common Answers At the Top of Drop Down Lists" srcset="/resources/ux/UX-Tactic-26-Position-Common-Answers-At-the-Top-of-Drop-Down-Lists.png 406w, /resources/ux/UX-Tactic-26-Position-Common-Answers-At-the-Top-of-Drop-Down-Lists-300x110.png 300w" sizes="(max-width: 406px) 100vw, 406px"></p><br></div><br><h3 id="ux-strategy8">Communicate the Statuses of Interactions</h3><br><p>Reduce uncertainty by conveying&nbsp;all&nbsp;pertinent information.</p><br><div class="content-box-style1"><br><h4>Display Current Progress and Time Remaining on Machine-Driven Tasks</h4><br><p><img class="alignnone size-full wp-image-2700" src="/resources/ux/UX-Tactic-28-Display-Current-Progress-and-Time-Remaining-on-Machine-Driven-Tasks.png" alt="UX Tactic 28 - Display Current Progress and Time Remaining on Machine-Driven Tasks" srcset="/resources/ux/UX-Tactic-28-Display-Current-Progress-and-Time-Remaining-on-Machine-Driven-Tasks.png 446w, /resources/ux/UX-Tactic-28-Display-Current-Progress-and-Time-Remaining-on-Machine-Driven-Tasks-300x108.png 300w" sizes="(max-width: 446px) 100vw, 446px"></p><br></div><br><div class="content-box-style1"><br><h4>Communicate the Current&nbsp;Phase of Complex or Lengthy Interactions</h4><br><p><img class="alignnone size-full wp-image-2701" src="/resources/ux/UX-Tactic-29-Communicate-the-Incremental-Phase-of-Interactions.png" alt="UX Tactic 29 - Communicate the Incremental Phase of Interactions" srcset="/resources/ux/UX-Tactic-29-Communicate-the-Incremental-Phase-of-Interactions.png 470w, /resources/ux/UX-Tactic-29-Communicate-the-Incremental-Phase-of-Interactions-300x204.png 300w" sizes="(max-width: 470px) 100vw, 470px"></p><br></div><br><div class="content-box-style1"><br><h4>Reveal the Number of Steps Within a Sequence</h4><br><p><img class="alignnone size-full wp-image-2705" src="/resources/ux/UX-Tactic-33-Reveal-the-Number-of-Steps-Within-a-Sequence.png" alt="UX Tactic 33 - Reveal the Number of Steps Within a Sequence" srcset="/resources/ux/UX-Tactic-33-Reveal-the-Number-of-Steps-Within-a-Sequence.png 450w, /resources/ux/UX-Tactic-33-Reveal-the-Number-of-Steps-Within-a-Sequence-300x103.png 300w" sizes="(max-width: 450px) 100vw, 450px"></p><br></div><br><div class="content-box-style1"><br><h4>Reveal the Number of Items in a Category</h4><br><p><img class="alignnone size-full wp-image-2773" src="/resources/ux/UX-Tactic-89-Reveal-the-Number-of-Items-in-a-Category.png" alt="UX Tactic 89 - Reveal the Number of Items in a Category" srcset="/resources/ux/UX-Tactic-89-Reveal-the-Number-of-Items-in-a-Category.png 621w, /resources/ux/UX-Tactic-89-Reveal-the-Number-of-Items-in-a-Category-300x61.png 300w" sizes="(max-width: 621px) 100vw, 621px"></p><br></div><br><h3 id="ux-strategy9">Offer Multiple Ways to Accomplish the Same Task</h3><br><p>Users prefer&nbsp;different workflows. Create different&nbsp;paths&nbsp;for&nbsp;each goal, and let users&nbsp;choose the most appropriate path for their workflow.</p><br><div class="content-box-style1"><br><h4>Let Users Log In Via Username or Email</h4><br><p><img class="alignnone size-full wp-image-2702" src="/resources/ux/UX-Tactic-30-Let-Users-Log-In-Via-Username-or-Email.png" alt="UX Tactic 30 - Let Users Log In Via Username or Email" srcset="/resources/ux/UX-Tactic-30-Let-Users-Log-In-Via-Username-or-Email.png 439w, /resources/ux/UX-Tactic-30-Let-Users-Log-In-Via-Username-or-Email-300x100.png 300w" sizes="(max-width: 439px) 100vw, 439px"></p><br></div><br><div class="content-box-style1"><br><h4>Offer Keyboard Shortcuts for Repetitive Functions</h4><br><p><img class="alignnone size-full wp-image-2703" src="/resources/ux/UX-Tactic-31-Offer-Keyboard-Shortcuts-for-Repetitive-Functions.png" alt="UX Tactic 31 - Offer Keyboard Shortcuts for Repetitive Functions" srcset="/resources/ux/UX-Tactic-31-Offer-Keyboard-Shortcuts-for-Repetitive-Functions.png 459w, /resources/ux/UX-Tactic-31-Offer-Keyboard-Shortcuts-for-Repetitive-Functions-300x101.png 300w" sizes="(max-width: 459px) 100vw, 459px"></p><br></div><br><div class="content-box-style1"><br><h4>Let Users Drag and Drop Elements</h4><br><p><img class="alignnone size-full wp-image-2689" src="/resources/ux/UX-Tactic-19-Let-Users-Drag-and-Drop-Elements.png" alt="UX Tactic 19 - Let Users Drag and Drop Elements"></p><br></div><br><div class="content-box-style1"><br><h4>Let Users Directly Edit Data</h4><br><p><img class="alignnone size-full wp-image-2691" src="/resources/ux/UX-Tactic-20-Let-Users-Directly-Edit-Data.png" alt="UX Tactic 20 - Let Users Directly Edit Data" srcset="/resources/ux/UX-Tactic-20-Let-Users-Directly-Edit-Data.png 431w, /resources/ux/UX-Tactic-20-Let-Users-Directly-Edit-Data-300x129.png 300w" sizes="(max-width: 431px) 100vw, 431px"></p><br></div><br><h3 id="ux-strategy10">Communicate Requirements or Parameters for an Interaction</h3><br><p>Prepare users for each interaction. What will they need? How do they proceed?</p><br><div class="content-box-style1"><br><h4>Describe the Input That You Require From Users</h4><br><p><img class="alignnone size-full wp-image-2706" src="/resources/ux/UX-Tactic-34-Describe-the-Input-That-You-Require-From-Users.png" alt="UX Tactic 34 - Describe the Input That You Require From Users" srcset="/resources/ux/UX-Tactic-34-Describe-the-Input-That-You-Require-From-Users.png 434w, /resources/ux/UX-Tactic-34-Describe-the-Input-That-You-Require-From-Users-300x85.png 300w" sizes="(max-width: 434px) 100vw, 434px"></p><br></div><br><div class="content-box-style1"><br><h4>Give Real-Time Password Requirements and Feedback</h4><br><p><img class="alignnone size-full wp-image-2708" src="/resources/ux/UX-Tactic-35-Give-Real-Time-Password-Requirements-and-Feedback.png" alt="UX Tactic 35 - Give Real-Time Password Requirements and Feedback" srcset="/resources/ux/UX-Tactic-35-Give-Real-Time-Password-Requirements-and-Feedback.png 457w, /resources/ux/UX-Tactic-35-Give-Real-Time-Password-Requirements-and-Feedback-300x114.png 300w" sizes="(max-width: 457px) 100vw, 457px"></p><br></div><br><div class="content-box-style1"><br><h4>Prepopulate Form Elements With Universal Parameters</h4><br><p><img class="alignnone size-full wp-image-2709" src="/resources/ux/UX-Tactic-36-Prepopulate-Form-Elements-With-Universal-Parameters.png" alt="UX Tactic 36 - Prepopulate Form Elements With Universal Parameters" srcset="/resources/ux/UX-Tactic-36-Prepopulate-Form-Elements-With-Universal-Parameters.png 520w, /resources/ux/UX-Tactic-36-Prepopulate-Form-Elements-With-Universal-Parameters-300x79.png 300w" sizes="(max-width: 520px) 100vw, 520px"></p><br></div><br><div class="content-box-style1"><br><h4>Indicate Required and Optional Form Elements</h4><br><p><img class="alignnone size-full wp-image-2710" src="/resources/ux/UX-Tactic-37-Indicate-Required-and-Optional-Form-Elements.png" alt="UX Tactic 37 - Indicate Required and Optional Form Elements" srcset="/resources/ux/UX-Tactic-37-Indicate-Required-and-Optional-Form-Elements.png 401w, /resources/ux/UX-Tactic-37-Indicate-Required-and-Optional-Form-Elements-300x120.png 300w" sizes="(max-width: 401px) 100vw, 401px"></p><br></div><br><h3 id="ux-strategy11">Communicate the Expected Outcome of an Interaction</h3><br><p>Before users interact with an element, they should understand the intended outcome.</p><br><div class="content-box-style1"><br><h4>Use Descriptive Button Labels</h4><br><p><img class="alignnone size-full wp-image-2712" src="/resources/ux/UX-Tactic-39-Use-Descriptive-Labels-for-Buttons.png" alt="UX Tactic 39 - Use Descriptive Labels for Buttons" srcset="/resources/ux/UX-Tactic-39-Use-Descriptive-Labels-for-Buttons.png 367w, /resources/ux/UX-Tactic-39-Use-Descriptive-Labels-for-Buttons-300x64.png 300w" sizes="(max-width: 367px) 100vw, 367px"></p><br></div><br><div class="content-box-style1"><br><h4>Show a Preview of the Output Based on the Current Input</h4><br><p><img class="alignnone size-full wp-image-2711" src="/resources/ux/UX-Tactic-38-Show-a-Preview-of-the-Output-Based-on-the-Current-Input.png" alt="UX Tactic 38 - Show a Preview of the Output Based on the Current Input" srcset="/resources/ux/UX-Tactic-38-Show-a-Preview-of-the-Output-Based-on-the-Current-Input.png 534w, /resources/ux/UX-Tactic-38-Show-a-Preview-of-the-Output-Based-on-the-Current-Input-300x190.png 300w" sizes="(max-width: 534px) 100vw, 534px"></p><br></div><br><div class="content-box-style1"><br><h4>Indicate or Preview the Next Item in a Sequence</h4><br><p><img class="alignnone size-full wp-image-2695" src="/resources/ux/UX-Tactic-24-Indicate-or-Preview-the-Next-Item-in-a-Sequence.png" alt="UX Tactic 24 - Indicate or Preview the Next Item in a Sequence" srcset="/resources/ux/UX-Tactic-24-Indicate-or-Preview-the-Next-Item-in-a-Sequence.png 407w, /resources/ux/UX-Tactic-24-Indicate-or-Preview-the-Next-Item-in-a-Sequence-300x111.png 300w" sizes="(max-width: 407px) 100vw, 407px"></p><br></div><br><div class="content-box-style1"><br><h4>Use Smart Menu Items to Clarify Actions</h4><br><p><img class="alignnone size-full wp-image-2713" src="/resources/ux/UX-Tactic-40-Use-Smart-Menu-Items-to-Clarify-Actions.png" alt="UX Tactic 40 - Use Smart Menu Items to Clarify Actions" srcset="/resources/ux/UX-Tactic-40-Use-Smart-Menu-Items-to-Clarify-Actions.png 452w, /resources/ux/UX-Tactic-40-Use-Smart-Menu-Items-to-Clarify-Actions-300x155.png 300w" sizes="(max-width: 452px) 100vw, 452px"></p><br></div><br><h3 id="ux-strategy12">Reward or Reassure Users When They Make Progress</h3><br><p>Are users making progress? Was their&nbsp;interaction successful? Let them know. And entice&nbsp;them to continue.</p><br><div class="content-box-style1"><br><h4>Maintain Congruency Between Links and Target Pages</h4><br><p><img class="alignnone size-full wp-image-2714" src="/resources/ux/UX-Tactic-41-Maintain-Congruency-Between-Links-and-Target-Pages.png" alt="UX Tactic 41 - Maintain Congruency Between Links and Target Pages" srcset="/resources/ux/UX-Tactic-41-Maintain-Congruency-Between-Links-and-Target-Pages.png 614w, /resources/ux/UX-Tactic-41-Maintain-Congruency-Between-Links-and-Target-Pages-300x113.png 300w" sizes="(max-width: 614px) 100vw, 614px"></p><br></div><br><div class="content-box-style1"><br><h4>Provide Quick Wins During Onboarding</h4><br><p><img class="alignnone size-full wp-image-2715" src="/resources/ux/UX-Tactic-42-Provide-Quick-Wins-During-Onboarding.png" alt="UX Tactic 42 - Provide Quick Wins During Onboarding" srcset="/resources/ux/UX-Tactic-42-Provide-Quick-Wins-During-Onboarding.png 473w, /resources/ux/UX-Tactic-42-Provide-Quick-Wins-During-Onboarding-300x105.png 300w" sizes="(max-width: 473px) 100vw, 473px"></p><br></div><br><div class="content-box-style1"><br><h4>Start Progress Bars Above 0%</h4><br><p><img class="alignnone size-full wp-image-2716" src="/resources/ux/UX-Tactic-43-Start-Progress-Bars-Above-0.png" alt="UX Tactic 43 - Start Progress Bars Above 0%" srcset="/resources/ux/UX-Tactic-43-Start-Progress-Bars-Above-0.png 310w, /resources/ux/UX-Tactic-43-Start-Progress-Bars-Above-0-300x88.png 300w" sizes="(max-width: 310px) 100vw, 310px"></p><br></div><br><h3 id="ux-strategy13">Solve the User’s Core Intent</h3><br><p>Oftentimes, we&nbsp;solve surface-level needs. Go deeper. Always brainstorm <em>why</em> users need certain&nbsp;features or information. Then solve the underlying intent.</p><br><div class="content-box-style1"><br><h4>Indicate Whether Your Office is Open or Closed</h4><br><p><img class="alignnone size-full wp-image-2717" src="/resources/ux/UX-Tactic-44-Indicate-Whether-Your-Office-is-Open-or-Closed.png" alt="UX Tactic 44 - Indicate Whether Your Office is Open or Closed" srcset="/resources/ux/UX-Tactic-44-Indicate-Whether-Your-Office-is-Open-or-Closed.png 424w, /resources/ux/UX-Tactic-44-Indicate-Whether-Your-Office-is-Open-or-Closed-300x109.png 300w" sizes="(max-width: 424px) 100vw, 424px"></p><br></div><br><div class="content-box-style1"><br><h4>Indicate the Recency of Events</h4><br><p><img class="alignnone size-full wp-image-2718" src="/resources/ux/UX-Tactic-45-Indicate-the-Recency-of-Events.png" alt="UX Tactic 45 - Indicate the Recency of Events" srcset="/resources/ux/UX-Tactic-45-Indicate-the-Recency-of-Events.png 450w, /resources/ux/UX-Tactic-45-Indicate-the-Recency-of-Events-300x65.png 300w" sizes="(max-width: 450px) 100vw, 450px"></p><br></div><br><h2 id="ux-category3">Reduce Mental Effort and Maintain Flow</h2><br><p>In addition to guiding&nbsp;users,&nbsp;reduce&nbsp;their cognitive workflow. That way,&nbsp;you prolong their state of “flow.”</p><br><h3 id="ux-strategy14">Minimize User Calculations</h3><br><p>Never make the user perform math. Let the computer handle it.</p><br><div class="content-box-style1"><br><h4>Indicate the Number of Items Remaining</h4><br><p><img class="alignnone size-full wp-image-2721" src="/resources/ux/UX-Tactic-46-Indicate-the-Number-of-Items-Remaining.png" alt="UX Tactic 46 - Indicate the Number of Items Remaining"></p><br></div><br><h3 id="ux-strategy15">Convey the User’s Current Location Within the Interface</h3><br><p>Interfaces are like airports. Without a “you are here” marker, users can get lost. So&nbsp;create those markers.</p><br><div class="content-box-style1"><br><h4>Highlight the Section Within the Navigation Menu</h4><br><p><img class="alignnone size-full wp-image-2722" src="/resources/ux/UX-Tactic-47-Highlight-the-Section-Within-the-Navigation-Menu.png" alt="UX Tactic 47 - Highlight the Section Within the Navigation Menu" srcset="/resources/ux/UX-Tactic-47-Highlight-the-Section-Within-the-Navigation-Menu.png 634w, /resources/ux/UX-Tactic-47-Highlight-the-Section-Within-the-Navigation-Menu-300x88.png 300w" sizes="(max-width: 634px) 100vw, 634px"></p><br></div><br><div class="content-box-style1"><br><h4>Provide Breadcrumbs or Sequence Maps in Complex Interfaces</h4><br><p><img class="alignnone size-full wp-image-2723" src="/resources/ux/UX-Tactic-48-Provide-Breadcrumbs-or-Sequence-Maps-in-Complex-Interfaces.png" alt="UX Tactic 48 - Provide Breadcrumbs or Sequence Maps in Complex Interfaces" srcset="/resources/ux/UX-Tactic-48-Provide-Breadcrumbs-or-Sequence-Maps-in-Complex-Interfaces.png 462w, /resources/ux/UX-Tactic-48-Provide-Breadcrumbs-or-Sequence-Maps-in-Complex-Interfaces-300x142.png 300w" sizes="(max-width: 462px) 100vw, 462px"></p><br></div><br><div class="content-box-style1"><br><h4>Put Descriptive or Useful Information at the Beginning of Page Titles</h4><br><p><img class="alignnone size-full wp-image-2724" src="/resources/ux/UX-Tactic-49-Put-Descriptive-Terms-at-the-Beginning-of-the-Browsers-Page-Title.png" alt="UX Tactic 49 - Put Descriptive Terms at the Beginning of the Browser's Page Title" srcset="/resources/ux/UX-Tactic-49-Put-Descriptive-Terms-at-the-Beginning-of-the-Browsers-Page-Title.png 398w, /resources/ux/UX-Tactic-49-Put-Descriptive-Terms-at-the-Beginning-of-the-Browsers-Page-Title-300x73.png 300w" sizes="(max-width: 398px) 100vw, 398px"></p><br></div><br><h3 id="ux-strategy16">Simplify Choice Tasks</h3><br><p>Choices require effort. Reduce that&nbsp;effort by simplifying those tasks.</p><br><div class="content-box-style1"><br><h4>Indicate the Options That Most Users Choose</h4><br><p><img class="alignnone size-full wp-image-2725" src="/resources/ux/UX-Tactic-50-Indicate-the-Options-That-Most-Users-Choose.png" alt="UX Tactic 50 - Indicate the Options That Most Users Choose" srcset="/resources/ux/UX-Tactic-50-Indicate-the-Options-That-Most-Users-Choose.png 492w, /resources/ux/UX-Tactic-50-Indicate-the-Options-That-Most-Users-Choose-300x96.png 300w" sizes="(max-width: 492px) 100vw, 492px"></p><br></div><br><div class="content-box-style1"><br><h4>Provide a Curated List of Common Search Terms</h4><br><p><img class="alignnone size-full wp-image-2726" src="/resources/ux/UX-Tactic-51-Provide-a-Curated-List-of-Common-Search-Terms.png" alt="UX Tactic 51 - Provide a Curated List of Common Search Terms" srcset="/resources/ux/UX-Tactic-51-Provide-a-Curated-List-of-Common-Search-Terms.png 428w, /resources/ux/UX-Tactic-51-Provide-a-Curated-List-of-Common-Search-Terms-300x107.png 300w" sizes="(max-width: 428px) 100vw, 428px"></p><br></div><br><div class="content-box-style1"><br><h4>Create Tight Categories Within Navigation Menus</h4><br><p><img class="alignnone size-full wp-image-2727" src="/resources/ux/UX-Tactic-52-Create-Tight-Categories-Within-Navigation-Menus.png" alt="UX Tactic 52 - Create Tight Categories Within Navigation Menus" srcset="/resources/ux/UX-Tactic-52-Create-Tight-Categories-Within-Navigation-Menus.png 500w, /resources/ux/UX-Tactic-52-Create-Tight-Categories-Within-Navigation-Menus-300x91.png 300w" sizes="(max-width: 500px) 100vw, 500px"></p><br></div><br><h3 id="ux-strategy17">Use Conventional Web Design Interfaces</h3><br><p>Creativity is great. But don’t stray far from a&nbsp;conventional design. Users are accustomed to certain layouts and structures. Those conventional designs are popular&nbsp;<em>because</em> they work.</p><br><div class="content-box-style1"><br><h4>Use Conventional Navigation Menus</h4><br><p><img class="alignnone size-full wp-image-2728" src="/resources/ux/UX-Tactic-53-Use-Conventional-Navigation-Menus.png" alt="UX Tactic 53 - Use Conventional Navigation Menus" srcset="/resources/ux/UX-Tactic-53-Use-Conventional-Navigation-Menus.png 433w, /resources/ux/UX-Tactic-53-Use-Conventional-Navigation-Menus-300x103.png 300w" sizes="(max-width: 433px) 100vw, 433px"></p><br></div><br><div class="content-box-style1"><br><h4>Put Utilities in the Top Right Corner</h4><br><p><img class="alignnone size-full wp-image-2729" src="/resources/ux/UX-Tactic-54-Put-Utilities-in-the-Top-Right-Corner.png" alt="UX Tactic 54 - Put Utilities in the Top Right Corner" srcset="/resources/ux/UX-Tactic-54-Put-Utilities-in-the-Top-Right-Corner.png 672w, /resources/ux/UX-Tactic-54-Put-Utilities-in-the-Top-Right-Corner-300x110.png 300w" sizes="(max-width: 672px) 100vw, 672px"></p><br></div><br><h3 id="ux-strategy18">Provide Feedback After Each Interaction</h3><br><p>When&nbsp;users interact with your interface, they should experience real-time feedback. Was something successful? Was it&nbsp;unsuccessful? What changed?</p><br><div class="content-box-style1"><br><h4>Display Success Messages After Important Interactions</h4><br><p><img class="alignnone size-full wp-image-2730" src="/resources/ux/UX-Tactic-55-Display-Success-Messages-After-Important-Interactions.png" alt="UX Tactic 55 - Display Success Messages After Important Interactions" srcset="/resources/ux/UX-Tactic-55-Display-Success-Messages-After-Important-Interactions.png 484w, /resources/ux/UX-Tactic-55-Display-Success-Messages-After-Important-Interactions-300x75.png 300w" sizes="(max-width: 484px) 100vw, 484px"></p><br></div><br><div class="content-box-style1"><br><h4>Indicate Which Items the Cursor is Hovering Over</h4><br><p><img class="alignnone size-full wp-image-2731" src="/resources/ux/UX-Tactic-56-Indicate-Which-Items-the-Cursor-is-Hovering-Over.png" alt="UX Tactic 56 - Indicate Which Items the Cursor is Hovering Over" srcset="/resources/ux/UX-Tactic-56-Indicate-Which-Items-the-Cursor-is-Hovering-Over.png 413w, /resources/ux/UX-Tactic-56-Indicate-Which-Items-the-Cursor-is-Hovering-Over-300x91.png 300w" sizes="(max-width: 413px) 100vw, 413px"></p><br></div><br><h3 id="ux-strategy19">Minimize the Negative Effects of Waiting Periods</h3><br><p>Eliminate all&nbsp;unnecessary waiting periods. If&nbsp;users <em>need</em> to wait, then minimize those&nbsp;negative&nbsp;effects.</p><br><div class="content-box-style1"><br><h4>Use Cool Colors in Loading Animations to Decrease Arousal</h4><br><p>Blue reduces arousal (and&nbsp;increases relaxation).&nbsp;With blue&nbsp;loading elements, users perceive quicker loading times (<a href="http://repository.ust.hk/ir/bitstream/1783.1-1752/1/jmr01.pdf" target="_blank" rel="external">Gorn et al., 2004</a>). See my <a href="http://www.nickkolenda.com/color-psychology/" target="_blank" rel="external">article on color</a> for more detail.</p><br><p><img class="alignnone size-full wp-image-2732" src="/resources/ux/UX-Tactic-57-Use-Cool-Colors-in-Loading-Animations-to-Decrease-Arousal.png" alt="UX Tactic 57 - Use Cool Colors in Loading Animations to Decrease Arousal" srcset="/resources/ux/UX-Tactic-57-Use-Cool-Colors-in-Loading-Animations-to-Decrease-Arousal.png 417w, /resources/ux/UX-Tactic-57-Use-Cool-Colors-in-Loading-Animations-to-Decrease-Arousal-300x94.png 300w" sizes="(max-width: 417px) 100vw, 417px"></p><br></div><br><div class="content-box-style1"><br><h4>Keep Users Engaged During Lengthy Waiting Periods</h4><br><p><img class="alignnone size-full wp-image-2733" src="/resources/ux/UX-Tactic-58-Keep-Users-Engaged-During-Lengthy-Waiting-Periods.png" alt="UX Tactic 58 - Keep Users Engaged During Lengthy Waiting Periods" srcset="/resources/ux/UX-Tactic-58-Keep-Users-Engaged-During-Lengthy-Waiting-Periods.png 433w, /resources/ux/UX-Tactic-58-Keep-Users-Engaged-During-Lengthy-Waiting-Periods-300x112.png 300w" sizes="(max-width: 433px) 100vw, 433px"></p><br></div><br><div class="content-box-style1"><br><h4>Prevent Users From Uploading Files That Are Incompatible</h4><br><p><img class="alignnone size-full wp-image-2734" src="/resources/ux/UX-Tactic-59-Prevent-Users-From-Uploading-Files-That-Are-Incompatible.png" alt="UX Tactic 59 - Prevent Users From Uploading Files That Are Incompatible" srcset="/resources/ux/UX-Tactic-59-Prevent-Users-From-Uploading-Files-That-Are-Incompatible.png 436w, /resources/ux/UX-Tactic-59-Prevent-Users-From-Uploading-Files-That-Are-Incompatible-300x111.png 300w" sizes="(max-width: 436px) 100vw, 436px"></p><br></div><br><div class="content-box-style1"><br><h4>Display a Running Tally of Tasks Occurring</h4><br><p><img class="alignnone size-full wp-image-2735" src="/resources/ux/UX-Tactic-60-Display-a-Running-Tally-of-Tasks-Occurring.png" alt="UX Tactic 60 - Display a Running Tally of Tasks Occurring" srcset="/resources/ux/UX-Tactic-60-Display-a-Running-Tally-of-Tasks-Occurring.png 411w, /resources/ux/UX-Tactic-60-Display-a-Running-Tally-of-Tasks-Occurring-300x118.png 300w" sizes="(max-width: 411px) 100vw, 411px"></p><br></div><br><h3 id="ux-strategy20">Minimize the User’s Reliance on Memory</h3><br><p>Don’t force&nbsp;the user to remember anything. Keep all pertinent information in the open.</p><br><div class="content-box-style1"><br><h4>Keep Form Labels Visible At All Times</h4><br><p>Avoid inline labels that disappear when users click inside the&nbsp;element.</p><br><p><img class="alignnone size-full wp-image-2736" src="/resources/ux/UX-Tactic-61-Keep-Form-Labels-Visible-At-All-Times.png" alt="UX Tactic 61 - Keep Form Labels Visible At All Times" srcset="/resources/ux/UX-Tactic-61-Keep-Form-Labels-Visible-At-All-Times.png 376w, /resources/ux/UX-Tactic-61-Keep-Form-Labels-Visible-At-All-Times-300x122.png 300w" sizes="(max-width: 376px) 100vw, 376px"></p><br></div><br><div class="content-box-style1"><br><h4>Position Placeholder Text Outside the Form Element</h4><br><p><img class="alignnone size-full wp-image-2737" src="/resources/ux/UX-Tactic-62-Position-Placeholder-Text-Outside-the-Form-Element.png" alt="UX Tactic 62 - Position Placeholder Text Outside the Form Element" srcset="/resources/ux/UX-Tactic-62-Position-Placeholder-Text-Outside-the-Form-Element.png 450w, /resources/ux/UX-Tactic-62-Position-Placeholder-Text-Outside-the-Form-Element-300x92.png 300w" sizes="(max-width: 450px) 100vw, 450px"></p><br></div><br><div class="content-box-style1"><br><h4>Add Copy Buttons to Movable Input</h4><br><p><img class="alignnone size-full wp-image-2738" src="/resources/ux/UX-Tactic-63-Add-Copy-Buttons-to-Movable-Input.png" alt="UX Tactic 63 - Add Copy Buttons to Movable Input" srcset="/resources/ux/UX-Tactic-63-Add-Copy-Buttons-to-Movable-Input.png 423w, /resources/ux/UX-Tactic-63-Add-Copy-Buttons-to-Movable-Input-300x75.png 300w" sizes="(max-width: 423px) 100vw, 423px"></p><br></div><br><h3 id="ux-strategy21">Minimize Zig Zagging Eye Patterns</h3><br><p>Reduce the amount of&nbsp;back-and-forth eye motions. Keep all complementary data within close distances.</p><br><div class="content-box-style1"><br><h4>Merge Congruent Data to Help Users Compare Items</h4><br><p><img class="alignnone size-full wp-image-2739" src="/resources/ux/UX-Tactic-64-Merge-Congruent-Data-to-Help-Users-Compare-Items.png" alt="UX Tactic 64 - Merge Congruent Data to Help Users Compare Items" srcset="/resources/ux/UX-Tactic-64-Merge-Congruent-Data-to-Help-Users-Compare-Items.png 550w, /resources/ux/UX-Tactic-64-Merge-Congruent-Data-to-Help-Users-Compare-Items-300x117.png 300w" sizes="(max-width: 550px) 100vw, 550px"></p><br></div><br><div class="content-box-style1"><br><h4>Align Form Labels Directly Adjacent to Elements</h4><br><p><img class="alignnone size-full wp-image-2740" src="/resources/ux/UX-Tactic-65-Align-Form-Labels-Directly-Adjacent-to-Elements.png" alt="UX Tactic 65 - Align Form Labels Directly Adjacent to Elements" srcset="/resources/ux/UX-Tactic-65-Align-Form-Labels-Directly-Adjacent-to-Elements.png 476w, /resources/ux/UX-Tactic-65-Align-Form-Labels-Directly-Adjacent-to-Elements-300x96.png 300w" sizes="(max-width: 476px) 100vw, 476px"></p><br></div><br><h3 id="ux-strategy22">Communicate Which Items Are Clickable or Interactive</h3><br><p>Users should identify which elements&nbsp;are interactive&nbsp;(and <em>how</em> to interact with them). If you’re familiar with&nbsp;UX/UI, then you probably know&nbsp;<i>signifiers</i> and <i>affordances</i>, popularized by Don Norman in <a href="http://www.amazon.com/gp/product/0465050654/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0465050654&amp;linkCode=as2&amp;tag=nickkole-20&amp;linkId=R47II3FDCY67W65X" target="_blank" rel="external">The Design of Everyday Things</a>.</p><br><div class="content-box-style1"><br><h4>Design Buttons Using 3D Characteristics</h4><br><p><img class="alignnone size-full wp-image-2741" src="/resources/ux/UX-Tactic-66-Design-Buttons-Using-3D-Characteristics.png" alt="UX Tactic 66 - Design Buttons Using 3D Characteristics" srcset="/resources/ux/UX-Tactic-66-Design-Buttons-Using-3D-Characteristics.png 533w, /resources/ux/UX-Tactic-66-Design-Buttons-Using-3D-Characteristics-300x75.png 300w" sizes="(max-width: 533px) 100vw, 533px"></p><br></div><br><div class="content-box-style1"><br><h4>Add Dotted Textures to Drag and Drop Elements</h4><br><p><img class="alignnone size-full wp-image-2742" src="/resources/ux/UX-Tactic-67-Add-Dotted-Textures-to-Drag-and-Drop-Elements.png" alt="UX Tactic 67 - Add Dotted Textures to Drag and Drop Elements" srcset="/resources/ux/UX-Tactic-67-Add-Dotted-Textures-to-Drag-and-Drop-Elements.png 397w, /resources/ux/UX-Tactic-67-Add-Dotted-Textures-to-Drag-and-Drop-Elements-300x115.png 300w" sizes="(max-width: 397px) 100vw, 397px"></p><br></div><br><div class="content-box-style1"><br><h4>Use Icons and Symbols to Convey the Meaning of an Interaction</h4><br><p>You can create most of these icons using various shapes in PowerPoint or Keynote.</p><br><p><img class="alignnone size-full wp-image-2743" src="/resources/ux/UX-Tactic-68-Use-Icons-and-Symbols-to-Convey-the-Meaning-of-an-Interaction.png" alt="UX Tactic 68 - Use Icons and Symbols to Convey the Meaning of an Interaction" srcset="/resources/ux/UX-Tactic-68-Use-Icons-and-Symbols-to-Convey-the-Meaning-of-an-Interaction.png 464w, /resources/ux/UX-Tactic-68-Use-Icons-and-Symbols-to-Convey-the-Meaning-of-an-Interaction-300x208.png 300w" sizes="(max-width: 464px) 100vw, 464px"></p><br></div><br><h3 id="ux-strategy23">Communicate Using Familiar Words and Symbols</h3><br><p>In most cases, clarity trumps creativity or jargon.</p><br><div class="content-box-style1"><br><h4>Speak the Language of the User, Not the System</h4><br><p><img class="alignnone size-full wp-image-2744" src="/resources/ux/UX-Tactic-69-Speak-the-Language-of-the-User-Not-the-System.png" alt="UX Tactic 69 - Speak the Language of the User, Not the System" srcset="/resources/ux/UX-Tactic-69-Speak-the-Language-of-the-User-Not-the-System.png 443w, /resources/ux/UX-Tactic-69-Speak-the-Language-of-the-User-Not-the-System-300x111.png 300w" sizes="(max-width: 443px) 100vw, 443px"></p><br></div><br><div class="content-box-style1"><br><h4>Offer a Translate Button When Foreign Languages Appear</h4><br><p><img class="alignnone size-full wp-image-2745" src="/resources/ux/UX-Tactic-70-Offer-a-Translate-Button-When-Foreign-Languages-Appear.png" alt="UX Tactic 70 - Offer a Translate Button When Foreign Languages Appear" srcset="/resources/ux/UX-Tactic-70-Offer-a-Translate-Button-When-Foreign-Languages-Appear.png 486w, /resources/ux/UX-Tactic-70-Offer-a-Translate-Button-When-Foreign-Languages-Appear-300x57.png 300w" sizes="(max-width: 486px) 100vw, 486px"></p><br></div><br><div class="content-box-style1"><br><h4>Choose Colors That Are Semantically Congruent</h4><br><p>When colors are incongruent, users have more trouble&nbsp;processing the information. Currently, <a href="http://meetup.com" target="_blank" rel="external">meetup.com</a>&nbsp;has great usability. However,&nbsp;they’re using red to confirm attendance (when they should be using green):</p><br><p><img class="alignnone size-full wp-image-2746" src="/resources/ux/UX-Tactic-71-Choose-Colors-That-Are-Semantically-Congruent.png" alt="UX Tactic 71 - Choose Colors That Are Semantically Congruent" srcset="/resources/ux/UX-Tactic-71-Choose-Colors-That-Are-Semantically-Congruent.png 423w, /resources/ux/UX-Tactic-71-Choose-Colors-That-Are-Semantically-Congruent-300x102.png 300w" sizes="(max-width: 423px) 100vw, 423px"></p><br></div><br><h3 id="ux-strategy24">Maximize the Scannability of Your Interface</h3><br><p>Most users will&nbsp;process&nbsp;your content by&nbsp;scanning it. And you shouldn’t fight it. <em>Embrace it</em>. Make your interface more conducive to scanning.</p><br><div class="content-box-style1"><br><h4>Keep Paragraphs Short and Highlight Key Terms</h4><br><p><img class="alignnone size-full wp-image-2747" src="/resources/ux/UX-Tactic-72-Keep-Paragraphs-Short-and-Highlight-Key-Terms.png" alt="UX Tactic 72 - Keep Paragraphs Short and Highlight Key Terms" srcset="/resources/ux/UX-Tactic-72-Keep-Paragraphs-Short-and-Highlight-Key-Terms.png 412w, /resources/ux/UX-Tactic-72-Keep-Paragraphs-Short-and-Highlight-Key-Terms-300x111.png 300w" sizes="(max-width: 412px) 100vw, 412px"></p><br></div><br><div class="content-box-style1"><br><h4>Position Important Information at Beginning of List Items</h4><br><p><img class="alignnone size-full wp-image-2748" src="/resources/ux/UX-Tactic-73-Position-Important-Information-at-Beginning-of-List-Items.png" alt="UX Tactic 73 - Position Important Information at Beginning of List Items" srcset="/resources/ux/UX-Tactic-73-Position-Important-Information-at-Beginning-of-List-Items.png 532w, /resources/ux/UX-Tactic-73-Position-Important-Information-at-Beginning-of-List-Items-300x83.png 300w" sizes="(max-width: 532px) 100vw, 532px"></p><br></div><br><div class="content-box-style1"><br><h4>Add Row Stripes to Your Tables</h4><br><p><img class="alignnone size-full wp-image-2749" src="/resources/ux/UX-Tactic-74-Add-Row-Stripes-to-Your-Tables.png" alt="UX Tactic 74 - Add Row Stripes to Your Tables" srcset="/resources/ux/UX-Tactic-74-Add-Row-Stripes-to-Your-Tables.png 423w, /resources/ux/UX-Tactic-74-Add-Row-Stripes-to-Your-Tables-300x107.png 300w" sizes="(max-width: 423px) 100vw, 423px"></p><br></div><br><div class="content-box-style1"><br><h4>Write Standalone Subheadlines</h4><br><p><img class="alignnone size-full wp-image-2750" src="/resources/ux/UX-Tactic-75-Write-Standalone-Subheadlines.png" alt="UX Tactic 75 - Write Standalone Subheadlines" srcset="/resources/ux/UX-Tactic-75-Write-Standalone-Subheadlines.png 449w, /resources/ux/UX-Tactic-75-Write-Standalone-Subheadlines-300x77.png 300w" sizes="(max-width: 449px) 100vw, 449px"></p><br></div><br><div class="content-box-style1"><br><h4>Break Up Text With Visual Variety</h4><br><p><img class="alignnone size-full wp-image-2751" src="/resources/ux/UX-Tactic-76-Break-Up-Text-With-Visual-Variety.png" alt="UX Tactic 76 - Break Up Text With Visual Variety" srcset="/resources/ux/UX-Tactic-76-Break-Up-Text-With-Visual-Variety.png 638w, /resources/ux/UX-Tactic-76-Break-Up-Text-With-Visual-Variety-300x63.png 300w" sizes="(max-width: 638px) 100vw, 638px"></p><br></div><br><h3 id="ux-strategy25">Maximize the Readability of Text</h3><br><p>Obviously, text should be readable.&nbsp;But here are some tips to make it <em>more</em> readable.</p><br><div class="content-box-style1"><br><h4>Create Strong Contrast Between the Text and Background</h4><br><p>Be careful displaying&nbsp;text over backgrounds. You might need to add contrast through an overlay or blur. Let’s add text over my beautiful face…</p><br><p><img class="alignnone size-full wp-image-2752" src="/resources/ux/UX-Tactic-77-Create-Strong-Contrast-Between-the-Text-and-Background.png" alt="UX Tactic 77 - Create Strong Contrast Between the Text and Background" srcset="/resources/ux/UX-Tactic-77-Create-Strong-Contrast-Between-the-Text-and-Background.png 667w, /resources/ux/UX-Tactic-77-Create-Strong-Contrast-Between-the-Text-and-Background-300x143.png 300w" sizes="(max-width: 667px) 100vw, 667px"></p><br></div><br><div class="content-box-style1"><br><h4>Left Align the Majority of Body Text</h4><br><p><img class="alignnone size-full wp-image-2753" src="/resources/ux/UX-Tactic-78-Left-Align-the-Majority-of-Body-Text.png" alt="UX Tactic 78 - Left Align the Majority of Body Text" srcset="/resources/ux/UX-Tactic-78-Left-Align-the-Majority-of-Body-Text.png 458w, /resources/ux/UX-Tactic-78-Left-Align-the-Majority-of-Body-Text-300x88.png 300w" sizes="(max-width: 458px) 100vw, 458px"></p><br></div><br><h3 id="ux-strategy26">Use Consistent Patterns Throughout the Interface</h3><br><p>With inconsistent patterns, users will need more time to learn&nbsp;your interface. Simplify it by maintaining a consistent&nbsp;layout and appearance.</p><br><div class="content-box-style1"><br><h4>Create a Front-End Style Guide</h4><br><p>Create a document summarizing the design specifications for each element in your interface.</p><br><p><img class="alignnone size-full wp-image-2754" src="/resources/ux/UX-Tactic-79-Create-a-Front-End-Style-Guide.png" alt="UX Tactic 79 - Create a Front-End Style Guide" srcset="/resources/ux/UX-Tactic-79-Create-a-Front-End-Style-Guide.png 586w, /resources/ux/UX-Tactic-79-Create-a-Front-End-Style-Guide-300x104.png 300w" sizes="(max-width: 586px) 100vw, 586px"></p><br><p>Other elements include:</p><br><ul><br><li><b>Colors</b></li><br><li><b>Grids and Layouts</b></li><br><li><b>Placement and Positioning</b></li><br><li><b>Size and Shape</b></li><br><li><b>Labels and Language</b></li><br><li><b>Navigation</b></li><br><li><b>Tables</b></li><br><li><b>Lists</b></li><br><li><b>Links</b></li><br><li><b>Voice and Tone</b></li><br></ul><br><p>Need inspiration? Look through&nbsp;<a href="http://ux.mailchimp.com/patterns" target="_blank" rel="external">Mailchimp’s style guide</a>.</p><br></div><br><div class="content-box-style1"><br><h4>Keep Navigation Menus in the Same Position</h4><br><p><img class="alignnone size-full wp-image-2755" src="/resources/ux/UX-Tactic-80-Keep-Navigation-Menus-in-the-Same-Position.png" alt="UX Tactic 80 - Keep Navigation Menus in the Same Position" srcset="/resources/ux/UX-Tactic-80-Keep-Navigation-Menus-in-the-Same-Position.png 496w, /resources/ux/UX-Tactic-80-Keep-Navigation-Menus-in-the-Same-Position-300x90.png 300w" sizes="(max-width: 496px) 100vw, 496px"></p><br></div><br><h3 id="ux-strategy27">Create Beautiful Designs With Visual Balance</h3><br><p>Designs are more usable when they’re aesthetically pleasing — a principle called the <i>aesthetic-usability effect</i> (<a href="http://dl.acm.org/citation.cfm?id=223680" target="_blank" rel="external">Kurosu &amp; Kashimura, 1995</a>).</p><br><div class="content-box-style1"><br><h4>Construct Designs Using Mathematical Principles</h4><br><p><img class="alignnone size-full wp-image-2756" src="/resources/ux/UX-Tactic-81-Construct-Designs-Using-Mathematical-Principles.png" alt="UX Tactic 81 - Construct Designs Using Mathematical Principles" srcset="/resources/ux/UX-Tactic-81-Construct-Designs-Using-Mathematical-Principles.png 502w, /resources/ux/UX-Tactic-81-Construct-Designs-Using-Mathematical-Principles-300x96.png 300w" sizes="(max-width: 502px) 100vw, 502px"></p><br></div><br><div class="content-box-style1"><br><h4>Choose Contrasting Fonts</h4><br><p>When some&nbsp;people choose a matching&nbsp;typeface, they search for a font that looks similar to the existing one. But that’s the wrong approach. Oftentimes, the similarity will look like a mistake.</p><br><p>Instead, be deliberate. Choose typefaces with noticeable contrast.&nbsp;If you’re a newb designer, you can choose a serif vs sans-serif combination (serifs are the “twigs” on the ends of letters).</p><br><p><img class="alignnone size-full wp-image-2757" src="/resources/ux/UX-Tactic-82-Choose-Contrasting-Fonts.png" alt="UX Tactic 82 - Choose Contrasting Fonts" srcset="/resources/ux/UX-Tactic-82-Choose-Contrasting-Fonts.png 455w, /resources/ux/UX-Tactic-82-Choose-Contrasting-Fonts-300x98.png 300w" sizes="(max-width: 455px) 100vw, 455px"></p><br></div><br><h2 id="ux-category4">Maximize the Compatibility for All Users and Scenarios</h2><br><p>Your users are different people with different goals. Design&nbsp;your interface so that it’s compatible for everyone.</p><br><h3 id="ux-strategy28">Maximize Compatibility With the User’s Knowledge and Skill Level</h3><br><p>Your users will be novices, experts, or a mixture. Design your interface&nbsp;accordingly.</p><br><div class="content-box-style1"><br><h4>Use the Proper Amount of Onboarding</h4><br><p>There are four main&nbsp;onboarding strategies:</p><br><p><img class="alignnone size-full wp-image-2767" src="/resources/ux/UX-Tactic-83-Use-the-Proper-Amount-of-Onboarding.png" alt="UX Tactic 83 - Use the Proper Amount of Onboarding" srcset="/resources/ux/UX-Tactic-83-Use-the-Proper-Amount-of-Onboarding.png 646w, /resources/ux/UX-Tactic-83-Use-the-Proper-Amount-of-Onboarding-300x79.png 300w" sizes="(max-width: 646px) 100vw, 646px"></p><br><p>Those four approaches&nbsp;align nicely in&nbsp;a 2 x 2 matrix. Use the following diagram to choose the best approach for your interface.</p><br><p><img class="alignnone size-full wp-image-2766" src="/resources/ux/Onboarding-Matrix.png" alt="Onboarding Matrix" srcset="/resources/ux/Onboarding-Matrix.png 602w, /resources/ux/Onboarding-Matrix-300x187.png 300w" sizes="(max-width: 602px) 100vw, 602px"></p><br></div><br><div class="content-box-style1"><br><h4>Add Tooltips to Coach Novice Users Without Disrupting Expert Users</h4><br><p><img class="alignnone size-full wp-image-2768" src="/resources/ux/UX-Tactic-84-Add-Tooltips-to-Coach-Novice-Users-Without-Disrupting-Expert-Users.png" alt="UX Tactic 84 - Add Tooltips to Coach Novice Users Without Disrupting Expert Users" srcset="/resources/ux/UX-Tactic-84-Add-Tooltips-to-Coach-Novice-Users-Without-Disrupting-Expert-Users.png 421w, /resources/ux/UX-Tactic-84-Add-Tooltips-to-Coach-Novice-Users-Without-Disrupting-Expert-Users-300x98.png 300w" sizes="(max-width: 421px) 100vw, 421px"></p><br></div><br><div class="content-box-style1"><br><h4>Use Card Sorting to Construct the Information Architecture</h4><br><ul><br><li>Use <b>open card sorting</b> if you want to see how users&nbsp;determine or conceptualize the menu categories.</li><br><li>Use <b>closed card sorting</b> if you want to see how users&nbsp;organize existing elements into pre-determined categories.</li><br></ul><br><p><img class="alignnone size-full wp-image-2769" src="/resources/ux/UX-Tactic-85-Use-Card-Sorting-to-Construct-the-Information-Acrhitecture.png" alt="UX Tactic 85 - Use Card Sorting to Construct the Information Acrhitecture" srcset="/resources/ux/UX-Tactic-85-Use-Card-Sorting-to-Construct-the-Information-Acrhitecture.png 445w, /resources/ux/UX-Tactic-85-Use-Card-Sorting-to-Construct-the-Information-Acrhitecture-300x117.png 300w" sizes="(max-width: 445px) 100vw, 445px"></p><br></div><br><h3 id="ux-strategy29">Maximize Compatibility With the User’s Workflow</h3><br><p>Users will have different needs. Customize your interface toward&nbsp;those different&nbsp;workflows.</p><br><div class="content-box-style1"><br><h4>Let Users Control the Appearance of Data</h4><br><p><img class="alignnone size-full wp-image-2770" src="/resources/ux/UX-Tactic-86-Let-Users-Control-the-Appearance-of-Data.png" alt="UX Tactic 86 - Let Users Control the Appearance of Data" srcset="/resources/ux/UX-Tactic-86-Let-Users-Control-the-Appearance-of-Data.png 409w, /resources/ux/UX-Tactic-86-Let-Users-Control-the-Appearance-of-Data-300x252.png 300w" sizes="(max-width: 409px) 100vw, 409px"></p><br></div><br><div class="content-box-style1"><br><h4>Let Users Control the Order of Data</h4><br><p><img class="alignnone size-full wp-image-2771" src="/resources/ux/UX-Tactic-87-Let-Users-Control-the-Order-of-Data.png" alt="UX Tactic 87 - Let Users Control the Order of Data" srcset="/resources/ux/UX-Tactic-87-Let-Users-Control-the-Order-of-Data.png 445w, /resources/ux/UX-Tactic-87-Let-Users-Control-the-Order-of-Data-300x116.png 300w" sizes="(max-width: 445px) 100vw, 445px"></p><br><p>Other sorting criteria include:</p><br><ul><br><li><b>Alphabetically</b></li><br><li><b>Availability</b></li><br><li><b>Categorically</b></li><br><li><b>Date</b></li><br><li><b>Distance</b></li><br><li><b>Popularity</b></li><br><li><b>Price</b></li><br><li><b>Relevance</b></li><br><li><b>Size</b></li><br></ul><br></div><br><div class="content-box-style1"><br><h4>Let Users Control the Quantity of Data</h4><br><p><img class="alignnone size-full wp-image-2772" src="/resources/ux/UX-Tactic-88-Let-Users-Control-the-Quantity-of-Data.png" alt="UX Tactic 88 - Let Users Control the Quantity of Data" srcset="/resources/ux/UX-Tactic-88-Let-Users-Control-the-Quantity-of-Data.png 477w, /resources/ux/UX-Tactic-88-Let-Users-Control-the-Quantity-of-Data-300x113.png 300w" sizes="(max-width: 477px) 100vw, 477px"></p><br></div><br><div class="content-box-style1"><br><h4>Construct&nbsp;Personas to&nbsp;Identify Specific Workflows</h4><br><p><img class="alignnone size-full wp-image-2774" src="/resources/ux/UX-Tactic-90-Use-Personas-to-Optimize-the-Interface.png" alt="UX Tactic 90 - Use Personas to Optimize the Interface" srcset="/resources/ux/UX-Tactic-90-Use-Personas-to-Optimize-the-Interface.png 385w, /resources/ux/UX-Tactic-90-Use-Personas-to-Optimize-the-Interface-300x241.png 300w" sizes="(max-width: 385px) 100vw, 385px"></p><br></div><br><div class="content-box-style1"><br><h4>Let Users Open Pages in New Tabs</h4><br><p>Many users will <a href="https://www.nngroup.com/articles/multi-tab-page-parking/" target="_blank" rel="external">page park</a>. They’ll open tabs to read later.</p><br><p><img class="alignnone size-full wp-image-2775" src="/resources/ux/UX-Tactic-91-Let-Users-Open-Pages-in-New-Tabs.png" alt="UX Tactic 91 - Let Users Open Pages in New Tabs" srcset="/resources/ux/UX-Tactic-91-Let-Users-Open-Pages-in-New-Tabs.png 457w, /resources/ux/UX-Tactic-91-Let-Users-Open-Pages-in-New-Tabs-300x110.png 300w" sizes="(max-width: 457px) 100vw, 457px"></p><br></div><br><h3 id="ux-strategy30">Maximize the Accessibility of Your Interface</h3><br><p>Make your interface accessible to&nbsp;people with disabilities. Not only is it a best practice, but you could also face <a href="https://en.wikipedia.org/wiki/Americans_with_Disabilities_Act_of_1990" target="_blank" rel="external">legal consequences</a> (depending on your product).</p><br><div class="content-box-style1"><br><h4>Use Semantic Labels in HTML5</h4><br><p><img class="alignnone size-full wp-image-2776" src="/resources/ux/UX-Tactic-92-Use-Semantic-Labels-in-HTML5.png" alt="UX Tactic 92 - Use Semantic Labels in HTML5" srcset="/resources/ux/UX-Tactic-92-Use-Semantic-Labels-in-HTML5.png 426w, /resources/ux/UX-Tactic-92-Use-Semantic-Labels-in-HTML5-300x149.png 300w" sizes="(max-width: 426px) 100vw, 426px"></p><br></div><br><div class="content-box-style1"><br><h4>Use Multiple Cues to Communicate Information</h4><br><p>Around 8&nbsp;percent of males&nbsp;are colorblind (<a href="http://apfmj.biomedcentral.com/articles/10.1186/s12930-014-0010-3" target="_blank" rel="external">Chan, Goh, &amp; Tan, 2014</a>).&nbsp;Never convey meaning through color alone. Always offer&nbsp;additional cues.</p><br><p><img class="alignnone size-full wp-image-2777" src="/resources/ux/UX-Tactic-93-Use-Multiple-Cues-to-Communicate-Information.png" alt="UX Tactic 93 - Use Multiple Cues to Communicate Information" srcset="/resources/ux/UX-Tactic-93-Use-Multiple-Cues-to-Communicate-Information.png 452w, /resources/ux/UX-Tactic-93-Use-Multiple-Cues-to-Communicate-Information-300x108.png 300w" sizes="(max-width: 452px) 100vw, 452px"></p><br></div><br><h3 id="ux-strategy31">Maximize Compatibility for All Inputs and Extreme Cases</h3><br><p>Users should be able to enter a wide range of input without consequences.</p><br><div class="content-box-style1"><br><h4>Resolve Unfavorable Outcomes in Automatically Generated Messages</h4><br><p><img class="alignnone size-full wp-image-2778" src="/resources/ux/UX-Tactic-94-Resolve-Unfavorable-Outcomes-in-Automatically-Generated-Messages.png" alt="UX Tactic 94 - Resolve Unfavorable Outcomes in Automatically Generated Messages"></p><br></div><br><div class="content-box-style1"><br><h4>Use Form Elements That Accept Various Formats of Input</h4><br><p><img class="alignnone size-full wp-image-2779" src="/resources/ux/UX-Tactic-95-Use-Form-Elements-That-Accept-Various-Formats-of-Input.png" alt="UX Tactic 95 - Use Form Elements That Accept Various Formats of Input"></p><br></div><br><div class="content-box-style1"><br><h4>Display Results That Solve the Searcher’s Need</h4><br><p><img class="alignnone size-full wp-image-2780" src="/resources/ux/UX-Tactic-96-Display-Results-That-Solve-the-Searchers-Need.png" alt="UX Tactic 96 - Display Results That Solve the Searcher's Need" srcset="/resources/ux/UX-Tactic-96-Display-Results-That-Solve-the-Searchers-Need.png 625w, /resources/ux/UX-Tactic-96-Display-Results-That-Solve-the-Searchers-Need-300x86.png 300w" sizes="(max-width: 625px) 100vw, 625px"></p><br></div><br><div class="content-box-style1"><br><h4>Use Search Fields That Handle Typos, Synonyms, and Variants</h4><br><p><img class="alignnone size-full wp-image-2781" src="/resources/ux/UX-Tactic-97-Use-Search-Fields-That-Handle-Typos-Synonyms-and-Variants.png" alt="UX Tactic 97 - Use Search Fields That Handle Typos, Synonyms, and Variants" srcset="/resources/ux/UX-Tactic-97-Use-Search-Fields-That-Handle-Typos-Synonyms-and-Variants.png 627w, /resources/ux/UX-Tactic-97-Use-Search-Fields-That-Handle-Typos-Synonyms-and-Variants-300x86.png 300w" sizes="(max-width: 627px) 100vw, 627px"></p><br></div><br><h3 id="ux-strategy32">Maximize Compatibility for All Mediums</h3><br><p>Your interface should work in all environments (e.g., devices, browsers, etc.).</p><br><div class="content-box-style1"><br><h4>Customize Instructions for the User’s Browser</h4><br><p><img class="alignnone size-full wp-image-2782" src="/resources/ux/UX-Tactic-98-Customize-Instructions-for-the-Users-Browser.png" alt="UX Tactic 98 - Customize Instructions for the User's Browser" srcset="/resources/ux/UX-Tactic-98-Customize-Instructions-for-the-Users-Browser.png 409w, /resources/ux/UX-Tactic-98-Customize-Instructions-for-the-Users-Browser-300x116.png 300w" sizes="(max-width: 409px) 100vw, 409px"></p><br></div><br><div class="content-box-style1"><br><h4>Use One-Window Drilldowns on Small Devices</h4><br><p><img class="alignnone size-full wp-image-2783" src="/resources/ux/UX-Tactic-99-Use-One-Window-Drilldowns-on-Small-Devices.png" alt="UX Tactic 99 - Use One-Window Drilldowns on Small Devices"></p><br></div><br><h2 id="ux-category5">Help Users Minimize and Overcome Potential Errors</h2><br><p>In most interfaces, errors are unavoidable. If&nbsp;they do happen, help users overcome them quickly and easily.</p><br><h3 id="ux-strategy33">Prevent the Possibility of Errors</h3><br><p>When designing your interface, don’t immediately focus on solutions. Rather, try to make&nbsp;errors impossible to occur (referred to as <a href="https://en.wikipedia.org/wiki/Poka-yoke" target="_blank" rel="external">poka-yoke</a>).</p><br><div class="content-box-style1"><br><h4>Remove, Disable, or Replace Buttons When Users Click Them</h4><br><p>Don’t tell users to click “Submit” once. If they <em>can</em> click&nbsp;more than once, they <em>will</em>. Instead, disable buttons when users click them. That way, duplicate submissions are impossible.</p><br><p><img class="alignnone size-full wp-image-2786" src="/resources/ux/UX-Tactic-100-Remove-Disable-or-Replace-Buttons-When-Users-Click-Them.png" alt="UX Tactic 100 - Remove, Disable, or Replace Buttons When Users Click Them"></p><br></div><br><div class="content-box-style1"><br><h4>Only Offer Inputs That Are Acceptable</h4><br><p><img class="alignnone size-full wp-image-2787" src="/resources/ux/UX-Tactic-101-Only-Offer-Inputs-That-Are-Acceptable.png" alt="UX Tactic 101 - Only Offer Inputs That Are Acceptable" srcset="/resources/ux/UX-Tactic-101-Only-Offer-Inputs-That-Are-Acceptable.png 506w, /resources/ux/UX-Tactic-101-Only-Offer-Inputs-That-Are-Acceptable-300x205.png 300w" sizes="(max-width: 506px) 100vw, 506px"></p><br></div><br><div class="content-box-style1"><br><h4>Use Responsive Enabling or Disclosure in Form Elements</h4><br><p><img class="alignnone size-full wp-image-2788" src="/resources/ux/UX-Tactic-102-Use-Responsive-Enabling-or-Dlsclosure-in-Form-Elements.png" alt="UX Tactic 102 - Use Responsive Enabling or Disclosure in Form Elements" srcset="/resources/ux/UX-Tactic-102-Use-Responsive-Enabling-or-Dlsclosure-in-Form-Elements.png 556w, /resources/ux/UX-Tactic-102-Use-Responsive-Enabling-or-Dlsclosure-in-Form-Elements-300x153.png 300w" sizes="(max-width: 556px) 100vw, 556px"></p><br></div><br><div class="content-box-style1"><br><h4>Structure Text Fields to Match the Required Input</h4><br><p><img class="alignnone size-full wp-image-2789" src="/resources/ux/UX-Tactic-103-Structure-Text-Fields-to-Match-the-Required-Input.png" alt="UX Tactic 103 - Structure Text Fields to Match the Required Input" srcset="/resources/ux/UX-Tactic-103-Structure-Text-Fields-to-Match-the-Required-Input.png 414w, /resources/ux/UX-Tactic-103-Structure-Text-Fields-to-Match-the-Required-Input-300x84.png 300w" sizes="(max-width: 414px) 100vw, 414px"></p><br></div><br><h3 id="ux-strategy34">Monitor Signals That Are Typical in Errors</h3><br><p>What are common errors in your interface? Identify&nbsp;signals that are inherent in those&nbsp;errors. Then monitor when those signals&nbsp;occur.</p><br><div class="content-box-style1"><br><h4>Search for Wording That Contradicts User Intent</h4><br><p><img class="alignnone size-full wp-image-2790" src="/resources/ux/UX-Tactic-104-Search-for-Wording-That-Contradicts-User-Intent.png" alt="UX Tactic 104 - Search for Wording That Contradicts User Intent" srcset="/resources/ux/UX-Tactic-104-Search-for-Wording-That-Contradicts-User-Intent.png 515w, /resources/ux/UX-Tactic-104-Search-for-Wording-That-Contradicts-User-Intent-300x72.png 300w" sizes="(max-width: 515px) 100vw, 515px"></p><br></div><br><div class="content-box-style1"><br><h4>Remind Users if They’ve Already Purchased an Item</h4><br><p><img class="alignnone size-full wp-image-2791" src="/resources/ux/UX-Tactic-105-Remind-Users-if-Theyve-Already-Purchased-an-Item.png" alt="UX Tactic 105 - Remind Users if They've Already Purchased an Item"></p><br></div><br><h3 id="ux-strategy35">Differentiate Powerful Functions to Minimize Slips</h3><br><p>Users will lose focus. You can’t prevent it. However, you should visually&nbsp;distinguish powerful functions so that&nbsp;you minimize the possibility of damaging&nbsp;errors.</p><br><div class="content-box-style1"><br><h4>Separate Powerful Functions by Space or Color</h4><br><p><img class="alignnone size-full wp-image-2792" src="/resources/ux/UX-Tactic-106-Separate-Powerful-Functions-by-Space-or-Color.png" alt="UX Tactic 106 - Separate Powerful Functions by Space or Color" srcset="/resources/ux/UX-Tactic-106-Separate-Powerful-Functions-by-Space-or-Color.png 429w, /resources/ux/UX-Tactic-106-Separate-Powerful-Functions-by-Space-or-Color-300x115.png 300w" sizes="(max-width: 429px) 100vw, 429px"></p><br></div><br><div class="content-box-style1"><br><h4>Add Constraints to Significant Irreversible Changes</h4><br><p><img class="alignnone size-full wp-image-2793" src="/resources/ux/UX-Tactic-107-Add-Constraints-to-Significant-Irreversible-Changes.png" alt="UX Tactic 107 - Add Constraints to Significant Irreversible Changes" srcset="/resources/ux/UX-Tactic-107-Add-Constraints-to-Significant-Irreversible-Changes.png 535w, /resources/ux/UX-Tactic-107-Add-Constraints-to-Significant-Irreversible-Changes-300x79.png 300w" sizes="(max-width: 535px) 100vw, 535px"></p><br></div><br><h3 id="ux-strategy36">Provide Easy Ways to Revert or Escape</h3><br><p>Always give users the option&nbsp;to return to a previous page or safe/recognizable area.</p><br><div class="content-box-style1"><br><h4>Use Undos Rather Than Confirmations</h4><br><p><img class="alignnone size-full wp-image-2794" src="/resources/ux/UX-Tactic-108-Use-Undos-Rather-Than-Confirmations.png" alt="UX Tactic 108 - Use Undos Rather Than Confirmations" srcset="/resources/ux/UX-Tactic-108-Use-Undos-Rather-Than-Confirmations.png 433w, /resources/ux/UX-Tactic-108-Use-Undos-Rather-Than-Confirmations-300x98.png 300w" sizes="(max-width: 433px) 100vw, 433px"></p><br></div><br><div class="content-box-style1"><br><h4>Offer an Escape Hatch on All Pages and Functions</h4><br><p>For example, some drop down menus offer no escape hatch. When users click an option, they can’t leave it blank anymore.</p><br><p><img class="alignnone size-full wp-image-2795" src="/resources/ux/UX-Tactic-109-Offer-an-Escape-Hatch-on-All-Pages-and-Functions.png" alt="UX Tactic 109 - Offer an Escape Hatch on All Pages and Functions" srcset="/resources/ux/UX-Tactic-109-Offer-an-Escape-Hatch-on-All-Pages-and-Functions.png 437w, /resources/ux/UX-Tactic-109-Offer-an-Escape-Hatch-on-All-Pages-and-Functions-300x124.png 300w" sizes="(max-width: 437px) 100vw, 437px"></p><br></div><br><div class="content-box-style1"><br><h4>Provide a Visible Close on Popups and Modal Boxes</h4><br><p><img class="alignnone size-full wp-image-2796" src="/resources/ux/UX-Tactic-110-Provide-a-Visible-Close-on-Popups-and-Modal-Boxes.png" alt="UX Tactic 110 - Provide a Visible Close on Popups and Modal Boxes" srcset="/resources/ux/UX-Tactic-110-Provide-a-Visible-Close-on-Popups-and-Modal-Boxes.png 424w, /resources/ux/UX-Tactic-110-Provide-a-Visible-Close-on-Popups-and-Modal-Boxes-300x112.png 300w" sizes="(max-width: 424px) 100vw, 424px"></p><br></div><br><h3 id="ux-strategy37">Minimize the Negative Effects of Leaving Sequences</h3><br><p>Users should be able to&nbsp;return to a sequence in the same position with the same data.</p><br><div class="content-box-style1"><br><h4>Save Data That Users Enter</h4><br><p><img class="alignnone size-full wp-image-2797" src="/resources/ux/UX-Tactic-111-Save-Data-That-Users-Enter.png" alt="UX Tactic 111 - Save Data That Users Enter" srcset="/resources/ux/UX-Tactic-111-Save-Data-That-Users-Enter.png 618w, /resources/ux/UX-Tactic-111-Save-Data-That-Users-Enter-300x60.png 300w" sizes="(max-width: 618px) 100vw, 618px"></p><br></div><br><div class="content-box-style1"><br><h4>Let Users Return to the Same Position in a Sequence</h4><br><p><img class="alignnone size-full wp-image-2798" src="/resources/ux/UX-Tactic-112-Let-Users-Return-to-the-Same-Position-in-a-Sequence.png" alt="UX Tactic 112 - Let Users Return to the Same Position in a Sequence" srcset="/resources/ux/UX-Tactic-112-Let-Users-Return-to-the-Same-Position-in-a-Sequence.png 469w, /resources/ux/UX-Tactic-112-Let-Users-Return-to-the-Same-Position-in-a-Sequence-300x95.png 300w" sizes="(max-width: 469px) 100vw, 469px"></p><br></div><br><h3 id="ux-strategy38">Extend Movable Paths and Clickable Areas</h3><br><p>Users aren’t perfect. They make mistakes&nbsp;with&nbsp;the cursor. Create interfaces that are flexible and forgiving.</p><br><div class="content-box-style1"><br><h4>Add a Transparent Border to Small Buttons</h4><br><p><img class="alignnone size-full wp-image-2800" src="/resources/ux/UX-Tactic-113-Add-a-Transparent-Border-to-Small-Buttons.png" alt="UX Tactic 113 - Add a Transparent Border to Small Buttons" srcset="/resources/ux/UX-Tactic-113-Add-a-Transparent-Border-to-Small-Buttons.png 339w, /resources/ux/UX-Tactic-113-Add-a-Transparent-Border-to-Small-Buttons-300x124.png 300w" sizes="(max-width: 339px) 100vw, 339px"></p><br></div><br><div class="content-box-style1"><br><h4>Add a Slight Delay to Hover Pop Ups and Drop Down Menus</h4><br><p><img class="alignnone size-full wp-image-2801" src="/resources/ux/UX-Tactic-114-Add-a-Slight-Delay-to-Hover-Pop-Ups-and-Drop-Down-Menus.png" alt="UX Tactic 114 - Add a Slight Delay to Hover Pop Ups and Drop Down Menus" srcset="/resources/ux/UX-Tactic-114-Add-a-Slight-Delay-to-Hover-Pop-Ups-and-Drop-Down-Menus.png 303w, /resources/ux/UX-Tactic-114-Add-a-Slight-Delay-to-Hover-Pop-Ups-and-Drop-Down-Menus-300x154.png 300w" sizes="(max-width: 303px) 100vw, 303px"></p><br></div><br><div class="content-box-style1"><br><h4>Hyperlink the Entire Menu Option Container</h4><br><p><img class="alignnone size-full wp-image-2802" src="/resources/ux/UX-Tactic-115-Hyperlink-the-Entire-Menu-Option-Container.png" alt="UX Tactic 115 - Hyperlink the Entire Menu Option Container" srcset="/resources/ux/UX-Tactic-115-Hyperlink-the-Entire-Menu-Option-Container.png 479w, /resources/ux/UX-Tactic-115-Hyperlink-the-Entire-Menu-Option-Container-300x86.png 300w" sizes="(max-width: 479px) 100vw, 479px"></p><br></div><br><div class="content-box-style1"><br><h4>Hyperlink Primary&nbsp;Menus, List Items,&nbsp;and Complementary Icons</h4><br><p>Oftentimes, users click items that aren’t clickable. Don’t fight those mistakes. Instead, add clickable functionality to those common areas.</p><br><p><img class="alignnone size-full wp-image-2845" src="/resources/ux/UX-Tactic-116-Hyperlink-Primary-Menus-List-Items-and-Complementary-Icons.png" alt="UX Tactic 116 - Hyperlink Primary Menus, List Items, and Complementary Icons" srcset="/resources/ux/UX-Tactic-116-Hyperlink-Primary-Menus-List-Items-and-Complementary-Icons.png 446w, /resources/ux/UX-Tactic-116-Hyperlink-Primary-Menus-List-Items-and-Complementary-Icons-300x199.png 300w" sizes="(max-width: 446px) 100vw, 446px"></p><br></div><br><h3 id="ux-strategy39">Provide Useful and Supportive Error Messages</h3><br><p>Never give&nbsp;a standard “there was an error” message. Explain the reason — and ideally the solution — to the error.</p><br><div class="content-box-style1"><br><h4>Explain the Reason for Validation Errors</h4><br><p><img class="alignnone size-full wp-image-2804" src="/resources/ux/UX-Tactic-117-Explain-the-Reason-for-Validation-Errors.png" alt="UX Tactic 117 - Explain the Reason for Validation Errors"></p><br></div><br><div class="content-box-style1"><br><h4>Point Users Toward Documentation or Support for Complex Errors</h4><br><p><img class="alignnone size-full wp-image-2805" src="/resources/ux/UX-Tactic-118-Point-Users-Toward-Documentation-or-Support-for-Complex-Errors.png" alt="UX Tactic 118 - Point Users Toward Documentation or Support for Complex Errors"></p><br></div><br><div class="content-box-style1"><br><h4>Avoid Saying “You” in Error Messages</h4><br><p><img class="alignnone size-full wp-image-2848" src="/resources/ux/UX-Tactic-119-Avoid-Saying-22You22-in-Error-Messages.png" alt="UX Tactic 119 - Avoid Saying %22You%22 in Error Messages" srcset="/resources/ux/UX-Tactic-119-Avoid-Saying-22You22-in-Error-Messages.png 411w, /resources/ux/UX-Tactic-119-Avoid-Saying-22You22-in-Error-Messages-300x83.png 300w" sizes="(max-width: 411px) 100vw, 411px"></p><br></div><br><h3 id="ux-strategy40">Keep a Record of the User’s Previous Actions</h3><br><p>Remind users of their past actions in your interface.</p><br><div class="content-box-style1"><br><h4>Display the User’s Recent Searches</h4><br><p><img class="alignnone size-full wp-image-2807" src="/resources/ux/UX-Tactic-120-Display-the-Users-Recent-Searches.png" alt="UX Tactic 120 - Display the User's Recent Searches" srcset="/resources/ux/UX-Tactic-120-Display-the-Users-Recent-Searches.png 479w, /resources/ux/UX-Tactic-120-Display-the-Users-Recent-Searches-300x113.png 300w" sizes="(max-width: 479px) 100vw, 479px"></p><br></div><br><div class="content-box-style1"><br><h4>Use Different Colors for Visited Links</h4><br><p><img class="alignnone size-full wp-image-2808" src="/resources/ux/UX-Tactic-121-Use-Different-Colors-for-Visited-Links.png" alt="UX Tactic 121 - Use Different Colors for Visited Links" srcset="/resources/ux/UX-Tactic-121-Use-Different-Colors-for-Visited-Links.png 485w, /resources/ux/UX-Tactic-121-Use-Different-Colors-for-Visited-Links-300x87.png 300w" sizes="(max-width: 485px) 100vw, 485px"></p><br></div><br><div class="content-box-style1"><br><h4>Indicate Which Items Users Have Already Viewed</h4><br><p><img class="alignnone size-full wp-image-2809" src="/resources/ux/UX-Tactic-122-Indicate-Which-Items-Users-Have-Already-Viewed.png" alt="UX Tactic 122 - Indicate Which Items Users Have Already Viewed" srcset="/resources/ux/UX-Tactic-122-Indicate-Which-Items-Users-Have-Already-Viewed.png 368w, /resources/ux/UX-Tactic-122-Indicate-Which-Items-Users-Have-Already-Viewed-300x117.png 300w" sizes="(max-width: 368px) 100vw, 368px"></p><br></div><br><h3 id="ux-strategy41">Analyze User Behavior to Find Interface Issues</h3><br><p>Always iterate and improve your&nbsp;interface.&nbsp;Use these tactics&nbsp;to get started.</p><br><div class="content-box-style1"><br><h4>Gather User Feedback in Appropriate Places</h4><br><p><img class="alignnone size-full wp-image-2810" src="/resources/ux/UX-Tactic-123-Gather-User-Feedback-in-Appropriate-Places.png" alt="UX Tactic 123 - Gather User Feedback in Appropriate Places" srcset="/resources/ux/UX-Tactic-123-Gather-User-Feedback-in-Appropriate-Places.png 443w, /resources/ux/UX-Tactic-123-Gather-User-Feedback-in-Appropriate-Places-300x97.png 300w" sizes="(max-width: 443px) 100vw, 443px"></p><br></div><br><div class="content-box-style1"><br><h4>Create Alerts for Increases in 404 Errors</h4><br><p><img class="alignnone size-full wp-image-2811" src="/resources/ux/UX-Tactic-124-Create-Alerts-for-Increases-in-404-Errors.png" alt="UX Tactic 124 - Create Alerts for Increases in 404 Errors" srcset="/resources/ux/UX-Tactic-124-Create-Alerts-for-Increases-in-404-Errors.png 632w, /resources/ux/UX-Tactic-124-Create-Alerts-for-Increases-in-404-Errors-300x81.png 300w" sizes="(max-width: 632px) 100vw, 632px"></p><br></div><br><div class="content-box-style1"><br><h4>Identify Pages Where Users Are Pogo-Sticking</h4><br><p>If a page is receiving many views (yet few unique views), then double check whether users are pogo sticking on that page</p><br><p><img class="alignnone size-full wp-image-2812" src="/resources/ux/UX-Tactic-125-Identify-Pages-Where-Users-Are-Pogo-Sticking.png" alt="UX Tactic 125 - Identify Pages Where Users Are Pogo-Sticking"></p><br></div><br><h2 id="reference">Final Thoughts</h2><br><h3>How I Compiled These Tactics</h3><br><p>I usually focus heavily on academic research. However, the field of web usability is evolving so quickly. So I couldn’t find many useful and timely studies. Instead, I compiled the tactics by reading a bunch of UX/UI books.</p><br><p>Maybe I went a little overboard…</p><br><p><img class="size-full wp-image-2859 aligncenter" src="/resources/ux/UX-Books.jpg" alt="UX Books" srcset="/resources/ux/UX-Books.jpg 400w, /resources/ux/UX-Books-291x300.jpg 291w" sizes="(max-width: 400px) 100vw, 400px"></p><br><p>I read those books from cover to cover, looking for&nbsp;concrete actionable&nbsp;tactics. Afterward,&nbsp;I supplemented my list by (a)&nbsp;going through&nbsp;online guides (e.g., <a href="http://goodui.org" target="_blank" rel="external">GoodUI</a> has a great list) and (b) studying current platforms&nbsp;with strong reputations for usability&nbsp;(e.g., Mailchimp).</p><br><p>Here are the books from the previous&nbsp;image (from top to bottom):</p><br><ol><br><li><a href="http://www.amazon.com/gp/product/0465050654/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0465050654&amp;linkCode=as2&amp;tag=nickkole-20&amp;linkId=GWC4CFAJ4EXMVBUL" target="_blank" rel="external">The Design of Everyday Things</a> by Don Norman</li><br><li><a href="http://www.amazon.com/gp/product/0321703545/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321703545&amp;linkCode=as2&amp;tag=nickkole-20&amp;linkId=AWCDACQTTU7V64OM" target="_blank" rel="external">Simple and Usable</a> by Giles Colborne</li><br><li><a href="http://www.amazon.com/gp/product/1449372864/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1449372864&amp;linkCode=as2&amp;tag=nickkole-20&amp;linkId=J6LMI3J7J4URYTEO" target="_blank" rel="external">UX Strategy</a> by Jaime Levy</li><br><li><a href="http://www.amazon.com/gp/product/1449311652/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1449311652&amp;linkCode=as2&amp;tag=nickkole-20&amp;linkId=6A4MQKEIPTJ46VNE" target="_blank" rel="external">Lean UX</a> by Jeff Gothelf and Josh Seiden</li><br><li><a href="http://www.amazon.com/gp/product/1491945923/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1491945923&amp;linkCode=as2&amp;tag=nickkole-20&amp;linkId=YP6DMVT3ZDJUNREB" target="_blank" rel="external">Microinteractions</a> by Dan Saffer</li><br><li><a href="http://www.amazon.com/gp/product/0982634811/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0982634811&amp;linkCode=as2&amp;tag=nickkole-20&amp;linkId=N6KC6NVKA3VDQ6FA" target="_blank" rel="external">Interdisciplinary Interaction Design </a>by James Pannafino</li><br><li><a href="http://www.amazon.com/gp/product/0321965515/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321965515&amp;linkCode=as2&amp;tag=nickkole-20&amp;linkId=CHVYENGYPTGI4UKE" target="_blank" rel="external">Don’t Make Me Think</a> by Steve Krug</li><br><li><a href="http://www.amazon.com/gp/product/0321767535/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321767535&amp;linkCode=as2&amp;tag=nickkole-20&amp;linkId=ZB6T26WME44CVSKR" target="_blank" rel="external">100 Things Every Designer Needs to Know About People</a> by Susan Weinschenk</li><br><li><a href="http://www.amazon.com/gp/product/0134196031/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0134196031&amp;linkCode=as2&amp;tag=nickkole-20&amp;linkId=GKEC4QEHOX2UA7YP" target="_blank" rel="external">100 MORE&nbsp;Things&nbsp;Every Designer Needs to Know About People</a> by Susan Weinschenk</li><br><li><a href="http://www.amazon.com/gp/product/0321603605/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321603605&amp;linkCode=as2&amp;tag=nickkole-20&amp;linkId=JPARDVFGJYUTTMBO" target="_blank" rel="external">Neuro Web Design</a> by Susan Weinschenk</li><br><li><a href="http://www.amazon.com/gp/product/0133966151/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0133966151&amp;linkCode=as2&amp;tag=nickkole-20&amp;linkId=JYLPJQ4L7YLQWLBR" target="_blank" rel="external">The Non-Designer’s Design Book</a> by Robin Williams</li><br><li><a href="http://www.amazon.com/gp/product/012386531X/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=012386531X&amp;linkCode=as2&amp;tag=nickkole-20&amp;linkId=R5QMBJ4ORBFL64SU" target="_blank" rel="external">Design for Emotion </a>by Trevor van Gorp and Edie Adams</li><br><li><a href="http://www.amazon.com/gp/product/1118185471/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1118185471&amp;linkCode=as2&amp;tag=nickkole-20&amp;linkId=XSM4HWUEGXE33SYK" target="_blank" rel="external">Usable Usability</a> by Eric Reiss</li><br><li><a href="http://www.amazon.com/gp/product/0123708966/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0123708966&amp;linkCode=as2&amp;tag=nickkole-20&amp;linkId=PTUZFR2AJPAZ6CY5" target="_blank" rel="external">Visual Thinking for Design</a> by Colin Ware</li><br><li><a href="http://www.amazon.com/gp/product/0123852412/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0123852412&amp;linkCode=as2&amp;tag=nickkole-20&amp;linkId=OVBNSG4FJ4SGJ7DP" target="_blank" rel="external">The UX Book</a> by Rex Hartson and Pardha Pyla</li><br><li><a href="http://www.amazon.com/gp/product/1449379702/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1449379702&amp;linkCode=as2&amp;tag=nickkole-20&amp;linkId=DXKX4WIZTE47DH5X" target="_blank" rel="external">Designing Interfaces</a> by Jenifer Tidwell</li><br><li><a href="http://www.amazon.com/gp/product/1449372635/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1449372635&amp;linkCode=as2&amp;tag=nickkole-20&amp;linkId=J2BBVACMM6NF3HE7" target="_blank" rel="external">CSS Secrets</a> by Lea Verou</li><br><li><a href="http://www.amazon.com/gp/product/1592539270/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1592539270&amp;linkCode=as2&amp;tag=nickkole-20&amp;linkId=2UV7ZX2RV5QSONVK" target="_blank" rel="external">Design Elements: A Graphic Style Manual</a> by Timothy Samara</li><br><li><a href="http://www.amazon.com/gp/product/0495572810/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0495572810&amp;linkCode=as2&amp;tag=nickkole-20&amp;linkId=2YCNP6GOIR5H7R3C" target="_blank" rel="external">Graphic Design Solutions</a> by Robin Landa</li><br><li><a href="http://www.amazon.com/gp/product/1592535879/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1592535879&amp;linkCode=as2&amp;tag=nickkole-20&amp;linkId=VYERLRXD7WRVDQAJ" target="_blank" rel="external">Universal Principles of Design</a> by William Lidwell, Kristina Holden, &amp; Jill Butler</li><br><li><a href="http://www.amazon.com/gp/product/1592538037/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1592538037&amp;linkCode=as2&amp;tag=nickkole-20&amp;linkId=WDUUK37TVRPLWAXL" target="_blank" rel="external">Digital Design Essentials</a> by Raj Lal</li><br><li><a href="http://www.amazon.com/gp/product/1592537561/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1592537561&amp;linkCode=as2&amp;tag=nickkole-20&amp;linkId=JMU6CGUULKFKYLEL" target="_blank" rel="external">Universal Methods of Design</a> &nbsp;by Bella Martin and Bruce Harrington</li><br><li><a href="http://www.amazon.com/gp/product/0961392118/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0961392118&amp;linkCode=as2&amp;tag=nickkole-20&amp;linkId=VEJJCKZEKYAMLMQD" target="_blank" rel="external">Envisioning Information</a> by Edward Tufte</li><br></ol><br></div>
+      
+    </div>
+    
+  </div>
+  
+    
+    
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/06/14/duoshuo-disqus-comment-count/">
+                    获取多说和 Disqus 文章评论数的方法
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+
+
+
+
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ux-category1"><span class="toc-number">1.</span> <span class="toc-text">Control the User’s Focus and Attention</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy1"><span class="toc-number">1.1.</span> <span class="toc-text">Emphasize a Point of Entry in the Interface</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.1.</span> <span class="toc-text">Add Visual Contrast to Page Headlines</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy2"><span class="toc-number">1.2.</span> <span class="toc-text">Guide Users Through a Visual Hierarchy</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.2.1.</span> <span class="toc-text">Avoid Trapping Negative Space in the Composition</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.2.2.</span> <span class="toc-text">Use a One Column Layout</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.2.3.</span> <span class="toc-text">Overlap a Design Element to Emphasize Continuity</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy3"><span class="toc-number">1.3.</span> <span class="toc-text">Design the Layout Using Gestalt Principles</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.3.1.</span> <span class="toc-text">Group Similar Functions or Menu Items by Proximity</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.3.2.</span> <span class="toc-text">Position Headlines Closer to Respective Sections</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.3.3.</span> <span class="toc-text">Constrain Headlines to Respective Sections</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy4"><span class="toc-number">1.4.</span> <span class="toc-text">Depict Interface Changes Without Disrupting the User</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.4.1.</span> <span class="toc-text">Visibly Animate Changes in the Interface</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.4.2.</span> <span class="toc-text">Differentiate Elements That Triggered an Error</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy5"><span class="toc-number">1.5.</span> <span class="toc-text">Remove or Deemphasize Unnecessary Information</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.5.1.</span> <span class="toc-text">Obscure Backgrounds Behind Popup or Modal Boxes</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.5.2.</span> <span class="toc-text">Maximize Data-Ink Ratios in All Imagery</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.5.3.</span> <span class="toc-text">Remove Unnecessary Borders From Design Elements</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.5.4.</span> <span class="toc-text">Remove Redundant or Self-Explanatory Instructions</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.5.5.</span> <span class="toc-text">Hide Infrequent But Necessary Settings, Features, and Information</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy6"><span class="toc-number">1.6.</span> <span class="toc-text">Indicate Whether Content Exists Beyond the Fold</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.6.1.</span> <span class="toc-text">Extend Elements Through the Fold</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.6.2.</span> <span class="toc-text">Add a Shadow to Indicate Depth</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.6.3.</span> <span class="toc-text">Indicate More Content With Words or Graphics</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ux-category2"><span class="toc-number">2.</span> <span class="toc-text">Guide Users Toward the End Goal</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy7"><span class="toc-number">2.1.</span> <span class="toc-text">Position Frequent Functions and Important Data Closer to Users</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.1.1.</span> <span class="toc-text">Filter or Jump to Items That Users Are Searching</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.1.2.</span> <span class="toc-text">Create Smart Defaults Based on Frequently Chosen Input</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.1.3.</span> <span class="toc-text">Include Important Data on Product Listing Pages</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.1.4.</span> <span class="toc-text">Provide Useful Information on Hover</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.1.5.</span> <span class="toc-text">Expose Frequently Used Functions</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.1.6.</span> <span class="toc-text">Display Primary Data or Statuses in a Dashboard</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.1.7.</span> <span class="toc-text">Position Common Answers at the Top of Drop Down Lists</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy8"><span class="toc-number">2.2.</span> <span class="toc-text">Communicate the Statuses of Interactions</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.2.1.</span> <span class="toc-text">Display Current Progress and Time Remaining on Machine-Driven Tasks</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.2.2.</span> <span class="toc-text">Communicate the Current Phase of Complex or Lengthy Interactions</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.2.3.</span> <span class="toc-text">Reveal the Number of Steps Within a Sequence</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.2.4.</span> <span class="toc-text">Reveal the Number of Items in a Category</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy9"><span class="toc-number">2.3.</span> <span class="toc-text">Offer Multiple Ways to Accomplish the Same Task</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.3.1.</span> <span class="toc-text">Let Users Log In Via Username or Email</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.3.2.</span> <span class="toc-text">Offer Keyboard Shortcuts for Repetitive Functions</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.3.3.</span> <span class="toc-text">Let Users Drag and Drop Elements</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.3.4.</span> <span class="toc-text">Let Users Directly Edit Data</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy10"><span class="toc-number">2.4.</span> <span class="toc-text">Communicate Requirements or Parameters for an Interaction</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.4.1.</span> <span class="toc-text">Describe the Input That You Require From Users</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.4.2.</span> <span class="toc-text">Give Real-Time Password Requirements and Feedback</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.4.3.</span> <span class="toc-text">Prepopulate Form Elements With Universal Parameters</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.4.4.</span> <span class="toc-text">Indicate Required and Optional Form Elements</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy11"><span class="toc-number">2.5.</span> <span class="toc-text">Communicate the Expected Outcome of an Interaction</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.5.1.</span> <span class="toc-text">Use Descriptive Button Labels</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.5.2.</span> <span class="toc-text">Show a Preview of the Output Based on the Current Input</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.5.3.</span> <span class="toc-text">Indicate or Preview the Next Item in a Sequence</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.5.4.</span> <span class="toc-text">Use Smart Menu Items to Clarify Actions</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy12"><span class="toc-number">2.6.</span> <span class="toc-text">Reward or Reassure Users When They Make Progress</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.6.1.</span> <span class="toc-text">Maintain Congruency Between Links and Target Pages</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.6.2.</span> <span class="toc-text">Provide Quick Wins During Onboarding</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.6.3.</span> <span class="toc-text">Start Progress Bars Above 0%</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy13"><span class="toc-number">2.7.</span> <span class="toc-text">Solve the User’s Core Intent</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.7.1.</span> <span class="toc-text">Indicate Whether Your Office is Open or Closed</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.7.2.</span> <span class="toc-text">Indicate the Recency of Events</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ux-category3"><span class="toc-number">3.</span> <span class="toc-text">Reduce Mental Effort and Maintain Flow</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy14"><span class="toc-number">3.1.</span> <span class="toc-text">Minimize User Calculations</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.1.1.</span> <span class="toc-text">Indicate the Number of Items Remaining</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy15"><span class="toc-number">3.2.</span> <span class="toc-text">Convey the User’s Current Location Within the Interface</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.2.1.</span> <span class="toc-text">Highlight the Section Within the Navigation Menu</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.2.2.</span> <span class="toc-text">Provide Breadcrumbs or Sequence Maps in Complex Interfaces</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.2.3.</span> <span class="toc-text">Put Descriptive or Useful Information at the Beginning of Page Titles</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy16"><span class="toc-number">3.3.</span> <span class="toc-text">Simplify Choice Tasks</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.3.1.</span> <span class="toc-text">Indicate the Options That Most Users Choose</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.3.2.</span> <span class="toc-text">Provide a Curated List of Common Search Terms</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.3.3.</span> <span class="toc-text">Create Tight Categories Within Navigation Menus</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy17"><span class="toc-number">3.4.</span> <span class="toc-text">Use Conventional Web Design Interfaces</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.4.1.</span> <span class="toc-text">Use Conventional Navigation Menus</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.4.2.</span> <span class="toc-text">Put Utilities in the Top Right Corner</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy18"><span class="toc-number">3.5.</span> <span class="toc-text">Provide Feedback After Each Interaction</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.5.1.</span> <span class="toc-text">Display Success Messages After Important Interactions</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.5.2.</span> <span class="toc-text">Indicate Which Items the Cursor is Hovering Over</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy19"><span class="toc-number">3.6.</span> <span class="toc-text">Minimize the Negative Effects of Waiting Periods</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.6.1.</span> <span class="toc-text">Use Cool Colors in Loading Animations to Decrease Arousal</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.6.2.</span> <span class="toc-text">Keep Users Engaged During Lengthy Waiting Periods</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.6.3.</span> <span class="toc-text">Prevent Users From Uploading Files That Are Incompatible</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.6.4.</span> <span class="toc-text">Display a Running Tally of Tasks Occurring</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy20"><span class="toc-number">3.7.</span> <span class="toc-text">Minimize the User’s Reliance on Memory</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.7.1.</span> <span class="toc-text">Keep Form Labels Visible At All Times</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.7.2.</span> <span class="toc-text">Position Placeholder Text Outside the Form Element</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.7.3.</span> <span class="toc-text">Add Copy Buttons to Movable Input</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy21"><span class="toc-number">3.8.</span> <span class="toc-text">Minimize Zig Zagging Eye Patterns</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.8.1.</span> <span class="toc-text">Merge Congruent Data to Help Users Compare Items</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.8.2.</span> <span class="toc-text">Align Form Labels Directly Adjacent to Elements</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy22"><span class="toc-number">3.9.</span> <span class="toc-text">Communicate Which Items Are Clickable or Interactive</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.9.1.</span> <span class="toc-text">Design Buttons Using 3D Characteristics</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.9.2.</span> <span class="toc-text">Add Dotted Textures to Drag and Drop Elements</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.9.3.</span> <span class="toc-text">Use Icons and Symbols to Convey the Meaning of an Interaction</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy23"><span class="toc-number">3.10.</span> <span class="toc-text">Communicate Using Familiar Words and Symbols</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.10.1.</span> <span class="toc-text">Speak the Language of the User, Not the System</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.10.2.</span> <span class="toc-text">Offer a Translate Button When Foreign Languages Appear</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.10.3.</span> <span class="toc-text">Choose Colors That Are Semantically Congruent</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy24"><span class="toc-number">3.11.</span> <span class="toc-text">Maximize the Scannability of Your Interface</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.11.1.</span> <span class="toc-text">Keep Paragraphs Short and Highlight Key Terms</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.11.2.</span> <span class="toc-text">Position Important Information at Beginning of List Items</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.11.3.</span> <span class="toc-text">Add Row Stripes to Your Tables</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.11.4.</span> <span class="toc-text">Write Standalone Subheadlines</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.11.5.</span> <span class="toc-text">Break Up Text With Visual Variety</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy25"><span class="toc-number">3.12.</span> <span class="toc-text">Maximize the Readability of Text</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.12.1.</span> <span class="toc-text">Create Strong Contrast Between the Text and Background</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.12.2.</span> <span class="toc-text">Left Align the Majority of Body Text</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy26"><span class="toc-number">3.13.</span> <span class="toc-text">Use Consistent Patterns Throughout the Interface</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.13.1.</span> <span class="toc-text">Create a Front-End Style Guide</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.13.2.</span> <span class="toc-text">Keep Navigation Menus in the Same Position</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy27"><span class="toc-number">3.14.</span> <span class="toc-text">Create Beautiful Designs With Visual Balance</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.14.1.</span> <span class="toc-text">Construct Designs Using Mathematical Principles</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.14.2.</span> <span class="toc-text">Choose Contrasting Fonts</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ux-category4"><span class="toc-number">4.</span> <span class="toc-text">Maximize the Compatibility for All Users and Scenarios</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy28"><span class="toc-number">4.1.</span> <span class="toc-text">Maximize Compatibility With the User’s Knowledge and Skill Level</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">4.1.1.</span> <span class="toc-text">Use the Proper Amount of Onboarding</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">4.1.2.</span> <span class="toc-text">Add Tooltips to Coach Novice Users Without Disrupting Expert Users</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">4.1.3.</span> <span class="toc-text">Use Card Sorting to Construct the Information Architecture</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy29"><span class="toc-number">4.2.</span> <span class="toc-text">Maximize Compatibility With the User’s Workflow</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">4.2.1.</span> <span class="toc-text">Let Users Control the Appearance of Data</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">4.2.2.</span> <span class="toc-text">Let Users Control the Order of Data</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">4.2.3.</span> <span class="toc-text">Let Users Control the Quantity of Data</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">4.2.4.</span> <span class="toc-text">Construct Personas to Identify Specific Workflows</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">4.2.5.</span> <span class="toc-text">Let Users Open Pages in New Tabs</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy30"><span class="toc-number">4.3.</span> <span class="toc-text">Maximize the Accessibility of Your Interface</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">4.3.1.</span> <span class="toc-text">Use Semantic Labels in HTML5</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">4.3.2.</span> <span class="toc-text">Use Multiple Cues to Communicate Information</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy31"><span class="toc-number">4.4.</span> <span class="toc-text">Maximize Compatibility for All Inputs and Extreme Cases</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">4.4.1.</span> <span class="toc-text">Resolve Unfavorable Outcomes in Automatically Generated Messages</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">4.4.2.</span> <span class="toc-text">Use Form Elements That Accept Various Formats of Input</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">4.4.3.</span> <span class="toc-text">Display Results That Solve the Searcher’s Need</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">4.4.4.</span> <span class="toc-text">Use Search Fields That Handle Typos, Synonyms, and Variants</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy32"><span class="toc-number">4.5.</span> <span class="toc-text">Maximize Compatibility for All Mediums</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">4.5.1.</span> <span class="toc-text">Customize Instructions for the User’s Browser</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">4.5.2.</span> <span class="toc-text">Use One-Window Drilldowns on Small Devices</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ux-category5"><span class="toc-number">5.</span> <span class="toc-text">Help Users Minimize and Overcome Potential Errors</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy33"><span class="toc-number">5.1.</span> <span class="toc-text">Prevent the Possibility of Errors</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.1.1.</span> <span class="toc-text">Remove, Disable, or Replace Buttons When Users Click Them</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.1.2.</span> <span class="toc-text">Only Offer Inputs That Are Acceptable</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.1.3.</span> <span class="toc-text">Use Responsive Enabling or Disclosure in Form Elements</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.1.4.</span> <span class="toc-text">Structure Text Fields to Match the Required Input</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy34"><span class="toc-number">5.2.</span> <span class="toc-text">Monitor Signals That Are Typical in Errors</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.2.1.</span> <span class="toc-text">Search for Wording That Contradicts User Intent</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.2.2.</span> <span class="toc-text">Remind Users if They’ve Already Purchased an Item</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy35"><span class="toc-number">5.3.</span> <span class="toc-text">Differentiate Powerful Functions to Minimize Slips</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.3.1.</span> <span class="toc-text">Separate Powerful Functions by Space or Color</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.3.2.</span> <span class="toc-text">Add Constraints to Significant Irreversible Changes</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy36"><span class="toc-number">5.4.</span> <span class="toc-text">Provide Easy Ways to Revert or Escape</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.4.1.</span> <span class="toc-text">Use Undos Rather Than Confirmations</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.4.2.</span> <span class="toc-text">Offer an Escape Hatch on All Pages and Functions</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.4.3.</span> <span class="toc-text">Provide a Visible Close on Popups and Modal Boxes</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy37"><span class="toc-number">5.5.</span> <span class="toc-text">Minimize the Negative Effects of Leaving Sequences</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.5.1.</span> <span class="toc-text">Save Data That Users Enter</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.5.2.</span> <span class="toc-text">Let Users Return to the Same Position in a Sequence</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy38"><span class="toc-number">5.6.</span> <span class="toc-text">Extend Movable Paths and Clickable Areas</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.6.1.</span> <span class="toc-text">Add a Transparent Border to Small Buttons</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.6.2.</span> <span class="toc-text">Add a Slight Delay to Hover Pop Ups and Drop Down Menus</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.6.3.</span> <span class="toc-text">Hyperlink the Entire Menu Option Container</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.6.4.</span> <span class="toc-text">Hyperlink Primary Menus, List Items, and Complementary Icons</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy39"><span class="toc-number">5.7.</span> <span class="toc-text">Provide Useful and Supportive Error Messages</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.7.1.</span> <span class="toc-text">Explain the Reason for Validation Errors</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.7.2.</span> <span class="toc-text">Point Users Toward Documentation or Support for Complex Errors</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.7.3.</span> <span class="toc-text">Avoid Saying “You” in Error Messages</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy40"><span class="toc-number">5.8.</span> <span class="toc-text">Keep a Record of the User’s Previous Actions</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.8.1.</span> <span class="toc-text">Display the User’s Recent Searches</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.8.2.</span> <span class="toc-text">Use Different Colors for Visited Links</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.8.3.</span> <span class="toc-text">Indicate Which Items Users Have Already Viewed</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ux-strategy41"><span class="toc-number">5.9.</span> <span class="toc-text">Analyze User Behavior to Find Interface Issues</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.9.1.</span> <span class="toc-text">Gather User Feedback in Appropriate Places</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.9.2.</span> <span class="toc-text">Create Alerts for Increases in 404 Errors</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.9.3.</span> <span class="toc-text">Identify Pages Where Users Are Pogo-Sticking</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#reference"><span class="toc-number">6.</span> <span class="toc-text">Final Thoughts</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">6.1.</span> <span class="toc-text">How I Compiled These Tactics</span></a></li></ol></li></ol>
+</div>
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script>
+    yiliaConfig.toc = ["隐藏目录", "显示目录", !!"true"];
+</script>
+
+
+
+    
+    <div class="share">
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"图解网页设计！125个小优化提升网页可用性　| MOxFIVE's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    </div>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <div id="comment-box" ></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/06/29/user-experience-practices/" data-title="图解网页设计！125个小优化提升网页可用性" data-url="http://MOxFIVE.xyz/2016/06/29/user-experience-practices/"></div>
+    <script>
+        var duoshuoQuery = {short_name:"moxfive"};
+        function loadComment() {
+            var d = document, s = d.createElement('script');
+            s.src = '//moxfive.xyz/resources/embed.js';
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
+
+        $(function() { 
+            var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=moxfive&threads=2016/06/29/user-experience-practices/&callback=?";
+            $.getJSON(jsonUrl, function(result) {
+                $.each(result.response, function(i, field) {
+                    var value = field.comments;
+                    if (value > 0) {
+                        $(".count-comment").text(value);
+                        return;
+                    }
+                })
+
+            })
+        });
+    </script>
+    
+    <aside class="comment-bar">
+        <a href="javascript:void(0);">
+            <i class="fa fa-commenting-o animated infinite pulse"></i>
+            <i class="fa fa-spinner fa-pulse"></i>
+            <span class="count-comment"></span>
+        </a>
+    </aside>
+
+    <script>
+        var $commentBar = $("#comments aside.comment-bar");
+        var load$hide = function(){
+            $commentBar.find("a > i").toggle();
+            loadComment();
+            $commentBar.fadeOut(800);
+        }
+        $commentBar.click(function(){
+            load$hide();
+        })
+        $commentBar.children("a").hover(function(){
+            load$hide();
+        })
+        if (window.location.hash === "#comments") {
+            load$hide();
+        }
+    </script>
+
+</div>
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/06/14/duoshuo-disqus-comment-count/" title="下一篇: 获取多说和 Disqus 文章评论数的方法">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/06/29/user-experience-practices/">图解网页设计！125个小优化提升网页可用性</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/14/duoshuo-disqus-comment-count/">获取多说和 Disqus 文章评论数的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/13/hexo-collapsible-toc/">为 Hexo 添加可折叠的文章目录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/31/hexo-local-search/">让 Hexo 博客支持本地站内搜索</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/17/image-compression/">关于 Yelee 主题背景图的压缩与优化</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/public-dns/">几个国内专用的公共 DNS</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/20/baidu-share-fontawesome/">在百度分享中使用 Font Awesome 图标</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/18/text-overflow-ellipsis/">CSS 设置文本省略 ellipsis (…)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/27/hexo-browsersync/">Hexo 页面自动刷新与移动端调试</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/04/markdown-table-style/">Markdown 表格样式调整与自适应优化</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/16/front-end-tools/">前端工程化工具初选</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/10/hexo-post-version-control/">关联 GitHub, 让 Hexo 支持查看文章更新历史</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/02/hexo-comments/">为 Hexo 主题添加评论模块 — Disqus, 多说, 友言</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/01/hexo-config-true-false/">关于 Hexo 配置文件中的 true 和 false</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/22/anki-excel-shortcuts/">Anki 记忆库之 Excel 快捷键大全</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/21/common-hexo-commands/">Hexo 最常用的几个命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/09/css-font-family/">CSS font-family 网页字体使用小结</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/30/sublime-config/">Sublime Text 3 使用配置与插件安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/23/anki-templates/">Anki 自用卡片模板分享</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/23/git-command/">Git 基础命令与相关术语</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/16/png-gif-transparency/">制作透明背景 PNG 图片和 GIF 动图的几种方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/09/web-style-guide/">Web Style Guide 前端代码规范</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/04/hexo-deployment/">将 Hexo 博客部署到 GitHub Pages</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/31/excel-markdown-table/">用 Excel 生成和管理 Markdown 表格</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/25/hexo-tag-cloud/">让 Hexo 自动生成 Tag Cloud 标签云页面</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/16/hexo-404-page/">在 Hexo 中创建匹配主题的404页面</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/09/29/duoshuo-style/">多说样式折腾记录 — 添加 UA 浏览器标识、旋转头像等</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/09/20/windows-mac-software/">自用 Windows 和 Mac 软件推荐</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/30/EndNote-Markdown/">EndNote 与 Markdown 结合 — 为网文快速添加 Reference</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/28/Front-End-Study/">个人 Web 前端学习路线</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/20/blog-building/">个人博客站点建设历程</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/19/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+            yiliaConfig.fancybox = false;
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2015-2016 MOxFIVE
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题 v3.5">Yelee</a><span> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >本站到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+    <script src="/js/GithubRepoWidget.js"></script>
+
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 4;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+             github: ".github-widget a", 
+            
+             post: ".article-entry a[href]", 
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

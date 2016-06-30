@@ -14,13 +14,6 @@
     </url>
 
     <url>
-        <loc>http://MOxFIVE.xyz/categories/%E8%87%AA%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
-        <lastmod>2016-05-16T12:38:34.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://MOxFIVE.xyz/categories/%E8%87%AA%E7%94%A8%E7%AC%94%E8%AE%B0/%E6%9C%AF%E4%B8%9A%E4%B8%93%E6%94%BB/</loc>
         <lastmod>2016-05-16T12:38:34.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -30,6 +23,13 @@
     <url>
         <loc>http://MOxFIVE.xyz/categories/%E6%9C%AF%E4%B8%9A%E4%B8%93%E6%94%BB/</loc>
         <lastmod>2016-06-29T14:32:38.475Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://MOxFIVE.xyz/categories/%E8%87%AA%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
+        <lastmod>2016-06-30T06:06:09.934Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
