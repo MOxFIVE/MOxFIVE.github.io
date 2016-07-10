@@ -474,21 +474,27 @@
 
 
     <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#intro"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自动刷新"><span class="toc-number">2.</span> <span class="toc-text">自动刷新</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-Browsersync"><span class="toc-number">2.1.</span> <span class="toc-text">安装 Browsersync</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-Hexo-端插件"><span class="toc-number">2.2.</span> <span class="toc-text">安装 Hexo 端插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一些不足"><span class="toc-number">2.3.</span> <span class="toc-text">一些不足</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移动端调试"><span class="toc-number">3.</span> <span class="toc-text">移动端调试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#生成静态文件"><span class="toc-number">3.1.</span> <span class="toc-text">生成静态文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开启服务"><span class="toc-number">3.2.</span> <span class="toc-text">开启服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#局域网访问"><span class="toc-number">3.3.</span> <span class="toc-text">局域网访问</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相关链接"><span class="toc-number">4.</span> <span class="toc-text">相关链接</span></a></li></ol>
-</div>
-<style>
-    .left-col .switch-btn,
-    .left-col .switch-area {
-        display: none;
-    }
-</style>
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#intro"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自动刷新"><span class="toc-number">2.</span> <span class="toc-text">自动刷新</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-Browsersync"><span class="toc-number">2.1.</span> <span class="toc-text">安装 Browsersync</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-Hexo-端插件"><span class="toc-number">2.2.</span> <span class="toc-text">安装 Hexo 端插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一些不足"><span class="toc-number">2.3.</span> <span class="toc-text">一些不足</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移动端调试"><span class="toc-number">3.</span> <span class="toc-text">移动端调试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#生成静态文件"><span class="toc-number">3.1.</span> <span class="toc-text">生成静态文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开启服务"><span class="toc-number">3.2.</span> <span class="toc-text">开启服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#局域网访问"><span class="toc-number">3.3.</span> <span class="toc-text">局域网访问</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相关链接"><span class="toc-number">4.</span> <span class="toc-text">相关链接</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
 
-<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
-<script>
-    yiliaConfig.toc = ["隐藏目录", "显示目录", !!"true"];
-</script>
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"true"];
+    </script>
 
 
 

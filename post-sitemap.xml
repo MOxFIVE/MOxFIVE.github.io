@@ -7,6 +7,22 @@
     </url>
 
     <url>
+        <loc>http://MOxFIVE.xyz/2015/08/20/blog-building/</loc>
+        <lastmod>2016-07-10T14:04:10.222Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://MOxFIVE.xyz/2015/08/19/hello-world/</loc>
+        <lastmod>2016-07-04T13:39:16.419Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://MOxFIVE.xyz/2016/06/29/user-experience-practices/</loc>
         <lastmod>2016-06-30T06:41:49.421Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -17,22 +33,6 @@
     <url>
         <loc>http://MOxFIVE.xyz/2016/06/14/duoshuo-disqus-comment-count/</loc>
         <lastmod>2016-06-29T14:32:38.475Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://MOxFIVE.xyz/2015/08/20/blog-building/</loc>
-        <lastmod>2016-06-29T14:31:04.722Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://MOxFIVE.xyz/2015/08/19/hello-world/</loc>
-        <lastmod>2016-06-14T09:24:48.842Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

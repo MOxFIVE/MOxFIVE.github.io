@@ -465,21 +465,27 @@
 
 
     <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#样式调整"><span class="toc-number">1.</span> <span class="toc-text">样式调整</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基础概念"><span class="toc-number">1.1.</span> <span class="toc-text">基础概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本样式"><span class="toc-number">1.2.</span> <span class="toc-text">基本样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表头样式"><span class="toc-number">1.3.</span> <span class="toc-text">表头样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#隔行变色"><span class="toc-number">1.4.</span> <span class="toc-text">隔行变色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#悬浮变色"><span class="toc-number">1.5.</span> <span class="toc-text">悬浮变色</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自适应优化"><span class="toc-number">2.</span> <span class="toc-text">自适应优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#表头不换行"><span class="toc-number">2.1.</span> <span class="toc-text">表头不换行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#首列不换行"><span class="toc-number">2.2.</span> <span class="toc-text">首列不换行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表格滚动条"><span class="toc-number">2.3.</span> <span class="toc-text">表格滚动条</span></a></li></ol></li></ol>
-</div>
-<style>
-    .left-col .switch-btn,
-    .left-col .switch-area {
-        display: none;
-    }
-</style>
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#样式调整"><span class="toc-number">1.</span> <span class="toc-text">样式调整</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基础概念"><span class="toc-number">1.1.</span> <span class="toc-text">基础概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本样式"><span class="toc-number">1.2.</span> <span class="toc-text">基本样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表头样式"><span class="toc-number">1.3.</span> <span class="toc-text">表头样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#隔行变色"><span class="toc-number">1.4.</span> <span class="toc-text">隔行变色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#悬浮变色"><span class="toc-number">1.5.</span> <span class="toc-text">悬浮变色</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自适应优化"><span class="toc-number">2.</span> <span class="toc-text">自适应优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#表头不换行"><span class="toc-number">2.1.</span> <span class="toc-text">表头不换行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#首列不换行"><span class="toc-number">2.2.</span> <span class="toc-text">首列不换行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表格滚动条"><span class="toc-number">2.3.</span> <span class="toc-text">表格滚动条</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
 
-<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
-<script>
-    yiliaConfig.toc = ["隐藏目录", "显示目录", !!"true"];
-</script>
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"true"];
+    </script>
 
 
 

@@ -3650,7 +3650,17 @@
 <li>改动和尝试中参考的主要资源都做了 <a href="">链接跳转</a> 并在文末列出；    </li>
 <li><a href="">[G]</a>: 表示该项的具体修改已 commit 提交到 <a href="https://github.com/MOxFIVE" title="MOxFIVE&#39;s GitHub" target="_blank" rel="external">GitHub</a>，点击即可查看；</li>
 </ul>
-<h2 id="2016-年-6-月"><a href="#2016-年-6-月" class="headerlink" title="2016 年 6 月"></a>2016 年 6 月</h2><h3 id="06-27-评论数显示"><a href="#06-27-评论数显示" class="headerlink" title="06-27 评论数显示"></a>06-27 评论数显示</h3><blockquote>
+<h2 id="2016-年-7-月"><a href="#2016-年-7-月" class="headerlink" title="2016 年 7 月"></a>2016 年 7 月</h2><h3 id="07-04-目录设置"><a href="#07-04-目录设置" class="headerlink" title="07-04 目录设置"></a>07-04 目录设置</h3><blockquote>
+<ul>
+<li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/659f6eabe4922699a69bc583404c9f778b896535" title="add: settings for TOC (list_number, max_depth)" target="_blank" rel="external">[G]</a> 调整完善目录设置，方便显示\隐藏文章序号和限制目录最大级数（层级太多目录区会显得臃肿）。</li>
+</ul>
+</blockquote>
+<h2 id="2016-年-6-月"><a href="#2016-年-6-月" class="headerlink" title="2016 年 6 月"></a>2016 年 6 月</h2><h3 id="06-30-标签标题切换"><a href="#06-30-标签标题切换" class="headerlink" title="06-30 标签标题切换"></a>06-30 标签标题切换</h3><blockquote>
+<ul>
+<li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/pull/117" title="feat: tab title change when switch tab | 切换标签页时更改标签页标题" target="_blank" rel="external">[G]</a> 合并 Pull，支持在切换标签页时更改其标题，挺有意思的小功能。</li>
+</ul>
+</blockquote>
+<h3 id="06-27-评论数显示"><a href="#06-27-评论数显示" class="headerlink" title="06-27 评论数显示"></a>06-27 评论数显示</h3><blockquote>
 <ul>
 <li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/865a26bbcce2c173534653e2ee6ea201a22fe6ff" title="feat: show comment count on home page" target="_blank" rel="external">[G]</a> 可以在主页文章标题旁显示评论数（多说 或 Disqus）</li>
 </ul>
@@ -4745,7 +4755,7 @@
       <content type="html"><![CDATA[<p><img src="//moxfive.xyz/resources/Mihawk-Wind.gif" alt="111"> Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br>$$  x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$<br><a id="more"></a></p>
 <p>Quick Start</p>
 <p><img src="/resources/Mihawk-Wind.gif" width="150"></p>
-<h2 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h2><style>
+<h1 id="first"><a href="#first" class="headerlink" title="first"></a>first</h1><h3 id="seconde"><a href="#seconde" class="headerlink" title="seconde"></a>seconde</h3><h2 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h2><style>
     img[alt="111"] {
         width: 300px;
         float: right ;

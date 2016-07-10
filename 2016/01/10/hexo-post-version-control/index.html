@@ -467,21 +467,27 @@
 
 
     <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#intro"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件处理"><span class="toc-number">2.</span> <span class="toc-text">文件处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#文件命名"><span class="toc-number">2.1.</span> <span class="toc-text">文件命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件备份"><span class="toc-number">2.2.</span> <span class="toc-text">文件备份</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码添加"><span class="toc-number">3.</span> <span class="toc-text">代码添加</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码简析"><span class="toc-number">4.</span> <span class="toc-text">代码简析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Blame"><span class="toc-number">4.1.</span> <span class="toc-text">Blame</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#History"><span class="toc-number">4.2.</span> <span class="toc-text">History</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#md-Raw"><span class="toc-number">4.3.</span> <span class="toc-text">.md Raw</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后记"><span class="toc-number">5.</span> <span class="toc-text">后记</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相关链接"><span class="toc-number">6.</span> <span class="toc-text">相关链接</span></a></li></ol>
-</div>
-<style>
-    .left-col .switch-btn,
-    .left-col .switch-area {
-        display: none;
-    }
-</style>
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#intro"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件处理"><span class="toc-number">2.</span> <span class="toc-text">文件处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#文件命名"><span class="toc-number">2.1.</span> <span class="toc-text">文件命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件备份"><span class="toc-number">2.2.</span> <span class="toc-text">文件备份</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码添加"><span class="toc-number">3.</span> <span class="toc-text">代码添加</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码简析"><span class="toc-number">4.</span> <span class="toc-text">代码简析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Blame"><span class="toc-number">4.1.</span> <span class="toc-text">Blame</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#History"><span class="toc-number">4.2.</span> <span class="toc-text">History</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#md-Raw"><span class="toc-number">4.3.</span> <span class="toc-text">.md Raw</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后记"><span class="toc-number">5.</span> <span class="toc-text">后记</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相关链接"><span class="toc-number">6.</span> <span class="toc-text">相关链接</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
 
-<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
-<script>
-    yiliaConfig.toc = ["隐藏目录", "显示目录", !!"true"];
-</script>
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"true"];
+    </script>
 
 
 
