@@ -358,6 +358,12 @@ a {
   #container .article .article-meta {
     display: none;
   }
+  #container .article .article-nav {
+    padding: 0.2em auto;
+  }
+  #container .article:first-child {
+    margin-top: 1em;
+  }
   #container .article-inner {
     padding: 12px;
   }
@@ -579,7 +585,7 @@ a {
     line-height: 45px;
   }
   #container figure.highlight {
-    margin: auto -12px;
+    margin: auto -13px;
   }
   #container a.fancy-ctn.fancybox {
     display: block;
