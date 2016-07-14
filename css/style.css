@@ -595,6 +595,9 @@ a {
   #container .article img {
     display: block;
   }
+  #container #scroll {
+    right: 0.8em;
+  }
 }
 .header-author {
   text-align: center;
