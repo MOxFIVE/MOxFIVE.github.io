@@ -586,6 +586,7 @@ a {
   }
   #container figure.highlight {
     margin: auto -13px;
+    border: auto none;
   }
   #container a.fancy-ctn.fancybox {
     display: block;
