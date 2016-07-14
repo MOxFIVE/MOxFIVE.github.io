@@ -596,7 +596,7 @@ a {
     display: block;
   }
   #container #scroll {
-    right: 0.8em;
+    right: 12px;
   }
 }
 .header-author {
