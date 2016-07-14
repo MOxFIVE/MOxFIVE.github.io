@@ -2338,11 +2338,12 @@ pre .strong {
 #footer #busuanzi_value_site_uv,
 #footer #busuanzi_container_page_pv {
   font-family: Menlo, Consolas, "Source Code Pro", Inconsolata, Monaco;
-  font-size: 1.15em;
+}
+#footer .visit {
+  font-size: 1.1em;
 }
 #footer .visit .fa {
   padding-right: 0.25em;
-  font-size: 1.1em;
   color: #808080;
 }
 #footer .visit #site-visit:hover,
