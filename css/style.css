@@ -2335,6 +2335,13 @@ pre .strong {
   -ms-animation-duration: 1.1s;
   animation-duration: 1.1s;
 }
+#footer .busuanzi_value_site_uv,
+#footer .busuanzi_value_site_pv {
+  font-family: Menlo, Consolas, "Source Code Pro", Inconsolata, Monaco;
+}
+#footer .visit .fa {
+  font-size: 1.1em;
+}
 .footer-left {
   float: left;
 }
