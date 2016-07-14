@@ -339,7 +339,7 @@ a {
     font-size: 14px;
   }
   #container .article {
-    margin: 0.625rem 10px;
+    margin: 0;
   }
   #container .article .article-entry {
     padding-left: 0;
@@ -405,7 +405,7 @@ a {
     float: initial;
   }
   #container .archives-wrap {
-    margin: 10px 10px 0px;
+    margin: 10px 0 0;
     padding: 10px;
     padding-right: 0;
   }
@@ -577,6 +577,16 @@ a {
   }
   #container .tags a {
     line-height: 45px;
+  }
+  #container figure.highlight {
+    margin: auto -12px;
+  }
+  #container a.fancy-ctn.fancybox {
+    display: block;
+    margin: auto -12px;
+  }
+  #container .article img {
+    display: block;
   }
 }
 .header-author {
