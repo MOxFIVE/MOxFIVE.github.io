@@ -3650,7 +3650,18 @@
 <li>改动和尝试中参考的主要资源都做了 <a href="">链接跳转</a> 并在文末列出；    </li>
 <li><a href="">[G]</a>: 表示该项的具体修改已 commit 提交到 <a href="https://github.com/MOxFIVE" title="MOxFIVE&#39;s GitHub" target="_blank" rel="external">GitHub</a>，点击即可查看；</li>
 </ul>
-<h2 id="2016-年-7-月"><a href="#2016-年-7-月" class="headerlink" title="2016 年 7 月"></a>2016 年 7 月</h2><h3 id="07-04-目录设置"><a href="#07-04-目录设置" class="headerlink" title="07-04 目录设置"></a>07-04 目录设置</h3><blockquote>
+<h2 id="2016-年-7-月"><a href="#2016-年-7-月" class="headerlink" title="2016 年 7 月"></a>2016 年 7 月</h2><h3 id="07-14-样式优化"><a href="#07-14-样式优化" class="headerlink" title="07-14 样式优化"></a>07-14 样式优化</h3><blockquote>
+<ul>
+<li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/5ab41836a370652b69eb381ff863c65dec3b6b17" title="fix: FancyBox with no extension url" target="_blank" rel="external">[G]</a> 修复图片路径不包含后缀名时 FancyBox 失效的问题；</li>
+</ul>
+</blockquote>
+<h3 id="07-14-样式调整"><a href="#07-14-样式调整" class="headerlink" title="07-14 样式调整"></a>07-14 样式调整</h3><blockquote>
+<ul>
+<li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/3e4b75a399c4cf727d8c02d56625a16bccdaa3b6" title="style(.body-wrap): max-width, centering" target="_blank" rel="external">[G]</a> 限制文章区最大宽度，改善宽屏下显示效果；</li>
+<li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/daa58c81c757c984ea6248f07bc73c8a3205e7d4" title="style(.visit): use icon &amp; monospace font" target="_blank" rel="external">[G]</a> 简化页脚页面统计信息的样式，文字解释改为图标标识，数字使用等宽字体。</li>
+</ul>
+</blockquote>
+<h3 id="07-04-目录设置"><a href="#07-04-目录设置" class="headerlink" title="07-04 目录设置"></a>07-04 目录设置</h3><blockquote>
 <ul>
 <li><a href="https://github.com/MOxFIVE/hexo-theme-yelee/commit/659f6eabe4922699a69bc583404c9f778b896535" title="add: settings for TOC (list_number, max_depth)" target="_blank" rel="external">[G]</a> 调整完善目录设置，方便显示\隐藏文章序号和限制目录最大级数（层级太多目录区会显得臃肿）。</li>
 </ul>
@@ -4755,6 +4766,7 @@
       <content type="html"><![CDATA[<p><img src="//moxfive.xyz/resources/Mihawk-Wind.gif" alt="111"> Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br>$$  x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$<br><a id="more"></a></p>
 <p>Quick Start</p>
 <p><img src="/resources/Mihawk-Wind.gif" width="150"></p>
+<p><img src="http://img.blog.csdn.net/20160613112401190" alt=""></p>
 <h1 id="first"><a href="#first" class="headerlink" title="first"></a>first</h1><h3 id="seconde"><a href="#seconde" class="headerlink" title="seconde"></a>seconde</h3><h2 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h2><style>
     img[alt="111"] {
         width: 300px;
